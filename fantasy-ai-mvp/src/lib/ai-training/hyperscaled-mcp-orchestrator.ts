@@ -954,7 +954,7 @@ export class HyperscaledMCPOrchestrator extends EventEmitter {
       'bulk': 'bulk-pool'
     };
     
-    return laneToPoolMapping[laneName] || 'standard-pool';
+    return laneToPoolMapping[laneName as keyof typeof laneToPoolMapping] || 'standard-pool';
   }
 
   // Record scaling event for analytics

@@ -182,8 +182,8 @@ export class GlobalEdgeExpansion extends EventEmitter {
   private config: GlobalExpansionConfig;
   private currentLocations: Map<string, GlobalEdgeLocation> = new Map();
   private continentalClusters: Map<string, ContinentalCluster> = new Map();
-  private deploymentPlan: GlobalDeploymentPlan;
-  private globalMetrics: GlobalMetrics;
+  private deploymentPlan!: GlobalDeploymentPlan;
+  private globalMetrics!: GlobalMetrics;
   private isDeploying: boolean = false;
 
   constructor(config: GlobalExpansionConfig) {
@@ -747,7 +747,7 @@ export class GlobalEdgeExpansion extends EventEmitter {
       'south-america': 'south-america',
       'africa': 'africa-middle-east'
     };
-    return mapping[region] || 'other';
+    return mapping[region as keyof typeof mapping] || 'other';
   }
 
   private estimatePopulationCoverage(lat: number, lng: number): number {
@@ -764,7 +764,7 @@ export class GlobalEdgeExpansion extends EventEmitter {
       'Africa & Middle East': 1500,
       'Oceania': 45
     };
-    return populations[continent] || 100;
+    return populations[continent as keyof typeof populations] || 100;
   }
 
   private getContinentalTimeZones(continent: string): string[] {
@@ -776,7 +776,7 @@ export class GlobalEdgeExpansion extends EventEmitter {
       'Africa & Middle East': ['CAT', 'GST', 'EET'],
       'Oceania': ['AEST', 'NZST']
     };
-    return timeZones[continent] || ['UTC'];
+    return timeZones[continent as keyof typeof timeZones] || ['UTC'];
   }
 
   private getContinentalLanguages(continent: string): string[] {
@@ -788,7 +788,7 @@ export class GlobalEdgeExpansion extends EventEmitter {
       'Africa & Middle East': ['Arabic', 'English', 'French'],
       'Oceania': ['English']
     };
-    return languages[continent] || ['English'];
+    return languages[continent as keyof typeof languages] || ['English'];
   }
 
   private estimateLocationLatency(lat: number, lng: number): number {

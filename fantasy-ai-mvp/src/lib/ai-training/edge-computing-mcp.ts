@@ -642,7 +642,7 @@ export class EdgeComputingMCPSystem extends EventEmitter {
         taskId: task.id,
         workerId: worker.id,
         location: location.city,
-        error: error.message
+        error: error instanceof Error ? error.message : String(error)
       });
 
     } finally {
@@ -878,7 +878,7 @@ export class EdgeComputingMCPSystem extends EventEmitter {
 
   // Get location breakdown
   private getLocationBreakdown(): any {
-    const breakdown = {};
+    const breakdown: { [key: string]: any } = {};
     
     this.edgeLocations.forEach(location => {
       breakdown[location.id] = {

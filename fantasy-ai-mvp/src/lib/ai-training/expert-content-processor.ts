@@ -6,7 +6,7 @@
 
 import { EventEmitter } from 'events';
 
-export interface ExpertContentProcessor {
+export interface IExpertContentProcessor {
   processYouTubeContent(channelId: string, videoId: string): Promise<ProcessedContent>;
   processPodcastContent(feedUrl: string, episodeId: string): Promise<ProcessedContent>;
   processLiveStreamContent(streamUrl: string): Promise<ProcessedContent>;
@@ -16,7 +16,7 @@ export interface ExpertContentProcessor {
 
 export interface ProcessedContent {
   id: string;
-  source: ContentSource;
+  source: any;
   timestamp: Date;
   
   // Raw content
@@ -51,7 +51,7 @@ export interface ExpertKnowledge {
   patterns: AnalysisPattern[];
   
   // Training data
-  knowledgePoints: KnowledgePoint[];
+  knowledgePoints: any[];
   trainingValue: number;
   applicableModels: string[];
 }
@@ -704,4 +704,4 @@ export class ExpertContentProcessor extends EventEmitter {
   private calculateTrainingValue(content: any, knowledgePoints: any[]): number { return 80; }
 }
 
-export { ExpertContentProcessor };
+// ExpertContentProcessor is already exported as class above

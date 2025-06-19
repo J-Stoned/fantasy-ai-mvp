@@ -160,7 +160,7 @@ export async function runTrainingSystemDemo(): Promise<void> {
     console.log('📊 Data Pipeline: Optimizing based on expert data preferences');
     console.log('');
     console.log('💡 THE FUTURE IS NOW!');
-    console.log('This system will continuously learn from the world\\'s best sports experts,');
+    console.log('This system will continuously learn from the world\'s best sports experts,');
     console.log('making our AI models smarter, more accurate, and more valuable every day.');
     console.log('');
     console.log('🏆 Ready to revolutionize sports AI with expert knowledge!');
@@ -448,4 +448,4 @@ if (require.main === module) {
   runTrainingSystemDemo().catch(console.error);
 }
 
-export { runTrainingSystemDemo };
+// runTrainingSystemDemo is already exported as function above

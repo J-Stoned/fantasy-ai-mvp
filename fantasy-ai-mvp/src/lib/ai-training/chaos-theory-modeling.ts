@@ -670,7 +670,7 @@ export class ChaosTheoryModeling extends EventEmitter {
       ]
     };
     
-    const template = chainTemplates[triggerType] || chainTemplates['social_media_post'];
+    const template = chainTemplates[triggerType as keyof typeof chainTemplates] || chainTemplates['social_media_post'];
     
     return template.map((step, index) => ({
       step: index + 1,
@@ -690,7 +690,7 @@ export class ChaosTheoryModeling extends EventEmitter {
       'expectation_burden': ['mental_fatigue', 'bust_risk']
     };
     
-    return feedbackMap[parameter] || [];
+    return feedbackMap[parameter as keyof typeof feedbackMap] || [];
   }
 
   private calculateChaosAmplification(chaosState: ChaosState): number {
@@ -726,7 +726,7 @@ export class ChaosTheoryModeling extends EventEmitter {
       'family_event': 2.1
     };
     
-    const baseImpact = baseImpacts[triggerType] || -3.0;
+    const baseImpact = baseImpacts[triggerType as keyof typeof baseImpacts] || -3.0;
     
     // Apply chaos amplification
     let finalImpact = baseImpact * amplification;
@@ -748,7 +748,7 @@ export class ChaosTheoryModeling extends EventEmitter {
       'family_event': 'Positive family milestone boosts motivation'
     };
     
-    return descriptions[triggerType] || 'Unknown trigger event detected';
+    return descriptions[triggerType as keyof typeof descriptions] || 'Unknown trigger event detected';
   }
 
   async generateBreakoutPredictions(playerId: string): Promise<BreakoutPrediction[]> {
@@ -831,7 +831,7 @@ export class ChaosTheoryModeling extends EventEmitter {
       'bust_risk': chaosState.performance_chaos.bust_risk
     };
     
-    return parameterMap[parameterName] || 50; // Default value
+    return parameterMap[parameterName as keyof typeof parameterMap] || 50; // Default value
   }
 
   private calculateTriggerMatch(actualValue: number, trigger: ChaosParameter): number {

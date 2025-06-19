@@ -896,7 +896,7 @@ export class ContextualReinforcementLearning extends EventEmitter {
     reward *= riskAdjustment;
     
     // Contextual success bonus
-    if (outcome.contextualSuccessRate > 0.8) {
+    if (outcome.actualPerformance.contextualSuccessRate > 0.8) {
       reward += 2; // Bonus for contextual mastery
     }
     

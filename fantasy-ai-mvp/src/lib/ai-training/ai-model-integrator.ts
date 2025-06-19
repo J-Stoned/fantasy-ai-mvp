@@ -690,4 +690,4 @@ interface TrainingStats {
   expertSourceCount: number;
 }
 
-export { AIModelIntegrator };
+// AIModelIntegrator is already exported as class above

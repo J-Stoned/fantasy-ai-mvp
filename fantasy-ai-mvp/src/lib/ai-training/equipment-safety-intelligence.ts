@@ -732,7 +732,7 @@ export class EquipmentSafetyIntelligence extends EventEmitter {
       },
       manufacturer: this.generateManufacturer(),
       specifications: this.generateSpecifications(category, sport),
-      performanceMetrics: this.generatePerformanceMetrics(),
+      performanceMetrics: this.generatePerformanceMetrics() as any,
       safetyProfile: this.generateSafetyProfile(category),
       lifecycleData: this.generateLifecycleData(),
       userFeedback: this.generateUserFeedback(),
@@ -881,7 +881,7 @@ export class EquipmentSafetyIntelligence extends EventEmitter {
       
     } catch (error) {
       console.error('❌ Safety analysis failed:', error);
-      throw new Error(`Safety analysis failed: ${error.message}`);
+      throw new Error(`Safety analysis failed: ${error instanceof Error ? error.message : String(error)}`);
     }
   }
 
@@ -902,17 +902,18 @@ export class EquipmentSafetyIntelligence extends EventEmitter {
         errorRate: 0,
         qualityScore: 90 + Math.random() * 10,
         uptime: 99 + Math.random() * 1,
-        dataProcessed: 0,
-        lastActivity: new Date()
-      },
+        throughputPerHour: 100,
+        resourceEfficiency: 85,
+        specializationScore: 90,
+        lastPerformanceReview: new Date()
+      } as any,
       capabilities: this.getSafetyWorkerCapabilities(type),
       resourceAllocation: {
-        cpuCores: 6,
-        memoryGB: 32,
-        storageGB: 1000,
-        networkBandwidthMbps: 200,
-        gpuMemoryGB: type.includes('predictor') ? 8 : 0
-      },
+        cpuUtilization: 60,
+        memoryUtilization: 70,
+        storageUtilization: 40,
+        networkUtilization: 50
+      } as any,
       lastOptimization: new Date(),
       
       // AI-enhanced properties
@@ -953,7 +954,7 @@ export class EquipmentSafetyIntelligence extends EventEmitter {
       'FACILITY': ['Surfaces', 'Structures', 'Systems', 'Environment'],
       'MONITORING': ['Sensors', 'Wearables', 'Analytics', 'Tracking']
     };
-    const options = subcategories[category] || ['General'];
+    const options = subcategories[category as keyof typeof subcategories] || ['General'];
     return options[Math.floor(Math.random() * options.length)];
   }
 
@@ -964,7 +965,7 @@ export class EquipmentSafetyIntelligence extends EventEmitter {
       'Baseball': ['P', 'C', '1B', '2B', '3B', 'SS', 'OF'],
       'Soccer': ['GK', 'DF', 'MF', 'FW']
     };
-    const sportPositions = positions[sport] || ['General'];
+    const sportPositions = positions[sport as keyof typeof positions] || ['General'];
     return sportPositions[Math.floor(Math.random() * sportPositions.length)];
   }
 
@@ -976,7 +977,7 @@ export class EquipmentSafetyIntelligence extends EventEmitter {
       'FACILITY': ['ADA', 'OSHA', 'Building Codes', 'Safety Standards'],
       'MONITORING': ['FDA', 'FCC', 'GDPR', 'HIPAA']
     };
-    return requirements[category] || [];
+    return requirements[category as keyof typeof requirements] || [];
   }
 
   private getSafetyWorkerCapabilities(type: string): string[] {
@@ -988,7 +989,7 @@ export class EquipmentSafetyIntelligence extends EventEmitter {
       'innovation-researcher': ['innovation-tracking', 'technology-research', 'development-analysis'],
       'compliance-tracker': ['compliance-monitoring', 'regulation-tracking', 'audit-support']
     };
-    return capabilityMap[type] || [];
+    return capabilityMap[type as keyof typeof capabilityMap] || [];
   }
 
   private getSafetyWorkerSpecializations(type: string): any[] {

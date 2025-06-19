@@ -617,7 +617,7 @@ export class GPUAcceleratedProcessor extends EventEmitter {
       
     } catch (error) {
       console.error('❌ Video processing failed:', error);
-      throw new Error(`Video processing failed: ${error.message}`);
+      throw new Error(`Video processing failed: ${error instanceof Error ? error.message : String(error)}`);
     }
   }
 
@@ -657,7 +657,7 @@ export class GPUAcceleratedProcessor extends EventEmitter {
       
     } catch (error) {
       console.error('❌ Audio processing failed:', error);
-      throw new Error(`Audio processing failed: ${error.message}`);
+      throw new Error(`Audio processing failed: ${error instanceof Error ? error.message : String(error)}`);
     }
   }
 

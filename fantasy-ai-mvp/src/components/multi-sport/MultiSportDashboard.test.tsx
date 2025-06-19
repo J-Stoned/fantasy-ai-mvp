@@ -65,4 +65,4 @@ function MultiSportDashboardContent({ userId }: MultiSportDashboardProps) {
   );
 }
 
-export default MultiSportDashboard;
+// MultiSportDashboard should be imported, not exported from test file

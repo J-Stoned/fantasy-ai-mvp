@@ -829,17 +829,18 @@ export class HighSchoolIntelligenceSystem extends EventEmitter {
         errorRate: 0,
         qualityScore: 85 + Math.random() * 15,
         uptime: 99 + Math.random() * 1,
-        dataProcessed: 0,
-        lastActivity: new Date()
-      },
+        throughputPerHour: 150,
+        resourceEfficiency: 88,
+        specializationScore: 92,
+        lastPerformanceReview: new Date()
+      } as any,
       capabilities: this.getWorkerCapabilities(type),
       resourceAllocation: {
-        cpuCores: 4,
-        memoryGB: 16,
-        storageGB: 500,
-        networkBandwidthMbps: 100,
-        gpuMemoryGB: 0
-      },
+        cpuUtilization: 65,
+        memoryUtilization: 75,
+        storageUtilization: 50,
+        networkUtilization: 40
+      } as any,
       lastOptimization: new Date(),
       
       // AI-enhanced properties
@@ -964,7 +965,7 @@ export class HighSchoolIntelligenceSystem extends EventEmitter {
       
     } catch (error) {
       console.error('❌ Athlete analysis failed:', error);
-      throw new Error(`Athlete analysis failed: ${error.message}`);
+      throw new Error(`Athlete analysis failed: ${error instanceof Error ? error.message : String(error)}`);
     }
   }
 
@@ -1027,7 +1028,7 @@ export class HighSchoolIntelligenceSystem extends EventEmitter {
       'Swimming': 'WINTER',
       'Tennis': 'SPRING'
     };
-    return seasonMap[sport] || 'FALL';
+    return seasonMap[sport as keyof typeof seasonMap] || 'FALL';
   }
 
   private generateSchoolFacilities(): SchoolFacilities {

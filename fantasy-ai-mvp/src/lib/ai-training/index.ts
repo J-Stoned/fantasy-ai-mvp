@@ -278,14 +278,8 @@ export async function healthCheck(): Promise<string> {
   }
 }
 
-// Export all components for advanced usage
-export {
-  UniversalTrainingManager,
-  MCPTrainingOrchestrator, 
-  ExpertContentProcessor,
-  AIModelIntegrator,
-  createDefaultConfig
-};
+// Components are already exported individually from their source files
+// No need to re-export here as they're imported above
 
 // Export the main training system instance getter
 export function getTrainingSystem(): UniversalTrainingManager | null {

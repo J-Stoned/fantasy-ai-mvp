@@ -310,7 +310,7 @@ export class VoiceDataProtection {
 }
 
 // Future-proof security monitoring
-export class SecurityMonitor {
+class SecurityMonitor {
   private static alerts: any[] = [];
   
   // Monitor for AI attacks

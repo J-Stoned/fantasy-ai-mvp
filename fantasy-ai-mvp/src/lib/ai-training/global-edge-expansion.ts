@@ -809,7 +809,7 @@ export class GlobalEdgeExpansion extends EventEmitter {
       'Brazil': 'AWS',
       'India': 'Google Cloud'
     };
-    return providers[country] || 'AWS';
+    return providers[country as keyof typeof providers] || 'AWS';
   }
 
   private selectWorkerType(index: number): any {
@@ -895,7 +895,9 @@ export const globalEdgeExpansion = new GlobalEdgeExpansion({
   contentCaching: true,
   continentalClusters: true,
   crossRegionFailover: true,
-  geographicLoadBalancing: true
+  geographicLoadBalancing: true,
+  compressionEnabled: true,
+  edgePreprocessing: true
 });
 
 console.log('🌍 GLOBAL EDGE EXPANSION LOADED - 50 LOCATIONS WITH 3,500 WORKERS READY!');

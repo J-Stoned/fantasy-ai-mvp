@@ -98,7 +98,7 @@ export async function startUniversalAITraining(): Promise<UniversalTrainingManag
     
   } catch (error) {
     console.error('❌ FAILED TO START UNIVERSAL AI TRAINING:', error);
-    throw new Error(`Training system initialization failed: ${error.message}`);
+    throw new Error(`Training system initialization failed: ${error instanceof Error ? error.message : String(error)}`);
   }
 }
 
@@ -221,7 +221,7 @@ function setupEventLogging(system: UniversalTrainingManager) {
   
   // Error handling
   system.on('error', (error) => {
-    console.error(`❌ Training system error: ${error.message}`);
+    console.error(`❌ Training system error: ${error instanceof Error ? error.message : String(error)}`);
   });
 }
 
@@ -236,7 +236,7 @@ export async function quickStartTraining(): Promise<string> {
     return `✅ Universal AI Training started successfully! Session ID: ${session?.id}`;
     
   } catch (error) {
-    return `❌ Failed to start training: ${error.message}`;
+    return `❌ Failed to start training: ${error instanceof Error ? error.message : String(error)}`;
   }
 }
 

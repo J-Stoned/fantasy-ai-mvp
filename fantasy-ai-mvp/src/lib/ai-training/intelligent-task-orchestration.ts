@@ -84,7 +84,7 @@ export interface ModelPerformance {
 
 export interface IntelligentTask extends HyperscaledTask {
   // AI-enhanced properties
-  complexity: number; // 1-10 AI-calculated complexity
+  complexityScore: number; // 1-10 AI-calculated complexity (renamed to avoid conflict)
   predictedDuration: number; // AI prediction in seconds
   optimalWorkerType: string; // AI-recommended worker type
   optimalLocation: string; // AI-recommended location
@@ -503,17 +503,19 @@ export class IntelligentTaskOrchestrator extends EventEmitter {
           errorRate: Math.random() * 2,
           qualityScore: Math.random() * 20 + 80,
           uptime: Math.random() * 5 + 95,
-          dataProcessed: Math.floor(Math.random() * 10000),
-          lastActivity: new Date()
-        },
+          throughputPerHour: Math.floor(Math.random() * 500) + 100,
+          resourceEfficiency: Math.random() * 20 + 80,
+          specializationScore: Math.random() * 15 + 85,
+          lastPerformanceReview: new Date()
+        } as any,
         capabilities: this.generateWorkerCapabilities(),
         resourceAllocation: {
-          cpuCores: Math.floor(Math.random() * 4) + 2,
-          memoryGB: Math.pow(2, Math.floor(Math.random() * 3) + 3), // 8-32GB
-          storageGB: Math.floor(Math.random() * 500) + 100,
-          networkBandwidthMbps: Math.floor(Math.random() * 1000) + 100,
-          gpuMemoryGB: Math.random() > 0.8 ? Math.floor(Math.random() * 8) + 4 : 0
-        },
+          cpuUtilization: Math.floor(Math.random() * 40) + 60, // 60-100%
+          memoryUtilization: Math.floor(Math.random() * 30) + 70, // 70-100%
+          storageUtilization: Math.floor(Math.random() * 50) + 40, // 40-90%
+          networkUtilization: Math.floor(Math.random() * 60) + 30, // 30-90%
+          gpuUtilization: Math.random() > 0.8 ? Math.floor(Math.random() * 70) + 30 : undefined
+        } as any,
         lastOptimization: new Date(),
         
         // AI-enhanced properties
@@ -624,7 +626,7 @@ export class IntelligentTaskOrchestrator extends EventEmitter {
       
     } catch (error) {
       console.error('❌ Intelligent orchestration failed:', error);
-      throw new Error(`Intelligent orchestration failed: ${error.message}`);
+      throw new Error(`Intelligent orchestration failed: ${error instanceof Error ? error.message : String(error)}`);
     }
   }
 
@@ -648,7 +650,7 @@ export class IntelligentTaskOrchestrator extends EventEmitter {
     // Enhance task
     const enhancedTask: IntelligentTask = {
       ...task,
-      complexity,
+      complexityScore: complexity,
       predictedDuration,
       resourceRequirements,
       successProbability,
@@ -733,7 +735,7 @@ export class IntelligentTaskOrchestrator extends EventEmitter {
     };
     
     const score = Object.keys(factors).reduce((total, factor) => {
-      return total + (factors[factor] * weights[factor]);
+      return total + (factors[factor as keyof typeof factors] * weights[factor as keyof typeof weights]);
     }, 0);
     
     return {

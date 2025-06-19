@@ -1027,7 +1027,7 @@ export class HighSchoolIntelligenceSystem extends EventEmitter {
       'Wrestling': 'WINTER',
       'Swimming': 'WINTER',
       'Tennis': 'SPRING'
-    };
+    } as const;
     return seasonMap[sport as keyof typeof seasonMap] || 'FALL';
   }
 

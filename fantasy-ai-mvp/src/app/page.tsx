@@ -1,5 +1,5 @@
-import { SimpleDashboard } from "@/components/dashboard/SimpleDashboard";
+import { UltimateAdminDashboard } from "@/components/admin/UltimateAdminDashboard";
 
 export default function Home() {
-  return <SimpleDashboard />;
+  return <UltimateAdminDashboard />;
 }

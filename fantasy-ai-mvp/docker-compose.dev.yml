@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: fantasy-ai-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: fantasy_ai_dev
+      POSTGRES_USER: fantasy_user
+      POSTGRES_PASSWORD: fantasy_pass
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U fantasy_user -d fantasy_ai_dev"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Next.js Development Server
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: fantasy-ai-nextjs
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgresql://fantasy_user:fantasy_pass@postgres:5432/fantasy_ai_dev
+      - NEXTAUTH_URL=http://localhost:3000
+      - NEXTAUTH_SECRET=fantasy-ai-development-secret-change-in-production
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - STRIPE_SECRET_KEY=${STRIPE_SECRET_KEY}
+      - STRIPE_PUBLISHABLE_KEY=${STRIPE_PUBLISHABLE_KEY}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - fantasy-network
+
+networks:
+  fantasy-network:
+    driver: bridge
+
+volumes:
+  postgres_data:

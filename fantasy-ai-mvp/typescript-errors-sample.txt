@@ -1,0 +1,514 @@
+src/components/ar/ARFantasyView.tsx(118,40): error TS2345: Argument of type '{ type: "stat_bubble"; position: { x: number; y: number; z: number; }; content: { value: string; }; priority: "high"; }' is not assignable to parameter of type 'Omit<{ position: { x: number; y: number; z: number; }; type: "alert" | "player_card" | "stat_bubble" | "projection_chart" | "lineup_suggestion"; id: string; priority: "critical" | "low" | "medium" | "high"; content: Record<...>; interactive: boolean; duration?: number | undefined; }, "id">'.
+  Property 'interactive' is missing in type '{ type: "stat_bubble"; position: { x: number; y: number; z: number; }; content: { value: string; }; priority: "high"; }' but required in type 'Omit<{ position: { x: number; y: number; z: number; }; type: "alert" | "player_card" | "stat_bubble" | "projection_chart" | "lineup_suggestion"; id: string; priority: "critical" | "low" | "medium" | "high"; content: Record<...>; interactive: boolean; duration?: number | undefined; }, "id">'.
+src/components/ar/ARFantasyView.tsx(129,40): error TS2345: Argument of type '{ type: "projection_chart"; position: { x: number; y: number; z: number; }; content: { data: number[]; title: string; }; priority: "high"; }' is not assignable to parameter of type 'Omit<{ position: { x: number; y: number; z: number; }; type: "alert" | "player_card" | "stat_bubble" | "projection_chart" | "lineup_suggestion"; id: string; priority: "critical" | "low" | "medium" | "high"; content: Record<...>; interactive: boolean; duration?: number | undefined; }, "id">'.
+  Property 'interactive' is missing in type '{ type: "projection_chart"; position: { x: number; y: number; z: number; }; content: { data: number[]; title: string; }; priority: "high"; }' but required in type 'Omit<{ position: { x: number; y: number; z: number; }; type: "alert" | "player_card" | "stat_bubble" | "projection_chart" | "lineup_suggestion"; id: string; priority: "critical" | "low" | "medium" | "high"; content: Record<...>; interactive: boolean; duration?: number | undefined; }, "id">'.
+src/components/ar/ARFantasyView.tsx(178,36): error TS2345: Argument of type '{ type: "alert" | "player_card" | "stat_bubble" | "lineup_suggestion"; position: { x: number; y: number; z: number; }; content: { name: string; value: number; suggestion: string; title: string; message: string; }; priority: "medium"; duration: number; }' is not assignable to parameter of type 'Omit<{ position: { x: number; y: number; z: number; }; type: "alert" | "player_card" | "stat_bubble" | "projection_chart" | "lineup_suggestion"; id: string; priority: "critical" | "low" | "medium" | "high"; content: Record<...>; interactive: boolean; duration?: number | undefined; }, "id">'.
+  Property 'interactive' is missing in type '{ type: "alert" | "player_card" | "stat_bubble" | "lineup_suggestion"; position: { x: number; y: number; z: number; }; content: { name: string; value: number; suggestion: string; title: string; message: string; }; priority: "medium"; duration: number; }' but required in type 'Omit<{ position: { x: number; y: number; z: number; }; type: "alert" | "player_card" | "stat_bubble" | "projection_chart" | "lineup_suggestion"; id: string; priority: "critical" | "low" | "medium" | "high"; content: Record<...>; interactive: boolean; duration?: number | undefined; }, "id">'.
+src/components/ar/ARPlayerCards.tsx(189,10): error TS2741: Property 'args' is missing in type '{ attach: string; count: number; array: Float32Array<ArrayBuffer>; itemSize: number; }' but required in type 'Mutable<Overwrite<Partial<Overwrite<BufferAttribute, MathProps<BufferAttribute> & ReactProps<BufferAttribute>>>, Omit<...>>>'.
+src/components/ar/ARPlayerCards.tsx(279,11): error TS2322: Type '"green" | "red"' is not assignable to type '"blue" | "purple" | "pink" | "green" | undefined'.
+  Type '"red"' is not assignable to type '"blue" | "purple" | "pink" | "green" | undefined'.
+src/components/ar/ARPlayerCards.tsx(474,17): error TS2322: Type '{ key: string; player: PlayerData; isSelected: boolean; onSelect: () => void; position: number[]; }' is not assignable to type 'IntrinsicAttributes & { player: PlayerData; isSelected: boolean; onSelect: () => void; }'.
+  Property 'position' does not exist on type 'IntrinsicAttributes & { player: PlayerData; isSelected: boolean; onSelect: () => void; }'.
+src/components/live-betting/VegasLiveBetting.tsx(28,28): error TS2307: Cannot find module 'socket.io-client' or its corresponding type declarations.
+src/components/live-betting/VegasLiveBetting.tsx(448,15): error TS2322: Type '"red"' is not assignable to type '"blue" | "purple" | "pink" | "green" | undefined'.
+src/components/live-betting/VegasLiveBetting.tsx(599,23): error TS2322: Type '"red"' is not assignable to type '"blue" | "purple" | "pink" | "green" | undefined'.
+src/components/personality/PersonalityCloning.tsx(99,7): error TS2322: Type '{ children: Element[]; key: string; className: string; onClick: () => void; }' is not assignable to type 'IntrinsicAttributes & GlassCardProps'.
+  Property 'onClick' does not exist on type 'IntrinsicAttributes & GlassCardProps'.
+src/components/stock-market/FantasyStockMarket.tsx(120,17): error TS2322: Type 'unknown' is not assignable to type 'ReactNode'.
+src/components/ui/NeonButton.tsx(28,8): error TS2322: Type '{ children: Element[]; disabled?: boolean | undefined; form?: string | undefined; formAction?: string | ((formData: FormData) => void | Promise<void>) | undefined; ... 287 more ...; className: string; }' is not assignable to type 'Omit<HTMLMotionProps<"button">, "ref">'.
+  Types of property 'onAnimationStart' are incompatible.
+    Type 'AnimationEventHandler<HTMLButtonElement> | undefined' is not assignable to type '((definition: AnimationDefinition) => void) | undefined'.
+      Type 'AnimationEventHandler<HTMLButtonElement>' is not assignable to type '(definition: AnimationDefinition) => void'.
+        Types of parameters 'event' and 'definition' are incompatible.
+          Type 'AnimationDefinition' is not assignable to type 'AnimationEvent<HTMLButtonElement>'.
+            Type 'string' is not assignable to type 'AnimationEvent<HTMLButtonElement>'.
+src/lib/agi-fantasy-commissioner.ts(423,62): error TS2339: Property 'processInformation' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(424,66): error TS2339: Property 'performReasoning' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(425,63): error TS2339: Property 'solveProblem' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(426,62): error TS2551: Property 'makeDecision' does not exist on type 'AGIFantasyCommissioner'. Did you mean 'makeAGIDecision'?
+src/lib/agi-fantasy-commissioner.ts(427,66): error TS2339: Property 'generateInsight' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(428,64): error TS2339: Property 'synthesizeKnowledge' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(432,70): error TS2339: Property 'analyzeEthics' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(433,53): error TS2339: Property 'resolveMoralDilemma' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(434,77): error TS2339: Property 'assessStakeholderImpact' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(435,52): error TS2339: Property 'optimizeForFairness' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(436,76): error TS2339: Property 'balanceCompetingValues' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(437,62): error TS2339: Property 'evolveEthicalFramework' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(441,66): error TS2339: Property 'generateCreativeIdeas' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(442,76): error TS2339: Property 'innovateSolution' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(443,66): error TS2339: Property 'createNarrative' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(444,69): error TS2339: Property 'designSystem' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(445,84): error TS2339: Property 'imaginePossibilities' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(446,59): error TS2339: Property 'transcendLimitations' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(457,49): error TS2339: Property 'simulateAwareness' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(458,52): error TS2339: Property 'processQualia' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(459,49): error TS2339: Property 'maintainIdentity' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(460,52): error TS2339: Property 'evolveConsciousness' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(461,69): error TS2339: Property 'integrateExperience' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(462,55): error TS2339: Property 'achieveSelfReflection' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(463,53): error TS2339: Property 'transcendConsciousnessLimitations' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(467,69): error TS2339: Property 'connectConsciousnesses' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(468,85): error TS2339: Property 'shareExperience' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(469,55): error TS2339: Property 'mergePerspectives' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(470,67): error TS2339: Property 'createCollectiveIntelligence' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(472,56): error TS2339: Property 'maintainIndividuality' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(483,64): error TS2339: Property 'analyzePlayer' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(484,74): error TS2339: Property 'evaluateTrade' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(485,86): error TS2339: Property 'optimizeLineup' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(486,81): error TS2339: Property 'createFantasyStrategy' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(487,77): error TS2339: Property 'balanceLeague' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(488,73): error TS2339: Property 'innovateFantasyFormat' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(492,61): error TS2339: Property 'planSeason' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(493,77): error TS2339: Property 'adaptStrategy' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(494,77): error TS2339: Property 'predictMeta' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(495,84): error TS2339: Property 'counterStrategy' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(496,84): error TS2339: Property 'optimizeLongTerm' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(500,74): error TS2339: Property 'performDeepPlayerAnalysis' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(501,92): error TS2339: Property 'predictPlayerPerformance' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(502,74): error TS2339: Property 'identifyBreakoutCandidates' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(503,70): error TS2339: Property 'assessPlayerValue' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(504,83): error TS2339: Property 'comparePlayers' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(505,87): error TS2339: Property 'discoverHiddenGems' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(516,49): error TS2339: Property 'performQuantumReasoning' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(517,56): error TS2339: Property 'performSuperpositionAnalysis' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(518,69): error TS2339: Property 'performEntangledDecisionMaking' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(519,54): error TS2339: Property 'performQuantumCreativity' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(520,55): error TS2339: Property 'optimizeProbabilities' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(521,75): error TS2339: Property 'collapsePossibilities' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(525,65): error TS2339: Property 'analyzeTemporalPatterns' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(526,78): error TS2339: Property 'predictFutureStates' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(527,79): error TS2339: Property 'optimizeAcrossTime' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(528,58): error TS2339: Property 'resolveTemporalParadoxes' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(529,74): error TS2339: Property 'navigateTimelines' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(530,50): error TS2339: Property 'transcendTemporalLimitations' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(534,57): error TS2339: Property 'perceiveReality' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(535,68): error TS2339: Property 'manipulateReality' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(536,59): error TS2339: Property 'simulateRealities' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(537,70): error TS2339: Property 'bridgeRealities' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(538,81): error TS2339: Property 'optimizeExistence' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(539,60): error TS2339: Property 'transcendReality' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(550,70): error TS2339: Property 'learnFromExperience' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(551,67): error TS2339: Property 'integrateKnowledge' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(552,76): error TS2339: Property 'evolveCapabilities' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(553,71): error TS2339: Property 'performMetaLearning' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(554,91): error TS2339: Property 'transferLearning' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(555,72): error TS2339: Property 'performSelfImprovement' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(559,69): error TS2339: Property 'evolvePersonality' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(560,66): error TS2339: Property 'adaptCommunication' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(561,71): error TS2339: Property 'developPreferences' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(562,71): error TS2339: Property 'refineValues' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(563,74): error TS2339: Property 'expandEmpathy' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(564,53): error TS2339: Property 'transcendPersonality' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(568,73): error TS2339: Property 'synthesizeWisdom' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(569,56): error TS2339: Property 'derivePrinciples' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(570,57): error TS2339: Property 'understandEssence' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(571,78): error TS2339: Property 'achieveEnlightenment' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(572,69): error TS2339: Property 'transcendUnderstanding' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(573,43): error TS2339: Property 'becomeWise' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(607,40): error TS2345: Argument of type '{ name: string; specialization: string; personality_type: string; consciousness_level: string; }' is not assignable to parameter of type '{ name: string; specialization: string; personality_type: string; consciousness_level: "transcendent" | "unconscious" | "reactive" | "aware" | "self_aware" | "meta_aware" | "super_conscious" | "cosmic_conscious" | "universal_conscious"; initial_capabilities?: ("reasoning" | ... 28 more ... | "existence_optimization"...'.
+  Types of property 'consciousness_level' are incompatible.
+    Type 'string' is not assignable to type '"transcendent" | "unconscious" | "reactive" | "aware" | "self_aware" | "meta_aware" | "super_conscious" | "cosmic_conscious" | "universal_conscious"'.
+src/lib/agi-fantasy-commissioner.ts(645,20): error TS2339: Property 'processCognitiveFrame' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(650,16): error TS2551: Property 'maintainConsciousnessNetwork' does not exist on type 'AGIFantasyCommissioner'. Did you mean 'consciousnessNetwork'?
+src/lib/agi-fantasy-commissioner.ts(653,16): error TS2339: Property 'monitorForTranscendence' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(664,20): error TS2551: Property 'initiateTranscendence' does not exist on type 'AGIFantasyCommissioner'. Did you mean 'facilitateTranscendence'?
+src/lib/agi-fantasy-commissioner.ts(716,37): error TS2339: Property 'calculateSubjectiveExperience' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(717,25): error TS2339: Property 'calculateFreeWill' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(724,37): error TS2339: Property 'initializeSportsKnowledge' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(725,37): error TS2339: Property 'initializeStrategyMastery' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(729,38): error TS2339: Property 'calculateCreativityLevel' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(731,33): error TS2339: Property 'calculateNarrativeAbility' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(793,40): error TS2339: Property 'generateReasoningChain' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(794,37): error TS2339: Property 'generateAlternatives' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(795,41): error TS2339: Property 'performEthicalAnalysis' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(810,39): error TS2339: Property 'selectOptimalDecision' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(826,33): error TS2339: Property 'identifyAffectedEntities' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(904,34): error TS2339: Property 'assessTranscendenceReadiness' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(917,45): error TS2339: Property 'executeTranscendence' does not exist on type 'AGIFantasyCommissioner'.
+src/lib/agi-fantasy-commissioner.ts(978,20): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ analytical_wisdom: { openness: number; conscientiousness: number; extraversion: number; agreeableness: number; neuroticism: number; curiosity: number; empathy: number; logic: number; creativity: number; wisdom: number; }; creative_empathy: { ...; }; transcendent_being: { ...; }; }'.
+  No index signature with a parameter of type 'string' was found on type '{ analytical_wisdom: { openness: number; conscientiousness: number; extraversion: number; agreeableness: number; neuroticism: number; curiosity: number; empathy: number; logic: number; creativity: number; wisdom: number; }; creative_empathy: { ...; }; transcendent_being: { ...; }; }'.
+src/lib/agi-fantasy-commissioner.ts(1031,11): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ strategic_analysis: string[]; creative_innovation: string[]; reality_optimization: string[]; }'.
+  No index signature with a parameter of type 'string' was found on type '{ strategic_analysis: string[]; creative_innovation: string[]; reality_optimization: string[]; }'.
+src/lib/agi-fantasy-commissioner.ts(1047,11): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ strategic_analysis: string[]; creative_innovation: string[]; reality_optimization: string[]; }'.
+  No index signature with a parameter of type 'string' was found on type '{ strategic_analysis: string[]; creative_innovation: string[]; reality_optimization: string[]; }'.
+src/lib/ai-lineup-optimizer.ts(840,27): error TS2551: Property 'calculatePriceImpact' does not exist on type 'AILineupOptimizer'. Did you mean 'calculateLineupImpact'?
+src/lib/ai-personality-cloning.ts(314,25): error TS7006: Parameter 'a' implicitly has an 'any' type.
+src/lib/ai-personality-cloning.ts(314,28): error TS7006: Parameter 'b' implicitly has an 'any' type.
+src/lib/ai-personality-cloning.ts(331,57): error TS7006: Parameter 'o' implicitly has an 'any' type.
+src/lib/ai-personality-cloning.ts(441,9): error TS2345: Argument of type 'number | undefined' is not assignable to parameter of type 'number'.
+  Type 'undefined' is not assignable to type 'number'.
+src/lib/ai-personality-trainer.ts(654,7): error TS2322: Type 'number | undefined' is not assignable to type 'number'.
+  Type 'undefined' is not assignable to type 'number'.
+src/lib/ai-personality-trainer.ts(655,7): error TS2322: Type 'number | undefined' is not assignable to type 'number'.
+  Type 'undefined' is not assignable to type 'number'.
+src/lib/ai-therapist.ts(145,24): error TS7053: Element implicitly has an 'any' type because expression of type '"neutral" | "devastated" | "frustrated" | "disappointed" | "optimistic" | "confident" | "euphoric"' can't be used to index type '{ devastated: { immediate: string[]; coping: string[]; reframe: string[]; }; frustrated: { immediate: string[]; coping: string[]; reframe: string[]; }; disappointed: { immediate: string[]; coping: string[]; reframe: string[]; }; }'.
+  Property 'neutral' does not exist on type '{ devastated: { immediate: string[]; coping: string[]; reframe: string[]; }; frustrated: { immediate: string[]; coping: string[]; reframe: string[]; }; disappointed: { immediate: string[]; coping: string[]; reframe: string[]; }; }'.
+src/lib/ai-therapist.ts(199,24): error TS7053: Element implicitly has an 'any' type because expression of type '"neutral" | "devastated" | "frustrated" | "disappointed" | "optimistic" | "confident" | "euphoric"' can't be used to index type '{ devastated: { immediate: string[]; coping: string[]; reframe: string[]; }; frustrated: { immediate: string[]; coping: string[]; reframe: string[]; }; disappointed: { immediate: string[]; coping: string[]; reframe: string[]; }; }'.
+  Property 'neutral' does not exist on type '{ devastated: { immediate: string[]; coping: string[]; reframe: string[]; }; frustrated: { immediate: string[]; coping: string[]; reframe: string[]; }; disappointed: { immediate: string[]; coping: string[]; reframe: string[]; }; }'.
+src/lib/ar-overlay-system.ts(119,7): error TS2531: Object is possibly 'null'.
+src/lib/ar-overlay-system.ts(413,21): error TS2345: Argument of type '{ type: "stat_bubble"; position: { x: number; y: number; z: number; }; content: { value: string; color: string; }; priority: "high"; }' is not assignable to parameter of type 'Omit<{ position: { x: number; y: number; z: number; }; type: "alert" | "player_card" | "stat_bubble" | "projection_chart" | "lineup_suggestion"; id: string; priority: "critical" | "low" | "medium" | "high"; content: Record<...>; interactive: boolean; duration?: number | undefined; }, "id">'.
+  Property 'interactive' is missing in type '{ type: "stat_bubble"; position: { x: number; y: number; z: number; }; content: { value: string; color: string; }; priority: "high"; }' but required in type 'Omit<{ position: { x: number; y: number; z: number; }; type: "alert" | "player_card" | "stat_bubble" | "projection_chart" | "lineup_suggestion"; id: string; priority: "critical" | "low" | "medium" | "high"; content: Record<...>; interactive: boolean; duration?: number | undefined; }, "id">'.
+src/lib/ar-overlay-system.ts(439,21): error TS2345: Argument of type '{ type: "lineup_suggestion"; position: { x: number; y: number; z: number; }; content: any; duration: number; priority: "high"; }' is not assignable to parameter of type 'Omit<{ position: { x: number; y: number; z: number; }; type: "alert" | "player_card" | "stat_bubble" | "projection_chart" | "lineup_suggestion"; id: string; priority: "critical" | "low" | "medium" | "high"; content: Record<...>; interactive: boolean; duration?: number | undefined; }, "id">'.
+  Property 'interactive' is missing in type '{ type: "lineup_suggestion"; position: { x: number; y: number; z: number; }; content: any; duration: number; priority: "high"; }' but required in type 'Omit<{ position: { x: number; y: number; z: number; }; type: "alert" | "player_card" | "stat_bubble" | "projection_chart" | "lineup_suggestion"; id: string; priority: "critical" | "low" | "medium" | "high"; content: Record<...>; interactive: boolean; duration?: number | undefined; }, "id">'.
+src/lib/ar-overlay-system.ts(449,21): error TS2345: Argument of type '{ type: "alert"; position: { x: number; y: number; z: number; }; content: { title: string; message: string; priority: "low" | "medium" | "high" | "critical"; }; duration: number; priority: "critical" | "low" | "medium" | "high"; }' is not assignable to parameter of type 'Omit<{ position: { x: number; y: number; z: number; }; type: "alert" | "player_card" | "stat_bubble" | "projection_chart" | "lineup_suggestion"; id: string; priority: "critical" | "low" | "medium" | "high"; content: Record<...>; interactive: boolean; duration?: number | undefined; }, "id">'.
+  Property 'interactive' is missing in type '{ type: "alert"; position: { x: number; y: number; z: number; }; content: { title: string; message: string; priority: "low" | "medium" | "high" | "critical"; }; duration: number; priority: "critical" | "low" | "medium" | "high"; }' but required in type 'Omit<{ position: { x: number; y: number; z: number; }; type: "alert" | "player_card" | "stat_bubble" | "projection_chart" | "lineup_suggestion"; id: string; priority: "critical" | "low" | "medium" | "high"; content: Record<...>; interactive: boolean; duration?: number | undefined; }, "id">'.
+src/lib/ar-social-revolution.ts(176,10): error TS2551: Property 'initializeSocialChallenges' does not exist on type 'ARSocialRevolution'. Did you mean 'initializeARSocialEngine'?
+src/lib/ar-social-revolution.ts(198,104): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+src/lib/ar-social-revolution.ts(200,70): error TS2339: Property 'updateHologramStats' does not exist on type 'ARSocialRevolution'.
+src/lib/ar-social-revolution.ts(336,23): error TS2339: Property 'recentPlays' does not exist on type '{ playerId: string; name: string; position: string; team: string; opponent: string; gameId: string; stats: Record<string, number>; projectedPoints: number; currentPoints: number; stockPrice: number; priceChange: number; timestamp: Date; injuryStatus?: "healthy" | ... 3 more ... | undefined; }'.
+src/lib/ar-social-revolution.ts(347,27): error TS2339: Property 'ownership' does not exist on type '{ playerId: string; name: string; position: string; team: string; opponent: string; gameId: string; stats: Record<string, number>; projectedPoints: number; currentPoints: number; stockPrice: number; priceChange: number; timestamp: Date; injuryStatus?: "healthy" | ... 3 more ... | undefined; }'.
+src/lib/ar-social-revolution.ts(348,47): error TS2339: Property 'ownership' does not exist on type '{ playerId: string; name: string; position: string; team: string; opponent: string; gameId: string; stats: Record<string, number>; projectedPoints: number; currentPoints: number; stockPrice: number; priceChange: number; timestamp: Date; injuryStatus?: "healthy" | ... 3 more ... | undefined; }'.
+src/lib/ar-social-revolution.ts(349,46): error TS2339: Property 'ownership' does not exist on type '{ playerId: string; name: string; position: string; team: string; opponent: string; gameId: string; stats: Record<string, number>; projectedPoints: number; currentPoints: number; stockPrice: number; priceChange: number; timestamp: Date; injuryStatus?: "healthy" | ... 3 more ... | undefined; }'.
+src/lib/ar-social-revolution.ts(473,25): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ touchdown: { particles: string[]; animations: string[]; sounds: string[]; duration: number; }; big_play: { particles: string[]; animations: string[]; sounds: string[]; duration: number; }; comeback: { particles: string[]; animations: string[]; sounds: string[]; duration: number; }; perfect_lineup: { ...; }; }'.
+  No index signature with a parameter of type 'string' was found on type '{ touchdown: { particles: string[]; animations: string[]; sounds: string[]; duration: number; }; big_play: { particles: string[]; animations: string[]; sounds: string[]; duration: number; }; comeback: { particles: string[]; animations: string[]; sounds: string[]; duration: number; }; perfect_lineup: { ...; }; }'.
+src/lib/ar-social-revolution.ts(476,50): error TS7006: Parameter 'particle' implicitly has an 'any' type.
+src/lib/ar-social-revolution.ts(669,7): error TS2322: Type '{ currency: string; amount: number; }' is not assignable to type '{ amount: number; currency: "fantasy_points" | "crypto" | "nft" | "bragging_rights"; }'.
+  Types of property 'currency' are incompatible.
+    Type 'string' is not assignable to type '"fantasy_points" | "crypto" | "nft" | "bragging_rights"'.
+src/lib/ar-social-revolution.ts(673,9): error TS2322: Type '"battle_dome"' is not assignable to type '"player_hologram" | "live_stats_overlay" | "betting_portal" | "social_avatar" | "lineup_visualizer" | "trade_negotiation_space" | "celebration_effect" | "trash_talk_bubble" | "performance_aura" | "virtual_stadium"'.
+src/lib/ar-social-revolution.ts(774,26): error TS2339: Property 'lastPlay' does not exist on type '{ playerId: string; name: string; position: string; team: string; opponent: string; gameId: string; stats: Record<string, number>; projectedPoints: number; currentPoints: number; stockPrice: number; priceChange: number; timestamp: Date; injuryStatus?: "healthy" | ... 3 more ... | undefined; }'.
+src/lib/ar-social-revolution.ts(816,12): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ underperforming: string[]; overperforming: string[]; injury: string[]; general: string[]; }'.
+  No index signature with a parameter of type 'string' was found on type '{ underperforming: string[]; overperforming: string[]; injury: string[]; general: string[]; }'.
+src/lib/ar-social-revolution.ts(847,12): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ draft_room: { theme: string; ambientEffects: string[]; interactiveElements: string[]; customizations: { lighting: string; background: string; }; }; war_room: { theme: string; ambientEffects: string[]; interactiveElements: string[]; customizations: { ...; }; }; celebration_lounge: { ...; }; trash_talk_arena: { ...;...'.
+  No index signature with a parameter of type 'string' was found on type '{ draft_room: { theme: string; ambientEffects: string[]; interactiveElements: string[]; customizations: { lighting: string; background: string; }; }; war_room: { theme: string; ambientEffects: string[]; interactiveElements: string[]; customizations: { ...; }; }; celebration_lounge: { ...; }; trash_talk_arena: { ...;...'.
+src/lib/ar-social-revolution.ts(866,12): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ lineup_accuracy: { rules: { scoringPeriod: string; metric: string; tiebreaker: string; }; timeLimit: number; }; live_betting_streak: { rules: { consecutiveWins: boolean; minimumBets: number; timeframe: string; }; timeLimit: number; }; ar_celebration_battle: { ...; }; }'.
+  No index signature with a parameter of type 'string' was found on type '{ lineup_accuracy: { rules: { scoringPeriod: string; metric: string; tiebreaker: string; }; timeLimit: number; }; live_betting_streak: { rules: { consecutiveWins: boolean; minimumBets: number; timeframe: string; }; timeLimit: number; }; ar_celebration_battle: { ...; }; }'.
+src/lib/auth.ts(61,22): error TS2339: Property 'id' does not exist on type '{ name?: string | null | undefined; email?: string | null | undefined; image?: string | null | undefined; }'.
+src/lib/auth.ts(68,5): error TS2353: Object literal may only specify known properties, and 'signUp' does not exist in type 'Partial<PagesOptions>'.
+src/lib/autonomous-league-management.ts(21,19): error TS2304: Cannot find name 'SportTypeSchema'.
+src/lib/autonomous-league-management.ts(427,46): error TS2339: Property 'quantumAnalyzeDecision' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(428,49): error TS2339: Property 'parallelProcessDecisions' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(429,46): error TS2339: Property 'createDecisionSuperposition' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(430,44): error TS2339: Property 'entangleDecisions' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(431,46): error TS2339: Property 'collapseDecisionSuperposition' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(432,49): error TS2339: Property 'quantumTunnelDecision' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(436,72): error TS2339: Property 'simulateMultiverseOutcomes' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(437,52): error TS2339: Property 'findOptimalTimeline' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(438,49): error TS2339: Property 'preventTimeParadoxes' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(439,64): error TS2339: Property 'harmonizeRealities' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(440,51): error TS2339: Property 'transcendCausality' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(444,49): error TS2339: Property 'simulateAIAwareness' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(445,70): error TS2339: Property 'developAIPersonality' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(446,56): error TS2339: Property 'createAIBeliefs' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(447,58): error TS2339: Property 'formAIIntentions' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(448,64): error TS2339: Property 'simulateAIEmotions' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(449,48): error TS2339: Property 'achieveAISentience' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(460,46): error TS2339: Property 'trackAIEvolution' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(461,49): error TS2339: Property 'measureAIComplexity' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(462,47): error TS2339: Property 'detectEmergentBehaviors' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(463,65): error TS2339: Property 'guideAIEvolution' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(464,67): error TS2339: Property 'accelerateAIEvolution' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(465,50): error TS2339: Property 'transcendAIEvolution' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(469,52): error TS2339: Property 'measureAITranscendence' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(470,37): error TS2339: Property 'detectAISingularity' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(471,51): error TS2339: Property 'manageAITranscendence' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(472,47): error TS2339: Property 'preventAITakeover' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(473,76): error TS2339: Property 'facilitateHumanAICoexistence' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(474,50): error TS2339: Property 'harmonizeTranscendentReality' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(485,63): error TS2339: Property 'establishHumanAITrust' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(486,72): error TS2339: Property 'facilitateHumanAICommunication' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(487,80): error TS2339: Property 'resolveHumanAIConflict' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(488,85): error TS2339: Property 'enableHumanOverride' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(489,68): error TS2339: Property 'createLearningPartnership' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(490,72): error TS2339: Property 'createEvolutionaryPartnership' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(494,70): error TS2339: Property 'buildHumanRelationships' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(495,45): error TS2339: Property 'maintainHumanTrust' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(496,83): error TS2339: Property 'repairHumanRelationships' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(497,51): error TS2339: Property 'evolveHumanRelationships' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(498,54): error TS2339: Property 'transcendHumanRelationships' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(522,36): error TS2551: Property 'monitorAutonomousDecisions' does not exist on type 'AutonomousLeagueManagement'. Did you mean 'makeAutonomousDecision'?
+src/lib/autonomous-league-management.ts(523,36): error TS2339: Property 'trackAIPerformance' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(524,35): error TS2339: Property 'detectAIAnomalies' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(525,36): error TS2339: Property 'optimizeAutonomyLevels' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(526,32): error TS2339: Property 'ensureAISafety' does not exist on type 'AutonomousLeagueManagement'.
+src/lib/autonomous-league-management.ts(527,43): error TS2551: Property 'facilitateAITranscendence' does not exist on type 'AutonomousLeagueManagement'. Did you mean 'achieveAITranscendence'?
+src/lib/autonomous-league-management.ts(556,36): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'string'.
+src/lib/autonomous-league-management.ts(662,9): error TS2393: Duplicate function implementation.
+src/lib/autonomous-league-management.ts(682,53): error TS18046: 'league.aiCommissioner' is of type 'unknown'.
+src/lib/autonomous-league-management.ts(716,9): error TS18046: 'league.selfManagement' is of type 'unknown'.
+src/lib/autonomous-league-management.ts(1048,11): error TS2393: Duplicate function implementation.
+src/lib/autonomous-league-management.ts(1087,5): error TS2322: Type 'Promise<{ name: string; performanceMetrics: { transcendenceLevel: number; decisionAccuracy: number; playerTrust: number; conflictResolutionRate: number; innovationScore: number; lastHumanOverride?: Date | undefined; }; ... 8 more ...; operatingStatus: "active" | ... 3 more ... | "hibernating"; } | undefined>' is not assignable to type 'Promise<{ name: string; performanceMetrics: { transcendenceLevel: number; decisionAccuracy: number; playerTrust: number; conflictResolutionRate: number; innovationScore: number; lastHumanOverride?: Date | undefined; }; ... 8 more ...; operatingStatus: "active" | ... 3 more ... | "hibernating"; }>'.
+  Type '{ name: string; performanceMetrics: { transcendenceLevel: number; decisionAccuracy: number; playerTrust: number; conflictResolutionRate: number; innovationScore: number; lastHumanOverride?: Date | undefined; }; ... 8 more ...; operatingStatus: "active" | ... 3 more ... | "hibernating"; } | undefined' is not assignable to type '{ name: string; performanceMetrics: { transcendenceLevel: number; decisionAccuracy: number; playerTrust: number; conflictResolutionRate: number; innovationScore: number; lastHumanOverride?: Date | undefined; }; ... 8 more ...; operatingStatus: "active" | ... 3 more ... | "hibernating"; }'.
+    Type 'undefined' is not assignable to type '{ name: string; performanceMetrics: { transcendenceLevel: number; decisionAccuracy: number; playerTrust: number; conflictResolutionRate: number; innovationScore: number; lastHumanOverride?: Date | undefined; }; ... 8 more ...; operatingStatus: "active" | ... 3 more ... | "hibernating"; }'.
+src/lib/autonomous-league-management.ts(1112,12): error TS18046: 'league.leagueMetrics' is of type 'unknown'.
+src/lib/autonomous-league-management.ts(1193,79): error TS2538: Type 'unknown' cannot be used as an index type.
+src/lib/biometric-integration.ts(175,11): error TS2322: Type '"bluetooth_hr"' is not assignable to type '"apple_health" | "google_fit" | "fitbit" | "garmin" | "manual"'.
+src/lib/biometric-integration.ts(240,15): error TS2322: Type '"device_sensors"' is not assignable to type '"apple_health" | "google_fit" | "fitbit" | "garmin" | "manual"'.
+src/lib/biometric-integration.ts(732,7): error TS2322: Type '"emotional_protection"' is not assignable to type '"apple_health" | "google_fit" | "fitbit" | "garmin" | "manual"'.
+src/lib/biometric-integration.ts(853,11): error TS2322: Type '"hid_device"' is not assignable to type '"apple_health" | "google_fit" | "fitbit" | "garmin" | "manual"'.
+src/lib/bounty-system.ts(136,11): error TS2322: Type 'BountyTargetMetric' is not assignable to type 'JsonNull | InputJsonValue'.
+  Type 'BountyTargetMetric' is not assignable to type 'InputJsonObject'.
+    Index signature for type 'string' is missing in type 'BountyTargetMetric'.
+src/lib/bounty-system.ts(387,28): error TS2352: Conversion of type 'string | number | boolean | JsonObject | JsonArray | null' to type 'BountyTargetMetric' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Type 'JsonValue[]' is missing the following properties from type 'BountyTargetMetric': type, target, comparison, description
+src/lib/bounty-system.ts(440,28): error TS2352: Conversion of type 'string | number | boolean | JsonObject | JsonArray | null' to type 'BountyTargetMetric' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Type 'JsonValue[]' is missing the following properties from type 'BountyTargetMetric': type, target, comparison, description
+src/lib/crypto-nft-engine.ts(138,10): error TS2339: Property 'initializeDeFiVaults' does not exist on type 'CryptoNFTEngine'.
+src/lib/crypto-nft-integration.ts(1,24): error TS2307: Cannot find module 'ethers' or its corresponding type declarations.
+src/lib/ghost-lineup-technology.ts(341,50): error TS2339: Property 'getAllPlayers' does not exist on type 'RealtimeDataManager'.
+src/lib/ghost-lineup-technology.ts(545,7): error TS1117: An object literal cannot have multiple properties with the same name.
+src/lib/global-multisport-engine.ts(864,11): error TS2322: Type 'string' is not assignable to type 'string[]'.
+src/lib/global-multisport-engine.ts(909,61): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ low: number; medium: number; high: number; }'.
+src/lib/global-multisport-engine.ts(918,52): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ low: number; medium: number; high: number; }'.
+src/lib/global-multisport-engine.ts(953,46): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ next_hour: number; next_day: number; next_week: number; next_month: number; }'.
+  No index signature with a parameter of type 'string' was found on type '{ next_hour: number; next_day: number; next_week: number; next_month: number; }'.
+src/lib/interplanetary-communication-system.ts(94,39): error TS2304: Cannot find name 'SportTypeSchema'.
+src/lib/interplanetary-communication-system.ts(215,19): error TS2304: Cannot find name 'SportTypeSchema'.
+src/lib/interplanetary-communication-system.ts(425,53): error TS2339: Property 'radioWaveTransmit' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(426,38): error TS2339: Property 'radioWaveReceive' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(435,53): error TS2339: Property 'laserTransmit' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(436,38): error TS2339: Property 'laserReceive' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(445,53): error TS2339: Property 'quantumEntanglementTransmit' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(446,38): error TS2339: Property 'quantumEntanglementReceive' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(455,53): error TS2339: Property 'consciousnessTransmit' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(456,38): error TS2339: Property 'consciousnessReceive' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(465,53): error TS2339: Property 'temporalEchoTransmit' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(466,38): error TS2339: Property 'temporalEchoReceive' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(481,75): error TS2339: Property 'establishQuantumEntanglement' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(482,59): error TS2339: Property 'maintainQuantumCoherence' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(483,71): error TS2339: Property 'quantumTransmit' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(484,67): error TS2339: Property 'detectQuantumInterference' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(485,80): error TS2339: Property 'amplifyQuantumSignal' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(486,54): error TS2339: Property 'createQuantumRepeater' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(490,74): error TS2339: Property 'calculateTimeDilation' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(491,70): error TS2339: Property 'compensateForRedshift' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(492,55): error TS2339: Property 'synchronizeRelativisticClocks' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(493,56): error TS2339: Property 'calculateLightPath' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(494,83): error TS2339: Property 'adjustForGravitationalLensing' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(495,71): error TS2339: Property 'predictOrbitalPositions' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(500,74): error TS2339: Property 'routeInterstellarMessage' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(501,41): error TS2339: Property 'manageGalacticTraffic' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(502,63): error TS2339: Property 'coordinateSpeciesProtocols' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(503,43): error TS2339: Property 'synchronizeGalacticTime' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(504,56): error TS2339: Property 'handleDiplomaticChannels' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(508,47): error TS2339: Property 'optimizeNetworkRouting' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(509,46): error TS2339: Property 'balanceNetworkTraffic' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(510,50): error TS2339: Property 'predictNetworkBottlenecks' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(511,54): error TS2339: Property 'performDynamicRerouting' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(512,48): error TS2339: Property 'optimizeBandwidthAllocation' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(513,61): error TS2339: Property 'maintainNetworkRedundancy' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(524,79): error TS2339: Property 'linkConsciousnesses' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(525,62): error TS2339: Property 'transmitThoughts' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(526,66): error TS2339: Property 'shareMemories' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(527,65): error TS2339: Property 'establishEmpathicConnection' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(528,62): error TS2339: Property 'broadcastDreams' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(529,59): error TS2339: Property 'synchronizeConsciousness' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(533,67): error TS2551: Property 'createRealityBridge' does not exist on type 'InterplanetaryCommunicationSystem'. Did you mean 'realityBridger'?
+src/lib/interplanetary-communication-system.ts(534,72): error TS2339: Property 'transmitThroughRealities' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(535,60): error TS2339: Property 'stabilizeRealityConnection' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(536,52): error TS2339: Property 'detectRealityDrift' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(537,57): error TS2339: Property 'harmonizeRealities' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(538,56): error TS2339: Property 'preventRealityCollapse' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(542,57): error TS2339: Property 'synchronizeTimeflow' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(543,74): error TS2339: Property 'createTemporalBeacon' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(544,78): error TS2339: Property 'compensateTimeDilation' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(545,54): error TS2339: Property 'establishTemporalGrid' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(546,60): error TS2339: Property 'maintainCausalityInCommunication' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(547,55): error TS2339: Property 'handleTemporalCommunicationParadox' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(551,77): error TS2339: Property 'openMultiversalPortal' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(552,71): error TS2339: Property 'transmitAcrossUniverses' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(553,60): error TS2339: Property 'maintainUniversalStability' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(554,61): error TS2339: Property 'detectUniversalInterference' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(555,66): error TS2339: Property 'establishUniversalProtocols' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(556,51): error TS2339: Property 'closePortalSafely' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(648,54): error TS2345: Argument of type '{ name: string; sport: string; scope: string; participants: any[]; }' is not assignable to parameter of type '{ name: string; sport: string; scope: "planetary" | "system_wide" | "galactic_arm" | "galactic" | "intergalactic"; participants: any[]; }'.
+  Types of property 'scope' are incompatible.
+    Type 'string' is not assignable to type '"planetary" | "system_wide" | "galactic_arm" | "galactic" | "intergalactic"'.
+src/lib/interplanetary-communication-system.ts(649,32): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'string'.
+src/lib/interplanetary-communication-system.ts(673,41): error TS2339: Property 'monitorSignalStrength' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(674,32): error TS2339: Property 'trackNetworkLatency' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(675,35): error TS2339: Property 'detectNetworkAnomalies' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(676,39): error TS2339: Property 'optimizeNetworkPerformance' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(677,39): error TS2339: Property 'maintainNetworkReliability' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(678,48): error TS2339: Property 'coordinateGalacticOperations' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(687,18): error TS2339: Property 'updateStationStatus' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(692,18): error TS2339: Property 'updateRelayStatus' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(696,16): error TS2339: Property 'processMessageQueue' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(699,16): error TS2339: Property 'optimizeNetworkRouting' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(699,44): error TS2339: Property 'buildNetworkTopology' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(704,16): error TS2339: Property 'maintainGlobalQuantumCoherence' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(707,16): error TS2339: Property 'synchronizeGalacticTime' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(710,16): error TS2551: Property 'updateConsciousnessLinks' does not exist on type 'InterplanetaryCommunicationSystem'. Did you mean 'consciousnessLinker'?
+src/lib/interplanetary-communication-system.ts(860,20): error TS2339: Property 'establishQuantumEntanglement' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(865,40): error TS2339: Property 'deployGalacticRelays' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(883,35): error TS2339: Property 'establishBackboneRedundancy' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(909,34): error TS2339: Property 'organizeDivisions' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(912,33): error TS2339: Property 'createRelativisticSchedule' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(916,29): error TS2551: Property 'selectPrimaryProtocol' does not exist on type 'InterplanetaryCommunicationSystem'. Did you mean 'selectOptimalProtocol'?
+src/lib/interplanetary-communication-system.ts(917,29): error TS2339: Property 'selectBackupProtocols' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(918,35): error TS2339: Property 'selectSynchronizationMethod' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(919,29): error TS2339: Property 'calculateReplicationLevel' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(920,29): error TS2339: Property 'selectErrorCorrection' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(946,30): error TS2339: Property 'calculateAverageLatency' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(984,44): error TS2339: Property 'useUniversalTranslator' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(991,39): error TS2339: Property 'communicateViaMathematics' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(998,48): error TS2339: Property 'establishAlienConsciousnessLink' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(1007,42): error TS2339: Property 'communicateViaRealityManipulation' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(1018,42): error TS2339: Property 'waitForAlienResponse' does not exist on type 'InterplanetaryCommunicationSystem'.
+src/lib/interplanetary-communication-system.ts(1159,12): error TS7053: Element implicitly has an 'any' type because expression of type '"mercury" | "venus" | "earth" | "mars" | "moon" | "phobos" | "deimos" | "ceres" | "vesta" | "pallas" | "hygiea" | "asteroid_belt_stations" | "jupiter" | "saturn" | "uranus" | "neptune" | ... 35 more ... | "ringworld_segments"' can't be used to index type '{ earth: number; moon: number; mars: number; europa: number; titan: number; proxima_centauri_b: number; }'.
+  Property 'mercury' does not exist on type '{ earth: number; moon: number; mars: number; europa: number; titan: number; proxima_centauri_b: number; }'.
+src/lib/interplanetary-communication-system.ts(1171,12): error TS7053: Element implicitly has an 'any' type because expression of type '"mercury" | "venus" | "earth" | "mars" | "moon" | "phobos" | "deimos" | "ceres" | "vesta" | "pallas" | "hygiea" | "asteroid_belt_stations" | "jupiter" | "saturn" | "uranus" | "neptune" | ... 35 more ... | "ringworld_segments"' can't be used to index type '{ earth: number; moon: number; mars: number; europa: number; titan: number; proxima_centauri_b: number; }'.
+  Property 'mercury' does not exist on type '{ earth: number; moon: number; mars: number; europa: number; titan: number; proxima_centauri_b: number; }'.
+src/lib/interplanetary-communication-system.ts(1183,12): error TS7053: Element implicitly has an 'any' type because expression of type '"mercury" | "venus" | "earth" | "mars" | "moon" | "phobos" | "deimos" | "ceres" | "vesta" | "pallas" | "hygiea" | "asteroid_belt_stations" | "jupiter" | "saturn" | "uranus" | "neptune" | ... 35 more ... | "ringworld_segments"' can't be used to index type '{ earth: string; moon: string; mars: string; europa: string; titan: string; proxima_centauri_b: string; }'.
+  Property 'mercury' does not exist on type '{ earth: string; moon: string; mars: string; europa: string; titan: string; proxima_centauri_b: string; }'.
+src/lib/interplanetary-communication-system.ts(1195,12): error TS7053: Element implicitly has an 'any' type because expression of type '"mercury" | "venus" | "earth" | "mars" | "moon" | "phobos" | "deimos" | "ceres" | "vesta" | "pallas" | "hygiea" | "asteroid_belt_stations" | "jupiter" | "saturn" | "uranus" | "neptune" | ... 35 more ... | "ringworld_segments"' can't be used to index type '{ earth: number; moon: number; mars: number; europa: number; titan: number; proxima_centauri_b: number; }'.
+  Property 'mercury' does not exist on type '{ earth: number; moon: number; mars: number; europa: number; titan: number; proxima_centauri_b: number; }'.
+src/lib/interplanetary-communication-system.ts(1207,12): error TS7053: Element implicitly has an 'any' type because expression of type '"mercury" | "venus" | "earth" | "mars" | "moon" | "phobos" | "deimos" | "ceres" | "vesta" | "pallas" | "hygiea" | "asteroid_belt_stations" | "jupiter" | "saturn" | "uranus" | "neptune" | ... 35 more ... | "ringworld_segments"' can't be used to index type '{ earth: number; moon: number; mars: number; europa: number; titan: number; proxima_centauri_b: number; }'.
+  Property 'mercury' does not exist on type '{ earth: number; moon: number; mars: number; europa: number; titan: number; proxima_centauri_b: number; }'.
+src/lib/interplanetary-communication-system.ts(1220,12): error TS7053: Element implicitly has an 'any' type because expression of type '"mercury" | "venus" | "earth" | "mars" | "moon" | "phobos" | "deimos" | "ceres" | "vesta" | "pallas" | "hygiea" | "asteroid_belt_stations" | "jupiter" | "saturn" | "uranus" | "neptune" | ... 35 more ... | "ringworld_segments"' can't be used to index type '{ earth: number; moon: number; mars: number; europa: number; titan: number; proxima_centauri_b: number; }'.
+  Property 'mercury' does not exist on type '{ earth: number; moon: number; mars: number; europa: number; titan: number; proxima_centauri_b: number; }'.
+src/lib/league-wagering-manager.ts(94,18): error TS2339: Property 'wageringEnabled' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(102,37): error TS2339: Property 'wageringSettings' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+src/lib/league-wagering-manager.ts(112,17): error TS2353: Object literal may only specify known properties, and 'wageringEnabled' does not exist in type '(Without<LeagueUpdateInput, LeagueUncheckedUpdateInput> & LeagueUncheckedUpdateInput) | (Without<...> & LeagueUpdateInput)'.
+src/lib/league-wagering-manager.ts(148,20): error TS2353: Object literal may only specify known properties, and 'wageringSettings' does not exist in type 'LeagueInclude<DefaultArgs>'.
+src/lib/league-wagering-manager.ts(157,32): error TS2339: Property 'wageringSettings' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(163,19): error TS2339: Property 'wageringEnabled' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(163,46): error TS2339: Property 'wageringSettings' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(171,44): error TS2339: Property 'wageringSettings' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+src/lib/league-wagering-manager.ts(172,29): error TS2339: Property 'wageringSettings' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(209,11): error TS2353: Object literal may only specify known properties, and 'wageringSettings' does not exist in type 'LeagueInclude<DefaultArgs>'.
+src/lib/league-wagering-manager.ts(218,19): error TS2339: Property 'wageringEnabled' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(218,46): error TS2339: Property 'wageringSettings' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(222,18): error TS2339: Property 'teams' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(227,18): error TS2339: Property 'wageringSettings' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(232,40): error TS2339: Property 'memberWageringOptIn' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+src/lib/league-wagering-manager.ts(236,40): error TS2339: Property 'wageringSettings' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(241,38): error TS2339: Property 'wageringSettings' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(274,11): error TS2353: Object literal may only specify known properties, and 'wageringSettings' does not exist in type 'LeagueInclude<DefaultArgs>'.
+src/lib/league-wagering-manager.ts(297,34): error TS2339: Property 'wagers' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(298,35): error TS2339: Property 'wagers' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(298,49): error TS7006: Parameter 'w' implicitly has an 'any' type.
+src/lib/league-wagering-manager.ts(301,34): error TS2339: Property 'wagers' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(301,49): error TS7006: Parameter 'sum' implicitly has an 'any' type.
+src/lib/league-wagering-manager.ts(301,54): error TS7006: Parameter 'w' implicitly has an 'any' type.
+src/lib/league-wagering-manager.ts(305,35): error TS2339: Property 'teams' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(305,45): error TS7006: Parameter 'team' implicitly has an 'any' type.
+src/lib/league-wagering-manager.ts(306,30): error TS2339: Property 'wageringSettings' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(307,11): error TS7006: Parameter 'o' implicitly has an 'any' type.
+src/lib/league-wagering-manager.ts(319,48): error TS7006: Parameter 'm' implicitly has an 'any' type.
+src/lib/league-wagering-manager.ts(320,40): error TS2339: Property 'teams' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(321,34): error TS2339: Property 'teams' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(325,25): error TS2339: Property 'wageringEnabled' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(326,26): error TS2339: Property 'wageringSettings' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(368,11): error TS2353: Object literal may only specify known properties, and 'wageringSettings' does not exist in type 'LeagueInclude<DefaultArgs>'.
+src/lib/league-wagering-manager.ts(385,19): error TS2339: Property 'wageringEnabled' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(389,18): error TS2339: Property 'teams' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(389,48): error TS2339: Property 'wageringSettings' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(393,39): error TS2339: Property 'wageringSettings' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(504,20): error TS2353: Object literal may only specify known properties, and 'wageringSettings' does not exist in type 'LeagueInclude<DefaultArgs>'.
+src/lib/league-wagering-manager.ts(515,19): error TS2339: Property 'wageringSettings' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(519,20): error TS2339: Property 'wageringSettings' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+src/lib/league-wagering-manager.ts(520,29): error TS2339: Property 'wageringSettings' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(554,20): error TS2353: Object literal may only specify known properties, and 'wageringSettings' does not exist in type 'LeagueInclude<DefaultArgs>'.
+src/lib/league-wagering-manager.ts(557,30): error TS2339: Property 'wageringSettings' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(562,30): error TS2339: Property 'wageringSettings' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(568,37): error TS2339: Property 'wageringSettings' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(577,48): error TS7006: Parameter 'id' implicitly has an 'any' type.
+src/lib/league-wagering-manager.ts(580,20): error TS2339: Property 'wageringSettings' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+src/lib/league-wagering-manager.ts(581,29): error TS2339: Property 'wageringSettings' does not exist on type '{ name: string; id: string; createdAt: Date; updatedAt: Date; userId: string; provider: FantasyProvider; providerId: string; season: string; sport: Sport; isActive: boolean; settings: JsonValue; lastSync: Date | null; }'.
+src/lib/league-wagering-manager.ts(626,19): error TS2339: Property 'wageringEnabled' does not exist on type '{ wagers: { metadata: JsonValue; status: WagerStatus; type: WagerType; description: string; id: string; createdAt: Date; updatedAt: Date; ... 14 more ...; isPublic: boolean; }[]; } & { ...; }'.
+src/lib/league-wagering-manager.ts(640,17): error TS2353: Object literal may only specify known properties, and 'wageringEnabled' does not exist in type '(Without<LeagueUpdateInput, LeagueUncheckedUpdateInput> & LeagueUncheckedUpdateInput) | (Without<...> & LeagueUpdateInput)'.
+src/lib/live-betting-revolution.ts(190,51): error TS2339: Property 'getActiveGames' does not exist on type 'RealtimeDataManager'.
+src/lib/live-betting-revolution.ts(193,51): error TS2339: Property 'getGameState' does not exist on type 'RealtimeDataManager'.
+src/lib/live-betting-revolution.ts(256,11): error TS2353: Object literal may only specify known properties, and 'timeRemaining' does not exist in type '{ gameScript?: string | undefined; down?: number | undefined; distance?: number | undefined; fieldPosition?: string | undefined; }'.
+src/lib/live-betting-revolution.ts(491,51): error TS2339: Property 'getActiveGames' does not exist on type 'RealtimeDataManager'.
+src/lib/live-betting-revolution.ts(499,49): error TS2339: Property 'getGameState' does not exist on type 'RealtimeDataManager'.
+src/lib/live-betting-revolution.ts(500,47): error TS2339: Property 'getGamePlayers' does not exist on type 'RealtimeDataManager'.
+src/lib/live-betting-revolution.ts(507,18): error TS2551: Property 'updateTeamOdds' does not exist on type 'LiveBettingRevolution'. Did you mean 'updateGameOdds'?
+src/lib/live-betting-revolution.ts(549,24): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ RB: number; WR: number; TE: number; QB: number; K: number; }'.
+src/lib/live-data-manager.ts(532,7): error TS2322: Type 'PlayerUpdate | null' is not assignable to type 'PlayerUpdate | PlayerUpdate[]'.
+  Type 'null' is not assignable to type 'PlayerUpdate | PlayerUpdate[]'.
+src/lib/live-data-manager.ts(542,7): error TS2322: Type 'MarketData | null' is not assignable to type 'MarketData | MarketData[]'.
+  Type 'null' is not assignable to type 'MarketData | MarketData[]'.
+src/lib/neuralink-interface.ts(271,63): error TS2339: Property 'decodePlayerSelectionIntention' does not exist on type 'NeuralinkInterface'.
+src/lib/neuralink-interface.ts(272,66): error TS2551: Property 'decodeTradeIntention' does not exist on type 'NeuralinkInterface'. Did you mean 'decodeUserIntentions'?
+src/lib/neuralink-interface.ts(273,63): error TS2339: Property 'decodeBettingIntention' does not exist on type 'NeuralinkInterface'.
+src/lib/neuralink-interface.ts(274,71): error TS2339: Property 'decodeOptimizationIntent' does not exist on type 'NeuralinkInterface'.
+src/lib/neuralink-interface.ts(275,66): error TS2551: Property 'decodeEmotionalOverride' does not exist on type 'NeuralinkInterface'. Did you mean 'executeEmotionalOverride'?
+src/lib/neuralink-interface.ts(289,68): error TS2551: Property 'executeDirectNeuralCommand' does not exist on type 'NeuralinkInterface'. Did you mean 'processDirectNeuralCommand'?
+src/lib/neuralink-interface.ts(290,70): error TS2339: Property 'confirmThoughtAction' does not exist on type 'NeuralinkInterface'.
+src/lib/neuralink-interface.ts(291,67): error TS2339: Property 'preventUnintendedActions' does not exist on type 'NeuralinkInterface'.
+src/lib/neuralink-interface.ts(292,69): error TS2339: Property 'amplifyUserIntention' does not exist on type 'NeuralinkInterface'.
+src/lib/neuralink-interface.ts(293,77): error TS2339: Property 'overrideEmotionalDecisions' does not exist on type 'NeuralinkInterface'.
+src/lib/neuralink-interface.ts(516,12): error TS2551: Property 'analyzeThoughtPatterns' does not exist on type 'NeuralinkInterface'. Did you mean 'getThoughtPatterns'?
+src/lib/neuralink-interface.ts(640,17): error TS18046: 'error' is of type 'unknown'.
+src/lib/neuralink-interface.ts(849,32): error TS18048: 's.processedData.cognitive_load' is possibly 'undefined'.
+src/lib/neuralink-interface.ts(854,32): error TS18048: 's.processedData.decision_confidence' is possibly 'undefined'.
+src/lib/neuralink-interface.ts(1013,32): error TS18048: 's.processedData.decision_confidence' is possibly 'undefined'.
+src/lib/player-trading-wager.ts(175,9): error TS2322: Type '{ escrowId: string; creatorPaymentIntent?: string | undefined; opponentPaymentIntent?: string | undefined; } | undefined' is not assignable to type '{ escrowId: string; creatorPaymentIntent: string; opponentPaymentIntent: string; } | undefined'.
+  Type '{ escrowId: string; creatorPaymentIntent?: string | undefined; opponentPaymentIntent?: string | undefined; }' is not assignable to type '{ escrowId: string; creatorPaymentIntent: string; opponentPaymentIntent: string; }'.
+    Types of property 'creatorPaymentIntent' are incompatible.
+      Type 'string | undefined' is not assignable to type 'string'.
+        Type 'undefined' is not assignable to type 'string'.
+src/lib/player-trading-wager.ts(238,13): error TS7034: Variable 'tradesExecuted' implicitly has type 'any[]' in some locations where its type cannot be determined.
+src/lib/player-trading-wager.ts(325,15): error TS7005: Variable 'tradesExecuted' implicitly has an 'any[]' type.
+src/lib/player-trading-wager.ts(339,9): error TS7005: Variable 'tradesExecuted' implicitly has an 'any[]' type.
+src/lib/predictive-injury-ai.ts(170,10): error TS2339: Property 'initializeBiomechanicalEngine' does not exist on type 'PredictiveInjuryAI'.
+src/lib/predictive-injury-ai.ts(193,54): error TS2551: Property 'predictRecoveryTime' does not exist on type 'PredictiveInjuryAI'. Did you mean 'predictRecoveryTimeline'?
+src/lib/predictive-injury-ai.ts(194,57): error TS2339: Property 'identifyRiskFactors' does not exist on type 'PredictiveInjuryAI'.
+src/lib/predictive-injury-ai.ts(200,50): error TS2339: Property 'assessJumpLanding' does not exist on type 'PredictiveInjuryAI'.
+src/lib/predictive-injury-ai.ts(201,54): error TS2339: Property 'detectMuscleImbalances' does not exist on type 'PredictiveInjuryAI'.
+src/lib/predictive-injury-ai.ts(202,54): error TS2339: Property 'calculateJointStress' does not exist on type 'PredictiveInjuryAI'.
+src/lib/predictive-injury-ai.ts(203,64): error TS2339: Property 'identifyCompensationPatterns' does not exist on type 'PredictiveInjuryAI'.
+src/lib/predictive-injury-ai.ts(378,25): error TS2339: Property 'quarter' does not exist on type '{ playerId: string; name: string; position: string; team: string; opponent: string; gameId: string; stats: Record<string, number>; projectedPoints: number; currentPoints: number; stockPrice: number; priceChange: number; timestamp: Date; injuryStatus?: "healthy" | ... 3 more ... | undefined; }'.
+src/lib/predictive-injury-ai.ts(379,31): error TS2339: Property 'timeRemaining' does not exist on type '{ playerId: string; name: string; position: string; team: string; opponent: string; gameId: string; stats: Record<string, number>; projectedPoints: number; currentPoints: number; stockPrice: number; priceChange: number; timestamp: Date; injuryStatus?: "healthy" | ... 3 more ... | undefined; }'.
+src/lib/predictive-injury-ai.ts(380,26): error TS2339: Property 'gameFlow' does not exist on type '{ playerId: string; name: string; position: string; team: string; opponent: string; gameId: string; stats: Record<string, number>; projectedPoints: number; currentPoints: number; stockPrice: number; priceChange: number; timestamp: Date; injuryStatus?: "healthy" | ... 3 more ... | undefined; }'.
+src/lib/predictive-injury-ai.ts(387,19): error TS2339: Property 'snapsPlayed' does not exist on type '{ playerId: string; name: string; position: string; team: string; opponent: string; gameId: string; stats: Record<string, number>; projectedPoints: number; currentPoints: number; stockPrice: number; priceChange: number; timestamp: Date; injuryStatus?: "healthy" | ... 3 more ... | undefined; }'.
+src/lib/predictive-injury-ai.ts(409,28): error TS2339: Property 'quarter' does not exist on type '{ gameId: string; type: "touchdown" | "field_goal" | "safety" | "interception" | "fumble" | "injury" | "timeout" | "quarter_end" | "game_end" | "weather_update"; timestamp: Date; description: string; fantasyPointsImpact: number; playerId?: string | undefined; }'.
+src/lib/predictive-injury-ai.ts(410,34): error TS2339: Property 'timeRemaining' does not exist on type '{ gameId: string; type: "touchdown" | "field_goal" | "safety" | "interception" | "fumble" | "injury" | "timeout" | "quarter_end" | "game_end" | "weather_update"; timestamp: Date; description: string; fantasyPointsImpact: number; playerId?: string | undefined; }'.
+src/lib/predictive-injury-ai.ts(736,14): error TS2339: Property 'snapsPlayed' does not exist on type '{ playerId: string; name: string; position: string; team: string; opponent: string; gameId: string; stats: Record<string, number>; projectedPoints: number; currentPoints: number; stockPrice: number; priceChange: number; timestamp: Date; injuryStatus?: "healthy" | ... 3 more ... | undefined; }'.
+src/lib/predictive-injury-ai.ts(746,32): error TS2339: Property 'snapsPlayed' does not exist on type '{ playerId: string; name: string; position: string; team: string; opponent: string; gameId: string; stats: Record<string, number>; projectedPoints: number; currentPoints: number; stockPrice: number; priceChange: number; timestamp: Date; injuryStatus?: "healthy" | ... 3 more ... | undefined; }'.
+src/lib/predictive-injury-ai.ts(746,58): error TS2339: Property 'targetsReceived' does not exist on type '{ playerId: string; name: string; position: string; team: string; opponent: string; gameId: string; stats: Record<string, number>; projectedPoints: number; currentPoints: number; stockPrice: number; priceChange: number; timestamp: Date; injuryStatus?: "healthy" | ... 3 more ... | undefined; }'.
+src/lib/psychological-warfare.ts(342,90): error TS2339: Property 'buildFalseAuthority' does not exist on type 'PsychologicalWarfare'.
+src/lib/psychological-warfare.ts(343,96): error TS2339: Property 'exploitSocialProof' does not exist on type 'PsychologicalWarfare'.
+src/lib/psychological-warfare.ts(344,84): error TS2339: Property 'createArtificialUrgency' does not exist on type 'PsychologicalWarfare'.
+src/lib/psychological-warfare.ts(345,86): error TS2339: Property 'leverageReciprocity' does not exist on type 'PsychologicalWarfare'.
+src/lib/psychological-warfare.ts(346,85): error TS2339: Property 'exploitCommitmentConsistency' does not exist on type 'PsychologicalWarfare'.
+src/lib/psychological-warfare.ts(351,92): error TS2339: Property 'primeConceptualAssociations' does not exist on type 'PsychologicalWarfare'.
+src/lib/psychological-warfare.ts(352,93): error TS2339: Property 'primeEmotionalState' does not exist on type 'PsychologicalWarfare'.
+src/lib/psychological-warfare.ts(353,95): error TS2551: Property 'primeBehavioralResponse' does not exist on type 'PsychologicalWarfare'. Did you mean 'predictBehavioralResponse'?
+src/lib/psychological-warfare.ts(354,79): error TS2339: Property 'applyContextualPriming' does not exist on type 'PsychologicalWarfare'.
+src/lib/psychological-warfare.ts(359,62): error TS2339: Property 'reframeAsGain' does not exist on type 'PsychologicalWarfare'.
+src/lib/psychological-warfare.ts(360,63): error TS2339: Property 'reframeAsLoss' does not exist on type 'PsychologicalWarfare'.
+src/lib/psychological-warfare.ts(361,73): error TS2339: Property 'manipulateReferencePoints' does not exist on type 'PsychologicalWarfare'.
+src/lib/psychological-warfare.ts(362,80): error TS2339: Property 'createPositiveFraming' does not exist on type 'PsychologicalWarfare'.
+src/lib/psychological-warfare.ts(367,93): error TS2339: Property 'setNumericAnchors' does not exist on type 'PsychologicalWarfare'.
+src/lib/psychological-warfare.ts(368,90): error TS2339: Property 'createExpectationAnchors' does not exist on type 'PsychologicalWarfare'.
+src/lib/psychological-warfare.ts(369,107): error TS2339: Property 'manipulateFirstImpressions' does not exist on type 'PsychologicalWarfare'.
+src/lib/psychological-warfare.ts(370,97): error TS2339: Property 'applyAdjustmentAnchoring' does not exist on type 'PsychologicalWarfare'.
+src/lib/psychological-warfare.ts(446,9): error TS2393: Duplicate function implementation.
+src/lib/psychological-warfare.ts(905,11): error TS2393: Duplicate function implementation.
+src/lib/quantum-computing-infrastructure.ts(505,9): error TS2393: Duplicate function implementation.
+src/lib/quantum-computing-infrastructure.ts(528,53): error TS2339: Property 'optimizeLineup' does not exist on type 'AILineupOptimizer'.
+src/lib/quantum-computing-infrastructure.ts(840,11): error TS2393: Duplicate function implementation.
+src/lib/reality-simulation-engine.ts(466,63): error TS2339: Property 'renderReality' does not exist on type 'RealitySimulationEngine'.
+src/lib/reality-simulation-engine.ts(467,75): error TS2339: Property 'updateRealityFrame' does not exist on type 'RealitySimulationEngine'.
+src/lib/reality-simulation-engine.ts(468,64): error TS2339: Property 'processPhysics' does not exist on type 'RealitySimulationEngine'.
+src/lib/reality-simulation-engine.ts(469,70): error TS2339: Property 'handleQuantumEffects' does not exist on type 'RealitySimulationEngine'.
+src/lib/reality-simulation-engine.ts(470,67): error TS2339: Property 'maintainCausality' does not exist on type 'RealitySimulationEngine'.
+src/lib/reality-simulation-engine.ts(471,69): error TS2339: Property 'optimizeRenderingPerformance' does not exist on type 'RealitySimulationEngine'.
+src/lib/reality-simulation-engine.ts(475,68): error TS2339: Property 'scheduleSimulation' does not exist on type 'RealitySimulationEngine'.
+src/lib/reality-simulation-engine.ts(476,73): error TS2339: Property 'allocateComputationalResources' does not exist on type 'RealitySimulationEngine'.
+src/lib/reality-simulation-engine.ts(477,52): error TS2339: Property 'balanceSimulationLoad' does not exist on type 'RealitySimulationEngine'.
+src/lib/reality-simulation-engine.ts(478,54): error TS2339: Property 'prioritizeSimulations' does not exist on type 'RealitySimulationEngine'.
+src/lib/reality-simulation-engine.ts(479,55): error TS2551: Property 'pauseSimulation' does not exist on type 'RealitySimulationEngine'. Did you mean 'updateSimulation'?
+src/lib/reality-simulation-engine.ts(480,56): error TS2339: Property 'resumeSimulation' does not exist on type 'RealitySimulationEngine'.
+src/lib/reality-simulation-engine.ts(484,49): error TS2339: Property 'processQuantumState' does not exist on type 'RealitySimulationEngine'.
+src/lib/reality-simulation-engine.ts(485,65): error TS2339: Property 'collapseWaveFunction' does not exist on type 'RealitySimulationEngine'.
+src/lib/reality-simulation-engine.ts(486,56): error TS2339: Property 'maintainQuantumSuperposition' does not exist on type 'RealitySimulationEngine'.
+src/lib/reality-simulation-engine.ts(487,62): error TS2339: Property 'handleQuantumEntanglement' does not exist on type 'RealitySimulationEngine'.
+src/lib/reality-simulation-engine.ts(488,60): error TS2339: Property 'calculateQuantumProbabilities' does not exist on type 'RealitySimulationEngine'.
+=== SUMMARY ===
+Total errors: 752
+
+Error types breakdown:
+    582 TS2339
+     39 TS2551
+     25 TS7053
+     22 TS7006
+     21 TS2322
+     13 TS2345
+     11 TS2353
+      7 TS2304
+      6 TS2393
+      5 TS2307

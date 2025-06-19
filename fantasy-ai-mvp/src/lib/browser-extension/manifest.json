@@ -1,0 +1,138 @@
+{
+  "manifest_version": 3,
+  "name": "Hey Fantasy - AI Sports Intelligence",
+  "version": "1.0.0",
+  "description": "Revolutionary voice-activated fantasy sports insights powered by AI. Say 'Hey Fantasy' for instant player analysis, lineup optimization, and trade recommendations.",
+  
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "webNavigation",
+    "alarms"
+  ],
+  
+  "host_permissions": [
+    "*://draftkings.com/*",
+    "*://fanduel.com/*",
+    "*://espn.com/*",
+    "*://yahoo.com/*",
+    "*://nfl.com/*",
+    "*://sleeper.app/*",
+    "*://superdraft.com/*",
+    "*://fantasyai.com/*",
+    "*://api.fantasyai.com/*"
+  ],
+  
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": [
+        "*://draftkings.com/*",
+        "*://fanduel.com/*",
+        "*://espn.com/*",
+        "*://yahoo.com/*",
+        "*://nfl.com/*",
+        "*://sleeper.app/*",
+        "*://superdraft.com/*"
+      ],
+      "js": [
+        "content-script.js",
+        "voice-recognition.js",
+        "data-sync.js",
+        "overlay-manager.js"
+      ],
+      "css": [
+        "fantasy-overlay.css",
+        "voice-status.css"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Hey Fantasy - AI Sports Intelligence",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png", 
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "overlay-components/*",
+        "voice-assets/*",
+        "data-templates/*",
+        "fantasy-widgets.js",
+        "ai-processing.js"
+      ],
+      "matches": [
+        "*://draftkings.com/*",
+        "*://fanduel.com/*",
+        "*://espn.com/*",
+        "*://yahoo.com/*",
+        "*://nfl.com/*",
+        "*://sleeper.app/*",
+        "*://superdraft.com/*"
+      ]
+    }
+  ],
+  
+  "externally_connectable": {
+    "matches": [
+      "*://fantasyai.com/*",
+      "*://api.fantasyai.com/*"
+    ]
+  },
+  
+  "commands": {
+    "activate-voice": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "Command+Shift+F"
+      },
+      "description": "Activate Hey Fantasy voice commands"
+    },
+    "toggle-overlay": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+O",
+        "mac": "Command+Shift+O"
+      },
+      "description": "Toggle Fantasy.AI overlay display"
+    },
+    "quick-lineup": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+L",
+        "mac": "Command+Shift+L"
+      },
+      "description": "Quick lineup optimization"
+    }
+  },
+  
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  
+  "minimum_chrome_version": "88",
+  
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' https://api.fantasyai.com https://fantasyai.com wss://realtime.fantasyai.com;"
+  }
+}

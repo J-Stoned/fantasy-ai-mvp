@@ -60,7 +60,7 @@ export interface FantasyPlayerProfile {
   injuryIntelligence: InjuryIntelligence;
   performanceProjections: PerformanceProjections;
   equipmentAnalysis: EquipmentAnalysis;
-  characterProfile: CharacterProfile;
+  characterProfile: any; // CharacterProfile type not defined
   marketIntelligence: MarketIntelligence;
   fantasyRecommendations: FantasyRecommendation[];
 }
@@ -186,10 +186,10 @@ export interface HealthStatus {
 export interface InjuryRisk {
   overallRisk: number; // 1-100
   riskByBodyPart: { [bodyPart: string]: number };
-  riskFactors: RiskFactor[];
-  seasonalRisk: SeasonalRisk[];
-  gameTypeRisk: GameTypeRisk[];
-  equipmentRisk: EquipmentRisk[];
+  riskFactors: any[]; // RiskFactor type not defined
+  seasonalRisk: any[]; // SeasonalRisk type not defined
+  gameTypeRisk: any[]; // GameTypeRisk type not defined
+  equipmentRisk: any[]; // EquipmentRisk type not defined
 }
 
 export interface CurrentInjury {
@@ -691,7 +691,7 @@ export class FantasyAIIntegration extends EventEmitter {
       
     } catch (error) {
       console.error('❌ Failed to generate fantasy insights:', error);
-      throw new Error(`Fantasy insights generation failed: ${error.message}`);
+      throw new Error(`Fantasy insights generation failed: ${error instanceof Error ? error instanceof Error ? error.message : String(error) : String(error)}`);
     }
   }
 
@@ -734,7 +734,7 @@ export class FantasyAIIntegration extends EventEmitter {
       
     } catch (error) {
       console.error('❌ Failed to optimize lineup:', error);
-      throw new Error(`Lineup optimization failed: ${error.message}`);
+      throw new Error(`Lineup optimization failed: ${error instanceof Error ? error.message : String(error)}`);
     }
   }
 
@@ -780,7 +780,7 @@ export class FantasyAIIntegration extends EventEmitter {
       
     } catch (error) {
       console.error('❌ Failed to process voice command:', error);
-      throw new Error(`Voice command processing failed: ${error.message}`);
+      throw new Error(`Voice command processing failed: ${error instanceof Error ? error.message : String(error)}`);
     }
   }
 
@@ -1082,7 +1082,7 @@ export class FantasyAIIntegration extends EventEmitter {
         state: 'TX',
         graduationYear: 2018,
         stats: [],
-        achievements: ['State Championship'],
+        achievements: ['State Championship'] as any,
         recruitingRanking: {
           stars: Math.floor(Math.random() * 3) + 3,
           nationalRank: Math.floor(Math.random() * 1000) + 1,
@@ -1101,7 +1101,7 @@ export class FantasyAIIntegration extends EventEmitter {
         conference: 'SEC',
         yearsPlayed: 4,
         stats: [],
-        achievements: ['Conference Championship'],
+        achievements: ['Conference Championship'] as any,
         majorStudied: 'Communications',
         academicPerformance: {
           gpa: 2.5 + Math.random() * 1.5,
@@ -1336,7 +1336,7 @@ export class FantasyAIIntegration extends EventEmitter {
       'matchup_analysis': 'This week\'s matchup analysis shows...',
       'trade_analysis': 'Let me analyze this trade opportunity using our complete player data...'
     };
-    return responses[intent] || 'I can help you with fantasy insights. What would you like to know?';
+    return responses[intent as keyof typeof responses] || 'I can help you with fantasy insights. What would you like to know?';
   }
 
   private generateFollowUpSuggestions(intent: string, parameters: any): string[] {
@@ -1352,7 +1352,7 @@ export class FantasyAIIntegration extends EventEmitter {
         'Need help with specific positions?'
       ]
     };
-    return suggestions[intent] || ['How else can I help with your fantasy team?'];
+    return suggestions[intent as keyof typeof suggestions] || ['How else can I help with your fantasy team?'];
   }
 
   // Additional helper methods

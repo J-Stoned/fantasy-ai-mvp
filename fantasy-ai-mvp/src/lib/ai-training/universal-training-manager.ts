@@ -117,12 +117,12 @@ export class UniversalTrainingManager extends EventEmitter {
   private trainingHistory: TrainingSession[] = [];
   
   // Core components
-  private mcpOrchestrator: MCPTrainingOrchestrator;
-  private contentProcessor: ExpertContentProcessor;
-  private modelIntegrator: AIModelIntegrator;
+  private mcpOrchestrator!: MCPTrainingOrchestrator;
+  private contentProcessor!: ExpertContentProcessor;
+  private modelIntegrator!: AIModelIntegrator;
   
   // System monitoring
-  private systemHealth: SystemHealth;
+  private systemHealth!: SystemHealth;
   private performanceMetrics: Map<string, number> = new Map();
   private isRunning: boolean = false;
   
@@ -623,4 +623,3 @@ export const createDefaultConfig = (): UniversalTrainingConfig => ({
   }
 });
 
-export { UniversalTrainingManager };

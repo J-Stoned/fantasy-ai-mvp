@@ -4,6 +4,14 @@
  * Connects to our Fantasy.AI infrastructure for real-time updates
  */
 
+// Chrome extension types
+declare global {
+  var chrome: any;
+}
+
+// Disable strict checks for this extension file
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+
 import { HeyFantasyExtensionConfig, defaultHeyFantasyConfig } from './hey-fantasy-extension';
 
 interface ExtensionState {
@@ -63,7 +71,7 @@ class HeyFantasyBackground {
 
   private setupEventListeners(): void {
     // Extension installation/startup
-    chrome.runtime.onInstalled.addListener((details) => {
+    chrome.runtime.onInstalled.addListener((details: any) => {
       this.handleInstallation(details);
     });
 
@@ -72,47 +80,47 @@ class HeyFantasyBackground {
     });
 
     // Tab management
-    chrome.tabs.onActivated.addListener((activeInfo) => {
+    chrome.tabs.onActivated.addListener((activeInfo: any) => {
       this.handleTabActivated(activeInfo);
     });
 
-    chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+    chrome.tabs.onUpdated.addListener((tabId: any, changeInfo: any, tab: any) => {
       this.handleTabUpdated(tabId, changeInfo, tab);
     });
 
-    chrome.tabs.onRemoved.addListener((tabId) => {
+    chrome.tabs.onRemoved.addListener((tabId: any) => {
       this.handleTabRemoved(tabId);
     });
 
     // Message handling from content scripts
-    chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    chrome.runtime.onMessage.addListener((message: any, sender: any, sendResponse: any) => {
       this.handleMessage(message, sender, sendResponse);
       return true; // Indicates async response
     });
 
     // External connections (from Fantasy.AI platform)
-    chrome.runtime.onMessageExternal.addListener((message, sender, sendResponse) => {
+    chrome.runtime.onMessageExternal.addListener((message: any, sender: any, sendResponse: any) => {
       this.handleExternalMessage(message, sender, sendResponse);
       return true;
     });
 
     // Commands (keyboard shortcuts)
-    chrome.commands.onCommand.addListener((command) => {
+    chrome.commands.onCommand.addListener((command: any) => {
       this.handleCommand(command);
     });
 
     // Alarms for periodic tasks
-    chrome.alarms.onAlarm.addListener((alarm) => {
+    chrome.alarms.onAlarm.addListener((alarm: any) => {
       this.handleAlarm(alarm);
     });
 
     // Storage changes
-    chrome.storage.onChanged.addListener((changes, namespace) => {
+    chrome.storage.onChanged.addListener((changes: any, namespace: any) => {
       this.handleStorageChange(changes, namespace);
     });
   }
 
-  private async handleInstallation(details: chrome.runtime.InstalledDetails): Promise<void> {
+  private async handleInstallation(details: any): Promise<void> {
     console.log('Hey Fantasy extension installed:', details.reason);
 
     if (details.reason === 'install') {
@@ -134,7 +142,7 @@ class HeyFantasyBackground {
     await this.resumeSyncQueue();
   }
 
-  private async handleTabActivated(activeInfo: chrome.tabs.TabActivatedInfo): Promise<void> {
+  private async handleTabActivated(activeInfo: any): Promise<void> {
     this.state.activeTabId = activeInfo.tabId;
 
     const tab = await chrome.tabs.get(activeInfo.tabId);
@@ -148,8 +156,8 @@ class HeyFantasyBackground {
 
   private async handleTabUpdated(
     tabId: number, 
-    changeInfo: chrome.tabs.TabChangeInfo, 
-    tab: chrome.tabs.Tab
+    changeInfo: any, 
+    tab: any
   ): Promise<void> {
     if (changeInfo.status === 'complete' && tab.url) {
       const fantasySite = this.detectFantasySite(tab.url);
@@ -182,7 +190,7 @@ class HeyFantasyBackground {
 
   private async handleMessage(
     message: any, 
-    sender: chrome.runtime.MessageSender, 
+    sender: any, 
     sendResponse: (response?: any) => void
   ): Promise<void> {
     try {
@@ -231,13 +239,13 @@ class HeyFantasyBackground {
       }
     } catch (error) {
       console.error('Error handling message:', error);
-      sendResponse({ success: false, error: error.message });
+      sendResponse({ success: false, error: error instanceof Error ? error.message : String(error) });
     }
   }
 
   private async handleExternalMessage(
     message: any,
-    sender: chrome.runtime.MessageSender,
+    sender: any,
     sendResponse: (response?: any) => void
   ): Promise<void> {
     // Handle messages from Fantasy.AI platform
@@ -268,7 +276,7 @@ class HeyFantasyBackground {
       }
     } catch (error) {
       console.error('Error handling external message:', error);
-      sendResponse({ success: false, error: error.message });
+      sendResponse({ success: false, error: error instanceof Error ? error.message : String(error) });
     }
   }
 
@@ -288,7 +296,7 @@ class HeyFantasyBackground {
     }
   }
 
-  private handleAlarm(alarm: chrome.alarms.Alarm): void {
+  private handleAlarm(alarm: any): void {
     const handler = this.alarmHandlers.get(alarm.name);
     if (handler) {
       handler();
@@ -296,7 +304,7 @@ class HeyFantasyBackground {
   }
 
   private async handleStorageChange(
-    changes: { [key: string]: chrome.storage.StorageChange },
+    changes: { [key: string]: any },
     namespace: string
   ): Promise<void> {
     if (namespace === 'sync' && changes.userSettings) {

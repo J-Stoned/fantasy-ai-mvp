@@ -785,7 +785,16 @@ export class IntelligentTaskOrchestrator extends EventEmitter {
 
   // Perform global optimization
   private async performGlobalOptimization(): Promise<GlobalOptimizationResult> {
-    if (this.isOptimizing) return;
+    if (this.isOptimizing) {
+      return {
+        optimizationId: 'in-progress',
+        scope: 'GLOBAL',
+        improvements: [],
+        resourceReallocation: [],
+        performanceGains: { throughputIncrease: 0, latencyReduction: 0, costSavings: 0, qualityImprovement: 0, reliabilityIncrease: 0 },
+        implementationPlan: []
+      };
+    }
     
     console.log('🔄 Performing global optimization...');
     this.isOptimizing = true;
@@ -840,7 +849,7 @@ export class IntelligentTaskOrchestrator extends EventEmitter {
       'resource-optimization': ['cpu_usage', 'memory_usage', 'network_io', 'storage_io', 'gpu_usage'],
       'predictive-scaling': ['workload_trend', 'capacity_utilization', 'performance_metrics', 'external_factors']
     };
-    return features[modelId] || ['default_feature'];
+    return features[modelId as keyof typeof features] || ['default_feature'];
   }
 
   private getTargetVariable(modelId: string): string {
@@ -852,7 +861,7 @@ export class IntelligentTaskOrchestrator extends EventEmitter {
       'resource-optimization': 'resource_efficiency',
       'predictive-scaling': 'scaling_requirement'
     };
-    return targets[modelId] || 'default_target';
+    return targets[modelId as keyof typeof targets] || 'default_target';
   }
 
   private selectWorkerPool(index: number): string {

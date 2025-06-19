@@ -297,6 +297,44 @@ export class MCPTrainingOrchestrator extends EventEmitter {
     await this.playwright.configureSource('live-stream', liveConfig);
   }
   
+  private async setupNewsSource(source: ContentSource) {
+    // Configure news source monitoring
+    const newsConfig = {
+      sources: this.getNewsSources(),
+      realTimeUpdates: true,
+      breakingNewsAlerts: true,
+      expertOpinions: true
+    };
+    
+    await this.firecrawl.configureSource('news', newsConfig);
+  }
+  
+  private async setupSocialSource(source: ContentSource) {
+    // Configure social media monitoring
+    const socialConfig = {
+      platforms: this.getSocialPlatforms(),
+      expertAccounts: true,
+      trendingTopics: true,
+      sentimentAnalysis: true
+    };
+    
+    await this.firecrawl.configureSource('social', socialConfig);
+  }
+  
+  private getNewsSources(): string[] {
+    return [
+      'ESPN', 'Fox Sports', 'CBS Sports', 'NBC Sports',
+      'The Athletic', 'Bleacher Report', 'Yahoo Sports'
+    ];
+  }
+  
+  private getSocialPlatforms(): string[] {
+    return [
+      'Twitter', 'Instagram', 'YouTube', 'TikTok',
+      'Reddit', 'Discord'
+    ];
+  }
+  
   private getLiveStreams(): string[] {
     return [
       // Live Sports Commentary
@@ -464,6 +502,22 @@ export class MCPTrainingOrchestrator extends EventEmitter {
     });
   }
   
+  private async updateContextualModel(updates: KnowledgePoint[]) {
+    // Update contextual reinforcement learning with expert decision patterns
+    const decisionPatterns = updates.filter(u => u.type === 'pattern' && u.content.includes('decision'));
+    const contextualInsights = updates.filter(u => u.type === 'insight' && u.content.includes('context'));
+    
+    this.emit('model-update', {
+      model: 'contextual-reinforcement-learning',
+      updateType: 'contextual-enhancement',
+      data: {
+        decisionPatterns: decisionPatterns,
+        contextualInsights: contextualInsights,
+        trainingSource: 'expert-contextual-analysis'
+      }
+    });
+  }
+
   private async updatePredictiveModel(updates: KnowledgePoint[]) {
     // Update prediction models with expert prediction patterns
     const predictionStrategies = updates.filter(u => u.type === 'strategy');
@@ -476,6 +530,42 @@ export class MCPTrainingOrchestrator extends EventEmitter {
         strategies: predictionStrategies,
         insights: insightPatterns,
         trainingSource: 'expert-predictions'
+      }
+    });
+  }
+
+  private async updateChaosModel(updates: KnowledgePoint[]) {
+    // Update chaos theory modeling with expert unpredictability analysis
+    const chaosPatterns = updates.filter(u => 
+      u.content.includes('chaos') || 
+      u.content.includes('unpredictable') || 
+      u.content.includes('random')
+    );
+    const complexityInsights = updates.filter(u => u.content.includes('complex'));
+    
+    this.emit('model-update', {
+      model: 'chaos-theory-modeling',
+      updateType: 'chaos-enhancement',
+      data: {
+        chaosPatterns: chaosPatterns,
+        complexityInsights: complexityInsights,
+        trainingSource: 'expert-chaos-analysis'
+      }
+    });
+  }
+
+  private async updateDataPipelineModel(updates: KnowledgePoint[]) {
+    // Update data pipeline manager with expert data preferences and patterns
+    const dataPatterns = updates.filter(u => u.content.includes('data') || u.content.includes('pipeline'));
+    const optimizationStrategies = updates.filter(u => u.type === 'strategy' && u.content.includes('optimization'));
+    
+    this.emit('model-update', {
+      model: 'data-pipeline-manager',
+      updateType: 'pipeline-enhancement',
+      data: {
+        dataPatterns: dataPatterns,
+        optimizationStrategies: optimizationStrategies,
+        trainingSource: 'expert-data-analysis'
       }
     });
   }
@@ -652,4 +742,4 @@ interface TrainingStats {
   lastUpdate: Date;
 }
 
-export { MCPTrainingOrchestrator };
+// MCPTrainingOrchestrator is already exported as class above

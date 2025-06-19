@@ -273,7 +273,7 @@ export class GlobalSportsIntegrationArchitecture extends EventEmitter {
           broadcastPartners: ['Star Sports', 'Sky Cricket', 'Fox Cricket'],
           streamingPlatforms: ['Hotstar', 'Willow TV', 'Kayo Sports'],
           socialMediaPresence: ['ICC', 'BCCI', 'IPL'],
-          dataAccessibility: 'medium',
+          dataAccessibility: 'open' as 'restricted' | 'open' | 'expensive' | 'exclusive',
           apiAvailability: true
         },
         fantasyFormats: [
@@ -333,7 +333,7 @@ export class GlobalSportsIntegrationArchitecture extends EventEmitter {
           broadcastPartners: ['ESPN', 'Eurosport', 'Tennis Channel'],
           streamingPlatforms: ['Amazon Prime', 'Tennis TV'],
           socialMediaPresence: ['ATP', 'WTA', 'Roland Garros', 'Wimbledon'],
-          dataAccessibility: 'medium',
+          dataAccessibility: 'open' as 'restricted' | 'open' | 'expensive' | 'exclusive',
           apiAvailability: false
         },
         fantasyFormats: [

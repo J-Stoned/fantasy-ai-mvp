@@ -282,10 +282,10 @@ export class UniversalExtensionInfrastructure extends EventEmitter {
   private config: UniversalInfrastructureConfig;
   private browserSupports: Map<BrowserName, BrowserSupport> = new Map();
   private deploymentPipelines: Map<string, DeploymentPipeline> = new Map();
-  private distributionNetwork: GlobalDistributionNetwork;
-  private updateSystem: UpdateDistributionSystem;
-  private analyticsInfrastructure: AnalyticsInfrastructure;
-  private securityInfrastructure: SecurityInfrastructure;
+  private distributionNetwork!: GlobalDistributionNetwork;
+  private updateSystem!: UpdateDistributionSystem;
+  private analyticsInfrastructure!: AnalyticsInfrastructure;
+  private securityInfrastructure!: SecurityInfrastructure;
   
   private buildQueue: BuildTask[] = [];
   private deploymentQueue: DeploymentTask[] = [];
@@ -331,7 +331,7 @@ export class UniversalExtensionInfrastructure extends EventEmitter {
             { name: 'content', path: 'src/content-script.ts' },
             { name: 'popup', path: 'src/popup.ts' }
           ],
-          outputFormat: 'ES2020',
+          outputFormat: 'ES2020' as unknown as OutputFormat,
           minification: true,
           treeshaking: true,
           codesplitting: true,
@@ -388,11 +388,11 @@ export class UniversalExtensionInfrastructure extends EventEmitter {
             { name: 'content', path: 'src/content-script.ts' },
             { name: 'popup', path: 'src/popup.ts' }
           ],
-          outputFormat: 'ES2018',
+          outputFormat: 'ES2018' as unknown as OutputFormat,
           minification: true,
           treeshaking: true,
           codesplitting: false, // Firefox limitations
-          polyfills: ['webextension-polyfill']
+          polyfills: ['webextension-polyfill' as unknown as Polyfill]
         },
         assetOptimization: {
           imageCompression: true,
@@ -445,11 +445,11 @@ export class UniversalExtensionInfrastructure extends EventEmitter {
             { name: 'content', path: 'src/content-script.ts' },
             { name: 'popup', path: 'src/popup.ts' }
           ],
-          outputFormat: 'ES2018',
+          outputFormat: 'ES2018' as unknown as OutputFormat,
           minification: true,
           treeshaking: true,
           codesplitting: false,
-          polyfills: ['webextension-polyfill', 'safari-web-extension-converter']
+          polyfills: ['webextension-polyfill', 'safari-web-extension-converter'] as unknown as Polyfill[]
         },
         assetOptimization: {
           imageCompression: true,
@@ -502,7 +502,7 @@ export class UniversalExtensionInfrastructure extends EventEmitter {
             { name: 'content', path: 'src/content-script.ts' },
             { name: 'popup', path: 'src/popup.ts' }
           ],
-          outputFormat: 'ES2020',
+          outputFormat: 'ES2020' as unknown as OutputFormat,
           minification: true,
           treeshaking: true,
           codesplitting: true,
@@ -625,7 +625,7 @@ export class UniversalExtensionInfrastructure extends EventEmitter {
             connections: 10000
           },
           currentLoad: 25,
-          healthStatus: 'HEALTHY',
+          healthStatus: 'HEALTHY' as unknown as HealthStatus,
           performanceMetrics: {
             cpuUsage: 30,
             memoryUsage: 40,
@@ -1004,7 +1004,7 @@ export class UniversalExtensionInfrastructure extends EventEmitter {
           browserName,
           version,
           success: false,
-          error: error.message,
+          error: error instanceof Error ? error.message : String(error),
           buildTime: 0,
           packageSize: 0,
           artifacts: []
@@ -1074,7 +1074,7 @@ export class UniversalExtensionInfrastructure extends EventEmitter {
               version,
               distributionChannel: channel,
               success: false,
-              error: error.message,
+              error: error instanceof Error ? error.message : String(error),
               deploymentTime: 0,
               storeUrl: null
             });

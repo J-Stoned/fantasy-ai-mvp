@@ -329,7 +329,7 @@ export class AITrainingOrchestrator extends EventEmitter {
       
     } catch (error) {
       session.status = 'failed';
-      this.emit('sessionFailed', { sessionId: session.id, error: error.message });
+      this.emit('sessionFailed', { sessionId: session.id, error: error instanceof Error ? error.message : String(error) });
       console.error(`❌ Training session failed: ${session.id}`, error);
     } finally {
       // Clean up resources
@@ -572,7 +572,7 @@ export class AITrainingOrchestrator extends EventEmitter {
       'real-time-processing': 'Contextual Reinforcement Learning'
     };
     
-    const typeName = typeMap[objective.id] || 'Multi-Modal Fusion Learning';
+    const typeName = typeMap[objective.id as keyof typeof typeMap] || 'Multi-Modal Fusion Learning';
     return this.getTrainingTypeByName(typeName);
   }
 

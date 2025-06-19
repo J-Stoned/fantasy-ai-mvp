@@ -1,0 +1,100 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(npx create-next-app:*)",
+      "Bash(mv:*)",
+      "Bash(true)",
+      "Bash(rm:*)",
+      "Bash(ls:*)",
+      "Bash(find:*)",
+      "Bash(npm install:*)",
+      "Bash(cp:*)",
+      "Bash(npm run:*)",
+      "Bash(node:*)",
+      "Bash(npx tsc:*)",
+      "Bash(NODE_OPTIONS=\"--max-old-space-size=4096\" npx tsc --noEmit 2>&1)",
+      "Bash(grep:*)",
+      "Bash(sed:*)",
+      "Bash(npx prisma generate:*)",
+      "Bash(diff:*)",
+      "Bash(for:*)",
+      "Bash(do [ -f \"$file\" ])",
+      "Bash(done)",
+      "Bash(timeout 5s npm run mcp:espn)",
+      "Bash(timeout 5s npm run mcp:gambling)",
+      "Bash(timeout 5s npm run mcp:multi)",
+      "Bash(timeout 10s npm run mcp:all)",
+      "WebFetch(domain:www.fantasypros.com)",
+      "WebFetch(domain:www.espn.com)",
+      "WebFetch(domain:www.nfl.com)",
+      "Bash(npm test)",
+      "Bash(npm test:*)",
+      "Bash(rg:*)",
+      "Bash(DATABASE_URL=\"file:./dev.db\" npx prisma db push)",
+      "Bash(docker-compose up:*)",
+      "Bash(curl:*)",
+      "Bash(pkill:*)",
+      "Bash(timeout 15 npm run dev:*)",
+      "Bash(cat:*)",
+      "Bash(npx next dev:*)",
+      "Bash(npx next:*)",
+      "Bash(hostname:*)",
+      "Bash(ss:*)",
+      "Bash(export DATABASE_URL=\"file:./dev.db\")",
+      "Bash(chmod:*)",
+      "Bash(bash:*)",
+      "Bash(npx:*)",
+      "Bash(npm view:*)",
+      "Bash(npm search:*)",
+      "Bash(vercel:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git push:*)",
+      "Bash(awk:*)",
+      "Bash(timeout 30s npm run dev:*)"
+    ],
+    "deny": []
+  },
+  "rules": {
+    "file_operations": {
+      "always_read_before_write": true
+    },
+    "development": {
+      "mcp_tools": {
+        "enabled": true,
+        "description": "Always use the MCP tools in development whenever they help"
+      }
+    },
+    "quality_control": {
+      "pre_push_checks": {
+        "duplicate_exports": true,
+        "typefix_errors": true,
+        "description": "Always check for duplicate export and typefix errors before pushing to git"
+      }
+    },
+    "todo_list_persistence": {
+      "enabled": true,
+      "always_save_progress": true,
+      "track_completed_items": true,
+      "maintain_session_state": true,
+      "auto_resume_on_reconnect": true,
+      "progress_file": ".claude/todo-progress.json",
+      "description": "Always save todo list progress after each completed item. Track all completed items until entire list is done. Resume exactly where left off after disconnections. Only delete progress when all items are fully completed.",
+      "behavior": {
+        "on_item_completion": "immediately_save_progress",
+        "on_disconnection": "preserve_current_state",
+        "on_reconnection": "auto_resume_from_last_saved_state",
+        "on_list_completion": "mark_complete_but_keep_until_confirmed",
+        "cleanup_trigger": "user_confirmation_or_new_todo_list"
+      },
+      "persistence_strategy": {
+        "save_frequency": "after_each_item",
+        "backup_copies": 3,
+        "include_context": true,
+        "include_next_steps": true,
+        "timestamp_all_updates": true
+      }
+    }
+  }
+}

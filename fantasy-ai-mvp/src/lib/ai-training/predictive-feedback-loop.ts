@@ -266,7 +266,7 @@ export class PredictiveFeedbackLoop extends EventEmitter {
     const predictionResult: PredictionResult = {
       id: predictionId,
       playerId,
-      algorithm,
+      algorithm: algorithm as 'fusion' | 'multi-modal' | 'momentum-wave' | 'contextual-rl',
       prediction: {
         metric: prediction.metric || 'fantasy_points',
         value: prediction.value || 0,
@@ -568,7 +568,7 @@ export class PredictiveFeedbackLoop extends EventEmitter {
       this.emit('retrainingFailed', {
         sessionId: session.id,
         algorithm: session.algorithm,
-        error: error.message
+        error: error instanceof Error ? error.message : String(error)
       });
     }
   }

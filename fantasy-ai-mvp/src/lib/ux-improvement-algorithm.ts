@@ -111,7 +111,7 @@ export interface UXGap {
   // Performance Issues
   averageDelay?: number;
   errorRate?: number;
-  abandonment Rate?: number;
+  abandonmentRate?: number;
   conversionImpact?: number;
   
   // User Feedback
@@ -314,7 +314,7 @@ export interface Milestone {
   targetDate: Date;
   completedDate?: Date;
   deliverables: string[];
-  success Criteria: string[];
+  successCriteria: string[];
 }
 
 export interface ExpectedImpact {

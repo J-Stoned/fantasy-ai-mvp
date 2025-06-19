@@ -490,7 +490,7 @@ export class ParallelMCPOrchestrator extends EventEmitter {
       this.emit('task-failed', { 
         taskId: task.id, 
         workerId: worker.id, 
-        error: error.message 
+        error: error instanceof Error ? error.message : String(error)
       });
     } finally {
       // Mark worker as available
@@ -857,10 +857,10 @@ export class ParallelMCPOrchestrator extends EventEmitter {
 
   // Get worker breakdown by type and status
   private getWorkerBreakdown(): any {
-    const breakdown = {};
+    const breakdown: any = {};
     
     this.workers.forEach(worker => {
-      if (!breakdown[worker.type]) {
+      if (!breakdown[worker.type as keyof typeof breakdown]) {
         breakdown[worker.type] = { idle: 0, busy: 0, error: 0, offline: 0 };
       }
       breakdown[worker.type][worker.status]++;

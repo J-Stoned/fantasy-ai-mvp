@@ -54,13 +54,14 @@
     "superjson": "^2.2.2",
     "tailwind-merge": "^3.3.1",
     "tsx": "^4.20.3",
-    "zod": "^3.25.64"
+    "zod": "^3.25.64",
+    "tailwindcss": "^3.4.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32"
   },
   "devDependencies": {
     "@react-three/drei": "^10.3.0",
     "@react-three/fiber": "^9.1.2",
-    "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.32",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
@@ -74,7 +75,6 @@
     "jest": "^30.0.0",
     "jest-environment-jsdom": "^30.0.0",
     "lightningcss": "^1.30.1",
-    "tailwindcss": "^3.4.0",
     "three": "^0.177.0",
     "ts-jest": "^29.4.0",
     "typescript": "^5"

@@ -1,9 +1,9 @@
 "use client";
 
 import { EventEmitter } from 'events';
-import { omniversalDataCollector } from '../data-empire/omniversal-data-collector';
-import { revolutionaryAIArmy } from '../ai-army/revolutionary-ai-algorithms';
-import { globalSportsIntegration } from '../global-sports/global-integration-architecture';
+// import { omniversalDataCollector } from '../data-empire/omniversal-data-collector';
+// import { revolutionaryAIArmy } from '../ai-army/revolutionary-ai-algorithms';
+// import { globalSportsIntegration } from '../global-sports/global-integration-architecture';
 
 /**
  * COMPETITIVE ANNIHILATION STRATEGY SYSTEM

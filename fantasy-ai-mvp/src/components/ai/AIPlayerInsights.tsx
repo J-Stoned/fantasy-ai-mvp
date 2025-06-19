@@ -1,10 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Progress } from '@/components/ui/progress';
+import { GlassCard } from '@/components/ui/GlassCard';
+import { NeonButton } from '@/components/ui/NeonButton';
 import { 
   Brain, 
   TrendingUp, 
@@ -120,62 +118,64 @@ export function AIPlayerInsights({
 
   if (loading) {
     return (
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center space-x-2">
+      <GlassCard>
+        <div>
+          <h3 className="flex items-center space-x-2">
             <Brain className="w-5 h-5 animate-pulse" />
             <span>AI Analyzing {playerName}...</span>
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
+          </h3>
+        </div>
+        <div>
           <div className="space-y-4">
             <div className="animate-pulse">
               <div className="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
               <div className="h-4 bg-gray-200 rounded w-1/2"></div>
             </div>
-            <Progress value={60} className="animate-pulse" />
+            <div className="w-full bg-gray-200 rounded-full h-2 animate-pulse">
+              <div className="bg-neon-blue h-2 rounded-full" style={{ width: '60%' }}></div>
+            </div>
             <div className="text-sm text-gray-500">
               Processing with 1,375+ AI workers...
             </div>
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </GlassCard>
     );
   }
 
   if (error || !prediction) {
     return (
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center space-x-2">
+      <GlassCard>
+        <div>
+          <h3 className="flex items-center space-x-2">
             <AlertTriangle className="w-5 h-5 text-yellow-500" />
             <span>AI Insights</span>
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
+          </h3>
+        </div>
+        <div>
           <div className="text-center py-4">
             <AlertTriangle className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
             <p className="text-gray-600 mb-4">{error}</p>
-            <Button onClick={fetchPrediction} variant="outline">
+            <NeonButton onClick={fetchPrediction} variant="blue">
               <RefreshCw className="w-4 h-4 mr-2" />
               Retry Analysis
-            </Button>
+            </NeonButton>
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </GlassCard>
     );
   }
 
   return (
     <div className="space-y-6">
-      {/* Main Prediction Card */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center justify-between">
+      {/* Main Prediction GlassCard */}
+      <GlassCard>
+        <div>
+          <h3 className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <Brain className="w-5 h-5 text-blue-600" />
               <span>AI Insights: {playerName}</span>
-              <Badge variant="outline">{position}</Badge>
+              <span className="px-2 py-1 bg-gray-200 text-gray-700 rounded text-sm">{position}</span>
             </div>
             <div className="flex items-center space-x-2">
               <Zap className="w-4 h-4 text-yellow-500" />
@@ -183,9 +183,9 @@ export function AIPlayerInsights({
                 {prediction.aiSystems.totalWorkers.toLocaleString()} AI workers
               </span>
             </div>
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
+          </h3>
+        </div>
+        <div>
           {/* Overall Recommendation */}
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-4 mb-6">
             <div className="flex items-center justify-between mb-3">
@@ -195,11 +195,11 @@ export function AIPlayerInsights({
                   {prediction.overall.recommendation}
                 </span>
               </div>
-              <Badge 
+              <div 
                 className={`${getRecommendationColor(prediction.overall.recommendation)} text-white`}
               >
                 {prediction.overall.confidence}% Confidence
-              </Badge>
+              </div>
             </div>
             
             <div className="mb-3">
@@ -207,7 +207,9 @@ export function AIPlayerInsights({
                 <span className="text-sm text-gray-600">AI Confidence</span>
                 <span className="text-sm font-medium">{prediction.overall.confidence}%</span>
               </div>
-              <Progress value={prediction.overall.confidence} className="h-2" />
+              <div className="w-full bg-gray-200 rounded-full h-2">
+                <div className="bg-neon-green h-2 rounded-full" style={{ width: `${prediction.overall.confidence}%` }}></div>
+              </div>
             </div>
             
             <div className="text-sm text-gray-600">
@@ -236,20 +238,20 @@ export function AIPlayerInsights({
               <div className="text-xs text-gray-600">Multi-Modal Fusion</div>
             </div>
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </GlassCard>
 
       {/* Individual AI System Predictions */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {prediction.predictions.map((insight, index) => (
-          <Card key={index}>
-            <CardHeader>
-              <CardTitle className="text-sm font-medium flex items-center justify-between">
+          <GlassCard key={index}>
+            <div>
+              <h3 className="text-sm font-medium flex items-center justify-between">
                 <span>{insight.source.replace(/([A-Z])/g, ' $1').trim()}</span>
-                <Badge variant="outline">{insight.confidence}%</Badge>
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
+                <span className="px-2 py-1 bg-gray-200 text-gray-700 rounded text-sm">{insight.confidence}%</span>
+              </h3>
+            </div>
+            <div className="space-y-4">
               {/* Fantasy Points Prediction */}
               <div className="text-center">
                 <div className="text-2xl font-bold text-blue-600">
@@ -291,17 +293,17 @@ export function AIPlayerInsights({
                   ))}
                 </div>
               )}
-            </CardContent>
-          </Card>
+            </div>
+          </GlassCard>
         ))}
       </div>
 
-      {/* Refresh Button */}
+      {/* Refresh NeonButton */}
       <div className="text-center">
-        <Button onClick={fetchPrediction} variant="outline" disabled={loading}>
+        <NeonButton onClick={fetchPrediction} variant="blue" disabled={loading}>
           <RefreshCw className={`w-4 h-4 mr-2 ${loading ? 'animate-spin' : ''}`} />
           {loading ? 'Analyzing...' : 'Refresh AI Analysis'}
-        </Button>
+        </NeonButton>
         <div className="text-xs text-gray-500 mt-2">
           Powered by 1,375+ AI workers with contextual learning
         </div>

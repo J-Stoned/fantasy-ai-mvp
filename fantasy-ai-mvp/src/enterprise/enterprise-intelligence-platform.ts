@@ -1,8 +1,8 @@
 "use client";
 
 import { EventEmitter } from 'events';
-import { omniversalDataCollector } from '../data-empire/omniversal-data-collector';
-import { revolutionaryAIArmy } from '../ai-army/revolutionary-ai-algorithms';
+// import { omniversalDataCollector } from '../data-empire/omniversal-data-collector';
+// import { revolutionaryAIArmy } from '../ai-army/revolutionary-ai-algorithms';
 
 /**
  * ENTERPRISE INTELLIGENCE PLATFORM

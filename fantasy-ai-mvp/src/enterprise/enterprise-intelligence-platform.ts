@@ -1457,22 +1457,22 @@ export class EnterpriseIntelligencePlatform extends EventEmitter {
   }
 
   private getDefaultDataAccess(industry: string): DataAccessLevel[] {
-    const baseAccess = [
-      { category: 'player-performance', accessType: 'real-time', updateFrequency: 'real-time', dataRetention: 365, customization: true, exclusivity: false, pricing: 50000 },
-      { category: 'game-analytics', accessType: 'historical', updateFrequency: 'daily', dataRetention: 1095, customization: true, exclusivity: false, pricing: 30000 }
+    const baseAccess: DataAccessLevel[] = [
+      { category: 'player-performance', accessType: 'real-time' as const, updateFrequency: 'real-time', dataRetention: 365, customization: true, exclusivity: false, pricing: 50000 },
+      { category: 'game-analytics', accessType: 'historical' as const, updateFrequency: 'daily', dataRetention: 1095, customization: true, exclusivity: false, pricing: 30000 }
     ];
     
     switch (industry) {
       case 'professional-sports-teams':
         return [
           ...baseAccess,
-          { category: 'injury-prediction', accessType: 'predictive', updateFrequency: 'hourly', dataRetention: 1095, customization: true, exclusivity: true, pricing: 100000 },
-          { category: 'opponent-analysis', accessType: 'real-time', updateFrequency: 'real-time', dataRetention: 365, customization: true, exclusivity: true, pricing: 75000 }
+          { category: 'injury-prediction', accessType: 'predictive' as const, updateFrequency: 'hourly', dataRetention: 1095, customization: true, exclusivity: true, pricing: 100000 },
+          { category: 'opponent-analysis', accessType: 'real-time' as const, updateFrequency: 'real-time', dataRetention: 365, customization: true, exclusivity: true, pricing: 75000 }
         ];
       case 'equipment-manufacturers':
         return [
           ...baseAccess,
-          { category: 'equipment-performance', accessType: 'raw-feeds', updateFrequency: 'real-time', dataRetention: 1095, customization: true, exclusivity: true, pricing: 80000 }
+          { category: 'equipment-performance', accessType: 'raw-feeds' as const, updateFrequency: 'real-time', dataRetention: 1095, customization: true, exclusivity: true, pricing: 80000 }
         ];
       default:
         return baseAccess;
@@ -1480,23 +1480,23 @@ export class EnterpriseIntelligencePlatform extends EventEmitter {
   }
 
   private getDefaultAIAccess(industry: string): AIAccessLevel[] {
-    const baseAccess = [
-      { algorithmCategory: 'performance-prediction', accessType: 'api', queryLimit: 1000000, customTraining: false, exclusiveModels: false, pricing: 25000 },
-      { algorithmCategory: 'game-analysis', accessType: 'dashboard', queryLimit: 500000, customTraining: false, exclusiveModels: false, pricing: 15000 }
+    const baseAccess: AIAccessLevel[] = [
+      { algorithmCategory: 'performance-prediction', accessType: 'api' as const, queryLimit: 1000000, customTraining: false, exclusiveModels: false, pricing: 25000 },
+      { algorithmCategory: 'game-analysis', accessType: 'dashboard' as const, queryLimit: 500000, customTraining: false, exclusiveModels: false, pricing: 15000 }
     ];
     
     switch (industry) {
       case 'professional-sports-teams':
         return [
           ...baseAccess,
-          { algorithmCategory: 'injury-prevention', accessType: 'custom-integration', queryLimit: 2000000, customTraining: true, exclusiveModels: true, pricing: 75000 },
-          { algorithmCategory: 'draft-intelligence', accessType: 'white-label', queryLimit: 100000, customTraining: true, exclusiveModels: true, pricing: 50000 }
+          { algorithmCategory: 'injury-prevention', accessType: 'custom-integration' as const, queryLimit: 2000000, customTraining: true, exclusiveModels: true, pricing: 75000 },
+          { algorithmCategory: 'draft-intelligence', accessType: 'white-label' as const, queryLimit: 100000, customTraining: true, exclusiveModels: true, pricing: 50000 }
         ];
       case 'gambling-sportsbooks':
         return [
           ...baseAccess,
-          { algorithmCategory: 'line-optimization', accessType: 'api', queryLimit: 5000000, customTraining: true, exclusiveModels: false, pricing: 100000 },
-          { algorithmCategory: 'risk-management', accessType: 'custom-integration', queryLimit: 2000000, customTraining: true, exclusiveModels: true, pricing: 80000 }
+          { algorithmCategory: 'line-optimization', accessType: 'api' as const, queryLimit: 5000000, customTraining: true, exclusiveModels: false, pricing: 100000 },
+          { algorithmCategory: 'risk-management', accessType: 'custom-integration' as const, queryLimit: 2000000, customTraining: true, exclusiveModels: true, pricing: 80000 }
         ];
       default:
         return baseAccess;

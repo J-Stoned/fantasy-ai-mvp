@@ -80,7 +80,7 @@ export interface PatentPortfolio {
   enforcementBudget: number;
   
   metadata: {
-    lead: attorneyS: string[];
+    leadAttorneys: string[];
     patentFirms: string[];
     prosecutionStrategy: string;
     enforcementStrategy: string;

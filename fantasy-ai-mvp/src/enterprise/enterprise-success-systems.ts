@@ -98,7 +98,7 @@ export interface CustomerHealthScore {
   
   // Business Metrics
   roi: number; // % ROI achieved
-  timeTo  Value: number; // days to see value
+  timeToValue: number; // days to see value
   businessImpact: number; // measured business impact
   
   // Engagement Metrics
@@ -156,7 +156,7 @@ export interface Intervention {
   action: string;
   owner: string;
   timeline: number; // hours to execute
-  success  Rate: number;
+  successRate: number;
   cost: number;
 }
 
@@ -168,7 +168,7 @@ export interface ExpansionOpportunity {
   // Opportunity Details
   services: string[];
   potentialRevenue: number;
-  implementation ost: number;
+  implementationCost: number;
   timelineMonths: number;
   
   // Probability Assessment

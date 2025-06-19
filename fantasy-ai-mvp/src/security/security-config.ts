@@ -160,7 +160,7 @@ export class SecurityUtils {
       SECURITY_CONFIG.encryption.algorithm,
       Buffer.from(key, 'hex'),
       iv
-    );
+    ) as crypto.CipherGCM;
     
     let encrypted = cipher.update(text);
     encrypted = Buffer.concat([encrypted, cipher.final()]);
@@ -181,7 +181,7 @@ export class SecurityUtils {
       SECURITY_CONFIG.encryption.algorithm,
       Buffer.from(key, 'hex'),
       iv
-    );
+    ) as crypto.DecipherGCM;
     
     decipher.setAuthTag(authTag);
     
@@ -357,8 +357,5 @@ class SecurityMonitor {
 
 // Export all security utilities
 export {
-  SecurityUtils,
-  AIModelProtection,
-  VoiceDataProtection,
   SecurityMonitor
 };

@@ -3,7 +3,7 @@
 import { EventEmitter } from 'events';
 import { voiceAnalyticsIntelligence } from './voice-analytics-intelligence';
 import { voiceFrustrationPrevention } from './voice-frustration-prevention';
-import { voiceResponseOptimization } from './voice-response-optimization';
+import { voiceResponseOptimization, UserAdaptationType, UserAdaptation, VoiceResponse as OptimizedVoiceResponse } from './voice-response-optimization';
 
 export interface VoiceCommand {
   id: string;
@@ -346,7 +346,10 @@ export class VoiceAssistantService extends EventEmitter {
       if (typeof audioData === 'string') {
         // Convert string to ArrayBuffer if needed
         const encoder = new TextEncoder();
-        audioBuffer = encoder.encode(audioData).buffer;
+        const uint8Array = encoder.encode(audioData);
+        // Create a new ArrayBuffer and copy the data
+        audioBuffer = new ArrayBuffer(uint8Array.length);
+        new Uint8Array(audioBuffer).set(uint8Array);
       } else {
         audioBuffer = audioData;
       }
@@ -396,7 +399,7 @@ export class VoiceAssistantService extends EventEmitter {
       
       // RESPONSE OPTIMIZATION - Optimize response based on user analysis
       if (userId) {
-        const voiceResponseData = {
+        const voiceResponseData: OptimizedVoiceResponse = {
           id: `response_${Date.now()}`,
           content: response.text,
           tone: {
@@ -535,7 +538,7 @@ export class VoiceAssistantService extends EventEmitter {
       
       // Make error response empathetic if user seems frustrated
       this.emit('processingError', { 
-        error: error.message,
+        error: error instanceof Error ? error.message : String(error),
         transcription: 'unknown',
         userId
       });

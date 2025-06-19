@@ -4,10 +4,7 @@
  * Connects to our Fantasy.AI infrastructure for real-time updates
  */
 
-// Chrome extension types
-declare global {
-  var chrome: any;
-}
+// Chrome extension types are already available globally
 
 // Disable strict checks for this extension file
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

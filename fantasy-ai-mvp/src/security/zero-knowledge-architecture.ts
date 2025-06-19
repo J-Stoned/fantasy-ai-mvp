@@ -278,7 +278,7 @@ export class ZeroKnowledgeArchitecture extends EventEmitter {
       
     } catch (error) {
       console.error('❌ Failed to store user data securely:', error);
-      return { success: false, pseudonymousId: '', error: error.message };
+      return { success: false, pseudonymousId: '', error: error instanceof Error ? error.message : 'Unknown error' };
     }
   }
 
@@ -659,7 +659,7 @@ export class ZeroKnowledgeArchitecture extends EventEmitter {
       
     } catch (error) {
       console.error('❌ Failed to process right to be forgotten:', error);
-      return { success: false, error: error.message };
+      return { success: false, error: error instanceof Error ? error.message : 'Unknown error' };
     }
   }
 

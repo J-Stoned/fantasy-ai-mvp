@@ -91,7 +91,7 @@ export class AuthenticationSystem {
 
       return { success: true, user };
     } catch (error) {
-      this.logSecurityEvent('registration_error', { email, error: error.message });
+      this.logSecurityEvent('registration_error', { email, error: error instanceof Error ? error.message : String(error) });
       return { success: false, error: 'Registration failed' };
     }
   }
@@ -170,7 +170,7 @@ export class AuthenticationSystem {
 
       return { success: true, token };
     } catch (error) {
-      this.logSecurityEvent('login_error', { email, error: error.message });
+      this.logSecurityEvent('login_error', { email, error: error instanceof Error ? error.message : String(error) });
       return { success: false, error: 'Authentication failed' };
     }
   }
@@ -201,7 +201,7 @@ export class AuthenticationSystem {
 
       return { valid: true, payload };
     } catch (error) {
-      this.logSecurityEvent('token_verification_failed', { error: error.message });
+      this.logSecurityEvent('token_verification_failed', { error: error instanceof Error ? error.message : String(error) });
       return { valid: false, error: 'Invalid token' };
     }
   }
@@ -263,7 +263,7 @@ export class AuthenticationSystem {
 
       return true;
     } catch (error) {
-      this.logSecurityEvent('biometric_registration_failed', { userId, error: error.message });
+      this.logSecurityEvent('biometric_registration_failed', { userId, error: error instanceof Error ? error.message : String(error) });
       return false;
     }
   }
@@ -286,7 +286,7 @@ export class AuthenticationSystem {
 
       return isValid;
     } catch (error) {
-      this.logSecurityEvent('biometric_verification_failed', { userId, error: error.message });
+      this.logSecurityEvent('biometric_verification_failed', { userId, error: error instanceof Error ? error.message : String(error) });
       return false;
     }
   }
@@ -310,7 +310,7 @@ export class AuthenticationSystem {
       this.logSecurityEvent('api_key_authenticated', { userId: user.id });
       return { valid: true, user };
     } catch (error) {
-      this.logSecurityEvent('api_key_error', { error: error.message });
+      this.logSecurityEvent('api_key_error', { error: error instanceof Error ? error.message : String(error) });
       return { valid: false, error: 'API key authentication failed' };
     }
   }
@@ -334,7 +334,7 @@ export class AuthenticationSystem {
       this.logSecurityEvent('password_reset_requested', { email, userId: user.id });
       return { success: true };
     } catch (error) {
-      this.logSecurityEvent('password_reset_error', { email, error: error.message });
+      this.logSecurityEvent('password_reset_error', { email, error: error instanceof Error ? error.message : String(error) });
       return { success: false, error: 'Password reset request failed' };
     }
   }

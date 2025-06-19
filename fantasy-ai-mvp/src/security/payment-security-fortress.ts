@@ -329,7 +329,7 @@ export class PaymentSecurityFortress extends EventEmitter {
       
       await this.auditLogger.logSecurityEvent({
         eventType: 'TOKENIZATION',
-        eventData: { userId, error: error.message },
+        eventData: { userId, error: error instanceof Error ? error.message : String(error) },
         timestamp: new Date(),
         outcome: 'FAILURE'
       });
@@ -436,7 +436,7 @@ export class PaymentSecurityFortress extends EventEmitter {
         fees: this.calculateFees(request.amount),
         error: {
           code: 'PROCESSING_ERROR',
-          message: error.message,
+          message: error instanceof Error ? error.message : 'An unknown error occurred',
           category: 'SYSTEM_ERROR',
           retryable: true,
           suggestions: ['Please try again', 'Contact support if issue persists']

@@ -393,7 +393,7 @@ export class PrivacyPreservingAnalytics extends EventEmitter {
     } catch (error) {
       console.error('❌ Private query execution failed:', error);
       
-      throw new Error(`Private query failed: ${error.message}`);
+      throw new Error(`Private query failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
     }
   }
 

@@ -618,7 +618,7 @@ export class HyperscaledMCPOrchestrator extends EventEmitter {
       this.emit('hyperscaled-task-failed', {
         taskId: task.id,
         workerId: worker.id,
-        error: error.message,
+        error: error instanceof Error ? error.message : String(error),
         retryCount: task.retryCount
       });
 

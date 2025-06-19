@@ -1019,16 +1019,16 @@ export class HighSchoolIntelligenceSystem extends EventEmitter {
 
   private getSportSeason(sport: string): 'FALL' | 'WINTER' | 'SPRING' {
     const seasonMap = {
-      'Football': 'FALL',
-      'Basketball': 'WINTER', 
-      'Baseball': 'SPRING',
-      'Soccer': 'FALL',
-      'Track': 'SPRING',
-      'Wrestling': 'WINTER',
-      'Swimming': 'WINTER',
-      'Tennis': 'SPRING'
+      'Football': 'FALL' as const,
+      'Basketball': 'WINTER' as const, 
+      'Baseball': 'SPRING' as const,
+      'Soccer': 'FALL' as const,
+      'Track': 'SPRING' as const,
+      'Wrestling': 'WINTER' as const,
+      'Swimming': 'WINTER' as const,
+      'Tennis': 'SPRING' as const
     };
-    return seasonMap[sport as keyof typeof seasonMap] || 'FALL';
+    return (seasonMap[sport as keyof typeof seasonMap] || 'FALL') as 'FALL' | 'WINTER' | 'SPRING';
   }
 
   private generateSchoolFacilities(): SchoolFacilities {
@@ -1113,7 +1113,7 @@ export class HighSchoolIntelligenceSystem extends EventEmitter {
       'data-collector': ['data-gathering', 'information-processing', 'database-management'],
       'character-assessor': ['character-evaluation', 'leadership-assessment', 'behavioral-analysis']
     };
-    return capabilityMap[type] || [];
+    return capabilityMap[type as keyof typeof capabilityMap] || [];
   }
 
   private getWorkerSpecializations(type: string): any[] {

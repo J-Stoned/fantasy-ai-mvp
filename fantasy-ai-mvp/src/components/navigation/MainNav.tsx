@@ -26,7 +26,8 @@ import {
   FileText,
   Gamepad2,
   MessageCircle,
-  Coffee
+  Coffee,
+  Mic
 } from "lucide-react";
 
 const mainRoutes = [
@@ -47,6 +48,12 @@ const mainRoutes = [
     href: "/dashboard/analytics",
     icon: Zap,
     description: "AI Insights"
+  },
+  {
+    name: "Voice Demo",
+    href: "/voice-demo",
+    icon: Mic,
+    description: "ElevenLabs AI"
   },
   {
     name: "Betting",

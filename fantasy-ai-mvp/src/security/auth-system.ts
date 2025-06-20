@@ -6,7 +6,7 @@
 
 import jwt from 'jsonwebtoken';
 import crypto from 'crypto';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import speakeasy from 'speakeasy';
 import { SecurityUtils, SECURITY_CONFIG } from './security-config';
 

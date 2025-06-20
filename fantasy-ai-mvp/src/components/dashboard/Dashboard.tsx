@@ -8,7 +8,6 @@ import { SafeModeIndicator, ComplianceDashboard } from "@/components/compliance/
 import { AnalyticsDashboard } from "@/components/analytics/AnalyticsDashboard";
 import { InteractiveLineupBuilder } from "@/components/ui/InteractiveLineupBuilder";
 import { VoiceAssistant } from "@/components/voice/VoiceAssistant";
-import { NumberTicker, AnimatedGradientText, MagicCard, ShimmerButton } from "@/components/magicui";
 import { useLiveSportsData } from "@/hooks/useLiveSportsData";
 import { COMPLIANCE } from "@/lib/feature-flags";
 // Real MagicUI Components from MCP Server

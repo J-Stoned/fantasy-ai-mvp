@@ -71,7 +71,7 @@ const dashboards = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-gray-900 to-slate-950 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-gray-900 to-slate-950 relative overflow-hidden pt-4">
       {/* Enhanced Animated Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-48 -left-48 w-96 h-96 bg-neon-blue/10 rounded-full blur-3xl animate-float" />
@@ -118,6 +118,31 @@ export default function Home() {
               <span className="text-sm text-neon-purple font-medium">Revolutionary AI</span>
             </div>
           </div>
+        </motion.div>
+
+        {/* Live Stats Bar */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12"
+        >
+          <GlassCard className="p-4 text-center border border-neon-blue/30">
+            <div className="text-2xl font-bold text-neon-blue">22</div>
+            <div className="text-sm text-gray-400">MCP Servers</div>
+          </GlassCard>
+          <GlassCard className="p-4 text-center border border-neon-green/30">
+            <div className="text-2xl font-bold text-neon-green">1,375+</div>
+            <div className="text-sm text-gray-400">AI Workers</div>
+          </GlassCard>
+          <GlassCard className="p-4 text-center border border-neon-purple/30">
+            <div className="text-2xl font-bold text-neon-purple">99.97%</div>
+            <div className="text-sm text-gray-400">Uptime</div>
+          </GlassCard>
+          <GlassCard className="p-4 text-center border border-neon-orange/30">
+            <div className="text-2xl font-bold text-neon-orange">47ms</div>
+            <div className="text-sm text-gray-400">Response</div>
+          </GlassCard>
         </motion.div>
 
         {/* Dashboard Grid */}

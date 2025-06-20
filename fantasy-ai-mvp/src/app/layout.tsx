@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/providers/Providers";
+import { MainNav } from "@/components/navigation/MainNav";
+import { QuickActions } from "@/components/navigation/QuickActions";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -82,10 +84,16 @@ export default function RootLayout({
             <div className="fixed inset-0 bg-gradient-to-br from-background via-background to-slate-900 pointer-events-none" />
             <div className="fixed inset-0 bg-[url('/cyber-grid.png')] opacity-5 pointer-events-none" />
             
+            {/* Universal Navigation */}
+            <MainNav />
+            
             {/* Main content */}
             <main className="relative z-10">
               {children}
             </main>
+            
+            {/* Quick Actions Floating Button */}
+            <QuickActions />
           </div>
         </Providers>
       </body>

@@ -421,6 +421,17 @@ p { line-height: 1.6; margin-bottom: 1rem; }
   100% { transform: translateX(100%); }
 }
 
+/* MagicUI Animations */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  animation: gradient 6s ease infinite;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .dashboard-grid { grid-template-columns: 1fr; }

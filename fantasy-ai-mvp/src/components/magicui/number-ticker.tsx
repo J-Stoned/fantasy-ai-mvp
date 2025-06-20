@@ -1,42 +1,62 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { useInView, useMotionValue, useSpring } from "framer-motion";
+import { ComponentPropsWithoutRef, useEffect, useRef } from "react";
 
-interface NumberTickerProps {
+import { cn } from "@/lib/utils";
+
+interface NumberTickerProps extends ComponentPropsWithoutRef<"span"> {
   value: number;
-  className?: string;
+  startValue?: number;
+  direction?: "up" | "down";
+  delay?: number;
+  decimalPlaces?: number;
 }
 
-export function NumberTicker({ value, className = "" }: NumberTickerProps) {
-  const [displayValue, setDisplayValue] = useState(0);
+export function NumberTicker({
+  value,
+  startValue = 0,
+  direction = "up",
+  delay = 0,
+  className,
+  decimalPlaces = 0,
+  ...props
+}: NumberTickerProps) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const motionValue = useMotionValue(direction === "down" ? value : startValue);
+  const springValue = useSpring(motionValue, {
+    damping: 60,
+    stiffness: 100,
+  });
+  const isInView = useInView(ref, { once: true, margin: "0px" });
 
   useEffect(() => {
-    const duration = 1000; // 1 second
-    const steps = 60;
-    const increment = value / steps;
-    let current = 0;
-    
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= value) {
-        setDisplayValue(value);
-        clearInterval(timer);
-      } else {
-        setDisplayValue(Math.floor(current));
-      }
-    }, duration / steps);
+    if (isInView) {
+      const timer = setTimeout(() => {
+        motionValue.set(direction === "down" ? startValue : value);
+      }, delay * 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [motionValue, isInView, delay, value, direction, startValue]);
 
-    return () => clearInterval(timer);
-  }, [value]);
+  useEffect(
+    () =>
+      springValue.on("change", (latest) => {
+        if (ref.current) {
+          ref.current.textContent = Intl.NumberFormat("en-US", {
+            minimumFractionDigits: decimalPlaces,
+            maximumFractionDigits: decimalPlaces,
+          }).format(Number(latest.toFixed(decimalPlaces)));
+        }
+      }),
+    [springValue, decimalPlaces],
+  );
 
   return (
-    <motion.span
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      className={className}
-    >
-      {displayValue.toLocaleString()}
-    </motion.span>
+    <span
+      ref={ref}
+      className={cn("tabular-nums tracking-wider", className)}
+      {...props}
+    />
   );
 }

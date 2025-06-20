@@ -1,35 +1,37 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { cn } from "@/lib/utils";
+import { ComponentPropsWithoutRef } from "react";
 
-interface AnimatedGradientTextProps {
-  children: ReactNode;
-  className?: string;
+export interface AnimatedGradientTextProps 
+  extends ComponentPropsWithoutRef<"span"> {
+  speed?: number;
+  colorFrom?: string;
+  colorTo?: string;
 }
 
-export function AnimatedGradientText({ children, className = "" }: AnimatedGradientTextProps) {
+export function AnimatedGradientText({
+  children,
+  className,
+  speed = 1,
+  colorFrom = "#ffaa40",
+  colorTo = "#9c40ff",
+  ...props
+}: AnimatedGradientTextProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className={`bg-gradient-to-r from-neon-blue via-neon-purple to-neon-pink bg-clip-text text-transparent ${className}`}
+    <span
       style={{
-        backgroundSize: "200% 200%",
-        animation: "gradient-x 3s ease infinite"
-      }}
+        "--bg-size": `${speed * 300}%`,
+        "--color-from": colorFrom,
+        "--color-to": colorTo,
+      } as React.CSSProperties}
+      className={cn(
+        `inline animate-gradient bg-gradient-to-r from-[var(--color-from)] via-[var(--color-to)] to-[var(--color-from)] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,
+        className,
+      )}
+      {...props}
     >
       {children}
-      <style jsx>{`
-        @keyframes gradient-x {
-          0%, 100% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-        }
-      `}</style>
-    </motion.div>
+    </span>
   );
 }

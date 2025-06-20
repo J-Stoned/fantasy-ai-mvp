@@ -59,7 +59,7 @@ export function useLiveSportsData(options: UseLiveSportsDataOptions = {}): UseLi
     position,
     team,
     limit = 50,
-    refreshInterval = 5 * 60 * 1000, // 5 minutes default
+    refreshInterval = 30 * 1000, // 30 seconds default
     autoRefresh = true
   } = options;
 
@@ -115,7 +115,7 @@ export function useLiveSportsData(options: UseLiveSportsDataOptions = {}): UseLi
     }
     
     const timer = setInterval(() => {
-      console.log('🔄 Auto-refreshing sports data...');
+      console.log('🔄 Auto-refreshing sports data (30s interval)...');
       fetchData();
     }, refreshInterval);
     

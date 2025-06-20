@@ -8,8 +8,17 @@ import { SafeModeIndicator, ComplianceDashboard } from "@/components/compliance/
 import { AnalyticsDashboard } from "@/components/analytics/AnalyticsDashboard";
 import { InteractiveLineupBuilder } from "@/components/ui/InteractiveLineupBuilder";
 import { VoiceAssistant } from "@/components/voice/VoiceAssistant";
+import { NumberTicker, AnimatedGradientText, MagicCard, ShimmerButton } from "@/components/magicui";
 import { useLiveSportsData } from "@/hooks/useLiveSportsData";
 import { COMPLIANCE } from "@/lib/feature-flags";
+// Real MagicUI Components from MCP Server
+import { 
+  NumberTicker, 
+  AnimatedGradientText, 
+  MagicCard, 
+  ShimmerButton, 
+  SimpleBentoGrid as BentoGrid
+} from '@/components/magicui';
 import { 
   Trophy, 
   TrendingUp, 
@@ -42,7 +51,7 @@ export function Dashboard() {
     isLive,
     lastUpdated,
     refresh: refreshPlayers
-  } = useLiveSportsData({ limit: 20 });
+  } = useLiveSportsData({ limit: 20, refreshInterval: 30 * 1000 });
   
   // Use live data with fallback to ensure UI works
   const players = livePlayerData.length > 0 ? livePlayerData : [];
@@ -88,8 +97,10 @@ export function Dashboard() {
         >
           <div className="flex items-center justify-between mb-4">
             <div>
-              <h1 className="text-4xl font-bold neon-text mb-2">
-                Fantasy.AI Command Center
+              <h1 className="text-4xl font-bold mb-2">
+                <AnimatedGradientText className="text-4xl font-bold">
+                  Fantasy.AI Command Center
+                </AnimatedGradientText>
               </h1>
               <p className="text-gray-400">
                 Your AI-powered fantasy sports assistant {isSafeMode ? '• Legal Fantasy Mode' : ''}
@@ -167,48 +178,48 @@ export function Dashboard() {
         >
           {activeView === "overview" && (
             <>
-              {/* Stats Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          <GlassCard delay={0.1}>
+              {/* Stats Grid - Enhanced with MagicUI */}
+              <BentoGrid className="grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <MagicCard>
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-gray-400 text-sm">League Rank</p>
-                <p className="text-2xl font-bold text-neon-green">#2</p>
+                <p className="text-2xl font-bold text-green-400">#<NumberTicker value={2} /></p>
               </div>
-              <Trophy className="w-8 h-8 text-neon-green glow-md" />
+              <Trophy className="w-8 h-8 text-green-400" />
             </div>
-          </GlassCard>
+          </MagicCard>
 
-          <GlassCard delay={0.2}>
+          <MagicCard>
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-gray-400 text-sm">Win Rate</p>
-                <p className="text-2xl font-bold text-neon-blue">78%</p>
+                <p className="text-2xl font-bold text-blue-400"><NumberTicker value={78} />%</p>
               </div>
-              <TrendingUp className="w-8 h-8 text-neon-blue glow-md" />
+              <TrendingUp className="w-8 h-8 text-blue-400" />
             </div>
-          </GlassCard>
+          </MagicCard>
 
-          <GlassCard delay={0.3}>
+          <MagicCard>
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-gray-400 text-sm">AI Score</p>
-                <p className="text-2xl font-bold text-neon-purple">94.2</p>
+                <p className="text-2xl font-bold text-purple-400"><NumberTicker value={94} decimalPlaces={1} startValue={90} />.2</p>
               </div>
-              <Brain className="w-8 h-8 text-neon-purple glow-md" />
+              <Brain className="w-8 h-8 text-purple-400" />
             </div>
-          </GlassCard>
+          </MagicCard>
 
-          <GlassCard delay={0.4}>
+          <MagicCard>
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-gray-400 text-sm">Active Alerts</p>
-                <p className="text-2xl font-bold text-neon-pink">3</p>
+                <p className="text-2xl font-bold text-pink-400"><NumberTicker value={3} /></p>
               </div>
-              <AlertCircle className="w-8 h-8 text-neon-pink glow-md" />
+              <AlertCircle className="w-8 h-8 text-pink-400" />
             </div>
-          </GlassCard>
-        </div>
+          </MagicCard>
+        </BentoGrid>
 
         {/* Safe Mode Features Showcase */}
         {isSafeMode && (
@@ -306,9 +317,9 @@ export function Dashboard() {
                 <Zap className="w-5 h-5 text-neon-yellow" />
                 AI Insights
               </h2>
-              <NeonButton size="sm" variant="purple">
+              <ShimmerButton className="px-4 py-2 text-sm">
                 View All
-              </NeonButton>
+              </ShimmerButton>
             </div>
 
             <div className="space-y-4">
@@ -373,18 +384,22 @@ export function Dashboard() {
             </h2>
 
             <div className="space-y-3">
-              <NeonButton variant="blue" className="w-full justify-center">
+              <ShimmerButton className="w-full justify-center">
+                <Target className="w-4 h-4 mr-2" />
                 Optimize Lineup
-              </NeonButton>
-              <NeonButton variant="purple" className="w-full justify-center">
+              </ShimmerButton>
+              <ShimmerButton className="w-full justify-center">
+                <Users className="w-4 h-4 mr-2" />
                 Find Trades
-              </NeonButton>
-              <NeonButton variant="green" className="w-full justify-center">
+              </ShimmerButton>
+              <ShimmerButton className="w-full justify-center">
+                <Star className="w-4 h-4 mr-2" />
                 Waiver Wire
-              </NeonButton>
-              <NeonButton variant="pink" className="w-full justify-center">
+              </ShimmerButton>
+              <ShimmerButton className="w-full justify-center">
+                <Bot className="w-4 h-4 mr-2" />
                 AI Assistant
-              </NeonButton>
+              </ShimmerButton>
             </div>
 
             <div className="mt-6 p-4 bg-gradient-to-br from-neon-blue/10 to-neon-purple/10 rounded-lg border border-white/5">
@@ -415,7 +430,7 @@ export function Dashboard() {
                         <p className="text-sm text-gray-400">3 new trades proposed</p>
                       </div>
                     </div>
-                    <NeonButton size="sm">View League</NeonButton>
+                    <ShimmerButton className="px-4 py-2 text-sm">View League</ShimmerButton>
                   </div>
                 </GlassCard>
               </motion.div>

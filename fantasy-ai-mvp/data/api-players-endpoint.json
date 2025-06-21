@@ -1,0 +1,1415 @@
+{
+  "endpoint": "/api/players",
+  "method": "GET",
+  "description": "Get all players with stats and projections",
+  "sampleResponse": {
+    "success": true,
+    "data": [
+      {
+        "id": "cmc6bp2ih000aunwl7q13ekiz",
+        "name": "Josh Allen",
+        "team": "LAD",
+        "position": "C",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.321",
+          "homeRuns": 26,
+          "rbi": 87,
+          "runs": 79,
+          "hits": 84,
+          "era": "5.48",
+          "wins": 15,
+          "strikeouts": 253
+        },
+        "projections": {
+          "points": 27,
+          "salary": 11765201,
+          "fantasyPoints": 139,
+          "age": 22,
+          "height": "71\"",
+          "weight": 274,
+          "experience": 3,
+          "college": "LSU"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.634Z"
+      },
+      {
+        "id": "cmc6bp2iq000cunwlmg0rk0qw",
+        "name": "Christian McCaffrey",
+        "team": "NYY",
+        "position": "1B",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.385",
+          "homeRuns": 36,
+          "rbi": 98,
+          "runs": 45,
+          "hits": 57,
+          "era": "5.32",
+          "wins": 11,
+          "strikeouts": 278
+        },
+        "projections": {
+          "points": 13,
+          "salary": 30506486,
+          "fantasyPoints": 201,
+          "age": 31,
+          "height": "69\"",
+          "weight": 258,
+          "experience": 14,
+          "college": "Clemson"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.643Z"
+      },
+      {
+        "id": "cmc6bp2j1000eunwlx0zzdtrq",
+        "name": "Cooper Kupp",
+        "team": "HOU",
+        "position": "RP",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.556",
+          "homeRuns": 6,
+          "rbi": 127,
+          "runs": 35,
+          "hits": 127,
+          "era": "2.31",
+          "wins": 11,
+          "strikeouts": 286
+        },
+        "projections": {
+          "points": 30,
+          "salary": 45004103,
+          "fantasyPoints": 129,
+          "age": 34,
+          "height": "69\"",
+          "weight": 208,
+          "experience": 5,
+          "college": "Clemson"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.653Z"
+      },
+      {
+        "id": "cmc6bp2jb000gunwlym7m1q3n",
+        "name": "Justin Jefferson",
+        "team": "ATL",
+        "position": "SP",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.410",
+          "homeRuns": 11,
+          "rbi": 67,
+          "runs": 12,
+          "hits": 153,
+          "era": "3.59",
+          "wins": 12,
+          "strikeouts": 66
+        },
+        "projections": {
+          "points": 32,
+          "salary": 32139260,
+          "fantasyPoints": 193,
+          "age": 29,
+          "height": "71\"",
+          "weight": 265,
+          "experience": 2,
+          "college": "Georgia"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.663Z"
+      },
+      {
+        "id": "cmc6bp2jk000iunwlrx2og335",
+        "name": "Travis Kelce",
+        "team": "SD",
+        "position": "SS",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.538",
+          "homeRuns": 35,
+          "rbi": 101,
+          "runs": 33,
+          "hits": 100,
+          "era": "1.45",
+          "wins": 8,
+          "strikeouts": 73
+        },
+        "projections": {
+          "points": 12,
+          "salary": 37193161,
+          "fantasyPoints": 310,
+          "age": 20,
+          "height": "69\"",
+          "weight": 214,
+          "experience": 12,
+          "college": "LSU"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.672Z"
+      },
+      {
+        "id": "cmc6bp2ju000kunwl5kqzqc0x",
+        "name": "Aaron Donald",
+        "team": "NYM",
+        "position": "2B",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.432",
+          "homeRuns": 13,
+          "rbi": 24,
+          "runs": 45,
+          "hits": 195,
+          "era": "4.73",
+          "wins": 14,
+          "strikeouts": 79
+        },
+        "projections": {
+          "points": 12,
+          "salary": 7177758,
+          "fantasyPoints": 349,
+          "age": 33,
+          "height": "70\"",
+          "weight": 274,
+          "experience": 5,
+          "college": "Georgia"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.683Z"
+      },
+      {
+        "id": "cmc6bp2k4000munwl3c7agx7m",
+        "name": "Myles Garrett",
+        "team": "STL",
+        "position": "SP",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.575",
+          "homeRuns": 40,
+          "rbi": 123,
+          "runs": 2,
+          "hits": 156,
+          "era": "5.35",
+          "wins": 7,
+          "strikeouts": 139
+        },
+        "projections": {
+          "points": 30,
+          "salary": 10228642,
+          "fantasyPoints": 331,
+          "age": 21,
+          "height": "66\"",
+          "weight": 245,
+          "experience": 6,
+          "college": "Georgia"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.693Z"
+      },
+      {
+        "id": "cmc6bp2kd000ounwlcvd2xubi",
+        "name": "Josh Allen",
+        "team": "LAD",
+        "position": "RP",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.581",
+          "homeRuns": 21,
+          "rbi": 85,
+          "runs": 39,
+          "hits": 153,
+          "era": "5.03",
+          "wins": 8,
+          "strikeouts": 248
+        },
+        "projections": {
+          "points": 27,
+          "salary": 33616150,
+          "fantasyPoints": 105,
+          "age": 33,
+          "height": "73\"",
+          "weight": 212,
+          "experience": 4,
+          "college": "Alabama"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.701Z"
+      },
+      {
+        "id": "cmc6bp2km000qunwlfuidwb44",
+        "name": "Christian McCaffrey",
+        "team": "NYY",
+        "position": "SP",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.214",
+          "homeRuns": 10,
+          "rbi": 70,
+          "runs": 71,
+          "hits": 181,
+          "era": "2.30",
+          "wins": 12,
+          "strikeouts": 105
+        },
+        "projections": {
+          "points": 30,
+          "salary": 11025803,
+          "fantasyPoints": 187,
+          "age": 24,
+          "height": "66\"",
+          "weight": 248,
+          "experience": 13,
+          "college": "Clemson"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.711Z"
+      },
+      {
+        "id": "cmc6bp2kw000sunwlrrdl9zu0",
+        "name": "Cooper Kupp",
+        "team": "HOU",
+        "position": "SS",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.461",
+          "homeRuns": 30,
+          "rbi": 85,
+          "runs": 64,
+          "hits": 73,
+          "era": "3.14",
+          "wins": 3,
+          "strikeouts": 197
+        },
+        "projections": {
+          "points": 13,
+          "salary": 14017414,
+          "fantasyPoints": 324,
+          "age": 21,
+          "height": "67\"",
+          "weight": 233,
+          "experience": 4,
+          "college": "LSU"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.721Z"
+      },
+      {
+        "id": "cmc6bp2l5000uunwlmax1z10j",
+        "name": "Justin Jefferson",
+        "team": "ATL",
+        "position": "SS",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.593",
+          "homeRuns": 27,
+          "rbi": 44,
+          "runs": 3,
+          "hits": 53,
+          "era": "5.19",
+          "wins": 1,
+          "strikeouts": 285
+        },
+        "projections": {
+          "points": 10,
+          "salary": 47827143,
+          "fantasyPoints": 314,
+          "age": 27,
+          "height": "70\"",
+          "weight": 201,
+          "experience": 15,
+          "college": "Georgia"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.729Z"
+      },
+      {
+        "id": "cmc6bp2le000wunwlcsrwxllq",
+        "name": "Travis Kelce",
+        "team": "SD",
+        "position": "C",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.282",
+          "homeRuns": 41,
+          "rbi": 97,
+          "runs": 35,
+          "hits": 35,
+          "era": "2.82",
+          "wins": 3,
+          "strikeouts": 134
+        },
+        "projections": {
+          "points": 15,
+          "salary": 34239841,
+          "fantasyPoints": 305,
+          "age": 22,
+          "height": "70\"",
+          "weight": 229,
+          "experience": 15,
+          "college": "Ohio State"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.739Z"
+      },
+      {
+        "id": "cmc6bp2lo000yunwlggbg5dh3",
+        "name": "Aaron Donald",
+        "team": "NYM",
+        "position": "SP",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.239",
+          "homeRuns": 32,
+          "rbi": 119,
+          "runs": 11,
+          "hits": 34,
+          "era": "3.02",
+          "wins": 18,
+          "strikeouts": 228
+        },
+        "projections": {
+          "points": 15,
+          "salary": 47868954,
+          "fantasyPoints": 117,
+          "age": 23,
+          "height": "73\"",
+          "weight": 233,
+          "experience": 15,
+          "college": "LSU"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.748Z"
+      },
+      {
+        "id": "cmc6bp2lx0010unwlpk50zz0c",
+        "name": "Myles Garrett",
+        "team": "STL",
+        "position": "C",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.249",
+          "homeRuns": 5,
+          "rbi": 89,
+          "runs": 98,
+          "hits": 92,
+          "era": "2.08",
+          "wins": 13,
+          "strikeouts": 78
+        },
+        "projections": {
+          "points": 10,
+          "salary": 5275917,
+          "fantasyPoints": 235,
+          "age": 21,
+          "height": "67\"",
+          "weight": 239,
+          "experience": 3,
+          "college": "Alabama"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.757Z"
+      },
+      {
+        "id": "cmc6bp2m60012unwl1r7ql4z3",
+        "name": "Josh Allen",
+        "team": "LAD",
+        "position": "1B",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.339",
+          "homeRuns": 8,
+          "rbi": 71,
+          "runs": 8,
+          "hits": 31,
+          "era": "2.53",
+          "wins": 15,
+          "strikeouts": 192
+        },
+        "projections": {
+          "points": 20,
+          "salary": 32907771,
+          "fantasyPoints": 303,
+          "age": 30,
+          "height": "66\"",
+          "weight": 215,
+          "experience": 13,
+          "college": "LSU"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.767Z"
+      },
+      {
+        "id": "cmc6bp2mg0014unwl9inv13mc",
+        "name": "Christian McCaffrey",
+        "team": "NYY",
+        "position": "RP",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.505",
+          "homeRuns": 2,
+          "rbi": 3,
+          "runs": 76,
+          "hits": 34,
+          "era": "4.25",
+          "wins": 18,
+          "strikeouts": 196
+        },
+        "projections": {
+          "points": 19,
+          "salary": 43008701,
+          "fantasyPoints": 247,
+          "age": 20,
+          "height": "68\"",
+          "weight": 203,
+          "experience": 9,
+          "college": "LSU"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.776Z"
+      },
+      {
+        "id": "cmc6bp2mp0016unwllgw7vjj4",
+        "name": "Cooper Kupp",
+        "team": "HOU",
+        "position": "OF",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.546",
+          "homeRuns": 4,
+          "rbi": 3,
+          "runs": 47,
+          "hits": 3,
+          "era": "5.50",
+          "wins": 2,
+          "strikeouts": 177
+        },
+        "projections": {
+          "points": 13,
+          "salary": 39974877,
+          "fantasyPoints": 331,
+          "age": 29,
+          "height": "66\"",
+          "weight": 243,
+          "experience": 3,
+          "college": "Ohio State"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.785Z"
+      },
+      {
+        "id": "cmc6bp2n10018unwl7qgvr4r6",
+        "name": "Justin Jefferson",
+        "team": "ATL",
+        "position": "C",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.415",
+          "homeRuns": 24,
+          "rbi": 74,
+          "runs": 113,
+          "hits": 190,
+          "era": "4.03",
+          "wins": 0,
+          "strikeouts": 76
+        },
+        "projections": {
+          "points": 25,
+          "salary": 45060579,
+          "fantasyPoints": 271,
+          "age": 33,
+          "height": "67\"",
+          "weight": 242,
+          "experience": 12,
+          "college": "Ohio State"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.797Z"
+      },
+      {
+        "id": "cmc6bp2nc001aunwl23t32fno",
+        "name": "Travis Kelce",
+        "team": "SD",
+        "position": "C",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.217",
+          "homeRuns": 12,
+          "rbi": 100,
+          "runs": 60,
+          "hits": 189,
+          "era": "4.27",
+          "wins": 14,
+          "strikeouts": 148
+        },
+        "projections": {
+          "points": 13,
+          "salary": 47697921,
+          "fantasyPoints": 304,
+          "age": 33,
+          "height": "72\"",
+          "weight": 184,
+          "experience": 4,
+          "college": "Alabama"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.808Z"
+      },
+      {
+        "id": "cmc6bp2nn001cunwl2xx06gtg",
+        "name": "Aaron Donald",
+        "team": "NYM",
+        "position": "3B",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.498",
+          "homeRuns": 32,
+          "rbi": 119,
+          "runs": 113,
+          "hits": 69,
+          "era": "1.81",
+          "wins": 16,
+          "strikeouts": 153
+        },
+        "projections": {
+          "points": 22,
+          "salary": 20924320,
+          "fantasyPoints": 177,
+          "age": 29,
+          "height": "69\"",
+          "weight": 270,
+          "experience": 4,
+          "college": "Alabama"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.819Z"
+      },
+      {
+        "id": "cmc6bp2nw001eunwl77ph055q",
+        "name": "Myles Garrett",
+        "team": "STL",
+        "position": "RP",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.360",
+          "homeRuns": 41,
+          "rbi": 42,
+          "runs": 55,
+          "hits": 187,
+          "era": "2.70",
+          "wins": 5,
+          "strikeouts": 275
+        },
+        "projections": {
+          "points": 16,
+          "salary": 20045441,
+          "fantasyPoints": 205,
+          "age": 27,
+          "height": "66\"",
+          "weight": 250,
+          "experience": 1,
+          "college": "Georgia"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.828Z"
+      },
+      {
+        "id": "cmc6bp2o5001gunwl1n4ysbbf",
+        "name": "Josh Allen",
+        "team": "LAD",
+        "position": "C",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.504",
+          "homeRuns": 28,
+          "rbi": 1,
+          "runs": 118,
+          "hits": 156,
+          "era": "4.45",
+          "wins": 2,
+          "strikeouts": 25
+        },
+        "projections": {
+          "points": 34,
+          "salary": 9943522,
+          "fantasyPoints": 226,
+          "age": 26,
+          "height": "68\"",
+          "weight": 255,
+          "experience": 6,
+          "college": "Ohio State"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.838Z"
+      },
+      {
+        "id": "cmc6bp2of001iunwllj3aywvt",
+        "name": "Christian McCaffrey",
+        "team": "NYY",
+        "position": "3B",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.554",
+          "homeRuns": 35,
+          "rbi": 13,
+          "runs": 115,
+          "hits": 62,
+          "era": "3.70",
+          "wins": 4,
+          "strikeouts": 47
+        },
+        "projections": {
+          "points": 14,
+          "salary": 8926616,
+          "fantasyPoints": 126,
+          "age": 22,
+          "height": "72\"",
+          "weight": 241,
+          "experience": 1,
+          "college": "Clemson"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.848Z"
+      },
+      {
+        "id": "cmc6bp2op001kunwlw6hknspo",
+        "name": "Cooper Kupp",
+        "team": "HOU",
+        "position": "SP",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.543",
+          "homeRuns": 38,
+          "rbi": 84,
+          "runs": 112,
+          "hits": 67,
+          "era": "1.11",
+          "wins": 6,
+          "strikeouts": 147
+        },
+        "projections": {
+          "points": 16,
+          "salary": 14952996,
+          "fantasyPoints": 127,
+          "age": 20,
+          "height": "67\"",
+          "weight": 201,
+          "experience": 8,
+          "college": "Alabama"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.857Z"
+      },
+      {
+        "id": "cmc6bp2ox001munwls0dmfot9",
+        "name": "Justin Jefferson",
+        "team": "ATL",
+        "position": "3B",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.284",
+          "homeRuns": 20,
+          "rbi": 44,
+          "runs": 73,
+          "hits": 150,
+          "era": "4.11",
+          "wins": 3,
+          "strikeouts": 130
+        },
+        "projections": {
+          "points": 30,
+          "salary": 1807561,
+          "fantasyPoints": 129,
+          "age": 26,
+          "height": "69\"",
+          "weight": 214,
+          "experience": 1,
+          "college": "Ohio State"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.866Z"
+      },
+      {
+        "id": "cmc6bp2p7001ounwlhtfd7v5y",
+        "name": "Travis Kelce",
+        "team": "SD",
+        "position": "SS",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.299",
+          "homeRuns": 28,
+          "rbi": 16,
+          "runs": 43,
+          "hits": 30,
+          "era": "5.54",
+          "wins": 19,
+          "strikeouts": 13
+        },
+        "projections": {
+          "points": 27,
+          "salary": 34026077,
+          "fantasyPoints": 136,
+          "age": 22,
+          "height": "70\"",
+          "weight": 241,
+          "experience": 5,
+          "college": "LSU"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.875Z"
+      },
+      {
+        "id": "cmc6bp2ph001qunwlkljxkf03",
+        "name": "Aaron Donald",
+        "team": "NYM",
+        "position": "C",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.373",
+          "homeRuns": 18,
+          "rbi": 48,
+          "runs": 85,
+          "hits": 94,
+          "era": "2.12",
+          "wins": 1,
+          "strikeouts": 128
+        },
+        "projections": {
+          "points": 32,
+          "salary": 9580894,
+          "fantasyPoints": 147,
+          "age": 30,
+          "height": "69\"",
+          "weight": 254,
+          "experience": 9,
+          "college": "Georgia"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.885Z"
+      },
+      {
+        "id": "cmc6bp2pq001sunwl2cyshz57",
+        "name": "Myles Garrett",
+        "team": "STL",
+        "position": "SS",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.517",
+          "homeRuns": 19,
+          "rbi": 22,
+          "runs": 93,
+          "hits": 157,
+          "era": "4.54",
+          "wins": 13,
+          "strikeouts": 123
+        },
+        "projections": {
+          "points": 17,
+          "salary": 4713702,
+          "fantasyPoints": 241,
+          "age": 28,
+          "height": "73\"",
+          "weight": 219,
+          "experience": 9,
+          "college": "Georgia"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.894Z"
+      },
+      {
+        "id": "cmc6bp2q0001uunwlb00llib9",
+        "name": "Josh Allen",
+        "team": "LAD",
+        "position": "OF",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.516",
+          "homeRuns": 16,
+          "rbi": 69,
+          "runs": 3,
+          "hits": 29,
+          "era": "1.52",
+          "wins": 12,
+          "strikeouts": 230
+        },
+        "projections": {
+          "points": 33,
+          "salary": 3586331,
+          "fantasyPoints": 256,
+          "age": 33,
+          "height": "71\"",
+          "weight": 217,
+          "experience": 10,
+          "college": "Alabama"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.904Z"
+      },
+      {
+        "id": "cmc6bp2qa001wunwlyho5n9j7",
+        "name": "Christian McCaffrey",
+        "team": "NYY",
+        "position": "SP",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.254",
+          "homeRuns": 9,
+          "rbi": 105,
+          "runs": 75,
+          "hits": 163,
+          "era": "1.39",
+          "wins": 12,
+          "strikeouts": 168
+        },
+        "projections": {
+          "points": 11,
+          "salary": 26866929,
+          "fantasyPoints": 91,
+          "age": 33,
+          "height": "71\"",
+          "weight": 229,
+          "experience": 9,
+          "college": "Alabama"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.914Z"
+      },
+      {
+        "id": "cmc6bp2qi001yunwlszha6c5y",
+        "name": "Cooper Kupp",
+        "team": "HOU",
+        "position": "2B",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.403",
+          "homeRuns": 40,
+          "rbi": 48,
+          "runs": 53,
+          "hits": 138,
+          "era": "4.07",
+          "wins": 1,
+          "strikeouts": 84
+        },
+        "projections": {
+          "points": 16,
+          "salary": 47725706,
+          "fantasyPoints": 119,
+          "age": 27,
+          "height": "71\"",
+          "weight": 261,
+          "experience": 7,
+          "college": "LSU"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.923Z"
+      },
+      {
+        "id": "cmc6bp2qs0020unwloav9ji6p",
+        "name": "Justin Jefferson",
+        "team": "ATL",
+        "position": "OF",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.333",
+          "homeRuns": 26,
+          "rbi": 66,
+          "runs": 29,
+          "hits": 2,
+          "era": "5.52",
+          "wins": 14,
+          "strikeouts": 82
+        },
+        "projections": {
+          "points": 18,
+          "salary": 30467191,
+          "fantasyPoints": 267,
+          "age": 22,
+          "height": "71\"",
+          "weight": 216,
+          "experience": 12,
+          "college": "LSU"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.933Z"
+      },
+      {
+        "id": "cmc6bp2r20022unwl8bfi1zo7",
+        "name": "Travis Kelce",
+        "team": "SD",
+        "position": "3B",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.446",
+          "homeRuns": 28,
+          "rbi": 47,
+          "runs": 78,
+          "hits": 112,
+          "era": "5.95",
+          "wins": 19,
+          "strikeouts": 113
+        },
+        "projections": {
+          "points": 26,
+          "salary": 37089445,
+          "fantasyPoints": 242,
+          "age": 24,
+          "height": "69\"",
+          "weight": 215,
+          "experience": 11,
+          "college": "Alabama"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.942Z"
+      },
+      {
+        "id": "cmc6bp2ra0024unwlbfhnoskt",
+        "name": "Aaron Donald",
+        "team": "NYM",
+        "position": "OF",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.390",
+          "homeRuns": 32,
+          "rbi": 110,
+          "runs": 29,
+          "hits": 182,
+          "era": "5.05",
+          "wins": 1,
+          "strikeouts": 35
+        },
+        "projections": {
+          "points": 16,
+          "salary": 20487878,
+          "fantasyPoints": 251,
+          "age": 22,
+          "height": "67\"",
+          "weight": 273,
+          "experience": 9,
+          "college": "Ohio State"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.951Z"
+      },
+      {
+        "id": "cmc6bp2rk0026unwlztkqtvjf",
+        "name": "Myles Garrett",
+        "team": "STL",
+        "position": "1B",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.374",
+          "homeRuns": 11,
+          "rbi": 101,
+          "runs": 50,
+          "hits": 69,
+          "era": "3.78",
+          "wins": 8,
+          "strikeouts": 19
+        },
+        "projections": {
+          "points": 27,
+          "salary": 22654642,
+          "fantasyPoints": 124,
+          "age": 25,
+          "height": "66\"",
+          "weight": 232,
+          "experience": 10,
+          "college": "Georgia"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.960Z"
+      },
+      {
+        "id": "cmc6bp2ru0028unwlkna1atzt",
+        "name": "Josh Allen",
+        "team": "LAD",
+        "position": "3B",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.336",
+          "homeRuns": 31,
+          "rbi": 33,
+          "runs": 114,
+          "hits": 12,
+          "era": "2.64",
+          "wins": 15,
+          "strikeouts": 172
+        },
+        "projections": {
+          "points": 32,
+          "salary": 31085782,
+          "fantasyPoints": 203,
+          "age": 34,
+          "height": "72\"",
+          "weight": 221,
+          "experience": 8,
+          "college": "LSU"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.970Z"
+      },
+      {
+        "id": "cmc6bp2s4002aunwlahz97e8u",
+        "name": "Christian McCaffrey",
+        "team": "NYY",
+        "position": "RP",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.291",
+          "homeRuns": 15,
+          "rbi": 85,
+          "runs": 34,
+          "hits": 28,
+          "era": "1.32",
+          "wins": 8,
+          "strikeouts": 34
+        },
+        "projections": {
+          "points": 13,
+          "salary": 25285394,
+          "fantasyPoints": 140,
+          "age": 24,
+          "height": "70\"",
+          "weight": 264,
+          "experience": 2,
+          "college": "Alabama"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.981Z"
+      },
+      {
+        "id": "cmc6bp2se002cunwllxk6kh4g",
+        "name": "Cooper Kupp",
+        "team": "HOU",
+        "position": "2B",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.390",
+          "homeRuns": 48,
+          "rbi": 73,
+          "runs": 67,
+          "hits": 31,
+          "era": "3.93",
+          "wins": 16,
+          "strikeouts": 88
+        },
+        "projections": {
+          "points": 32,
+          "salary": 33274795,
+          "fantasyPoints": 141,
+          "age": 26,
+          "height": "67\"",
+          "weight": 245,
+          "experience": 5,
+          "college": "Alabama"
+        },
+        "lastUpdated": "2025-06-21T14:17:20.991Z"
+      },
+      {
+        "id": "cmc6bp2sp002eunwl4jucoe6y",
+        "name": "Justin Jefferson",
+        "team": "ATL",
+        "position": "RP",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.303",
+          "homeRuns": 37,
+          "rbi": 4,
+          "runs": 90,
+          "hits": 5,
+          "era": "5.14",
+          "wins": 16,
+          "strikeouts": 11
+        },
+        "projections": {
+          "points": 25,
+          "salary": 37387124,
+          "fantasyPoints": 220,
+          "age": 28,
+          "height": "73\"",
+          "weight": 198,
+          "experience": 14,
+          "college": "LSU"
+        },
+        "lastUpdated": "2025-06-21T14:17:21.002Z"
+      },
+      {
+        "id": "cmc6bp2sz002gunwlno82s2oh",
+        "name": "Travis Kelce",
+        "team": "SD",
+        "position": "SP",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.547",
+          "homeRuns": 28,
+          "rbi": 64,
+          "runs": 20,
+          "hits": 124,
+          "era": "4.83",
+          "wins": 2,
+          "strikeouts": 123
+        },
+        "projections": {
+          "points": 27,
+          "salary": 23012406,
+          "fantasyPoints": 190,
+          "age": 22,
+          "height": "68\"",
+          "weight": 261,
+          "experience": 3,
+          "college": "LSU"
+        },
+        "lastUpdated": "2025-06-21T14:17:21.011Z"
+      },
+      {
+        "id": "cmc6bp2t8002iunwl9tefqnda",
+        "name": "Aaron Donald",
+        "team": "NYM",
+        "position": "SP",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.554",
+          "homeRuns": 29,
+          "rbi": 100,
+          "runs": 83,
+          "hits": 183,
+          "era": "1.20",
+          "wins": 10,
+          "strikeouts": 93
+        },
+        "projections": {
+          "points": 30,
+          "salary": 50202878,
+          "fantasyPoints": 309,
+          "age": 25,
+          "height": "69\"",
+          "weight": 200,
+          "experience": 11,
+          "college": "Ohio State"
+        },
+        "lastUpdated": "2025-06-21T14:17:21.021Z"
+      },
+      {
+        "id": "cmc6bp2ti002kunwl9rbp96mw",
+        "name": "Myles Garrett",
+        "team": "STL",
+        "position": "2B",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.454",
+          "homeRuns": 19,
+          "rbi": 119,
+          "runs": 12,
+          "hits": 182,
+          "era": "4.02",
+          "wins": 8,
+          "strikeouts": 124
+        },
+        "projections": {
+          "points": 16,
+          "salary": 12868668,
+          "fantasyPoints": 98,
+          "age": 27,
+          "height": "72\"",
+          "weight": 200,
+          "experience": 7,
+          "college": "Alabama"
+        },
+        "lastUpdated": "2025-06-21T14:17:21.031Z"
+      },
+      {
+        "id": "cmc6bp2ts002munwls9jgi0w5",
+        "name": "Josh Allen",
+        "team": "LAD",
+        "position": "SS",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.356",
+          "homeRuns": 39,
+          "rbi": 13,
+          "runs": 99,
+          "hits": 69,
+          "era": "2.04",
+          "wins": 2,
+          "strikeouts": 226
+        },
+        "projections": {
+          "points": 21,
+          "salary": 22828237,
+          "fantasyPoints": 313,
+          "age": 23,
+          "height": "69\"",
+          "weight": 218,
+          "experience": 8,
+          "college": "LSU"
+        },
+        "lastUpdated": "2025-06-21T14:17:21.041Z"
+      },
+      {
+        "id": "cmc6bp2u2002ounwlwgfbe2fy",
+        "name": "Christian McCaffrey",
+        "team": "NYY",
+        "position": "SS",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.377",
+          "homeRuns": 34,
+          "rbi": 67,
+          "runs": 53,
+          "hits": 128,
+          "era": "3.46",
+          "wins": 7,
+          "strikeouts": 38
+        },
+        "projections": {
+          "points": 33,
+          "salary": 6892904,
+          "fantasyPoints": 224,
+          "age": 24,
+          "height": "70\"",
+          "weight": 234,
+          "experience": 7,
+          "college": "Alabama"
+        },
+        "lastUpdated": "2025-06-21T14:17:21.050Z"
+      },
+      {
+        "id": "cmc6bp2ub002qunwl4nmvfpv5",
+        "name": "Cooper Kupp",
+        "team": "HOU",
+        "position": "C",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.337",
+          "homeRuns": 33,
+          "rbi": 93,
+          "runs": 67,
+          "hits": 182,
+          "era": "3.15",
+          "wins": 17,
+          "strikeouts": 35
+        },
+        "projections": {
+          "points": 31,
+          "salary": 3890085,
+          "fantasyPoints": 341,
+          "age": 20,
+          "height": "67\"",
+          "weight": 186,
+          "experience": 10,
+          "college": "LSU"
+        },
+        "lastUpdated": "2025-06-21T14:17:21.060Z"
+      },
+      {
+        "id": "cmc6bp2ul002sunwlxgrkrkto",
+        "name": "Justin Jefferson",
+        "team": "ATL",
+        "position": "1B",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.225",
+          "homeRuns": 4,
+          "rbi": 58,
+          "runs": 116,
+          "hits": 40,
+          "era": "1.05",
+          "wins": 17,
+          "strikeouts": 5
+        },
+        "projections": {
+          "points": 28,
+          "salary": 8882820,
+          "fantasyPoints": 139,
+          "age": 28,
+          "height": "72\"",
+          "weight": 248,
+          "experience": 14,
+          "college": "Ohio State"
+        },
+        "lastUpdated": "2025-06-21T14:17:21.069Z"
+      },
+      {
+        "id": "cmc6bp2ut002uunwlw81kjxry",
+        "name": "Travis Kelce",
+        "team": "SD",
+        "position": "2B",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.549",
+          "homeRuns": 20,
+          "rbi": 97,
+          "runs": 117,
+          "hits": 103,
+          "era": "3.53",
+          "wins": 2,
+          "strikeouts": 150
+        },
+        "projections": {
+          "points": 11,
+          "salary": 11419927,
+          "fantasyPoints": 290,
+          "age": 24,
+          "height": "66\"",
+          "weight": 211,
+          "experience": 3,
+          "college": "Ohio State"
+        },
+        "lastUpdated": "2025-06-21T14:17:21.078Z"
+      },
+      {
+        "id": "cmc6bp2v2002wunwl6mgtlh0t",
+        "name": "Aaron Donald",
+        "team": "NYM",
+        "position": "SS",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.474",
+          "homeRuns": 45,
+          "rbi": 122,
+          "runs": 90,
+          "hits": 112,
+          "era": "1.50",
+          "wins": 5,
+          "strikeouts": 218
+        },
+        "projections": {
+          "points": 13,
+          "salary": 44472576,
+          "fantasyPoints": 83,
+          "age": 25,
+          "height": "71\"",
+          "weight": 218,
+          "experience": 4,
+          "college": "LSU"
+        },
+        "lastUpdated": "2025-06-21T14:17:21.087Z"
+      },
+      {
+        "id": "cmc6bp2vc002yunwl330da303",
+        "name": "Myles Garrett",
+        "team": "STL",
+        "position": "2B",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.310",
+          "homeRuns": 8,
+          "rbi": 105,
+          "runs": 8,
+          "hits": 70,
+          "era": "5.90",
+          "wins": 8,
+          "strikeouts": 42
+        },
+        "projections": {
+          "points": 31,
+          "salary": 33704382,
+          "fantasyPoints": 77,
+          "age": 28,
+          "height": "68\"",
+          "weight": 264,
+          "experience": 12,
+          "college": "Alabama"
+        },
+        "lastUpdated": "2025-06-21T14:17:21.096Z"
+      },
+      {
+        "id": "cmc6bp2vk0030unwlcnd88stg",
+        "name": "Josh Allen",
+        "team": "LAD",
+        "position": "SP",
+        "sport": "BASEBALL",
+        "stats": {
+          "battingAvg": "0.273",
+          "homeRuns": 25,
+          "rbi": 128,
+          "runs": 113,
+          "hits": 38,
+          "era": "3.23",
+          "wins": 7,
+          "strikeouts": 141
+        },
+        "projections": {
+          "points": 18,
+          "salary": 36223558,
+          "fantasyPoints": 329,
+          "age": 28,
+          "height": "70\"",
+          "weight": 272,
+          "experience": 13,
+          "college": "Ohio State"
+        },
+        "lastUpdated": "2025-06-21T14:17:21.105Z"
+      }
+    ],
+    "meta": {
+      "total": 50,
+      "source": "Fantasy.AI MCP Collectors",
+      "lastSync": "2025-06-21T14:20:26.313Z"
+    }
+  }
+}

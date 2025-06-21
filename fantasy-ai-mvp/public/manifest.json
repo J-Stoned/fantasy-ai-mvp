@@ -1,0 +1,118 @@
+{
+  "name": "Fantasy.AI - AI-Powered Fantasy Sports",
+  "short_name": "Fantasy.AI",
+  "description": "The most advanced AI-powered fantasy sports platform with real-time analytics and intelligent decision making.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "categories": ["sports", "games", "entertainment"],
+  "lang": "en-US",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "My Lineups",
+      "short_name": "Lineups",
+      "description": "View and manage your fantasy lineups",
+      "url": "/dashboard?tab=lineup",
+      "icons": [{"src": "/icons/lineup-shortcut.png", "sizes": "96x96"}]
+    },
+    {
+      "name": "Live Scores",
+      "short_name": "Scores",
+      "description": "Check live fantasy scores and updates",
+      "url": "/dashboard?tab=analytics",
+      "icons": [{"src": "/icons/scores-shortcut.png", "sizes": "96x96"}]
+    },
+    {
+      "name": "AI Assistant",
+      "short_name": "AI Help",
+      "description": "Get AI-powered fantasy advice",
+      "url": "/dashboard?voice=true",
+      "icons": [{"src": "/icons/ai-shortcut.png", "sizes": "96x96"}]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/mobile-dashboard.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/screenshots/mobile-lineup.png", 
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/screenshots/desktop-dashboard.png",
+      "sizes": "1280x720",
+      "type": "image/png", 
+      "form_factor": "wide"
+    }
+  ],
+  "features": [
+    "cross-origin-isolated"
+  ],
+  "edge_side_panel": {
+    "preferred_width": 350
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "fantasyai",
+      "url": "/deep-link?url=%s"
+    }
+  ]
+}

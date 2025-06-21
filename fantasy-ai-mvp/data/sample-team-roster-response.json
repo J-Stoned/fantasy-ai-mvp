@@ -1,0 +1,199 @@
+{
+  "team": "Los Angeles Lakers",
+  "abbreviation": "LAL",
+  "sport": "NBA",
+  "roster": [
+    {
+      "id": "cmc6bp2y4003kunwl64wumdkx",
+      "name": "Josh Allen",
+      "position": "PG",
+      "stats": {
+        "points": 22,
+        "rebounds": 10,
+        "assists": 2,
+        "steals": 0,
+        "blocks": 1,
+        "fieldGoalPct": "0.853",
+        "threePointPct": "0.600"
+      },
+      "projections": {
+        "points": 20,
+        "salary": 4127761,
+        "fantasyPoints": 314,
+        "age": 20,
+        "height": "71\"",
+        "weight": 226,
+        "experience": 9,
+        "college": "LSU"
+      }
+    },
+    {
+      "id": "cmc6bp2zw003yunwls773k75f",
+      "name": "Josh Allen",
+      "position": "C",
+      "stats": {
+        "points": 15,
+        "rebounds": 0,
+        "assists": 10,
+        "steals": 2,
+        "blocks": 0,
+        "fieldGoalPct": "0.802",
+        "threePointPct": "0.666"
+      },
+      "projections": {
+        "points": 12,
+        "salary": 48753613,
+        "fantasyPoints": 50,
+        "age": 31,
+        "height": "68\"",
+        "weight": 210,
+        "experience": 10,
+        "college": "Ohio State"
+      }
+    },
+    {
+      "id": "cmc6bp31q004cunwlmz0hxh80",
+      "name": "Josh Allen",
+      "position": "C",
+      "stats": {
+        "points": 10,
+        "rebounds": 1,
+        "assists": 10,
+        "steals": 0,
+        "blocks": 1,
+        "fieldGoalPct": "0.577",
+        "threePointPct": "0.262"
+      },
+      "projections": {
+        "points": 16,
+        "salary": 14207138,
+        "fantasyPoints": 87,
+        "age": 21,
+        "height": "67\"",
+        "weight": 244,
+        "experience": 5,
+        "college": "Ohio State"
+      }
+    },
+    {
+      "id": "cmc6bp33l004qunwlu1776thy",
+      "name": "Josh Allen",
+      "position": "SG",
+      "stats": {
+        "points": 7,
+        "rebounds": 1,
+        "assists": 2,
+        "steals": 1,
+        "blocks": 1,
+        "fieldGoalPct": "0.305",
+        "threePointPct": "0.466"
+      },
+      "projections": {
+        "points": 24,
+        "salary": 24733292,
+        "fantasyPoints": 147,
+        "age": 32,
+        "height": "72\"",
+        "weight": 194,
+        "experience": 15,
+        "college": "Clemson"
+      }
+    },
+    {
+      "id": "cmc6bp35f0054unwl09wifk7u",
+      "name": "Josh Allen",
+      "position": "PF",
+      "stats": {
+        "points": 16,
+        "rebounds": 6,
+        "assists": 1,
+        "steals": 2,
+        "blocks": 2,
+        "fieldGoalPct": "0.719",
+        "threePointPct": "0.531"
+      },
+      "projections": {
+        "points": 28,
+        "salary": 15429673,
+        "fantasyPoints": 84,
+        "age": 33,
+        "height": "66\"",
+        "weight": 206,
+        "experience": 12,
+        "college": "Ohio State"
+      }
+    },
+    {
+      "id": "cmc6bp378005iunwl4droo8zu",
+      "name": "Josh Allen",
+      "position": "PF",
+      "stats": {
+        "points": 32,
+        "rebounds": 14,
+        "assists": 4,
+        "steals": 1,
+        "blocks": 3,
+        "fieldGoalPct": "0.712",
+        "threePointPct": "0.587"
+      },
+      "projections": {
+        "points": 25,
+        "salary": 8347036,
+        "fantasyPoints": 160,
+        "age": 25,
+        "height": "71\"",
+        "weight": 268,
+        "experience": 7,
+        "college": "Alabama"
+      }
+    },
+    {
+      "id": "cmc6bp395005wunwlhwnrluuj",
+      "name": "Josh Allen",
+      "position": "C",
+      "stats": {
+        "points": 4,
+        "rebounds": 5,
+        "assists": 0,
+        "steals": 1,
+        "blocks": 0,
+        "fieldGoalPct": "0.326",
+        "threePointPct": "0.530"
+      },
+      "projections": {
+        "points": 14,
+        "salary": 12618976,
+        "fantasyPoints": 87,
+        "age": 32,
+        "height": "70\"",
+        "weight": 196,
+        "experience": 8,
+        "college": "Clemson"
+      }
+    },
+    {
+      "id": "cmc6bp3az006aunwl0vnan810",
+      "name": "Josh Allen",
+      "position": "PG",
+      "stats": {
+        "points": 11,
+        "rebounds": 1,
+        "assists": 5,
+        "steals": 0,
+        "blocks": 2,
+        "fieldGoalPct": "0.368",
+        "threePointPct": "0.519"
+      },
+      "projections": {
+        "points": 33,
+        "salary": 24424493,
+        "fantasyPoints": 121,
+        "age": 27,
+        "height": "67\"",
+        "weight": 273,
+        "experience": 6,
+        "college": "Alabama"
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "session": {
+    "started": "2025-06-21T13:26:14.393Z",
+    "completed": "2025-06-21T13:26:14.426Z",
+    "duration": 33
+  },
+  "collected": [
+    {
+      "filename": "players/nfl/current-roster.json",
+      "timestamp": "2025-06-21T13:26:14.422Z",
+      "size": 650
+    },
+    {
+      "filename": "players/nba/current-roster.json",
+      "timestamp": "2025-06-21T13:26:14.424Z",
+      "size": 311
+    },
+    {
+      "filename": "raw/collection-status.json",
+      "timestamp": "2025-06-21T13:26:14.426Z",
+      "size": 464
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "totalFiles": 3,
+    "totalErrors": 0,
+    "successRate": 100
+  },
+  "nextSteps": [
+    "Process collected data with Knowledge Graph MCP",
+    "Set up automated data refresh pipeline",
+    "Integrate data into Fantasy.AI database",
+    "Activate real-time WebSocket updates"
+  ]
+}

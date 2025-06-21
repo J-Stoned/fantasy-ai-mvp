@@ -1,0 +1,1896 @@
+{
+  "timestamp": "2025-06-21T14:20:26.349Z",
+  "totalPlayers": 135,
+  "index": [
+    {
+      "id": "cmc6bp2ih000aunwl7q13ekiz",
+      "name": "Josh Allen",
+      "team": "LAD",
+      "position": "C",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "josh allen",
+        "lad",
+        "c",
+        "josh allen lad",
+        "lad c"
+      ]
+    },
+    {
+      "id": "cmc6bp2iq000cunwlmg0rk0qw",
+      "name": "Christian McCaffrey",
+      "team": "NYY",
+      "position": "1B",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "christian mccaffrey",
+        "nyy",
+        "1b",
+        "christian mccaffrey nyy",
+        "nyy 1b"
+      ]
+    },
+    {
+      "id": "cmc6bp2j1000eunwlx0zzdtrq",
+      "name": "Cooper Kupp",
+      "team": "HOU",
+      "position": "RP",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "cooper kupp",
+        "hou",
+        "rp",
+        "cooper kupp hou",
+        "hou rp"
+      ]
+    },
+    {
+      "id": "cmc6bp2jb000gunwlym7m1q3n",
+      "name": "Justin Jefferson",
+      "team": "ATL",
+      "position": "SP",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "justin jefferson",
+        "atl",
+        "sp",
+        "justin jefferson atl",
+        "atl sp"
+      ]
+    },
+    {
+      "id": "cmc6bp2jk000iunwlrx2og335",
+      "name": "Travis Kelce",
+      "team": "SD",
+      "position": "SS",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "travis kelce",
+        "sd",
+        "ss",
+        "travis kelce sd",
+        "sd ss"
+      ]
+    },
+    {
+      "id": "cmc6bp2ju000kunwl5kqzqc0x",
+      "name": "Aaron Donald",
+      "team": "NYM",
+      "position": "2B",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "aaron donald",
+        "nym",
+        "2b",
+        "aaron donald nym",
+        "nym 2b"
+      ]
+    },
+    {
+      "id": "cmc6bp2k4000munwl3c7agx7m",
+      "name": "Myles Garrett",
+      "team": "STL",
+      "position": "SP",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "myles garrett",
+        "stl",
+        "sp",
+        "myles garrett stl",
+        "stl sp"
+      ]
+    },
+    {
+      "id": "cmc6bp2kd000ounwlcvd2xubi",
+      "name": "Josh Allen",
+      "team": "LAD",
+      "position": "RP",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "josh allen",
+        "lad",
+        "rp",
+        "josh allen lad",
+        "lad rp"
+      ]
+    },
+    {
+      "id": "cmc6bp2km000qunwlfuidwb44",
+      "name": "Christian McCaffrey",
+      "team": "NYY",
+      "position": "SP",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "christian mccaffrey",
+        "nyy",
+        "sp",
+        "christian mccaffrey nyy",
+        "nyy sp"
+      ]
+    },
+    {
+      "id": "cmc6bp2kw000sunwlrrdl9zu0",
+      "name": "Cooper Kupp",
+      "team": "HOU",
+      "position": "SS",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "cooper kupp",
+        "hou",
+        "ss",
+        "cooper kupp hou",
+        "hou ss"
+      ]
+    },
+    {
+      "id": "cmc6bp2l5000uunwlmax1z10j",
+      "name": "Justin Jefferson",
+      "team": "ATL",
+      "position": "SS",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "justin jefferson",
+        "atl",
+        "ss",
+        "justin jefferson atl",
+        "atl ss"
+      ]
+    },
+    {
+      "id": "cmc6bp2le000wunwlcsrwxllq",
+      "name": "Travis Kelce",
+      "team": "SD",
+      "position": "C",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "travis kelce",
+        "sd",
+        "c",
+        "travis kelce sd",
+        "sd c"
+      ]
+    },
+    {
+      "id": "cmc6bp2lo000yunwlggbg5dh3",
+      "name": "Aaron Donald",
+      "team": "NYM",
+      "position": "SP",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "aaron donald",
+        "nym",
+        "sp",
+        "aaron donald nym",
+        "nym sp"
+      ]
+    },
+    {
+      "id": "cmc6bp2lx0010unwlpk50zz0c",
+      "name": "Myles Garrett",
+      "team": "STL",
+      "position": "C",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "myles garrett",
+        "stl",
+        "c",
+        "myles garrett stl",
+        "stl c"
+      ]
+    },
+    {
+      "id": "cmc6bp2m60012unwl1r7ql4z3",
+      "name": "Josh Allen",
+      "team": "LAD",
+      "position": "1B",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "josh allen",
+        "lad",
+        "1b",
+        "josh allen lad",
+        "lad 1b"
+      ]
+    },
+    {
+      "id": "cmc6bp2mg0014unwl9inv13mc",
+      "name": "Christian McCaffrey",
+      "team": "NYY",
+      "position": "RP",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "christian mccaffrey",
+        "nyy",
+        "rp",
+        "christian mccaffrey nyy",
+        "nyy rp"
+      ]
+    },
+    {
+      "id": "cmc6bp2mp0016unwllgw7vjj4",
+      "name": "Cooper Kupp",
+      "team": "HOU",
+      "position": "OF",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "cooper kupp",
+        "hou",
+        "of",
+        "cooper kupp hou",
+        "hou of"
+      ]
+    },
+    {
+      "id": "cmc6bp2n10018unwl7qgvr4r6",
+      "name": "Justin Jefferson",
+      "team": "ATL",
+      "position": "C",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "justin jefferson",
+        "atl",
+        "c",
+        "justin jefferson atl",
+        "atl c"
+      ]
+    },
+    {
+      "id": "cmc6bp2nc001aunwl23t32fno",
+      "name": "Travis Kelce",
+      "team": "SD",
+      "position": "C",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "travis kelce",
+        "sd",
+        "c",
+        "travis kelce sd",
+        "sd c"
+      ]
+    },
+    {
+      "id": "cmc6bp2nn001cunwl2xx06gtg",
+      "name": "Aaron Donald",
+      "team": "NYM",
+      "position": "3B",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "aaron donald",
+        "nym",
+        "3b",
+        "aaron donald nym",
+        "nym 3b"
+      ]
+    },
+    {
+      "id": "cmc6bp2nw001eunwl77ph055q",
+      "name": "Myles Garrett",
+      "team": "STL",
+      "position": "RP",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "myles garrett",
+        "stl",
+        "rp",
+        "myles garrett stl",
+        "stl rp"
+      ]
+    },
+    {
+      "id": "cmc6bp2o5001gunwl1n4ysbbf",
+      "name": "Josh Allen",
+      "team": "LAD",
+      "position": "C",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "josh allen",
+        "lad",
+        "c",
+        "josh allen lad",
+        "lad c"
+      ]
+    },
+    {
+      "id": "cmc6bp2of001iunwllj3aywvt",
+      "name": "Christian McCaffrey",
+      "team": "NYY",
+      "position": "3B",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "christian mccaffrey",
+        "nyy",
+        "3b",
+        "christian mccaffrey nyy",
+        "nyy 3b"
+      ]
+    },
+    {
+      "id": "cmc6bp2op001kunwlw6hknspo",
+      "name": "Cooper Kupp",
+      "team": "HOU",
+      "position": "SP",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "cooper kupp",
+        "hou",
+        "sp",
+        "cooper kupp hou",
+        "hou sp"
+      ]
+    },
+    {
+      "id": "cmc6bp2ox001munwls0dmfot9",
+      "name": "Justin Jefferson",
+      "team": "ATL",
+      "position": "3B",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "justin jefferson",
+        "atl",
+        "3b",
+        "justin jefferson atl",
+        "atl 3b"
+      ]
+    },
+    {
+      "id": "cmc6bp2p7001ounwlhtfd7v5y",
+      "name": "Travis Kelce",
+      "team": "SD",
+      "position": "SS",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "travis kelce",
+        "sd",
+        "ss",
+        "travis kelce sd",
+        "sd ss"
+      ]
+    },
+    {
+      "id": "cmc6bp2ph001qunwlkljxkf03",
+      "name": "Aaron Donald",
+      "team": "NYM",
+      "position": "C",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "aaron donald",
+        "nym",
+        "c",
+        "aaron donald nym",
+        "nym c"
+      ]
+    },
+    {
+      "id": "cmc6bp2pq001sunwl2cyshz57",
+      "name": "Myles Garrett",
+      "team": "STL",
+      "position": "SS",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "myles garrett",
+        "stl",
+        "ss",
+        "myles garrett stl",
+        "stl ss"
+      ]
+    },
+    {
+      "id": "cmc6bp2q0001uunwlb00llib9",
+      "name": "Josh Allen",
+      "team": "LAD",
+      "position": "OF",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "josh allen",
+        "lad",
+        "of",
+        "josh allen lad",
+        "lad of"
+      ]
+    },
+    {
+      "id": "cmc6bp2qa001wunwlyho5n9j7",
+      "name": "Christian McCaffrey",
+      "team": "NYY",
+      "position": "SP",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "christian mccaffrey",
+        "nyy",
+        "sp",
+        "christian mccaffrey nyy",
+        "nyy sp"
+      ]
+    },
+    {
+      "id": "cmc6bp2qi001yunwlszha6c5y",
+      "name": "Cooper Kupp",
+      "team": "HOU",
+      "position": "2B",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "cooper kupp",
+        "hou",
+        "2b",
+        "cooper kupp hou",
+        "hou 2b"
+      ]
+    },
+    {
+      "id": "cmc6bp2qs0020unwloav9ji6p",
+      "name": "Justin Jefferson",
+      "team": "ATL",
+      "position": "OF",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "justin jefferson",
+        "atl",
+        "of",
+        "justin jefferson atl",
+        "atl of"
+      ]
+    },
+    {
+      "id": "cmc6bp2r20022unwl8bfi1zo7",
+      "name": "Travis Kelce",
+      "team": "SD",
+      "position": "3B",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "travis kelce",
+        "sd",
+        "3b",
+        "travis kelce sd",
+        "sd 3b"
+      ]
+    },
+    {
+      "id": "cmc6bp2ra0024unwlbfhnoskt",
+      "name": "Aaron Donald",
+      "team": "NYM",
+      "position": "OF",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "aaron donald",
+        "nym",
+        "of",
+        "aaron donald nym",
+        "nym of"
+      ]
+    },
+    {
+      "id": "cmc6bp2rk0026unwlztkqtvjf",
+      "name": "Myles Garrett",
+      "team": "STL",
+      "position": "1B",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "myles garrett",
+        "stl",
+        "1b",
+        "myles garrett stl",
+        "stl 1b"
+      ]
+    },
+    {
+      "id": "cmc6bp2ru0028unwlkna1atzt",
+      "name": "Josh Allen",
+      "team": "LAD",
+      "position": "3B",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "josh allen",
+        "lad",
+        "3b",
+        "josh allen lad",
+        "lad 3b"
+      ]
+    },
+    {
+      "id": "cmc6bp2s4002aunwlahz97e8u",
+      "name": "Christian McCaffrey",
+      "team": "NYY",
+      "position": "RP",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "christian mccaffrey",
+        "nyy",
+        "rp",
+        "christian mccaffrey nyy",
+        "nyy rp"
+      ]
+    },
+    {
+      "id": "cmc6bp2se002cunwllxk6kh4g",
+      "name": "Cooper Kupp",
+      "team": "HOU",
+      "position": "2B",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "cooper kupp",
+        "hou",
+        "2b",
+        "cooper kupp hou",
+        "hou 2b"
+      ]
+    },
+    {
+      "id": "cmc6bp2sp002eunwl4jucoe6y",
+      "name": "Justin Jefferson",
+      "team": "ATL",
+      "position": "RP",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "justin jefferson",
+        "atl",
+        "rp",
+        "justin jefferson atl",
+        "atl rp"
+      ]
+    },
+    {
+      "id": "cmc6bp2sz002gunwlno82s2oh",
+      "name": "Travis Kelce",
+      "team": "SD",
+      "position": "SP",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "travis kelce",
+        "sd",
+        "sp",
+        "travis kelce sd",
+        "sd sp"
+      ]
+    },
+    {
+      "id": "cmc6bp2t8002iunwl9tefqnda",
+      "name": "Aaron Donald",
+      "team": "NYM",
+      "position": "SP",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "aaron donald",
+        "nym",
+        "sp",
+        "aaron donald nym",
+        "nym sp"
+      ]
+    },
+    {
+      "id": "cmc6bp2ti002kunwl9rbp96mw",
+      "name": "Myles Garrett",
+      "team": "STL",
+      "position": "2B",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "myles garrett",
+        "stl",
+        "2b",
+        "myles garrett stl",
+        "stl 2b"
+      ]
+    },
+    {
+      "id": "cmc6bp2ts002munwls9jgi0w5",
+      "name": "Josh Allen",
+      "team": "LAD",
+      "position": "SS",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "josh allen",
+        "lad",
+        "ss",
+        "josh allen lad",
+        "lad ss"
+      ]
+    },
+    {
+      "id": "cmc6bp2u2002ounwlwgfbe2fy",
+      "name": "Christian McCaffrey",
+      "team": "NYY",
+      "position": "SS",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "christian mccaffrey",
+        "nyy",
+        "ss",
+        "christian mccaffrey nyy",
+        "nyy ss"
+      ]
+    },
+    {
+      "id": "cmc6bp2ub002qunwl4nmvfpv5",
+      "name": "Cooper Kupp",
+      "team": "HOU",
+      "position": "C",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "cooper kupp",
+        "hou",
+        "c",
+        "cooper kupp hou",
+        "hou c"
+      ]
+    },
+    {
+      "id": "cmc6bp2ul002sunwlxgrkrkto",
+      "name": "Justin Jefferson",
+      "team": "ATL",
+      "position": "1B",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "justin jefferson",
+        "atl",
+        "1b",
+        "justin jefferson atl",
+        "atl 1b"
+      ]
+    },
+    {
+      "id": "cmc6bp2ut002uunwlw81kjxry",
+      "name": "Travis Kelce",
+      "team": "SD",
+      "position": "2B",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "travis kelce",
+        "sd",
+        "2b",
+        "travis kelce sd",
+        "sd 2b"
+      ]
+    },
+    {
+      "id": "cmc6bp2v2002wunwl6mgtlh0t",
+      "name": "Aaron Donald",
+      "team": "NYM",
+      "position": "SS",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "aaron donald",
+        "nym",
+        "ss",
+        "aaron donald nym",
+        "nym ss"
+      ]
+    },
+    {
+      "id": "cmc6bp2vc002yunwl330da303",
+      "name": "Myles Garrett",
+      "team": "STL",
+      "position": "2B",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "myles garrett",
+        "stl",
+        "2b",
+        "myles garrett stl",
+        "stl 2b"
+      ]
+    },
+    {
+      "id": "cmc6bp2vk0030unwlcnd88stg",
+      "name": "Josh Allen",
+      "team": "LAD",
+      "position": "SP",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "josh allen",
+        "lad",
+        "sp",
+        "josh allen lad",
+        "lad sp"
+      ]
+    },
+    {
+      "id": "cmc6bp2vu0032unwlik9fiwby",
+      "name": "Christian McCaffrey",
+      "team": "NYY",
+      "position": "OF",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "christian mccaffrey",
+        "nyy",
+        "of",
+        "christian mccaffrey nyy",
+        "nyy of"
+      ]
+    },
+    {
+      "id": "cmc6bp2w30034unwlgf72m1tg",
+      "name": "Cooper Kupp",
+      "team": "HOU",
+      "position": "2B",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "cooper kupp",
+        "hou",
+        "2b",
+        "cooper kupp hou",
+        "hou 2b"
+      ]
+    },
+    {
+      "id": "cmc6bp2wc0036unwll9hu1scc",
+      "name": "Justin Jefferson",
+      "team": "ATL",
+      "position": "2B",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "justin jefferson",
+        "atl",
+        "2b",
+        "justin jefferson atl",
+        "atl 2b"
+      ]
+    },
+    {
+      "id": "cmc6bp2wl0038unwl0py119nn",
+      "name": "Travis Kelce",
+      "team": "SD",
+      "position": "RP",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "travis kelce",
+        "sd",
+        "rp",
+        "travis kelce sd",
+        "sd rp"
+      ]
+    },
+    {
+      "id": "cmc6bp2wv003aunwlxv2nnjl0",
+      "name": "Aaron Donald",
+      "team": "NYM",
+      "position": "SP",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "aaron donald",
+        "nym",
+        "sp",
+        "aaron donald nym",
+        "nym sp"
+      ]
+    },
+    {
+      "id": "cmc6bp2x3003cunwlpzk5cawu",
+      "name": "Myles Garrett",
+      "team": "STL",
+      "position": "RP",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "myles garrett",
+        "stl",
+        "rp",
+        "myles garrett stl",
+        "stl rp"
+      ]
+    },
+    {
+      "id": "cmc6bp2xd003eunwln7ljkhza",
+      "name": "Josh Allen",
+      "team": "LAD",
+      "position": "RP",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "josh allen",
+        "lad",
+        "rp",
+        "josh allen lad",
+        "lad rp"
+      ]
+    },
+    {
+      "id": "cmc6bp2xm003gunwlia1wv5z6",
+      "name": "Christian McCaffrey",
+      "team": "NYY",
+      "position": "2B",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "christian mccaffrey",
+        "nyy",
+        "2b",
+        "christian mccaffrey nyy",
+        "nyy 2b"
+      ]
+    },
+    {
+      "id": "cmc6bp2xu003iunwltxwmv7e9",
+      "name": "Cooper Kupp",
+      "team": "HOU",
+      "position": "OF",
+      "sport": "BASEBALL",
+      "searchTerms": [
+        "cooper kupp",
+        "hou",
+        "of",
+        "cooper kupp hou",
+        "hou of"
+      ]
+    },
+    {
+      "id": "cmc6bp2y4003kunwl64wumdkx",
+      "name": "Josh Allen",
+      "team": "LAL",
+      "position": "PG",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "josh allen",
+        "lal",
+        "pg",
+        "josh allen lal",
+        "lal pg"
+      ]
+    },
+    {
+      "id": "cmc6bp2yd003munwlgiqkm7nl",
+      "name": "Christian McCaffrey",
+      "team": "GSW",
+      "position": "PF",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "christian mccaffrey",
+        "gsw",
+        "pf",
+        "christian mccaffrey gsw",
+        "gsw pf"
+      ]
+    },
+    {
+      "id": "cmc6bp2yl003ounwl7jb43vj4",
+      "name": "Cooper Kupp",
+      "team": "BOS",
+      "position": "C",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "cooper kupp",
+        "bos",
+        "c",
+        "cooper kupp bos",
+        "bos c"
+      ]
+    },
+    {
+      "id": "cmc6bp2yv003qunwlnoex92zb",
+      "name": "Justin Jefferson",
+      "team": "MIA",
+      "position": "SG",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "justin jefferson",
+        "mia",
+        "sg",
+        "justin jefferson mia",
+        "mia sg"
+      ]
+    },
+    {
+      "id": "cmc6bp2z5003sunwl7l0p8t3x",
+      "name": "Travis Kelce",
+      "team": "PHX",
+      "position": "C",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "travis kelce",
+        "phx",
+        "c",
+        "travis kelce phx",
+        "phx c"
+      ]
+    },
+    {
+      "id": "cmc6bp2zd003uunwl4iqpdfr3",
+      "name": "Aaron Donald",
+      "team": "MIL",
+      "position": "C",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "aaron donald",
+        "mil",
+        "c",
+        "aaron donald mil",
+        "mil c"
+      ]
+    },
+    {
+      "id": "cmc6bp2zn003wunwlgb02pzx5",
+      "name": "Myles Garrett",
+      "team": "DEN",
+      "position": "SF",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "myles garrett",
+        "den",
+        "sf",
+        "myles garrett den",
+        "den sf"
+      ]
+    },
+    {
+      "id": "cmc6bp2zw003yunwls773k75f",
+      "name": "Josh Allen",
+      "team": "LAL",
+      "position": "C",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "josh allen",
+        "lal",
+        "c",
+        "josh allen lal",
+        "lal c"
+      ]
+    },
+    {
+      "id": "cmc6bp3050040unwlhqpzr4kv",
+      "name": "Christian McCaffrey",
+      "team": "GSW",
+      "position": "C",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "christian mccaffrey",
+        "gsw",
+        "c",
+        "christian mccaffrey gsw",
+        "gsw c"
+      ]
+    },
+    {
+      "id": "cmc6bp30f0042unwl7q5ksb1v",
+      "name": "Cooper Kupp",
+      "team": "BOS",
+      "position": "C",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "cooper kupp",
+        "bos",
+        "c",
+        "cooper kupp bos",
+        "bos c"
+      ]
+    },
+    {
+      "id": "cmc6bp30p0044unwlhu8sid3v",
+      "name": "Justin Jefferson",
+      "team": "MIA",
+      "position": "SF",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "justin jefferson",
+        "mia",
+        "sf",
+        "justin jefferson mia",
+        "mia sf"
+      ]
+    },
+    {
+      "id": "cmc6bp30y0046unwly6ow2w0m",
+      "name": "Travis Kelce",
+      "team": "PHX",
+      "position": "PF",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "travis kelce",
+        "phx",
+        "pf",
+        "travis kelce phx",
+        "phx pf"
+      ]
+    },
+    {
+      "id": "cmc6bp3170048unwl1kutvuf3",
+      "name": "Aaron Donald",
+      "team": "MIL",
+      "position": "PG",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "aaron donald",
+        "mil",
+        "pg",
+        "aaron donald mil",
+        "mil pg"
+      ]
+    },
+    {
+      "id": "cmc6bp31h004aunwlcr5bgh2f",
+      "name": "Myles Garrett",
+      "team": "DEN",
+      "position": "PF",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "myles garrett",
+        "den",
+        "pf",
+        "myles garrett den",
+        "den pf"
+      ]
+    },
+    {
+      "id": "cmc6bp31q004cunwlmz0hxh80",
+      "name": "Josh Allen",
+      "team": "LAL",
+      "position": "C",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "josh allen",
+        "lal",
+        "c",
+        "josh allen lal",
+        "lal c"
+      ]
+    },
+    {
+      "id": "cmc6bp31z004eunwljwayhvzt",
+      "name": "Christian McCaffrey",
+      "team": "GSW",
+      "position": "C",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "christian mccaffrey",
+        "gsw",
+        "c",
+        "christian mccaffrey gsw",
+        "gsw c"
+      ]
+    },
+    {
+      "id": "cmc6bp32a004gunwl70fan3g9",
+      "name": "Cooper Kupp",
+      "team": "BOS",
+      "position": "PG",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "cooper kupp",
+        "bos",
+        "pg",
+        "cooper kupp bos",
+        "bos pg"
+      ]
+    },
+    {
+      "id": "cmc6bp32i004iunwl98pu15dh",
+      "name": "Justin Jefferson",
+      "team": "MIA",
+      "position": "PG",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "justin jefferson",
+        "mia",
+        "pg",
+        "justin jefferson mia",
+        "mia pg"
+      ]
+    },
+    {
+      "id": "cmc6bp32s004kunwlucdug9nq",
+      "name": "Travis Kelce",
+      "team": "PHX",
+      "position": "PF",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "travis kelce",
+        "phx",
+        "pf",
+        "travis kelce phx",
+        "phx pf"
+      ]
+    },
+    {
+      "id": "cmc6bp332004munwln35arcb7",
+      "name": "Aaron Donald",
+      "team": "MIL",
+      "position": "PG",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "aaron donald",
+        "mil",
+        "pg",
+        "aaron donald mil",
+        "mil pg"
+      ]
+    },
+    {
+      "id": "cmc6bp33b004ounwl6tmirk8r",
+      "name": "Myles Garrett",
+      "team": "DEN",
+      "position": "PF",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "myles garrett",
+        "den",
+        "pf",
+        "myles garrett den",
+        "den pf"
+      ]
+    },
+    {
+      "id": "cmc6bp33l004qunwlu1776thy",
+      "name": "Josh Allen",
+      "team": "LAL",
+      "position": "SG",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "josh allen",
+        "lal",
+        "sg",
+        "josh allen lal",
+        "lal sg"
+      ]
+    },
+    {
+      "id": "cmc6bp33u004sunwl2r0gl14t",
+      "name": "Christian McCaffrey",
+      "team": "GSW",
+      "position": "C",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "christian mccaffrey",
+        "gsw",
+        "c",
+        "christian mccaffrey gsw",
+        "gsw c"
+      ]
+    },
+    {
+      "id": "cmc6bp343004uunwlin2k7zeh",
+      "name": "Cooper Kupp",
+      "team": "BOS",
+      "position": "SG",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "cooper kupp",
+        "bos",
+        "sg",
+        "cooper kupp bos",
+        "bos sg"
+      ]
+    },
+    {
+      "id": "cmc6bp34c004wunwly1p82gf8",
+      "name": "Justin Jefferson",
+      "team": "MIA",
+      "position": "PF",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "justin jefferson",
+        "mia",
+        "pf",
+        "justin jefferson mia",
+        "mia pf"
+      ]
+    },
+    {
+      "id": "cmc6bp34m004yunwlq5jve9kl",
+      "name": "Travis Kelce",
+      "team": "PHX",
+      "position": "SG",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "travis kelce",
+        "phx",
+        "sg",
+        "travis kelce phx",
+        "phx sg"
+      ]
+    },
+    {
+      "id": "cmc6bp34v0050unwlkltzj9wj",
+      "name": "Aaron Donald",
+      "team": "MIL",
+      "position": "SG",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "aaron donald",
+        "mil",
+        "sg",
+        "aaron donald mil",
+        "mil sg"
+      ]
+    },
+    {
+      "id": "cmc6bp3550052unwliv252g53",
+      "name": "Myles Garrett",
+      "team": "DEN",
+      "position": "SF",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "myles garrett",
+        "den",
+        "sf",
+        "myles garrett den",
+        "den sf"
+      ]
+    },
+    {
+      "id": "cmc6bp35f0054unwl09wifk7u",
+      "name": "Josh Allen",
+      "team": "LAL",
+      "position": "PF",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "josh allen",
+        "lal",
+        "pf",
+        "josh allen lal",
+        "lal pf"
+      ]
+    },
+    {
+      "id": "cmc6bp35o0056unwl9isgmulq",
+      "name": "Christian McCaffrey",
+      "team": "GSW",
+      "position": "PG",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "christian mccaffrey",
+        "gsw",
+        "pg",
+        "christian mccaffrey gsw",
+        "gsw pg"
+      ]
+    },
+    {
+      "id": "cmc6bp35y0058unwlkdyskdun",
+      "name": "Cooper Kupp",
+      "team": "BOS",
+      "position": "SG",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "cooper kupp",
+        "bos",
+        "sg",
+        "cooper kupp bos",
+        "bos sg"
+      ]
+    },
+    {
+      "id": "cmc6bp368005aunwlc7iwn0db",
+      "name": "Justin Jefferson",
+      "team": "MIA",
+      "position": "C",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "justin jefferson",
+        "mia",
+        "c",
+        "justin jefferson mia",
+        "mia c"
+      ]
+    },
+    {
+      "id": "cmc6bp36g005cunwld1p7tmhy",
+      "name": "Travis Kelce",
+      "team": "PHX",
+      "position": "C",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "travis kelce",
+        "phx",
+        "c",
+        "travis kelce phx",
+        "phx c"
+      ]
+    },
+    {
+      "id": "cmc6bp36q005eunwlbsgojx7j",
+      "name": "Aaron Donald",
+      "team": "MIL",
+      "position": "SG",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "aaron donald",
+        "mil",
+        "sg",
+        "aaron donald mil",
+        "mil sg"
+      ]
+    },
+    {
+      "id": "cmc6bp370005gunwlzet586sg",
+      "name": "Myles Garrett",
+      "team": "DEN",
+      "position": "PG",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "myles garrett",
+        "den",
+        "pg",
+        "myles garrett den",
+        "den pg"
+      ]
+    },
+    {
+      "id": "cmc6bp378005iunwl4droo8zu",
+      "name": "Josh Allen",
+      "team": "LAL",
+      "position": "PF",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "josh allen",
+        "lal",
+        "pf",
+        "josh allen lal",
+        "lal pf"
+      ]
+    },
+    {
+      "id": "cmc6bp37i005kunwlq4ac2w43",
+      "name": "Christian McCaffrey",
+      "team": "GSW",
+      "position": "PF",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "christian mccaffrey",
+        "gsw",
+        "pf",
+        "christian mccaffrey gsw",
+        "gsw pf"
+      ]
+    },
+    {
+      "id": "cmc6bp37s005munwlwgn6ltr1",
+      "name": "Cooper Kupp",
+      "team": "BOS",
+      "position": "C",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "cooper kupp",
+        "bos",
+        "c",
+        "cooper kupp bos",
+        "bos c"
+      ]
+    },
+    {
+      "id": "cmc6bp381005ounwlwvfiqakd",
+      "name": "Justin Jefferson",
+      "team": "MIA",
+      "position": "SF",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "justin jefferson",
+        "mia",
+        "sf",
+        "justin jefferson mia",
+        "mia sf"
+      ]
+    },
+    {
+      "id": "cmc6bp38b005qunwled68ek7b",
+      "name": "Travis Kelce",
+      "team": "PHX",
+      "position": "PF",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "travis kelce",
+        "phx",
+        "pf",
+        "travis kelce phx",
+        "phx pf"
+      ]
+    },
+    {
+      "id": "cmc6bp38l005sunwl5ecgdm4e",
+      "name": "Aaron Donald",
+      "team": "MIL",
+      "position": "PG",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "aaron donald",
+        "mil",
+        "pg",
+        "aaron donald mil",
+        "mil pg"
+      ]
+    },
+    {
+      "id": "cmc6bp38v005uunwlprufujpz",
+      "name": "Myles Garrett",
+      "team": "DEN",
+      "position": "SF",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "myles garrett",
+        "den",
+        "sf",
+        "myles garrett den",
+        "den sf"
+      ]
+    },
+    {
+      "id": "cmc6bp395005wunwlhwnrluuj",
+      "name": "Josh Allen",
+      "team": "LAL",
+      "position": "C",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "josh allen",
+        "lal",
+        "c",
+        "josh allen lal",
+        "lal c"
+      ]
+    },
+    {
+      "id": "cmc6bp39f005yunwlkjksbdpz",
+      "name": "Christian McCaffrey",
+      "team": "GSW",
+      "position": "PF",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "christian mccaffrey",
+        "gsw",
+        "pf",
+        "christian mccaffrey gsw",
+        "gsw pf"
+      ]
+    },
+    {
+      "id": "cmc6bp39p0060unwl82w0v0q3",
+      "name": "Cooper Kupp",
+      "team": "BOS",
+      "position": "SG",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "cooper kupp",
+        "bos",
+        "sg",
+        "cooper kupp bos",
+        "bos sg"
+      ]
+    },
+    {
+      "id": "cmc6bp39z0062unwleds8djvn",
+      "name": "Justin Jefferson",
+      "team": "MIA",
+      "position": "C",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "justin jefferson",
+        "mia",
+        "c",
+        "justin jefferson mia",
+        "mia c"
+      ]
+    },
+    {
+      "id": "cmc6bp3a70064unwlm79e5voq",
+      "name": "Travis Kelce",
+      "team": "PHX",
+      "position": "SG",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "travis kelce",
+        "phx",
+        "sg",
+        "travis kelce phx",
+        "phx sg"
+      ]
+    },
+    {
+      "id": "cmc6bp3ah0066unwlwsxdtscc",
+      "name": "Aaron Donald",
+      "team": "MIL",
+      "position": "C",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "aaron donald",
+        "mil",
+        "c",
+        "aaron donald mil",
+        "mil c"
+      ]
+    },
+    {
+      "id": "cmc6bp3ar0068unwl0yqh6d58",
+      "name": "Myles Garrett",
+      "team": "DEN",
+      "position": "SG",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "myles garrett",
+        "den",
+        "sg",
+        "myles garrett den",
+        "den sg"
+      ]
+    },
+    {
+      "id": "cmc6bp3az006aunwl0vnan810",
+      "name": "Josh Allen",
+      "team": "LAL",
+      "position": "PG",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "josh allen",
+        "lal",
+        "pg",
+        "josh allen lal",
+        "lal pg"
+      ]
+    },
+    {
+      "id": "cmc6bp3b8006cunwl974hongg",
+      "name": "Christian McCaffrey",
+      "team": "GSW",
+      "position": "C",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "christian mccaffrey",
+        "gsw",
+        "c",
+        "christian mccaffrey gsw",
+        "gsw c"
+      ]
+    },
+    {
+      "id": "cmc6bp3bi006eunwly8yfbr04",
+      "name": "Cooper Kupp",
+      "team": "BOS",
+      "position": "PF",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "cooper kupp",
+        "bos",
+        "pf",
+        "cooper kupp bos",
+        "bos pf"
+      ]
+    },
+    {
+      "id": "cmc6bp3bq006gunwluusz10k8",
+      "name": "Justin Jefferson",
+      "team": "MIA",
+      "position": "PF",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "justin jefferson",
+        "mia",
+        "pf",
+        "justin jefferson mia",
+        "mia pf"
+      ]
+    },
+    {
+      "id": "cmc6bp3c0006iunwl2t5rgdx6",
+      "name": "Travis Kelce",
+      "team": "PHX",
+      "position": "SF",
+      "sport": "BASKETBALL",
+      "searchTerms": [
+        "travis kelce",
+        "phx",
+        "sf",
+        "travis kelce phx",
+        "phx sf"
+      ]
+    },
+    {
+      "id": "cmc6bp3ca006kunwl12ab9bbe",
+      "name": "Josh Allen",
+      "team": "BUF",
+      "position": "QB",
+      "sport": "FOOTBALL",
+      "searchTerms": [
+        "josh allen",
+        "buf",
+        "qb",
+        "josh allen buf",
+        "buf qb"
+      ]
+    },
+    {
+      "id": "cmc6bp3ci006munwlnao7dqwn",
+      "name": "Christian McCaffrey",
+      "team": "SF",
+      "position": "K",
+      "sport": "FOOTBALL",
+      "searchTerms": [
+        "christian mccaffrey",
+        "sf",
+        "k",
+        "christian mccaffrey sf",
+        "sf k"
+      ]
+    },
+    {
+      "id": "cmc6bp3cs006ounwlimztsi3f",
+      "name": "Cooper Kupp",
+      "team": "LAR",
+      "position": "TE",
+      "sport": "FOOTBALL",
+      "searchTerms": [
+        "cooper kupp",
+        "lar",
+        "te",
+        "cooper kupp lar",
+        "lar te"
+      ]
+    },
+    {
+      "id": "cmc6bp3d2006qunwlo71z0p7l",
+      "name": "Justin Jefferson",
+      "team": "MIN",
+      "position": "QB",
+      "sport": "FOOTBALL",
+      "searchTerms": [
+        "justin jefferson",
+        "min",
+        "qb",
+        "justin jefferson min",
+        "min qb"
+      ]
+    },
+    {
+      "id": "cmc6bp3da006sunwlavkftmu6",
+      "name": "Travis Kelce",
+      "team": "KC",
+      "position": "RB",
+      "sport": "FOOTBALL",
+      "searchTerms": [
+        "travis kelce",
+        "kc",
+        "rb",
+        "travis kelce kc",
+        "kc rb"
+      ]
+    },
+    {
+      "id": "cmc6bp3dj006uunwlobjx86ju",
+      "name": "Aaron Donald",
+      "team": "LAR",
+      "position": "K",
+      "sport": "FOOTBALL",
+      "searchTerms": [
+        "aaron donald",
+        "lar",
+        "k",
+        "aaron donald lar",
+        "lar k"
+      ]
+    },
+    {
+      "id": "cmc6bp3dt006wunwlis2d6j3o",
+      "name": "Myles Garrett",
+      "team": "CLE",
+      "position": "DST",
+      "sport": "FOOTBALL",
+      "searchTerms": [
+        "myles garrett",
+        "cle",
+        "dst",
+        "myles garrett cle",
+        "cle dst"
+      ]
+    },
+    {
+      "id": "cmc6bp3e1006yunwlf0ml63z2",
+      "name": "Josh Allen",
+      "team": "BUF",
+      "position": "RB",
+      "sport": "FOOTBALL",
+      "searchTerms": [
+        "josh allen",
+        "buf",
+        "rb",
+        "josh allen buf",
+        "buf rb"
+      ]
+    },
+    {
+      "id": "cmc6bp3eb0070unwl3u1p3y8q",
+      "name": "Christian McCaffrey",
+      "team": "SF",
+      "position": "DST",
+      "sport": "FOOTBALL",
+      "searchTerms": [
+        "christian mccaffrey",
+        "sf",
+        "dst",
+        "christian mccaffrey sf",
+        "sf dst"
+      ]
+    },
+    {
+      "id": "cmc6bp3ek0072unwln0achllq",
+      "name": "Cooper Kupp",
+      "team": "LAR",
+      "position": "K",
+      "sport": "FOOTBALL",
+      "searchTerms": [
+        "cooper kupp",
+        "lar",
+        "k",
+        "cooper kupp lar",
+        "lar k"
+      ]
+    },
+    {
+      "id": "cmc6bp3et0074unwledhovr2q",
+      "name": "Justin Jefferson",
+      "team": "MIN",
+      "position": "K",
+      "sport": "FOOTBALL",
+      "searchTerms": [
+        "justin jefferson",
+        "min",
+        "k",
+        "justin jefferson min",
+        "min k"
+      ]
+    },
+    {
+      "id": "cmc6bp3f10076unwlxmqxvmms",
+      "name": "Travis Kelce",
+      "team": "KC",
+      "position": "RB",
+      "sport": "FOOTBALL",
+      "searchTerms": [
+        "travis kelce",
+        "kc",
+        "rb",
+        "travis kelce kc",
+        "kc rb"
+      ]
+    },
+    {
+      "id": "cmc6bp3fb0078unwlbvopwjbi",
+      "name": "Aaron Donald",
+      "team": "LAR",
+      "position": "TE",
+      "sport": "FOOTBALL",
+      "searchTerms": [
+        "aaron donald",
+        "lar",
+        "te",
+        "aaron donald lar",
+        "lar te"
+      ]
+    },
+    {
+      "id": "cmc6bp3fj007aunwle5f0jug5",
+      "name": "Myles Garrett",
+      "team": "CLE",
+      "position": "QB",
+      "sport": "FOOTBALL",
+      "searchTerms": [
+        "myles garrett",
+        "cle",
+        "qb",
+        "myles garrett cle",
+        "cle qb"
+      ]
+    },
+    {
+      "id": "cmc6bp3ft007cunwll3e540qv",
+      "name": "Josh Allen",
+      "team": "BUF",
+      "position": "QB",
+      "sport": "FOOTBALL",
+      "searchTerms": [
+        "josh allen",
+        "buf",
+        "qb",
+        "josh allen buf",
+        "buf qb"
+      ]
+    },
+    {
+      "id": "cmc6bp3g3007eunwl7euxt8lz",
+      "name": "Christian McCaffrey",
+      "team": "SF",
+      "position": "RB",
+      "sport": "FOOTBALL",
+      "searchTerms": [
+        "christian mccaffrey",
+        "sf",
+        "rb",
+        "christian mccaffrey sf",
+        "sf rb"
+      ]
+    },
+    {
+      "id": "cmc6bp3gc007gunwlfvdxy851",
+      "name": "Cooper Kupp",
+      "team": "LAR",
+      "position": "RB",
+      "sport": "FOOTBALL",
+      "searchTerms": [
+        "cooper kupp",
+        "lar",
+        "rb",
+        "cooper kupp lar",
+        "lar rb"
+      ]
+    },
+    {
+      "id": "cmc6bp3gl007iunwlp9t26njx",
+      "name": "Justin Jefferson",
+      "team": "MIN",
+      "position": "K",
+      "sport": "FOOTBALL",
+      "searchTerms": [
+        "justin jefferson",
+        "min",
+        "k",
+        "justin jefferson min",
+        "min k"
+      ]
+    },
+    {
+      "id": "cmc6bp3gv007kunwlh34v1jaz",
+      "name": "Travis Kelce",
+      "team": "KC",
+      "position": "DST",
+      "sport": "FOOTBALL",
+      "searchTerms": [
+        "travis kelce",
+        "kc",
+        "dst",
+        "travis kelce kc",
+        "kc dst"
+      ]
+    },
+    {
+      "id": "cmc6bp3h3007munwlhl0hlhcy",
+      "name": "Aaron Donald",
+      "team": "LAR",
+      "position": "WR",
+      "sport": "FOOTBALL",
+      "searchTerms": [
+        "aaron donald",
+        "lar",
+        "wr",
+        "aaron donald lar",
+        "lar wr"
+      ]
+    },
+    {
+      "id": "cmc6bp3hd007ounwlu87s4vn1",
+      "name": "Myles Garrett",
+      "team": "CLE",
+      "position": "QB",
+      "sport": "FOOTBALL",
+      "searchTerms": [
+        "myles garrett",
+        "cle",
+        "qb",
+        "myles garrett cle",
+        "cle qb"
+      ]
+    },
+    {
+      "id": "cmc6bp3hm007qunwl9jq67j4g",
+      "name": "Josh Allen",
+      "team": "BUF",
+      "position": "WR",
+      "sport": "FOOTBALL",
+      "searchTerms": [
+        "josh allen",
+        "buf",
+        "wr",
+        "josh allen buf",
+        "buf wr"
+      ]
+    }
+  ]
+}

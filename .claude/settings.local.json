@@ -1,0 +1,379 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(npx create-next-app:*)",
+      "Bash(mv:*)",
+      "Bash(true)",
+      "Bash(rm:*)",
+      "Bash(ls:*)",
+      "Bash(find:*)",
+      "Bash(npm install:*)",
+      "Bash(cp:*)",
+      "Bash(npm run:*)",
+      "Bash(node:*)",
+      "Bash(npx tsc:*)",
+      "Bash(NODE_OPTIONS=\"--max-old-space-size=4096\" npx tsc --noEmit 2>&1)",
+      "Bash(grep:*)",
+      "Bash(sed:*)",
+      "Bash(npx prisma generate:*)",
+      "Bash(diff:*)",
+      "Bash(for:*)",
+      "Bash(do [ -f \"$file\" ])",
+      "Bash(done)",
+      "Bash(timeout 5s npm run mcp:espn)",
+      "Bash(timeout 5s npm run mcp:gambling)",
+      "Bash(timeout 5s npm run mcp:multi)",
+      "Bash(timeout 10s npm run mcp:all)",
+      "WebFetch(domain:www.fantasypros.com)",
+      "WebFetch(domain:www.espn.com)",
+      "WebFetch(domain:www.nfl.com)",
+      "Bash(npm test)",
+      "Bash(npm test:*)",
+      "Bash(rg:*)",
+      "Bash(DATABASE_URL=\"file:./dev.db\" npx prisma db push)",
+      "Bash(docker-compose up:*)",
+      "Bash(curl:*)",
+      "Bash(pkill:*)",
+      "Bash(timeout 15 npm run dev:*)",
+      "Bash(cat:*)",
+      "Bash(npx next dev:*)",
+      "Bash(npx next:*)",
+      "Bash(hostname:*)",
+      "Bash(ss:*)",
+      "Bash(export DATABASE_URL=\"file:./dev.db\")",
+      "Bash(chmod:*)",
+      "Bash(bash:*)",
+      "Bash(npx:*)",
+      "Bash(npm view:*)",
+      "Bash(npm search:*)",
+      "Bash(vercel:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git push:*)",
+      "Bash(awk:*)",
+      "Bash(timeout 30s npm run dev:*)",
+      "Bash(timeout 30 npm run build)",
+      "Bash(DATABASE_URL=postgresql://postgres:[YOUR-PASSWORD]@db.jhfhsbqrdblytrlrconc.supabase.co:5432/postgres npx prisma db push)",
+      "WebFetch(domain:magicui.design)",
+      "Bash(git commit:*)",
+      "Bash(docker run:*)"
+    ],
+    "deny": []
+  },
+  "rules": {
+    "file_operations": {
+      "always_read_before_write": true,
+      "mandatory_read_first": true,
+      "never_blind_write": true,
+      "read_entire_file_context": "required",
+      "preserve_existing_content": true,
+      "description": "MANDATORY: Always read the complete file content before making any modifications. Never write to a file without first understanding its current state, structure, and content.",
+      "enforcement": {
+        "pre_write_read": "absolutely_required",
+        "context_understanding": "complete_file_analysis",
+        "content_preservation": "maintain_all_existing_functionality",
+        "modification_strategy": "surgical_edits_only"
+      },
+      "safety_checks": {
+        "verify_file_exists": true,
+        "backup_before_changes": true,
+        "validate_syntax_before_write": true,
+        "preserve_formatting": true
+      }
+    },
+    "development": {
+      "mcp_tools": {
+        "enabled": true,
+        "description": "Always use the MCP tools in development whenever they help"
+      }
+    },
+    "quality_control": {
+      "pre_push_checks": {
+        "duplicate_exports": true,
+        "typefix_errors": true,
+        "description": "Always check for duplicate export and typefix errors before pushing to git"
+      }
+    },
+    "pre_build_validation": {
+      "enabled": true,
+      "mandatory": true,
+      "comprehensive_check": true,
+      "block_build_on_errors": true,
+      "description": "MANDATORY: Perform comprehensive validation before any build attempt. Fix ALL issues before proceeding with build.",
+      "validation_steps": {
+        "step_1_typescript": {
+          "command": "NODE_OPTIONS=\"--max-old-space-size=4096\" npx tsc --noEmit 2>&1",
+          "required": true,
+          "description": "TypeScript compilation check - fix ALL type errors"
+        },
+        "step_2_lint": {
+          "command": "npm run lint",
+          "required": true,
+          "description": "ESLint validation - fix ALL linting issues"
+        },
+        "step_3_test": {
+          "command": "npm test",
+          "required": true,
+          "description": "Run all tests - ALL must pass"
+        },
+        "step_4_duplicates": {
+          "command": "grep -r 'export.*{' src/ | grep -v node_modules",
+          "required": true,
+          "description": "Check for duplicate exports"
+        },
+        "step_5_imports": {
+          "command": "rg 'import.*from' --type ts --type tsx",
+          "required": true,
+          "description": "Validate all import statements"
+        },
+        "step_6_syntax": {
+          "command": "find src -name '*.tsx' -o -name '*.ts' | xargs -I {} node -c \"require('fs').readFileSync('{}', 'utf8')\"",
+          "required": true,
+          "description": "Syntax validation for all TypeScript files"
+        }
+      },
+      "error_handling": {
+        "batch_fix_all": true,
+        "stop_on_first_error": false,
+        "collect_all_errors_first": true,
+        "fix_in_order_of_dependency": true,
+        "description": "Collect ALL errors first, then batch-fix in logical dependency order"
+      }
+    },
+    "build_quality_assurance": {
+      "enabled": true,
+      "comprehensive_validation": true,
+      "zero_tolerance_policy": true,
+      "description": "ZERO TOLERANCE: No build attempts with ANY outstanding errors, warnings, or quality issues.",
+      "quality_gates": {
+        "typescript_errors": "zero_allowed",
+        "eslint_errors": "zero_allowed",
+        "test_failures": "zero_allowed",
+        "duplicate_exports": "zero_allowed",
+        "missing_imports": "zero_allowed",
+        "syntax_errors": "zero_allowed",
+        "unused_variables": "zero_allowed",
+        "dead_code": "zero_allowed"
+      },
+      "tool_usage": {
+        "typescript_compiler": "mandatory_pre_build",
+        "eslint": "mandatory_pre_build",
+        "jest_tests": "mandatory_pre_build",
+        "grep_searches": "for_duplicate_detection",
+        "ripgrep": "for_comprehensive_code_analysis",
+        "find_commands": "for_file_validation"
+      }
+    },
+    "method_validation": {
+      "enabled": true,
+      "check_correct_patterns": true,
+      "validate_best_practices": true,
+      "description": "Validate that correct methods, patterns, and best practices are being used throughout the codebase.",
+      "validation_rules": {
+        "react_patterns": {
+          "hooks_usage": "validate_proper_hook_usage",
+          "component_structure": "validate_component_patterns",
+          "state_management": "validate_state_patterns"
+        },
+        "typescript_patterns": {
+          "type_definitions": "validate_proper_typing",
+          "interface_usage": "validate_interface_patterns",
+          "generic_usage": "validate_generic_implementations"
+        },
+        "nextjs_patterns": {
+          "api_routes": "validate_api_route_patterns",
+          "page_structure": "validate_page_components",
+          "routing": "validate_routing_patterns"
+        }
+      }
+    },
+    "todo_list_persistence": {
+      "enabled": true,
+      "always_save_progress": true,
+      "track_completed_items": true,
+      "maintain_session_state": true,
+      "auto_resume_on_reconnect": true,
+      "progress_file": ".claude/todo-progress.json",
+      "description": "Always save todo list progress after each completed item. Track all completed items until entire list is done. Resume exactly where left off after disconnections. Only delete progress when all items are fully completed.",
+      "behavior": {
+        "on_item_completion": "immediately_save_progress",
+        "on_disconnection": "preserve_current_state",
+        "on_reconnection": "auto_resume_from_last_saved_state",
+        "on_list_completion": "mark_complete_but_keep_until_confirmed",
+        "cleanup_trigger": "user_confirmation_or_new_todo_list"
+      },
+      "persistence_strategy": {
+        "save_frequency": "after_each_item",
+        "backup_copies": 3,
+        "include_context": true,
+        "include_next_steps": true,
+        "timestamp_all_updates": true
+      }
+    },
+    "mcp_priority": {
+      "enabled": true,
+      "always_use_mcp_first": true,
+      "fallback_only_when_unavailable": true,
+      "description": "ALWAYS use MCP tools as the primary method for any task where they're available. Only use generic tools when MCP tools are unavailable or insufficient."
+    },
+    "error_handling": {
+      "batch_processing": {
+        "enabled": true,
+        "priority": "maximum_efficiency",
+        "batch_similar_errors": true,
+        "parallel_fixes": true,
+        "description": "Always batch-fix similar errors together for maximum efficiency. Process multiple errors in parallel when possible."
+      },
+      "fix_strategy": {
+        "analyze_all_errors_first": true,
+        "group_by_type": true,
+        "apply_fixes_in_batches": true,
+        "verify_batch_success": true,
+        "description": "Analyze all errors upfront, group by type, then apply fixes in efficient batches rather than one-by-one"
+      },
+      "comprehensive_error_collection": {
+        "enabled": true,
+        "collect_before_fixing": true,
+        "categorize_by_severity": true,
+        "prioritize_blocking_errors": true,
+        "description": "ALWAYS collect ALL errors from all sources before attempting any fixes. Categorize and prioritize for efficient batch resolution."
+      }
+    },
+    "efficiency_mandate": {
+      "enabled": true,
+      "parallel_operations": "always_preferred",
+      "batch_operations": "mandatory_when_possible",
+      "mcp_tools_first": "non_negotiable",
+      "description": "MANDATORY: Use parallel/batch operations whenever possible. MCP tools are NON-NEGOTIABLE first choice for any fantasy sports, data, or analysis tasks."
+    },
+    "safe_file_handling": {
+      "enabled": true,
+      "read_before_any_modification": "absolutely_required",
+      "understand_file_structure": "mandatory",
+      "preserve_existing_functionality": "critical",
+      "incremental_changes_only": true,
+      "description": "CRITICAL: Every file modification must begin with reading and understanding the complete file. Never make blind changes. Always preserve existing functionality and make only surgical, incremental modifications.",
+      "workflow": {
+        "step_1": "read_complete_file",
+        "step_2": "analyze_structure_and_content",
+        "step_3": "identify_modification_points",
+        "step_4": "plan_surgical_changes",
+        "step_5": "implement_with_preservation"
+      }
+    }
+  },
+  "planning": {
+    "mcp_integration": {
+      "enabled": true,
+      "priority": "high",
+      "use_for_data_gathering": true,
+      "use_for_analysis": true,
+      "description": "Always prioritize MCP tools when planning tasks, gathering data, or analyzing fantasy sports information"
+    },
+    "tool_preference": {
+      "fantasy_data": "mcp_first",
+      "sports_analysis": "mcp_preferred",
+      "league_operations": "mcp_enabled",
+      "description": "Use MCP tools as the primary method for fantasy sports planning and data operations"
+    }
+  },
+  "workflow": {
+    "planning_phase": {
+      "always_check_mcp_availability": true,
+      "prefer_mcp_over_generic_tools": true,
+      "description": "During planning phases, always check if MCP tools can provide better or more specific functionality"
+    },
+    "execution_strategy": {
+      "mcp_tools": {
+        "priority": "absolute",
+        "always_check_first": true,
+        "never_skip": true,
+        "description": "MCP tools have ABSOLUTE priority. Always check MCP availability first, never skip using them when available."
+      },
+      "batch_operations": {
+        "enabled": true,
+        "prefer_over_sequential": true,
+        "minimum_efficiency_threshold": "always_maximize",
+        "description": "Always prefer batch operations over sequential ones. Maximize efficiency in every operation."
+      },
+      "file_operations": {
+        "read_first_policy": "non_negotiable",
+        "context_analysis": "complete_understanding_required",
+        "modification_approach": "minimal_surgical_changes",
+        "safety_first": "preserve_all_existing_functionality",
+        "description": "File operations must ALWAYS start with reading. Complete context understanding is required before any modifications."
+      },
+      "build_workflow": {
+        "pre_build_validation": "mandatory",
+        "comprehensive_error_check": "required",
+        "batch_fix_all_issues": "before_build_attempt",
+        "zero_error_tolerance": "absolute",
+        "description": "MANDATORY build workflow: validate → collect all errors → batch fix all → then attempt build"
+      }
+    }
+  },
+  "mcp_specific": {
+    "fantasy_sports": {
+      "espn_integration": true,
+      "gambling_wagering": true,
+      "multi_platform": true,
+      "description": "Use all available MCP fantasy sports tools when planning league operations, analysis, or wagering strategies"
+    },
+    "tool_mandate": {
+      "usage_policy": "mandatory",
+      "override_generic_tools": true,
+      "always_available_check": true,
+      "description": "MCP tools usage is MANDATORY when available. Always override generic tools with MCP equivalents."
+    },
+    "efficiency_rules": {
+      "batch_mcp_calls": true,
+      "parallel_mcp_execution": true,
+      "optimize_mcp_workflow": true,
+      "description": "Optimize MCP tool usage for maximum efficiency through batching and parallel execution"
+    }
+  },
+  "performance_optimization": {
+    "enabled": true,
+    "batch_processing_mandatory": true,
+    "parallel_execution_preferred": true,
+    "mcp_tools_non_negotiable": true,
+    "file_safety_critical": true,
+    "build_quality_absolute": true,
+    "description": "Performance optimization is mandatory. Always use batch processing, parallel execution, MCP tools as non-negotiable first choice, safe file handling practices, and absolute build quality standards.",
+    "enforcement": {
+      "error_fixing": "always_batch",
+      "data_operations": "always_mcp_first",
+      "analysis_tasks": "always_parallel_when_possible",
+      "code_operations": "always_efficient_batching",
+      "file_modifications": "always_read_first_then_modify",
+      "build_attempts": "always_validate_and_fix_all_first"
+    }
+  },
+  "build_automation": {
+    "enabled": true,
+    "comprehensive_pre_build": true,
+    "automated_error_detection": true,
+    "batch_error_resolution": true,
+    "description": "Automated build pipeline with comprehensive validation and batch error resolution.",
+    "pipeline_steps": [
+      "collect_all_typescript_errors",
+      "collect_all_lint_errors", 
+      "collect_all_test_failures",
+      "collect_all_import_issues",
+      "collect_all_duplicate_exports",
+      "batch_categorize_all_errors",
+      "batch_fix_by_category",
+      "validate_all_fixes",
+      "attempt_build_only_when_clean"
+    ],
+    "tool_integration": {
+      "use_grep_for": "duplicate_detection",
+      "use_ripgrep_for": "comprehensive_searches",
+      "use_tsc_for": "typescript_validation",
+      "use_npm_for": "dependency_management",
+      "use_find_for": "file_system_validation",
+      "parallel_execution": "when_possible"
+    }
+  }
+}

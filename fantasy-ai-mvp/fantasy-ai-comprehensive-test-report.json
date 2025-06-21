@@ -1,0 +1,478 @@
+{
+  "summary": {
+    "totalTests": 24,
+    "passedTests": 21,
+    "failedTests": 3,
+    "warningTests": 0,
+    "successRate": 87.5,
+    "totalTime": 87142
+  },
+  "testSuites": [
+    {
+      "name": "Pre-flight Checks",
+      "description": "Test suite for Pre-flight Checks",
+      "tests": [
+        {
+          "category": "Pre-flight",
+          "test": "Node.js Version",
+          "status": "PASS",
+          "message": "Node.js v18.19.1 (✓ >= 18.x required)",
+          "duration": 0
+        },
+        {
+          "category": "Pre-flight",
+          "test": "Environment Variables",
+          "status": "FAIL",
+          "message": "Missing 2 required environment variables: DATABASE_URL, NEXTAUTH_SECRET",
+          "duration": 0,
+          "details": {
+            "requiredVars": [
+              "DATABASE_URL",
+              "NEXTAUTH_SECRET"
+            ],
+            "missingRequired": [
+              "DATABASE_URL",
+              "NEXTAUTH_SECRET"
+            ]
+          }
+        },
+        {
+          "category": "Pre-flight",
+          "test": "Package Dependencies",
+          "status": "PASS",
+          "message": "All package dependencies are properly installed",
+          "duration": 868
+        },
+        {
+          "category": "Pre-flight",
+          "test": "File System Structure",
+          "status": "PASS",
+          "message": "All required directories and files present",
+          "duration": 5
+        },
+        {
+          "category": "Pre-flight",
+          "test": "Database Configuration",
+          "status": "FAIL",
+          "message": "Database configuration failed: Error: DATABASE_URL not configured",
+          "duration": 0
+        }
+      ],
+      "totalTime": 874,
+      "passCount": 3,
+      "failCount": 2,
+      "warnCount": 0
+    },
+    {
+      "name": "TypeScript Error Resolution",
+      "description": "Test suite for TypeScript Error Resolution",
+      "tests": [
+        {
+          "category": "TypeScript",
+          "test": "Install Missing Packages",
+          "status": "PASS",
+          "message": "Missing packages installation completed",
+          "duration": 4455,
+          "details": {
+            "packagesToInstall": [
+              "socket.io",
+              "socket.io-client",
+              "@types/web-speech-api"
+            ]
+          }
+        },
+        {
+          "category": "TypeScript",
+          "test": "Fix Type Declarations",
+          "status": "PASS",
+          "message": "Type declarations created successfully",
+          "duration": 3
+        },
+        {
+          "category": "TypeScript",
+          "test": "Build Verification",
+          "status": "PASS",
+          "message": "Build completed successfully",
+          "duration": 77266
+        }
+      ],
+      "totalTime": 81724,
+      "passCount": 3,
+      "failCount": 0,
+      "warnCount": 0
+    },
+    {
+      "name": "Database Connection Testing",
+      "description": "Test suite for Database Connection Testing",
+      "tests": [
+        {
+          "category": "Database",
+          "test": "Database Connection",
+          "status": "FAIL",
+          "message": "Database connection failed: Error: Command failed: node scripts/test-db-connection.js\n❌ Database connection failed: \nInvalid `prisma.$queryRaw()` invocation:\n\n\nRaw query failed. Code: `1`. Message: `no such function: version`\n🔧 Check your DATABASE_URL and network connection\n",
+          "duration": 451
+        },
+        {
+          "category": "Database",
+          "test": "Database Schema",
+          "status": "PASS",
+          "message": "Database schema valid with 47 models",
+          "duration": 3,
+          "details": {
+            "modelCount": 47
+          }
+        },
+        {
+          "category": "Database",
+          "test": "API Endpoints",
+          "status": "PASS",
+          "message": "API structure validated",
+          "duration": 1
+        }
+      ],
+      "totalTime": 456,
+      "passCount": 2,
+      "failCount": 1,
+      "warnCount": 0
+    },
+    {
+      "name": "Real Data Population & Verification",
+      "description": "Test suite for Real Data Population & Verification",
+      "tests": [
+        {
+          "category": "Data Population",
+          "test": "Sports Data Sync",
+          "status": "PASS",
+          "message": "Sports data sync completed successfully",
+          "duration": 1390
+        },
+        {
+          "category": "Data Population",
+          "test": "Data Quality Check",
+          "status": "PASS",
+          "message": "Data quality verification passed",
+          "duration": 1318
+        }
+      ],
+      "totalTime": 2709,
+      "passCount": 2,
+      "failCount": 0,
+      "warnCount": 0
+    },
+    {
+      "name": "Web User Journey Testing",
+      "description": "Test suite for Web User Journey Testing",
+      "tests": [
+        {
+          "category": "User Journey",
+          "test": "Homepage Load",
+          "status": "PASS",
+          "message": "Homepage structure validated",
+          "duration": 2
+        },
+        {
+          "category": "User Journey",
+          "test": "Dashboard Access",
+          "status": "PASS",
+          "message": "Dashboard structure validated",
+          "duration": 3
+        },
+        {
+          "category": "User Journey",
+          "test": "Navigation Flow",
+          "status": "PASS",
+          "message": "Navigation structure complete",
+          "duration": 2
+        }
+      ],
+      "totalTime": 7,
+      "passCount": 3,
+      "failCount": 0,
+      "warnCount": 0
+    },
+    {
+      "name": "All Features Testing",
+      "description": "Test suite for All Features Testing",
+      "tests": [
+        {
+          "category": "Features",
+          "test": "Voice Assistant Components",
+          "status": "PASS",
+          "message": "Voice components found",
+          "duration": 1
+        },
+        {
+          "category": "Features",
+          "test": "Analytics Dashboard",
+          "status": "PASS",
+          "message": "Analytics components found",
+          "duration": 1
+        },
+        {
+          "category": "Features",
+          "test": "Admin Features",
+          "status": "PASS",
+          "message": "Admin features found",
+          "duration": 1
+        },
+        {
+          "category": "Features",
+          "test": "Mobile Components",
+          "status": "PASS",
+          "message": "Mobile components found",
+          "duration": 1
+        }
+      ],
+      "totalTime": 5,
+      "passCount": 4,
+      "failCount": 0,
+      "warnCount": 0
+    },
+    {
+      "name": "Database Content Verification",
+      "description": "Test suite for Database Content Verification",
+      "tests": [
+        {
+          "category": "Database Content",
+          "test": "Dashboard Integration",
+          "status": "PASS",
+          "message": "Dashboard integration completed",
+          "duration": 1360
+        },
+        {
+          "category": "Database Content",
+          "test": "Data Display Verification",
+          "status": "PASS",
+          "message": "Data display components found",
+          "duration": 2
+        }
+      ],
+      "totalTime": 1362,
+      "passCount": 2,
+      "failCount": 0,
+      "warnCount": 0
+    },
+    {
+      "name": "Performance & Security Testing",
+      "description": "Test suite for Performance & Security Testing",
+      "tests": [
+        {
+          "category": "Performance",
+          "test": "Build Performance",
+          "status": "PASS",
+          "message": "Build performance acceptable (0ms)",
+          "duration": 0
+        },
+        {
+          "category": "Security",
+          "test": "Security Check",
+          "status": "PASS",
+          "message": "Security configurations found",
+          "duration": 2
+        }
+      ],
+      "totalTime": 2,
+      "passCount": 2,
+      "failCount": 0,
+      "warnCount": 0
+    }
+  ],
+  "testResults": [
+    {
+      "category": "Pre-flight",
+      "test": "Node.js Version",
+      "status": "PASS",
+      "message": "Node.js v18.19.1 (✓ >= 18.x required)",
+      "duration": 0
+    },
+    {
+      "category": "Pre-flight",
+      "test": "Environment Variables",
+      "status": "FAIL",
+      "message": "Missing 2 required environment variables: DATABASE_URL, NEXTAUTH_SECRET",
+      "duration": 0,
+      "details": {
+        "requiredVars": [
+          "DATABASE_URL",
+          "NEXTAUTH_SECRET"
+        ],
+        "missingRequired": [
+          "DATABASE_URL",
+          "NEXTAUTH_SECRET"
+        ]
+      }
+    },
+    {
+      "category": "Pre-flight",
+      "test": "Package Dependencies",
+      "status": "PASS",
+      "message": "All package dependencies are properly installed",
+      "duration": 868
+    },
+    {
+      "category": "Pre-flight",
+      "test": "File System Structure",
+      "status": "PASS",
+      "message": "All required directories and files present",
+      "duration": 5
+    },
+    {
+      "category": "Pre-flight",
+      "test": "Database Configuration",
+      "status": "FAIL",
+      "message": "Database configuration failed: Error: DATABASE_URL not configured",
+      "duration": 0
+    },
+    {
+      "category": "TypeScript",
+      "test": "Install Missing Packages",
+      "status": "PASS",
+      "message": "Missing packages installation completed",
+      "duration": 4455,
+      "details": {
+        "packagesToInstall": [
+          "socket.io",
+          "socket.io-client",
+          "@types/web-speech-api"
+        ]
+      }
+    },
+    {
+      "category": "TypeScript",
+      "test": "Fix Type Declarations",
+      "status": "PASS",
+      "message": "Type declarations created successfully",
+      "duration": 3
+    },
+    {
+      "category": "TypeScript",
+      "test": "Build Verification",
+      "status": "PASS",
+      "message": "Build completed successfully",
+      "duration": 77266
+    },
+    {
+      "category": "Database",
+      "test": "Database Connection",
+      "status": "FAIL",
+      "message": "Database connection failed: Error: Command failed: node scripts/test-db-connection.js\n❌ Database connection failed: \nInvalid `prisma.$queryRaw()` invocation:\n\n\nRaw query failed. Code: `1`. Message: `no such function: version`\n🔧 Check your DATABASE_URL and network connection\n",
+      "duration": 451
+    },
+    {
+      "category": "Database",
+      "test": "Database Schema",
+      "status": "PASS",
+      "message": "Database schema valid with 47 models",
+      "duration": 3,
+      "details": {
+        "modelCount": 47
+      }
+    },
+    {
+      "category": "Database",
+      "test": "API Endpoints",
+      "status": "PASS",
+      "message": "API structure validated",
+      "duration": 1
+    },
+    {
+      "category": "Data Population",
+      "test": "Sports Data Sync",
+      "status": "PASS",
+      "message": "Sports data sync completed successfully",
+      "duration": 1390
+    },
+    {
+      "category": "Data Population",
+      "test": "Data Quality Check",
+      "status": "PASS",
+      "message": "Data quality verification passed",
+      "duration": 1318
+    },
+    {
+      "category": "User Journey",
+      "test": "Homepage Load",
+      "status": "PASS",
+      "message": "Homepage structure validated",
+      "duration": 2
+    },
+    {
+      "category": "User Journey",
+      "test": "Dashboard Access",
+      "status": "PASS",
+      "message": "Dashboard structure validated",
+      "duration": 3
+    },
+    {
+      "category": "User Journey",
+      "test": "Navigation Flow",
+      "status": "PASS",
+      "message": "Navigation structure complete",
+      "duration": 2
+    },
+    {
+      "category": "Features",
+      "test": "Voice Assistant Components",
+      "status": "PASS",
+      "message": "Voice components found",
+      "duration": 1
+    },
+    {
+      "category": "Features",
+      "test": "Analytics Dashboard",
+      "status": "PASS",
+      "message": "Analytics components found",
+      "duration": 1
+    },
+    {
+      "category": "Features",
+      "test": "Admin Features",
+      "status": "PASS",
+      "message": "Admin features found",
+      "duration": 1
+    },
+    {
+      "category": "Features",
+      "test": "Mobile Components",
+      "status": "PASS",
+      "message": "Mobile components found",
+      "duration": 1
+    },
+    {
+      "category": "Database Content",
+      "test": "Dashboard Integration",
+      "status": "PASS",
+      "message": "Dashboard integration completed",
+      "duration": 1360
+    },
+    {
+      "category": "Database Content",
+      "test": "Data Display Verification",
+      "status": "PASS",
+      "message": "Data display components found",
+      "duration": 2
+    },
+    {
+      "category": "Performance",
+      "test": "Build Performance",
+      "status": "PASS",
+      "message": "Build performance acceptable (0ms)",
+      "duration": 0
+    },
+    {
+      "category": "Security",
+      "test": "Security Check",
+      "status": "PASS",
+      "message": "Security configurations found",
+      "duration": 2
+    }
+  ],
+  "timestamp": "2025-06-21T14:53:28.650Z",
+  "recommendations": [
+    "Address failed tests before production deployment",
+    "Review error logs for specific failure reasons",
+    "Run tests regularly during development",
+    "Set up CI/CD pipeline with automated testing",
+    "Monitor production performance after deployment"
+  ]
+}

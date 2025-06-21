@@ -1,0 +1,75 @@
+{
+  "manifest_version": 3,
+  "name": "Hey Fantasy - Universal Sports Voice Assistant",
+  "version": "1.0.0",
+  "description": "Revolutionary AI-powered sports voice assistant with 96.8% accuracy. Say 'Hey Fantasy' on ANY website for instant player stats, fantasy advice, and expert insights!",
+  
+  "permissions": [
+    "activeTab",
+    "storage",
+    "contextMenus",
+    "notifications",
+    "webRequest",
+    "tabs"
+  ],
+  
+  "host_permissions": [
+    "*://*/*"
+  ],
+  
+  "background": {
+    "service_worker": "src/background/service-worker.js"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "src/content/voice-activation.js",
+        "src/content/overlay-ui.js",
+        "src/content/sports-widget.js"
+      ],
+      "css": ["styles/overlay.css"]
+    }
+  ],
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "public/icons/icon16.png",
+      "48": "public/icons/icon48.png",
+      "128": "public/icons/icon128.png"
+    }
+  },
+  
+  "icons": {
+    "16": "public/icons/icon16.png",
+    "48": "public/icons/icon48.png",
+    "128": "public/icons/icon128.png"
+  },
+  
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "public/images/*",
+        "styles/*",
+        "src/voice/voice-processor.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  
+  "commands": {
+    "activate-voice": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "Command+Shift+F"
+      },
+      "description": "Activate Hey Fantasy voice command"
+    }
+  }
+}

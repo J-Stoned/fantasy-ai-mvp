@@ -1,0 +1,266 @@
+{
+  "sport": "NFL",
+  "league": "NFL 2024 Season",
+  "players": [
+    {
+      "id": "cmc6bp3ca006kunwl12ab9bbe",
+      "name": "Josh Allen",
+      "team": "BUF",
+      "position": "QB",
+      "stats": {
+        "passingYards": 2276,
+        "passingTDs": 16,
+        "rushingYards": 523,
+        "rushingTDs": 1,
+        "receivingYards": 426,
+        "receivingTDs": 12,
+        "tackles": 90,
+        "sacks": 17
+      },
+      "projections": {
+        "points": 11,
+        "salary": 44601451,
+        "fantasyPoints": 251,
+        "age": 23,
+        "height": "73\"",
+        "weight": 221,
+        "experience": 14,
+        "college": "Georgia"
+      }
+    },
+    {
+      "id": "cmc6bp3ci006munwlnao7dqwn",
+      "name": "Christian McCaffrey",
+      "team": "SF",
+      "position": "K",
+      "stats": {
+        "passingYards": 4143,
+        "passingTDs": 5,
+        "rushingYards": 1380,
+        "rushingTDs": 15,
+        "receivingYards": 1324,
+        "receivingTDs": 5,
+        "tackles": 26,
+        "sacks": 19
+      },
+      "projections": {
+        "points": 32,
+        "salary": 37204882,
+        "fantasyPoints": 59,
+        "age": 34,
+        "height": "70\"",
+        "weight": 213,
+        "experience": 10,
+        "college": "Alabama"
+      }
+    },
+    {
+      "id": "cmc6bp3cs006ounwlimztsi3f",
+      "name": "Cooper Kupp",
+      "team": "LAR",
+      "position": "TE",
+      "stats": {
+        "passingYards": 4790,
+        "passingTDs": 28,
+        "rushingYards": 1223,
+        "rushingTDs": 17,
+        "receivingYards": 246,
+        "receivingTDs": 7,
+        "tackles": 13,
+        "sacks": 7
+      },
+      "projections": {
+        "points": 31,
+        "salary": 31457430,
+        "fantasyPoints": 336,
+        "age": 32,
+        "height": "70\"",
+        "weight": 253,
+        "experience": 5,
+        "college": "Georgia"
+      }
+    },
+    {
+      "id": "cmc6bp3d2006qunwlo71z0p7l",
+      "name": "Justin Jefferson",
+      "team": "MIN",
+      "position": "QB",
+      "stats": {
+        "passingYards": 2457,
+        "passingTDs": 36,
+        "rushingYards": 1817,
+        "rushingTDs": 6,
+        "receivingYards": 901,
+        "receivingTDs": 5,
+        "tackles": 26,
+        "sacks": 10
+      },
+      "projections": {
+        "points": 12,
+        "salary": 48767980,
+        "fantasyPoints": 74,
+        "age": 34,
+        "height": "71\"",
+        "weight": 192,
+        "experience": 7,
+        "college": "LSU"
+      }
+    },
+    {
+      "id": "cmc6bp3da006sunwlavkftmu6",
+      "name": "Travis Kelce",
+      "team": "KC",
+      "position": "RB",
+      "stats": {
+        "passingYards": 2014,
+        "passingTDs": 18,
+        "rushingYards": 791,
+        "rushingTDs": 18,
+        "receivingYards": 901,
+        "receivingTDs": 8,
+        "tackles": 33,
+        "sacks": 12
+      },
+      "projections": {
+        "points": 32,
+        "salary": 10734139,
+        "fantasyPoints": 309,
+        "age": 22,
+        "height": "68\"",
+        "weight": 201,
+        "experience": 5,
+        "college": "Ohio State"
+      }
+    },
+    {
+      "id": "cmc6bp3dj006uunwlobjx86ju",
+      "name": "Aaron Donald",
+      "team": "LAR",
+      "position": "K",
+      "stats": {
+        "passingYards": 24,
+        "passingTDs": 23,
+        "rushingYards": 741,
+        "rushingTDs": 16,
+        "receivingYards": 328,
+        "receivingTDs": 0,
+        "tackles": 25,
+        "sacks": 13
+      },
+      "projections": {
+        "points": 27,
+        "salary": 42493149,
+        "fantasyPoints": 157,
+        "age": 20,
+        "height": "73\"",
+        "weight": 235,
+        "experience": 5,
+        "college": "LSU"
+      }
+    },
+    {
+      "id": "cmc6bp3dt006wunwlis2d6j3o",
+      "name": "Myles Garrett",
+      "team": "CLE",
+      "position": "DST",
+      "stats": {
+        "passingYards": 915,
+        "passingTDs": 10,
+        "rushingYards": 143,
+        "rushingTDs": 13,
+        "receivingYards": 1981,
+        "receivingTDs": 16,
+        "tackles": 139,
+        "sacks": 16
+      },
+      "projections": {
+        "points": 17,
+        "salary": 14423135,
+        "fantasyPoints": 311,
+        "age": 21,
+        "height": "68\"",
+        "weight": 242,
+        "experience": 8,
+        "college": "Georgia"
+      }
+    },
+    {
+      "id": "cmc6bp3e1006yunwlf0ml63z2",
+      "name": "Josh Allen",
+      "team": "BUF",
+      "position": "RB",
+      "stats": {
+        "passingYards": 3814,
+        "passingTDs": 15,
+        "rushingYards": 169,
+        "rushingTDs": 2,
+        "receivingYards": 601,
+        "receivingTDs": 3,
+        "tackles": 138,
+        "sacks": 0
+      },
+      "projections": {
+        "points": 32,
+        "salary": 4945403,
+        "fantasyPoints": 193,
+        "age": 25,
+        "height": "66\"",
+        "weight": 234,
+        "experience": 2,
+        "college": "Georgia"
+      }
+    },
+    {
+      "id": "cmc6bp3eb0070unwl3u1p3y8q",
+      "name": "Christian McCaffrey",
+      "team": "SF",
+      "position": "DST",
+      "stats": {
+        "passingYards": 4038,
+        "passingTDs": 27,
+        "rushingYards": 692,
+        "rushingTDs": 19,
+        "receivingYards": 1526,
+        "receivingTDs": 19,
+        "tackles": 95,
+        "sacks": 16
+      },
+      "projections": {
+        "points": 11,
+        "salary": 14019693,
+        "fantasyPoints": 289,
+        "age": 20,
+        "height": "70\"",
+        "weight": 254,
+        "experience": 15,
+        "college": "Clemson"
+      }
+    },
+    {
+      "id": "cmc6bp3ek0072unwln0achllq",
+      "name": "Cooper Kupp",
+      "team": "LAR",
+      "position": "K",
+      "stats": {
+        "passingYards": 2186,
+        "passingTDs": 23,
+        "rushingYards": 1696,
+        "rushingTDs": 16,
+        "receivingYards": 1617,
+        "receivingTDs": 14,
+        "tackles": 120,
+        "sacks": 6
+      },
+      "projections": {
+        "points": 24,
+        "salary": 34226133,
+        "fantasyPoints": 224,
+        "age": 28,
+        "height": "68\"",
+        "weight": 230,
+        "experience": 3,
+        "college": "Georgia"
+      }
+    }
+  ]
+}

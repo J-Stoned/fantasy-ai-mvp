@@ -1,0 +1,256 @@
+{
+  "sport": "NBA",
+  "league": "NBA 2024-25 Season",
+  "players": [
+    {
+      "id": "cmc6bp2y4003kunwl64wumdkx",
+      "name": "Josh Allen",
+      "team": "LAL",
+      "position": "PG",
+      "stats": {
+        "points": 22,
+        "rebounds": 10,
+        "assists": 2,
+        "steals": 0,
+        "blocks": 1,
+        "fieldGoalPct": "0.853",
+        "threePointPct": "0.600"
+      },
+      "projections": {
+        "points": 20,
+        "salary": 4127761,
+        "fantasyPoints": 314,
+        "age": 20,
+        "height": "71\"",
+        "weight": 226,
+        "experience": 9,
+        "college": "LSU"
+      }
+    },
+    {
+      "id": "cmc6bp2yd003munwlgiqkm7nl",
+      "name": "Christian McCaffrey",
+      "team": "GSW",
+      "position": "PF",
+      "stats": {
+        "points": 16,
+        "rebounds": 10,
+        "assists": 9,
+        "steals": 0,
+        "blocks": 1,
+        "fieldGoalPct": "0.540",
+        "threePointPct": "0.393"
+      },
+      "projections": {
+        "points": 28,
+        "salary": 16300234,
+        "fantasyPoints": 294,
+        "age": 25,
+        "height": "70\"",
+        "weight": 202,
+        "experience": 3,
+        "college": "Georgia"
+      }
+    },
+    {
+      "id": "cmc6bp2yl003ounwl7jb43vj4",
+      "name": "Cooper Kupp",
+      "team": "BOS",
+      "position": "C",
+      "stats": {
+        "points": 2,
+        "rebounds": 12,
+        "assists": 9,
+        "steals": 1,
+        "blocks": 1,
+        "fieldGoalPct": "0.387",
+        "threePointPct": "0.424"
+      },
+      "projections": {
+        "points": 10,
+        "salary": 17820181,
+        "fantasyPoints": 338,
+        "age": 25,
+        "height": "70\"",
+        "weight": 242,
+        "experience": 4,
+        "college": "Georgia"
+      }
+    },
+    {
+      "id": "cmc6bp2yv003qunwlnoex92zb",
+      "name": "Justin Jefferson",
+      "team": "MIA",
+      "position": "SG",
+      "stats": {
+        "points": 2,
+        "rebounds": 1,
+        "assists": 3,
+        "steals": 2,
+        "blocks": 1,
+        "fieldGoalPct": "0.704",
+        "threePointPct": "0.519"
+      },
+      "projections": {
+        "points": 30,
+        "salary": 33864597,
+        "fantasyPoints": 143,
+        "age": 23,
+        "height": "73\"",
+        "weight": 240,
+        "experience": 10,
+        "college": "Ohio State"
+      }
+    },
+    {
+      "id": "cmc6bp2z5003sunwl7l0p8t3x",
+      "name": "Travis Kelce",
+      "team": "PHX",
+      "position": "C",
+      "stats": {
+        "points": 32,
+        "rebounds": 9,
+        "assists": 2,
+        "steals": 2,
+        "blocks": 1,
+        "fieldGoalPct": "0.647",
+        "threePointPct": "0.666"
+      },
+      "projections": {
+        "points": 29,
+        "salary": 28741776,
+        "fantasyPoints": 344,
+        "age": 26,
+        "height": "66\"",
+        "weight": 186,
+        "experience": 2,
+        "college": "Georgia"
+      }
+    },
+    {
+      "id": "cmc6bp2zd003uunwl4iqpdfr3",
+      "name": "Aaron Donald",
+      "team": "MIL",
+      "position": "C",
+      "stats": {
+        "points": 13,
+        "rebounds": 8,
+        "assists": 11,
+        "steals": 0,
+        "blocks": 3,
+        "fieldGoalPct": "0.816",
+        "threePointPct": "0.484"
+      },
+      "projections": {
+        "points": 24,
+        "salary": 3913061,
+        "fantasyPoints": 238,
+        "age": 32,
+        "height": "68\"",
+        "weight": 207,
+        "experience": 15,
+        "college": "Clemson"
+      }
+    },
+    {
+      "id": "cmc6bp2zn003wunwlgb02pzx5",
+      "name": "Myles Garrett",
+      "team": "DEN",
+      "position": "SF",
+      "stats": {
+        "points": 29,
+        "rebounds": 1,
+        "assists": 1,
+        "steals": 2,
+        "blocks": 0,
+        "fieldGoalPct": "0.766",
+        "threePointPct": "0.566"
+      },
+      "projections": {
+        "points": 33,
+        "salary": 49808524,
+        "fantasyPoints": 79,
+        "age": 29,
+        "height": "69\"",
+        "weight": 192,
+        "experience": 13,
+        "college": "Ohio State"
+      }
+    },
+    {
+      "id": "cmc6bp2zw003yunwls773k75f",
+      "name": "Josh Allen",
+      "team": "LAL",
+      "position": "C",
+      "stats": {
+        "points": 15,
+        "rebounds": 0,
+        "assists": 10,
+        "steals": 2,
+        "blocks": 0,
+        "fieldGoalPct": "0.802",
+        "threePointPct": "0.666"
+      },
+      "projections": {
+        "points": 12,
+        "salary": 48753613,
+        "fantasyPoints": 50,
+        "age": 31,
+        "height": "68\"",
+        "weight": 210,
+        "experience": 10,
+        "college": "Ohio State"
+      }
+    },
+    {
+      "id": "cmc6bp3050040unwlhqpzr4kv",
+      "name": "Christian McCaffrey",
+      "team": "GSW",
+      "position": "C",
+      "stats": {
+        "points": 31,
+        "rebounds": 2,
+        "assists": 6,
+        "steals": 2,
+        "blocks": 1,
+        "fieldGoalPct": "0.338",
+        "threePointPct": "0.488"
+      },
+      "projections": {
+        "points": 13,
+        "salary": 2588394,
+        "fantasyPoints": 153,
+        "age": 25,
+        "height": "68\"",
+        "weight": 276,
+        "experience": 3,
+        "college": "LSU"
+      }
+    },
+    {
+      "id": "cmc6bp30f0042unwl7q5ksb1v",
+      "name": "Cooper Kupp",
+      "team": "BOS",
+      "position": "C",
+      "stats": {
+        "points": 25,
+        "rebounds": 3,
+        "assists": 0,
+        "steals": 2,
+        "blocks": 1,
+        "fieldGoalPct": "0.672",
+        "threePointPct": "0.517"
+      },
+      "projections": {
+        "points": 30,
+        "salary": 38803768,
+        "fantasyPoints": 238,
+        "age": 24,
+        "height": "72\"",
+        "weight": 233,
+        "experience": 8,
+        "college": "Georgia"
+      }
+    }
+  ]
+}

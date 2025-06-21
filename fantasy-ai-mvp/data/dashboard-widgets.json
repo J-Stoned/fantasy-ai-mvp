@@ -1,0 +1,224 @@
+{
+  "timestamp": "2025-06-21T14:20:26.339Z",
+  "widgets": {
+    "topPerformers": {
+      "title": "Top Performers",
+      "type": "player-list",
+      "data": [
+        {
+          "id": "cmc6bp3hm007qunwl9jq67j4g",
+          "name": "Josh Allen",
+          "team": "BUF",
+          "position": "WR",
+          "fantasyPoints": 139,
+          "projectedPoints": 14,
+          "trend": "up"
+        },
+        {
+          "id": "cmc6bp3hd007ounwlu87s4vn1",
+          "name": "Myles Garrett",
+          "team": "CLE",
+          "position": "QB",
+          "fantasyPoints": 227,
+          "projectedPoints": 19,
+          "trend": "up"
+        },
+        {
+          "id": "cmc6bp3h3007munwlhl0hlhcy",
+          "name": "Aaron Donald",
+          "team": "LAR",
+          "position": "WR",
+          "fantasyPoints": 88,
+          "projectedPoints": 20,
+          "trend": "up"
+        },
+        {
+          "id": "cmc6bp3gv007kunwlh34v1jaz",
+          "name": "Travis Kelce",
+          "team": "KC",
+          "position": "DST",
+          "fantasyPoints": 103,
+          "projectedPoints": 18,
+          "trend": "up"
+        },
+        {
+          "id": "cmc6bp3gl007iunwlp9t26njx",
+          "name": "Justin Jefferson",
+          "team": "MIN",
+          "position": "K",
+          "fantasyPoints": 236,
+          "projectedPoints": 28,
+          "trend": "up"
+        },
+        {
+          "id": "cmc6bp3gc007gunwlfvdxy851",
+          "name": "Cooper Kupp",
+          "team": "LAR",
+          "position": "RB",
+          "fantasyPoints": 287,
+          "projectedPoints": 33,
+          "trend": "up"
+        },
+        {
+          "id": "cmc6bp3g3007eunwl7euxt8lz",
+          "name": "Christian McCaffrey",
+          "team": "SF",
+          "position": "RB",
+          "fantasyPoints": 192,
+          "projectedPoints": 11,
+          "trend": "up"
+        },
+        {
+          "id": "cmc6bp3ft007cunwll3e540qv",
+          "name": "Josh Allen",
+          "team": "BUF",
+          "position": "QB",
+          "fantasyPoints": 279,
+          "projectedPoints": 28,
+          "trend": "up"
+        },
+        {
+          "id": "cmc6bp3fj007aunwle5f0jug5",
+          "name": "Myles Garrett",
+          "team": "CLE",
+          "position": "QB",
+          "fantasyPoints": 272,
+          "projectedPoints": 27,
+          "trend": "up"
+        },
+        {
+          "id": "cmc6bp3fb0078unwlbvopwjbi",
+          "name": "Aaron Donald",
+          "team": "LAR",
+          "position": "TE",
+          "fantasyPoints": 223,
+          "projectedPoints": 33,
+          "trend": "up"
+        }
+      ]
+    },
+    "recentActivity": {
+      "title": "Recent Activity",
+      "type": "activity-feed",
+      "data": [
+        {
+          "id": "cmc6bp3hm007qunwl9jq67j4g",
+          "type": "player_update",
+          "message": "Josh Allen stats updated",
+          "timestamp": "2025-06-21T14:17:21.899Z",
+          "playerName": "Josh Allen",
+          "team": "BUF"
+        },
+        {
+          "id": "cmc6bp3hd007ounwlu87s4vn1",
+          "type": "player_update",
+          "message": "Myles Garrett stats updated",
+          "timestamp": "2025-06-21T14:17:21.889Z",
+          "playerName": "Myles Garrett",
+          "team": "CLE"
+        },
+        {
+          "id": "cmc6bp3h3007munwlhl0hlhcy",
+          "type": "player_update",
+          "message": "Aaron Donald stats updated",
+          "timestamp": "2025-06-21T14:17:21.880Z",
+          "playerName": "Aaron Donald",
+          "team": "LAR"
+        },
+        {
+          "id": "cmc6bp3gv007kunwlh34v1jaz",
+          "type": "player_update",
+          "message": "Travis Kelce stats updated",
+          "timestamp": "2025-06-21T14:17:21.872Z",
+          "playerName": "Travis Kelce",
+          "team": "KC"
+        },
+        {
+          "id": "cmc6bp3gl007iunwlp9t26njx",
+          "type": "player_update",
+          "message": "Justin Jefferson stats updated",
+          "timestamp": "2025-06-21T14:17:21.862Z",
+          "playerName": "Justin Jefferson",
+          "team": "MIN"
+        }
+      ]
+    },
+    "leagueStandings": {
+      "title": "League Overview",
+      "type": "league-standings",
+      "data": [
+        {
+          "id": "cmc6bp2hd0002unwlarak2nya",
+          "name": "NFL 2024 Season",
+          "sport": "FOOTBALL",
+          "playerCount": 22,
+          "status": "active",
+          "lastSync": null
+        },
+        {
+          "id": "cmc6bp2hn0004unwlnzf84dh0",
+          "name": "NBA 2024-25 Season",
+          "sport": "BASKETBALL",
+          "playerCount": 54,
+          "status": "active",
+          "lastSync": null
+        },
+        {
+          "id": "cmc6bp2hw0006unwltaumrwa4",
+          "name": "MLB 2024 Season",
+          "sport": "BASEBALL",
+          "playerCount": 59,
+          "status": "active",
+          "lastSync": null
+        },
+        {
+          "id": "cmc6bp2i70008unwlp9ypu5vv",
+          "name": "NHL 2024-25 Season",
+          "sport": "HOCKEY",
+          "playerCount": 0,
+          "status": "active",
+          "lastSync": null
+        }
+      ]
+    },
+    "playerSpotlight": {
+      "title": "Player Spotlight",
+      "type": "player-spotlight",
+      "data": {
+        "id": "cmc6bp3e1006yunwlf0ml63z2",
+        "name": "Josh Allen",
+        "team": "BUF",
+        "position": "RB",
+        "sport": "FOOTBALL",
+        "stats": {
+          "passingYards": 3814,
+          "passingTDs": 15,
+          "rushingYards": 169,
+          "rushingTDs": 2,
+          "receivingYards": 601,
+          "receivingTDs": 3,
+          "tackles": 138,
+          "sacks": 0
+        },
+        "projections": {
+          "points": 32,
+          "salary": 4945403,
+          "fantasyPoints": 193,
+          "age": 25,
+          "height": "66\"",
+          "weight": 234,
+          "experience": 2,
+          "college": "Georgia"
+        },
+        "description": "Star RB for BUF",
+        "imageUrl": "https://api.dicebear.com/7.x/initials/svg?seed=Josh%20Allen"
+      }
+    }
+  },
+  "metadata": {
+    "totalPlayers": 135,
+    "totalLeagues": 4,
+    "lastDataSync": "2025-06-21T14:20:26.342Z",
+    "dataSource": "MCP Collectors (ESPN, Yahoo, CBS, Global)"
+  }
+}

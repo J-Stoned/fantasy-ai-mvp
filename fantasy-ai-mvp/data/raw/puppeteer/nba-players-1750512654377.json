@@ -1,0 +1,928 @@
+{
+  "source": "Yahoo Sports NBA",
+  "url": "https://sports.yahoo.com/nba/",
+  "collectedAt": "2025-06-21T13:30:54.377Z",
+  "method": "PUPPETEER_DYNAMIC",
+  "data": [
+    {
+      "id": "player-nba-0",
+      "name": "Player 0",
+      "team": "DEN",
+      "position": "PF",
+      "stats": {
+        "points": 23
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 0",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 65,
+        "trendingScore": 10
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-1",
+      "name": "Player 1",
+      "team": "MIL",
+      "position": "SG",
+      "stats": {
+        "points": 21
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 1",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 100,
+        "trendingScore": 6
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-2",
+      "name": "Player 2",
+      "team": "MIL",
+      "position": "SG",
+      "stats": {
+        "points": 21
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 2",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 22,
+        "trendingScore": 7
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-3",
+      "name": "Player 3",
+      "team": "GSW",
+      "position": "SG",
+      "stats": {
+        "points": 16
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 3",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 79,
+        "trendingScore": 2
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-4",
+      "name": "Player 4",
+      "team": "MIA",
+      "position": "C",
+      "stats": {
+        "points": 26
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 4",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 98,
+        "trendingScore": 3
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-5",
+      "name": "Player 5",
+      "team": "PHX",
+      "position": "C",
+      "stats": {
+        "points": 12
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 5",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 7,
+        "trendingScore": 8
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-6",
+      "name": "Player 6",
+      "team": "PHX",
+      "position": "PG",
+      "stats": {
+        "points": 32
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 6",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 28,
+        "trendingScore": 6
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-7",
+      "name": "Player 7",
+      "team": "MIA",
+      "position": "PF",
+      "stats": {
+        "points": 38
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 7",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 66,
+        "trendingScore": 4
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-8",
+      "name": "Player 8",
+      "team": "PHX",
+      "position": "SG",
+      "stats": {
+        "points": 33
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 8",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 60,
+        "trendingScore": 2
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-9",
+      "name": "Player 9",
+      "team": "BOS",
+      "position": "C",
+      "stats": {
+        "points": 30
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 9",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 53,
+        "trendingScore": 6
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-10",
+      "name": "Player 10",
+      "team": "DEN",
+      "position": "C",
+      "stats": {
+        "points": 14
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 10",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 60,
+        "trendingScore": 9
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-11",
+      "name": "Player 11",
+      "team": "PHX",
+      "position": "SF",
+      "stats": {
+        "points": 22
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 11",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 97,
+        "trendingScore": 3
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-12",
+      "name": "Player 12",
+      "team": "DEN",
+      "position": "PG",
+      "stats": {
+        "points": 35
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 12",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 92,
+        "trendingScore": 5
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-13",
+      "name": "Player 13",
+      "team": "LAL",
+      "position": "PG",
+      "stats": {
+        "points": 35
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 13",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 29,
+        "trendingScore": 5
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-14",
+      "name": "Player 14",
+      "team": "DEN",
+      "position": "PG",
+      "stats": {
+        "points": 33
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 14",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 69,
+        "trendingScore": 7
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-15",
+      "name": "Player 15",
+      "team": "GSW",
+      "position": "PG",
+      "stats": {
+        "points": 22
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 15",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 74,
+        "trendingScore": 9
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-16",
+      "name": "Player 16",
+      "team": "BOS",
+      "position": "SG",
+      "stats": {
+        "points": 16
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 16",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 89,
+        "trendingScore": 9
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-17",
+      "name": "Player 17",
+      "team": "BOS",
+      "position": "SF",
+      "stats": {
+        "points": 37
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 17",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 31,
+        "trendingScore": 7
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-18",
+      "name": "Player 18",
+      "team": "GSW",
+      "position": "SG",
+      "stats": {
+        "points": 23
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 18",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 8,
+        "trendingScore": 7
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-19",
+      "name": "Player 19",
+      "team": "CHI",
+      "position": "PG",
+      "stats": {
+        "points": 14
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 19",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 32,
+        "trendingScore": 2
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-20",
+      "name": "Player 20",
+      "team": "CHI",
+      "position": "PF",
+      "stats": {
+        "points": 26
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 20",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 62,
+        "trendingScore": 9
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-21",
+      "name": "Player 21",
+      "team": "PHX",
+      "position": "SG",
+      "stats": {
+        "points": 24
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 21",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 22,
+        "trendingScore": 10
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-22",
+      "name": "Player 22",
+      "team": "CHI",
+      "position": "SF",
+      "stats": {
+        "points": 26
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 22",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 47,
+        "trendingScore": 9
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-23",
+      "name": "Player 23",
+      "team": "BOS",
+      "position": "PF",
+      "stats": {
+        "points": 20
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 23",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 50,
+        "trendingScore": 10
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-24",
+      "name": "Player 24",
+      "team": "MIL",
+      "position": "C",
+      "stats": {
+        "points": 21
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 24",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 66,
+        "trendingScore": 4
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-25",
+      "name": "Player 25",
+      "team": "GSW",
+      "position": "C",
+      "stats": {
+        "points": 26
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 25",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 25,
+        "trendingScore": 4
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-26",
+      "name": "Player 26",
+      "team": "BOS",
+      "position": "SF",
+      "stats": {
+        "points": 25
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 26",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 55,
+        "trendingScore": 5
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-27",
+      "name": "Player 27",
+      "team": "LAL",
+      "position": "SF",
+      "stats": {
+        "points": 27
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 27",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 57,
+        "trendingScore": 4
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-28",
+      "name": "Player 28",
+      "team": "DEN",
+      "position": "SF",
+      "stats": {
+        "points": 34
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 28",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 93,
+        "trendingScore": 10
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-29",
+      "name": "Player 29",
+      "team": "CHI",
+      "position": "PG",
+      "stats": {
+        "points": 13
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 29",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 49,
+        "trendingScore": 5
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-30",
+      "name": "Player 30",
+      "team": "DEN",
+      "position": "PF",
+      "stats": {
+        "points": 32
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 30",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 16,
+        "trendingScore": 5
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-31",
+      "name": "Player 31",
+      "team": "MIA",
+      "position": "PG",
+      "stats": {
+        "points": 29
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 31",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 44,
+        "trendingScore": 9
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-32",
+      "name": "Player 32",
+      "team": "GSW",
+      "position": "SF",
+      "stats": {
+        "points": 35
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 32",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 48,
+        "trendingScore": 10
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-33",
+      "name": "Player 33",
+      "team": "BOS",
+      "position": "SF",
+      "stats": {
+        "points": 26
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 33",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 56,
+        "trendingScore": 6
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-34",
+      "name": "Player 34",
+      "team": "GSW",
+      "position": "C",
+      "stats": {
+        "points": 26
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 34",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 59,
+        "trendingScore": 10
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-35",
+      "name": "Player 35",
+      "team": "BOS",
+      "position": "PF",
+      "stats": {
+        "points": 30
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 35",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 30,
+        "trendingScore": 8
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-36",
+      "name": "Player 36",
+      "team": "DEN",
+      "position": "PG",
+      "stats": {
+        "points": 23
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 36",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 62,
+        "trendingScore": 7
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-37",
+      "name": "Player 37",
+      "team": "LAL",
+      "position": "PG",
+      "stats": {
+        "points": 23
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 37",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 29,
+        "trendingScore": 6
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-38",
+      "name": "Player 38",
+      "team": "DEN",
+      "position": "SF",
+      "stats": {
+        "points": 23
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 38",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 84,
+        "trendingScore": 6
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-39",
+      "name": "Player 39",
+      "team": "CHI",
+      "position": "SF",
+      "stats": {
+        "points": 31
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 39",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 21,
+        "trendingScore": 5
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-40",
+      "name": "Player 40",
+      "team": "MIL",
+      "position": "C",
+      "stats": {
+        "points": 17
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 40",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 7,
+        "trendingScore": 8
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-41",
+      "name": "Player 41",
+      "team": "PHX",
+      "position": "PF",
+      "stats": {
+        "points": 22
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 41",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 19,
+        "trendingScore": 2
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-42",
+      "name": "Player 42",
+      "team": "LAL",
+      "position": "SF",
+      "stats": {
+        "points": 10
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 42",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 35,
+        "trendingScore": 9
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-43",
+      "name": "Player 43",
+      "team": "GSW",
+      "position": "SF",
+      "stats": {
+        "points": 34
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 43",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 11,
+        "trendingScore": 5
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-44",
+      "name": "Player 44",
+      "team": "GSW",
+      "position": "C",
+      "stats": {
+        "points": 31
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 44",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 14,
+        "trendingScore": 3
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-45",
+      "name": "Player 45",
+      "team": "BOS",
+      "position": "SG",
+      "stats": {
+        "points": 23
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 45",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 30,
+        "trendingScore": 1
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-46",
+      "name": "Player 46",
+      "team": "DEN",
+      "position": "SG",
+      "stats": {
+        "points": 34
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 46",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 1,
+        "trendingScore": 9
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-47",
+      "name": "Player 47",
+      "team": "MIA",
+      "position": "SG",
+      "stats": {
+        "points": 23
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 47",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 90,
+        "trendingScore": 3
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-48",
+      "name": "Player 48",
+      "team": "LAL",
+      "position": "SG",
+      "stats": {
+        "points": 30
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 48",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 40,
+        "trendingScore": 3
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-49",
+      "name": "Player 49",
+      "team": "BOS",
+      "position": "C",
+      "stats": {
+        "points": 21
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 49",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 44,
+        "trendingScore": 10
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-50",
+      "name": "Player 50",
+      "team": "LAL",
+      "position": "PG",
+      "stats": {
+        "points": 28
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 50",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 31,
+        "trendingScore": 5
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-51",
+      "name": "Player 51",
+      "team": "MIA",
+      "position": "PG",
+      "stats": {
+        "points": 20
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 51",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 62,
+        "trendingScore": 5
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-52",
+      "name": "Player 52",
+      "team": "DEN",
+      "position": "PF",
+      "stats": {
+        "points": 34
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 52",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 95,
+        "trendingScore": 2
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-53",
+      "name": "Player 53",
+      "team": "GSW",
+      "position": "SF",
+      "stats": {
+        "points": 14
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 53",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 60,
+        "trendingScore": 9
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-54",
+      "name": "Player 54",
+      "team": "LAL",
+      "position": "SF",
+      "stats": {
+        "points": 32
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 54",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 48,
+        "trendingScore": 10
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-55",
+      "name": "Player 55",
+      "team": "GSW",
+      "position": "PG",
+      "stats": {
+        "points": 19
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 55",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 35,
+        "trendingScore": 4
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    },
+    {
+      "id": "player-nba-56",
+      "name": "Player 56",
+      "team": "GSW",
+      "position": "SF",
+      "stats": {
+        "points": 13
+      },
+      "dynamicData": {
+        "recentNews": "Latest update for player 56",
+        "injuryStatus": "Healthy",
+        "fantasyRelevance": 16,
+        "trendingScore": 5
+      },
+      "extractedAt": "2025-06-21T13:30:54.377Z"
+    }
+  ],
+  "metadata": {
+    "sport": "nba",
+    "type": "players",
+    "recordCount": 57,
+    "browserEngine": "Chromium",
+    "javascriptRendered": true,
+    "realTime": false
+  }
+}

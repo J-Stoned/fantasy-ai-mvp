@@ -1,0 +1,114 @@
+{
+  "endpoint": "/api/teams",
+  "method": "GET",
+  "description": "Get team statistics and player counts",
+  "sampleResponse": {
+    "success": true,
+    "data": [
+      {
+        "abbreviation": "NYY",
+        "playerCount": 9,
+        "fullName": "New York Yankees"
+      },
+      {
+        "abbreviation": "LAD",
+        "playerCount": 9,
+        "fullName": "Los Angeles Dodgers"
+      },
+      {
+        "abbreviation": "HOU",
+        "playerCount": 9,
+        "fullName": "Houston Astros"
+      },
+      {
+        "abbreviation": "STL",
+        "playerCount": 8,
+        "fullName": "STL Team"
+      },
+      {
+        "abbreviation": "SD",
+        "playerCount": 8,
+        "fullName": "SD Team"
+      },
+      {
+        "abbreviation": "PHX",
+        "playerCount": 8,
+        "fullName": "PHX Team"
+      },
+      {
+        "abbreviation": "NYM",
+        "playerCount": 8,
+        "fullName": "NYM Team"
+      },
+      {
+        "abbreviation": "MIA",
+        "playerCount": 8,
+        "fullName": "MIA Team"
+      },
+      {
+        "abbreviation": "LAL",
+        "playerCount": 8,
+        "fullName": "Los Angeles Lakers"
+      },
+      {
+        "abbreviation": "GSW",
+        "playerCount": 8,
+        "fullName": "Golden State Warriors"
+      },
+      {
+        "abbreviation": "BOS",
+        "playerCount": 8,
+        "fullName": "Boston Celtics"
+      },
+      {
+        "abbreviation": "ATL",
+        "playerCount": 8,
+        "fullName": "Atlanta Braves"
+      },
+      {
+        "abbreviation": "MIL",
+        "playerCount": 7,
+        "fullName": "MIL Team"
+      },
+      {
+        "abbreviation": "DEN",
+        "playerCount": 7,
+        "fullName": "DEN Team"
+      },
+      {
+        "abbreviation": "LAR",
+        "playerCount": 6,
+        "fullName": "Los Angeles Rams"
+      },
+      {
+        "abbreviation": "BUF",
+        "playerCount": 4,
+        "fullName": "Buffalo Bills"
+      },
+      {
+        "abbreviation": "SF",
+        "playerCount": 3,
+        "fullName": "San Francisco 49ers"
+      },
+      {
+        "abbreviation": "MIN",
+        "playerCount": 3,
+        "fullName": "MIN Team"
+      },
+      {
+        "abbreviation": "KC",
+        "playerCount": 3,
+        "fullName": "Kansas City Chiefs"
+      },
+      {
+        "abbreviation": "CLE",
+        "playerCount": 3,
+        "fullName": "CLE Team"
+      }
+    ],
+    "meta": {
+      "total": 20,
+      "topTeam": "NYY"
+    }
+  }
+}

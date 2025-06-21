@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/mnt/c/Users/st0ne/fantasy.AI-MVP/logs/.91693c410f43c03e7f4d5c0086cb9ca076226edf-audit.json",
+    "files": [
+        {
+            "date": 1750209294556,
+            "name": "/mnt/c/Users/st0ne/fantasy.AI-MVP/logs/mcp-puppeteer-2025-06-17.log",
+            "hash": "71948331d45d30e696f7d06c05ffec0ec908018767e36e332cfd3d74826e1127"
+        }
+    ],
+    "hashType": "sha256"
+}

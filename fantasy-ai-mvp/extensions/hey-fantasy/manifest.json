@@ -1,0 +1,66 @@
+{
+  "manifest_version": 3,
+  "name": "Hey Fantasy - AI Voice Assistant",
+  "version": "1.0.0",
+  "description": "Revolutionary voice-powered fantasy sports assistant with multimedia intelligence",
+  "permissions": [
+    "tabs",
+    "storage",
+    "notifications",
+    "microphone",
+    "webNavigation",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://*.yahoo.com/*",
+    "https://*.espn.com/*",
+    "https://*.cbssports.com/*",
+    "https://*.sleeper.app/*",
+    "https://*.nfl.com/*",
+    "https://*.draftkings.com/*",
+    "https://*.fanduel.com/*",
+    "https://localhost:3000/*",
+    "https://fantasy-ai.vercel.app/*"
+  ],
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content.js"],
+      "css": ["src/styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "public/popup.html",
+    "default_icon": {
+      "16": "public/icon-16.png",
+      "48": "public/icon-48.png",
+      "128": "public/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "public/icon-16.png",
+    "48": "public/icon-48.png",
+    "128": "public/icon-128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["public/*", "src/*"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "commands": {
+    "activate-voice": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "Command+Shift+F"
+      },
+      "description": "Activate Hey Fantasy voice assistant"
+    }
+  }
+}

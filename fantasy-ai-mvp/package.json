@@ -18,9 +18,13 @@
     "mcp:multi": "tsx src/mcp/servers/multi-platform-fantasy.ts",
     "mcp:ai": "tsx src/mcp/tools/ai-analytics.ts",
     "mcp:all": "concurrently \"npm run mcp:yahoo\" \"npm run mcp:espn\" \"npm run mcp:multi\" \"npm run mcp:ai\"",
+    "deploy:production": "tsx scripts/deploy-production.ts",
+    "deploy:demo": "tsx scripts/deploy-production-demo.ts",
     "db:generate": "prisma generate",
     "db:push": "prisma db push",
-    "db:migrate": "prisma migrate dev"
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:reset": "prisma db push --force-reset && npm run db:seed"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.9.1",
@@ -28,6 +32,7 @@
     "@prisma/client": "^6.9.0",
     "@radix-ui/react-progress": "^1.1.7",
     "@radix-ui/themes": "^3.2.1",
+    "@supabase/supabase-js": "^2.50.0",
     "@tanstack/react-query": "^5.80.7",
     "@tanstack/react-query-devtools": "^5.80.7",
     "@trpc/client": "^11.4.1",
@@ -38,6 +43,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "concurrently": "^8.2.2",
+    "dotenv": "^16.5.0",
     "framer-motion": "^12.18.1",
     "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.515.0",

@@ -27,6 +27,8 @@
   "include": ["next-env.d.ts", "globals.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": [
     "node_modules", 
+    "mobile-app/**/*",
+    "scripts/**/*",
     "**/*.disabled.ts",
     "**/*.test.ts",
     "**/*.test.tsx", 

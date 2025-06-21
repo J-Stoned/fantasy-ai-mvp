@@ -28,11 +28,63 @@ export class VoiceService {
   private analytics: VoiceAnalyticsIntelligence;
   private apiKey: string | null = null;
   private baseUrl = 'https://api.elevenlabs.io/v1';
+  private currentPersona = 'voice_sports_commentator';
+  private isInitialized = false;
+
+  // Voice personas for web interface
+  private voicePersonas = {
+    'voice_sports_commentator': {
+      name: 'Sports Commentator',
+      description: 'Energetic play-by-play style',
+      voiceId: 'pNInz6obpgDQGcFmaJgB',
+      style: { stability: 0.5, similarityBoost: 0.8, style: 1.0, speakerBoost: true }
+    },
+    'voice_fantasy_expert': {
+      name: 'Fantasy Expert', 
+      description: 'Analytical and professional',
+      voiceId: 'EXAVITQu4vr4xnSDxMaL',
+      style: { stability: 0.75, similarityBoost: 0.85, style: 0.6, speakerBoost: false }
+    },
+    'voice_casual_buddy': {
+      name: 'Fantasy Buddy',
+      description: 'Friendly conversational tone',
+      voiceId: 'TxGEqnHWrfWFTfGW9XjX', 
+      style: { stability: 0.8, similarityBoost: 0.75, style: 0.4, speakerBoost: false }
+    }
+  };
 
   constructor() {
     this.analytics = new VoiceAnalyticsIntelligence();
     // API key should be set via environment or user input
     this.apiKey = process.env.NEXT_PUBLIC_ELEVENLABS_API_KEY || null;
+    this.loadSavedPersona();
+    this.initialize();
+  }
+
+  async initialize(): Promise<boolean> {
+    try {
+      if (!this.apiKey) {
+        console.warn('ElevenLabs API key not configured. Voice features will be limited.');
+        return false;
+      }
+
+      // Test API connection
+      const response = await fetch(`${this.baseUrl}/voices`, {
+        headers: { 'xi-api-key': this.apiKey }
+      });
+
+      if (response.ok) {
+        this.isInitialized = true;
+        console.log('ElevenLabs VoiceService initialized successfully');
+        return true;
+      } else {
+        console.error('Failed to connect to ElevenLabs API');
+        return false;
+      }
+    } catch (error) {
+      console.error('VoiceService initialization error:', error);
+      return false;
+    }
   }
 
   // Text-to-Speech with Fantasy Sports Context
@@ -41,8 +93,8 @@ export class VoiceService {
     voiceId: string = 'voice_sports_commentator',
     settings?: Partial<VoiceSettings>
   ): Promise<AudioBuffer | null> {
-    if (!this.apiKey) {
-      console.warn('ElevenLabs API key not configured');
+    if (!this.isInitialized || !this.apiKey) {
+      console.warn('ElevenLabs VoiceService not initialized');
       return null;
     }
 
@@ -297,6 +349,91 @@ export class VoiceService {
     };
 
     recognition.start();
+  }
+
+  // Persona Management for Web
+  setCurrentPersona(personaId: string): boolean {
+    if (this.voicePersonas[personaId as keyof typeof this.voicePersonas]) {
+      this.currentPersona = personaId;
+      // Only save to localStorage if we're in a browser environment
+      if (typeof window !== 'undefined' && window.localStorage) {
+        localStorage.setItem('fantasy_voice_persona', personaId);
+      }
+      return true;
+    }
+    return false;
+  }
+
+  getCurrentPersona(): any {
+    return this.voicePersonas[this.currentPersona as keyof typeof this.voicePersonas] || null;
+  }
+
+  getAvailablePersonas(): any[] {
+    return Object.entries(this.voicePersonas).map(([id, persona]) => ({
+      id,
+      ...persona
+    }));
+  }
+
+  // Enhanced announcement with persona context
+  async announceWithPersona(
+    text: string, 
+    emotion: 'excited' | 'calm' | 'dramatic' | 'analytical' = 'calm'
+  ): Promise<AudioBuffer | null> {
+    const persona = this.voicePersonas[this.currentPersona as keyof typeof this.voicePersonas];
+    if (!persona) return null;
+
+    const enhancedSettings: VoiceSettings = {
+      voiceId: persona.voiceId,
+      stability: persona.style.stability,
+      similarityBoost: persona.style.similarityBoost,
+      style: persona.style.style,
+      speakerBoost: persona.style.speakerBoost
+    };
+
+    // Adjust settings based on emotion
+    if (emotion === 'excited') {
+      enhancedSettings.style = Math.min(1.0, enhancedSettings.style + 0.2);
+    } else if (emotion === 'dramatic') {
+      enhancedSettings.stability = Math.max(0.3, enhancedSettings.stability - 0.2);
+      enhancedSettings.style = Math.min(1.0, enhancedSettings.style + 0.3);
+    }
+
+    return await this.synthesizeSpeech(text, persona.voiceId, enhancedSettings);
+  }
+
+  // Real-time voice response for web
+  async speakWithCurrentPersona(
+    text: string,
+    emotion: 'excited' | 'calm' | 'dramatic' | 'analytical' = 'calm'
+  ): Promise<boolean> {
+    try {
+      const audioBuffer = await this.announceWithPersona(text, emotion);
+      if (!audioBuffer) return false;
+
+      // Play the audio
+      const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+      const source = audioContext.createBufferSource();
+      source.buffer = audioBuffer;
+      source.connect(audioContext.destination);
+      source.start();
+
+      return true;
+    } catch (error) {
+      console.error('Failed to speak with current persona:', error);
+      return false;
+    }
+  }
+
+  // Initialize persona from localStorage (SSR-safe)
+  private loadSavedPersona(): void {
+    // Only access localStorage if we're in a browser environment
+    if (typeof window !== 'undefined' && window.localStorage) {
+      const savedPersona = localStorage.getItem('fantasy_voice_persona');
+      if (savedPersona && this.voicePersonas[savedPersona as keyof typeof this.voicePersonas]) {
+        this.currentPersona = savedPersona;
+      }
+    }
   }
 }
 

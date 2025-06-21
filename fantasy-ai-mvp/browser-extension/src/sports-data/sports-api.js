@@ -1,10 +1,17 @@
 /**
- * HEY FANTASY - Sports Data API Integration
- * Centralized sports data fetching from multiple sources
+ * 🌍 FANTASY.AI - GLOBAL REAL SPORTS DATA API
+ * Mission: "Either we know it or we don't... yet!"
+ * 
+ * Centralized sports data fetching from FREE global media sources
+ * Powered by 24 MCP servers and international sports intelligence
  */
+
+// Import our Global Real Data Engine
+const GlobalRealSportsData = require('./global-real-data.js');
 
 class SportsDataAPI {
   constructor() {
+    this.globalRealData = new GlobalRealSportsData();
     this.cache = new Map();
     this.cacheTTL = 300000; // 5 minutes
     this.rateLimiter = new Map();
@@ -101,22 +108,22 @@ class SportsDataAPI {
     try {
       switch (intent.type) {
         case 'PLAYER_STATS':
-          return await this.getPlayerStats(intent.player, intent.timeframe);
+          return await this.globalRealData.getPlayerStats(intent.player, intent.timeframe);
           
         case 'GAME_SCORES':
-          return await this.getGameScores(intent.teams, intent.date);
+          return await this.globalRealData.getGameScores(intent.teams, intent.date);
           
         case 'INJURY_REPORT':
-          return await this.getInjuryReport(intent.player || intent.team);
+          return await this.globalRealData.getInjuryReport(intent.player || intent.team);
           
         case 'TEAM_INFO':
-          return await this.getTeamInfo(intent.team);
+          return await this.globalRealData.getTeamInfo(intent.team);
           
         case 'FANTASY_ADVICE':
-          return await this.getFantasyAdvice(intent.context);
+          return await this.globalRealData.getFantasyAdvice(intent.context);
           
         case 'STANDINGS':
-          return await this.getStandings(intent.league);
+          return await this.globalRealData.getStandings(intent.league);
           
         case 'SCHEDULE':
           return await this.getSchedule(intent.team, intent.date);

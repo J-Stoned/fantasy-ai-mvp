@@ -1,0 +1,17 @@
+[
+  {
+    "id": "nikola-jokic",
+    "name": "Nikola Jokić",
+    "team": "DEN",
+    "position": "C",
+    "stats": {
+      "points": 26.4,
+      "rebounds": 12.4,
+      "assists": 9,
+      "fieldGoalPct": 0.584
+    },
+    "projection": 58.2,
+    "injury": null,
+    "lastUpdated": "2025-06-21T13:26:14.393Z"
+  }
+]

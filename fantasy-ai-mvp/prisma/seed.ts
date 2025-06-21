@@ -80,7 +80,7 @@ async function seed() {
         season: '2024',
         sport: Sport.FOOTBALL,
         isActive: true,
-        settings: {
+        settings: JSON.stringify({
           rosterSize: 16,
           startingQB: 1,
           startingRB: 2,
@@ -90,7 +90,7 @@ async function seed() {
           startingDST: 1,
           startingK: 1,
           scoringSystem: 'PPR'
-        }
+        })
       }
     });
     console.log('✅ Created demo league');
@@ -106,18 +106,18 @@ async function seed() {
             position: playerData.position,
             team: playerData.team,
             leagueId: league.id,
-            stats: {
+            stats: JSON.stringify({
               passingYards: playerData.position === 'QB' ? Math.floor(Math.random() * 4000) + 2000 : 0,
               rushingYards: ['RB', 'QB'].includes(playerData.position) ? Math.floor(Math.random() * 1500) + 200 : 0,
               receivingYards: ['WR', 'TE'].includes(playerData.position) ? Math.floor(Math.random() * 1400) + 400 : 0,
               touchdowns: Math.floor(Math.random() * 15) + 3,
               fantasyPoints: Math.floor(Math.random() * 200) + 100
-            },
-            projections: {
+            }),
+            projections: JSON.stringify({
               weeklyPoints: Math.floor(Math.random() * 25) + 8,
               seasonTotal: Math.floor(Math.random() * 200) + 150,
               confidence: Math.random() * 0.3 + 0.7
-            },
+            }),
             injuryStatus: Math.random() > 0.85 ? 'QUESTIONABLE' : 'HEALTHY',
             imageUrl: `https://a.espncdn.com/i/headshots/nfl/players/full/${4000000 + index}.png`
           }
@@ -137,15 +137,15 @@ async function seed() {
             type: 'POINTS',
             week: 1,
             season: '2024',
-            prediction: {
+            prediction: JSON.stringify({
               projectedPoints: Math.floor(Math.random() * 30) + 5,
               rationale: `AI analysis based on recent performance, matchup difficulty, and weather conditions for ${player.name}.`
-            },
+            }),
             confidence: Math.random() * 0.3 + 0.7, // 70-100% confidence
-            actual: {
+            actual: JSON.stringify({
               actualPoints: Math.floor(Math.random() * 25) + 3,
               gameCompleted: Math.random() > 0.3 // 70% of games completed
-            },
+            }),
             accuracy: Math.random() * 0.4 + 0.6 // 60-100% accuracy
           }
         })

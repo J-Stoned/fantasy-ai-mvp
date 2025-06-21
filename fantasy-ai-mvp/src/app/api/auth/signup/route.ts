@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
         },
         preferences: {
           create: {
-            notifications: {
+            notifications: JSON.stringify({
               email: true,
               push: true,
               sms: false,
@@ -51,7 +51,7 @@ export async function POST(request: NextRequest) {
               trades: true,
               lineups: true,
               wagers: true,
-            },
+            }),
             theme: "dark",
             aiPersonality: "professional",
           },

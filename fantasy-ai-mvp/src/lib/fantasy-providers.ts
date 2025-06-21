@@ -354,7 +354,7 @@ export class FantasyProviderAPI {
         update: {
           name: leagueInfo.name,
           season: leagueInfo.season,
-          settings: leagueInfo.settings,
+          settings: JSON.stringify(leagueInfo.settings),
           lastSync: new Date()
         },
         create: {
@@ -364,7 +364,7 @@ export class FantasyProviderAPI {
           name: leagueInfo.name,
           season: leagueInfo.season,
           sport: 'FOOTBALL',
-          settings: leagueInfo.settings,
+          settings: JSON.stringify(leagueInfo.settings),
           lastSync: new Date()
         }
       });
@@ -974,8 +974,8 @@ export class FantasyProviderAPI {
               name: player.name,
               position: player.position,
               team: player.team,
-              stats: player.stats.season,
-              projections: player.stats.projections,
+              stats: JSON.stringify(player.stats.season),
+              projections: JSON.stringify(player.stats.projections),
               injuryStatus: player.injuryStatus
             },
             create: {
@@ -984,8 +984,8 @@ export class FantasyProviderAPI {
               position: player.position,
               team: player.team,
               leagueId: leagueDbId,
-              stats: player.stats.season,
-              projections: player.stats.projections,
+              stats: JSON.stringify(player.stats.season),
+              projections: JSON.stringify(player.stats.projections),
               injuryStatus: player.injuryStatus
             }
           });

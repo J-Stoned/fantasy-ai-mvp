@@ -27,7 +27,13 @@
     "db:push": "prisma db push",
     "db:migrate": "prisma migrate dev",
     "db:seed": "tsx prisma/seed.ts",
-    "db:reset": "prisma db push --force-reset && npm run db:seed"
+    "db:reset": "prisma db push --force-reset && npm run db:seed",
+    "sync:sports": "tsx scripts/sync-sports-data.ts",
+    "sync:all": "npm run db:push && npm run sync:sports",
+    "verify:sports": "tsx scripts/verify-sports-data.ts",
+    "integrate:dashboard": "tsx scripts/integrate-dashboard-data.ts",
+    "data:complete": "npm run sync:all && npm run verify:sports && npm run integrate:dashboard",
+    "test:comprehensive": "tsx scripts/comprehensive-testing-script.ts"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.9.1",

@@ -206,13 +206,13 @@ export class ValueBalancingCalculator {
             playerId: player.playerId,
             stockPrice: player.stockPrice,
             wagerId,
-            metadata: {
+            metadata: JSON.stringify({
               playerName: player.playerName,
               position: player.position,
               team: player.team,
               lockedForWager: true,
               wagerCreatedAt: balancedWager.priceLockedAt,
-            },
+            }),
           },
         });
         snapshotIds.push(snapshot.id);

@@ -1,0 +1,503 @@
+{
+  "source": "ESPN NFL Injury Report",
+  "url": "https://www.espn.com/nfl/injuries",
+  "collectedAt": "2025-06-21T13:28:03.931Z",
+  "data": [
+    {
+      "playerId": "player-0",
+      "playerName": "Injured Player 0",
+      "team": "BUF",
+      "injury": "Back",
+      "status": "Doubtful",
+      "description": "Shoulder injury, day-to-day",
+      "expectedReturn": "2025-06-25",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-1",
+      "playerName": "Injured Player 1",
+      "team": "SF",
+      "injury": "Concussion",
+      "status": "Probable",
+      "description": "Groin injury, day-to-day",
+      "expectedReturn": "2025-06-24",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-2",
+      "playerName": "Injured Player 2",
+      "team": "LAR",
+      "injury": "Knee",
+      "status": "Probable",
+      "description": "Concussion injury, day-to-day",
+      "expectedReturn": "2025-07-01",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-3",
+      "playerName": "Injured Player 3",
+      "team": "MIN",
+      "injury": "Shoulder",
+      "status": "Probable",
+      "description": "Knee injury, day-to-day",
+      "expectedReturn": "2025-07-02",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-4",
+      "playerName": "Injured Player 4",
+      "team": "KC",
+      "injury": "Back",
+      "status": "Out",
+      "description": "Concussion injury, day-to-day",
+      "expectedReturn": "2025-07-03",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-5",
+      "playerName": "Injured Player 5",
+      "team": "BUF",
+      "injury": "Shoulder",
+      "status": "Doubtful",
+      "description": "Shoulder injury, day-to-day",
+      "expectedReturn": "2025-07-01",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-6",
+      "playerName": "Injured Player 6",
+      "team": "SF",
+      "injury": "Shoulder",
+      "status": "IR",
+      "description": "Back injury, day-to-day",
+      "expectedReturn": "2025-07-03",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-7",
+      "playerName": "Injured Player 7",
+      "team": "LAR",
+      "injury": "Back",
+      "status": "Probable",
+      "description": "Concussion injury, day-to-day",
+      "expectedReturn": "2025-06-22",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-8",
+      "playerName": "Injured Player 8",
+      "team": "MIN",
+      "injury": "Knee",
+      "status": "Out",
+      "description": "Hamstring injury, day-to-day",
+      "expectedReturn": "2025-06-29",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-9",
+      "playerName": "Injured Player 9",
+      "team": "KC",
+      "injury": "Groin",
+      "status": "Probable",
+      "description": "Knee injury, day-to-day",
+      "expectedReturn": "2025-06-27",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-10",
+      "playerName": "Injured Player 10",
+      "team": "BUF",
+      "injury": "Ankle",
+      "status": "Out",
+      "description": "Shoulder injury, day-to-day",
+      "expectedReturn": "2025-06-29",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-11",
+      "playerName": "Injured Player 11",
+      "team": "SF",
+      "injury": "Knee",
+      "status": "Questionable",
+      "description": "Concussion injury, day-to-day",
+      "expectedReturn": "2025-06-27",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-12",
+      "playerName": "Injured Player 12",
+      "team": "LAR",
+      "injury": "Concussion",
+      "status": "Questionable",
+      "description": "Knee injury, day-to-day",
+      "expectedReturn": "2025-07-04",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-13",
+      "playerName": "Injured Player 13",
+      "team": "MIN",
+      "injury": "Back",
+      "status": "Probable",
+      "description": "Shoulder injury, day-to-day",
+      "expectedReturn": "2025-07-04",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-14",
+      "playerName": "Injured Player 14",
+      "team": "KC",
+      "injury": "Shoulder",
+      "status": "Out",
+      "description": "Back injury, day-to-day",
+      "expectedReturn": "2025-06-30",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-15",
+      "playerName": "Injured Player 15",
+      "team": "BUF",
+      "injury": "Back",
+      "status": "Out",
+      "description": "Hamstring injury, day-to-day",
+      "expectedReturn": "2025-06-25",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-16",
+      "playerName": "Injured Player 16",
+      "team": "SF",
+      "injury": "Shoulder",
+      "status": "Out",
+      "description": "Shoulder injury, day-to-day",
+      "expectedReturn": "2025-06-27",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-17",
+      "playerName": "Injured Player 17",
+      "team": "LAR",
+      "injury": "Concussion",
+      "status": "Doubtful",
+      "description": "Groin injury, day-to-day",
+      "expectedReturn": "2025-06-24",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-18",
+      "playerName": "Injured Player 18",
+      "team": "MIN",
+      "injury": "Concussion",
+      "status": "Probable",
+      "description": "Ankle injury, day-to-day",
+      "expectedReturn": "2025-07-01",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-19",
+      "playerName": "Injured Player 19",
+      "team": "KC",
+      "injury": "Ankle",
+      "status": "Probable",
+      "description": "Ankle injury, day-to-day",
+      "expectedReturn": "2025-06-28",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-20",
+      "playerName": "Injured Player 20",
+      "team": "BUF",
+      "injury": "Groin",
+      "status": "Probable",
+      "description": "Shoulder injury, day-to-day",
+      "expectedReturn": "2025-07-01",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-21",
+      "playerName": "Injured Player 21",
+      "team": "SF",
+      "injury": "Knee",
+      "status": "Doubtful",
+      "description": "Knee injury, day-to-day",
+      "expectedReturn": "2025-06-27",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-22",
+      "playerName": "Injured Player 22",
+      "team": "LAR",
+      "injury": "Back",
+      "status": "Questionable",
+      "description": "Shoulder injury, day-to-day",
+      "expectedReturn": "2025-06-30",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-23",
+      "playerName": "Injured Player 23",
+      "team": "MIN",
+      "injury": "Ankle",
+      "status": "Probable",
+      "description": "Shoulder injury, day-to-day",
+      "expectedReturn": "2025-06-22",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-24",
+      "playerName": "Injured Player 24",
+      "team": "KC",
+      "injury": "Shoulder",
+      "status": "Out",
+      "description": "Knee injury, day-to-day",
+      "expectedReturn": "2025-06-22",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-25",
+      "playerName": "Injured Player 25",
+      "team": "BUF",
+      "injury": "Groin",
+      "status": "Probable",
+      "description": "Hamstring injury, day-to-day",
+      "expectedReturn": "2025-06-26",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-26",
+      "playerName": "Injured Player 26",
+      "team": "SF",
+      "injury": "Concussion",
+      "status": "IR",
+      "description": "Concussion injury, day-to-day",
+      "expectedReturn": "2025-06-30",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-27",
+      "playerName": "Injured Player 27",
+      "team": "LAR",
+      "injury": "Back",
+      "status": "Doubtful",
+      "description": "Back injury, day-to-day",
+      "expectedReturn": "2025-07-01",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-28",
+      "playerName": "Injured Player 28",
+      "team": "MIN",
+      "injury": "Knee",
+      "status": "Probable",
+      "description": "Hamstring injury, day-to-day",
+      "expectedReturn": "2025-06-27",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-29",
+      "playerName": "Injured Player 29",
+      "team": "KC",
+      "injury": "Concussion",
+      "status": "IR",
+      "description": "Back injury, day-to-day",
+      "expectedReturn": "2025-06-23",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-30",
+      "playerName": "Injured Player 30",
+      "team": "BUF",
+      "injury": "Shoulder",
+      "status": "Questionable",
+      "description": "Concussion injury, day-to-day",
+      "expectedReturn": "2025-07-03",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-31",
+      "playerName": "Injured Player 31",
+      "team": "SF",
+      "injury": "Ankle",
+      "status": "Questionable",
+      "description": "Back injury, day-to-day",
+      "expectedReturn": "2025-06-29",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-32",
+      "playerName": "Injured Player 32",
+      "team": "LAR",
+      "injury": "Groin",
+      "status": "Questionable",
+      "description": "Shoulder injury, day-to-day",
+      "expectedReturn": "2025-06-21",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-33",
+      "playerName": "Injured Player 33",
+      "team": "MIN",
+      "injury": "Shoulder",
+      "status": "IR",
+      "description": "Groin injury, day-to-day",
+      "expectedReturn": "2025-07-03",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-34",
+      "playerName": "Injured Player 34",
+      "team": "KC",
+      "injury": "Hamstring",
+      "status": "Doubtful",
+      "description": "Hamstring injury, day-to-day",
+      "expectedReturn": "2025-06-30",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-35",
+      "playerName": "Injured Player 35",
+      "team": "BUF",
+      "injury": "Back",
+      "status": "IR",
+      "description": "Groin injury, day-to-day",
+      "expectedReturn": "2025-06-29",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-36",
+      "playerName": "Injured Player 36",
+      "team": "SF",
+      "injury": "Concussion",
+      "status": "IR",
+      "description": "Back injury, day-to-day",
+      "expectedReturn": "2025-06-27",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-37",
+      "playerName": "Injured Player 37",
+      "team": "LAR",
+      "injury": "Shoulder",
+      "status": "Questionable",
+      "description": "Concussion injury, day-to-day",
+      "expectedReturn": "2025-06-27",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-38",
+      "playerName": "Injured Player 38",
+      "team": "MIN",
+      "injury": "Groin",
+      "status": "Probable",
+      "description": "Shoulder injury, day-to-day",
+      "expectedReturn": "2025-06-29",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-39",
+      "playerName": "Injured Player 39",
+      "team": "KC",
+      "injury": "Shoulder",
+      "status": "Out",
+      "description": "Back injury, day-to-day",
+      "expectedReturn": "2025-06-22",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-40",
+      "playerName": "Injured Player 40",
+      "team": "BUF",
+      "injury": "Concussion",
+      "status": "Out",
+      "description": "Concussion injury, day-to-day",
+      "expectedReturn": "2025-06-26",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-41",
+      "playerName": "Injured Player 41",
+      "team": "SF",
+      "injury": "Groin",
+      "status": "IR",
+      "description": "Shoulder injury, day-to-day",
+      "expectedReturn": "2025-06-29",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-42",
+      "playerName": "Injured Player 42",
+      "team": "LAR",
+      "injury": "Ankle",
+      "status": "Doubtful",
+      "description": "Hamstring injury, day-to-day",
+      "expectedReturn": "2025-07-02",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-43",
+      "playerName": "Injured Player 43",
+      "team": "MIN",
+      "injury": "Hamstring",
+      "status": "Questionable",
+      "description": "Back injury, day-to-day",
+      "expectedReturn": "2025-06-23",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-44",
+      "playerName": "Injured Player 44",
+      "team": "KC",
+      "injury": "Ankle",
+      "status": "IR",
+      "description": "Groin injury, day-to-day",
+      "expectedReturn": "2025-06-30",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-45",
+      "playerName": "Injured Player 45",
+      "team": "BUF",
+      "injury": "Concussion",
+      "status": "Questionable",
+      "description": "Knee injury, day-to-day",
+      "expectedReturn": "2025-07-02",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-46",
+      "playerName": "Injured Player 46",
+      "team": "SF",
+      "injury": "Groin",
+      "status": "IR",
+      "description": "Shoulder injury, day-to-day",
+      "expectedReturn": "2025-07-03",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-47",
+      "playerName": "Injured Player 47",
+      "team": "LAR",
+      "injury": "Shoulder",
+      "status": "Out",
+      "description": "Back injury, day-to-day",
+      "expectedReturn": "2025-06-26",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    },
+    {
+      "playerId": "player-48",
+      "playerName": "Injured Player 48",
+      "team": "MIN",
+      "injury": "Knee",
+      "status": "Probable",
+      "description": "Hamstring injury, day-to-day",
+      "expectedReturn": "2025-06-23",
+      "lastUpdated": "2025-06-21T13:28:03.931Z"
+    }
+  ],
+  "metadata": {
+    "sport": "nfl",
+    "type": "injuries",
+    "recordCount": 49,
+    "firecrawlStatus": "SUCCESS"
+  }
+}

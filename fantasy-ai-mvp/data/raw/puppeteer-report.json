@@ -1,0 +1,89 @@
+{
+  "puppeteerSession": {
+    "started": "2025-06-21T13:30:36.281Z",
+    "completed": "2025-06-21T13:31:08.928Z",
+    "duration": 32647,
+    "mcpServer": "Puppeteer",
+    "status": "COMPLETED",
+    "capabilities": [
+      "Dynamic Content",
+      "JavaScript Rendering",
+      "Real-time Data",
+      "Global Reach"
+    ]
+  },
+  "collection": {
+    "usTargets": 5,
+    "globalTargets": 4,
+    "totalTargets": 9,
+    "usRecords": 246,
+    "globalRecords": 107,
+    "totalRecords": 353,
+    "errors": 0
+  },
+  "breakdown": {
+    "usSports": [
+      {
+        "target": "Yahoo Fantasy Football",
+        "records": 52,
+        "timestamp": "2025-06-21T13:30:40.794Z",
+        "dynamic": true
+      },
+      {
+        "target": "CBS Sports NFL",
+        "records": 44,
+        "timestamp": "2025-06-21T13:30:45.304Z",
+        "dynamic": true
+      },
+      {
+        "target": "NFL.com Live Scores",
+        "records": 44,
+        "timestamp": "2025-06-21T13:30:49.866Z",
+        "dynamic": true
+      },
+      {
+        "target": "Yahoo Sports NBA",
+        "records": 57,
+        "timestamp": "2025-06-21T13:30:54.382Z",
+        "dynamic": true
+      },
+      {
+        "target": "ESPN Fantasy Basketball",
+        "records": 49,
+        "timestamp": "2025-06-21T13:30:58.891Z",
+        "dynamic": true
+      }
+    ],
+    "globalSports": [
+      {
+        "target": "BBC Sport Football",
+        "records": 23,
+        "region": "UK",
+        "timestamp": "2025-06-21T13:31:01.400Z"
+      },
+      {
+        "target": "Sky Sports Football",
+        "records": 26,
+        "region": "UK",
+        "timestamp": "2025-06-21T13:31:03.907Z"
+      },
+      {
+        "target": "TSN Hockey",
+        "records": 24,
+        "region": "Canada",
+        "timestamp": "2025-06-21T13:31:06.422Z"
+      },
+      {
+        "target": "Formula 1 Official",
+        "records": 34,
+        "region": "Global",
+        "timestamp": "2025-06-21T13:31:08.928Z"
+      }
+    ]
+  },
+  "nextPhase": {
+    "description": "Knowledge Graph MCP for data relationship mapping",
+    "focus": "Player-Team-League relationships and semantic connections",
+    "estimatedTime": "5 minutes"
+  }
+}

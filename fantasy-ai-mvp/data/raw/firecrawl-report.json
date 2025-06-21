@@ -1,0 +1,46 @@
+{
+  "firecrawlSession": {
+    "started": "2025-06-21T13:27:55.897Z",
+    "completed": "2025-06-21T13:28:03.935Z",
+    "duration": 8038,
+    "mcpServer": "Firecrawl",
+    "status": "COMPLETED"
+  },
+  "collection": {
+    "targets": 4,
+    "collected": 4,
+    "totalRecords": 184,
+    "errors": 0
+  },
+  "details": [
+    {
+      "target": "ESPN NFL Players",
+      "records": 22,
+      "timestamp": "2025-06-21T13:27:57.907Z"
+    },
+    {
+      "target": "ESPN NBA Players",
+      "records": 54,
+      "timestamp": "2025-06-21T13:27:59.912Z"
+    },
+    {
+      "target": "ESPN MLB Players",
+      "records": 59,
+      "timestamp": "2025-06-21T13:28:01.927Z"
+    },
+    {
+      "target": "ESPN NFL Injury Report",
+      "records": 49,
+      "timestamp": "2025-06-21T13:28:03.935Z"
+    }
+  ],
+  "nextPhase": {
+    "description": "Puppeteer MCP for dynamic content extraction",
+    "targets": [
+      "Yahoo Sports",
+      "CBS Sports",
+      "NFL.com"
+    ],
+    "estimatedTime": "10 minutes"
+  }
+}

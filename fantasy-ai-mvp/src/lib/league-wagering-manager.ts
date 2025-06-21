@@ -533,12 +533,14 @@ export class LeagueWageringManager {
         return { success: false, error: "Wagering is not enabled for this league" };
       }
 
+      // Parse current admins, add new admin, and stringify
+      const currentAdmins = JSON.parse(league.wageringSettings.wageringAdmins || "[]");
+      const updatedAdmins = [...currentAdmins, newAdminId];
+      
       await prisma.wageringSettings.update({
         where: { id: league.wageringSettings.id },
         data: {
-          wageringAdmins: {
-            push: [newAdminId],
-          },
+          wageringAdmins: JSON.stringify(updatedAdmins),
         },
       });
 
@@ -576,18 +578,14 @@ export class LeagueWageringManager {
       }
 
       const isCommissioner = league.userId === requestingUserId;
-      const adminsList = Array.isArray(league.wageringSettings.wageringAdmins) 
-        ? league.wageringSettings.wageringAdmins as string[]
-        : [];
+      const adminsList = JSON.parse(league.wageringSettings.wageringAdmins || "[]");
       const isAdmin = adminsList.includes(requestingUserId);
 
       if (!isCommissioner && !isAdmin) {
         return { success: false, error: "Insufficient permissions" };
       }
 
-      const currentBlocked = Array.isArray(league.wageringSettings.blockedMembers) 
-        ? league.wageringSettings.blockedMembers as string[]
-        : [];
+      const currentBlocked = JSON.parse(league.wageringSettings.blockedMembers || "[]");
       let updatedBlocked: string[];
 
       if (block) {
@@ -596,12 +594,12 @@ export class LeagueWageringManager {
         }
         updatedBlocked = [...currentBlocked, targetUserId];
       } else {
-        updatedBlocked = currentBlocked.filter(id => id !== targetUserId);
+        updatedBlocked = currentBlocked.filter((id: string) => id !== targetUserId);
       }
 
       await prisma.wageringSettings.update({
         where: { id: league.wageringSettings.id },
-        data: { blockedMembers: updatedBlocked },
+        data: { blockedMembers: JSON.stringify(updatedBlocked) },
       });
 
       return { success: true };
@@ -700,7 +698,7 @@ export class LeagueWageringManager {
         type: "WAGER_UPDATE" as const,
         title,
         message,
-        data: { leagueId },
+        data: JSON.stringify({ leagueId }),
       }));
 
       await prisma.alert.createMany({

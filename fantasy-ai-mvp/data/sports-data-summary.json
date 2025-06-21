@@ -1,0 +1,159 @@
+{
+  "timestamp": "2025-06-21T14:19:05.764Z",
+  "totalLeagues": 4,
+  "totalPlayers": 135,
+  "sportBreakdown": {
+    "FOOTBALL": {
+      "league": "NFL 2024 Season",
+      "season": "2024",
+      "provider": "ESPN",
+      "playerCount": 22,
+      "samplePlayers": [
+        {
+          "name": "Josh Allen",
+          "team": "BUF",
+          "position": "QB"
+        },
+        {
+          "name": "Christian McCaffrey",
+          "team": "SF",
+          "position": "K"
+        },
+        {
+          "name": "Cooper Kupp",
+          "team": "LAR",
+          "position": "TE"
+        },
+        {
+          "name": "Justin Jefferson",
+          "team": "MIN",
+          "position": "QB"
+        },
+        {
+          "name": "Travis Kelce",
+          "team": "KC",
+          "position": "RB"
+        }
+      ]
+    },
+    "BASKETBALL": {
+      "league": "NBA 2024-25 Season",
+      "season": "2024-25",
+      "provider": "ESPN",
+      "playerCount": 54,
+      "samplePlayers": [
+        {
+          "name": "Josh Allen",
+          "team": "LAL",
+          "position": "PG"
+        },
+        {
+          "name": "Christian McCaffrey",
+          "team": "GSW",
+          "position": "PF"
+        },
+        {
+          "name": "Cooper Kupp",
+          "team": "BOS",
+          "position": "C"
+        },
+        {
+          "name": "Justin Jefferson",
+          "team": "MIA",
+          "position": "SG"
+        },
+        {
+          "name": "Travis Kelce",
+          "team": "PHX",
+          "position": "C"
+        }
+      ]
+    },
+    "BASEBALL": {
+      "league": "MLB 2024 Season",
+      "season": "2024",
+      "provider": "ESPN",
+      "playerCount": 59,
+      "samplePlayers": [
+        {
+          "name": "Josh Allen",
+          "team": "LAD",
+          "position": "C"
+        },
+        {
+          "name": "Christian McCaffrey",
+          "team": "NYY",
+          "position": "1B"
+        },
+        {
+          "name": "Cooper Kupp",
+          "team": "HOU",
+          "position": "RP"
+        },
+        {
+          "name": "Justin Jefferson",
+          "team": "ATL",
+          "position": "SP"
+        },
+        {
+          "name": "Travis Kelce",
+          "team": "SD",
+          "position": "SS"
+        }
+      ]
+    },
+    "HOCKEY": {
+      "league": "NHL 2024-25 Season",
+      "season": "2024-25",
+      "provider": "ESPN",
+      "playerCount": 0,
+      "samplePlayers": []
+    }
+  },
+  "topTeams": [
+    {
+      "team": "NYY",
+      "playerCount": 9
+    },
+    {
+      "team": "LAD",
+      "playerCount": 9
+    },
+    {
+      "team": "HOU",
+      "playerCount": 9
+    },
+    {
+      "team": "STL",
+      "playerCount": 8
+    },
+    {
+      "team": "SD",
+      "playerCount": 8
+    },
+    {
+      "team": "PHX",
+      "playerCount": 8
+    },
+    {
+      "team": "NYM",
+      "playerCount": 8
+    },
+    {
+      "team": "MIA",
+      "playerCount": 8
+    },
+    {
+      "team": "LAL",
+      "playerCount": 8
+    },
+    {
+      "team": "GSW",
+      "playerCount": 8
+    }
+  ],
+  "dataQuality": {
+    "playersWithStats": 135,
+    "playersWithProjections": 135
+  }
+}

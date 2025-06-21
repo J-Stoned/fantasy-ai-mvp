@@ -35,9 +35,9 @@ NEXTAUTH_SECRET=fantasy-ai-development-secret-change-in-production
 # OpenAI (You should regenerate this key for security)
 OPENAI_API_KEY=your-openai-api-key-here
 
-# Stripe (Test keys are fine for now)
-STRIPE_SECRET_KEY=sk_test_51Rb5oIFvsEr7ne6FQ364dJn34yJo8XEECZxjwLBVmom7BxhjnzdlVyZoHYvo8qvChlziKUNaMJUuImG3KOXK1oOQ00WqRCsjmP
-STRIPE_PUBLISHABLE_KEY=pk_test_51Rb5oIFvsEr7ne6FNld3LUfVXFRTdqkdVemnFJKHlYal39fIgFb9AFrOlekjr81e7SLKR9ExPTq4gBPvdRzW3C5N00pTzEDKli
+# Stripe (Use environment variables for security)
+STRIPE_SECRET_KEY=your-stripe-secret-key-here
+STRIPE_PUBLISHABLE_KEY=your-stripe-publishable-key-here
 
 # Feature Flags (Safe for production)
 ENABLE_WAGERING=false

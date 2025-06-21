@@ -3,7 +3,7 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
@@ -84,7 +84,7 @@ model League {
   season        String
   sport         Sport     @default(FOOTBALL)
   isActive      Boolean   @default(true)
-  settings      Json
+  settings      String
   lastSync      DateTime?
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
@@ -125,8 +125,8 @@ model WageringSettings {
   
   // Member Controls
   memberOptIns          MemberWageringOptIn[]
-  blockedMembers        Json      @default("[]")
-  wageringAdmins        Json      @default("[]")
+  blockedMembers        String    @default("[]")
+  wageringAdmins        String    @default("[]")
   
   // Advanced Settings
   allowCrossLeagueBetting Boolean  @default(false)
@@ -182,8 +182,8 @@ model Player {
   team          String
   leagueId      String
   league        League    @relation(fields: [leagueId], references: [id], onDelete: Cascade)
-  stats         Json
-  projections   Json?
+  stats         String
+  projections   String?
   injuryStatus  String?
   imageUrl      String?
   createdAt     DateTime  @default(now())
@@ -226,9 +226,9 @@ model Prediction {
   type          PredictionType
   week          Int
   season        String
-  prediction    Json
+  prediction    String
   confidence    Float
-  actual        Json?
+  actual        String?
   accuracy      Float?
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
@@ -241,7 +241,7 @@ model Alert {
   type          AlertType
   title         String
   message       String
-  data          Json?
+  data          String?
   read          Boolean   @default(false)
   createdAt     DateTime  @default(now())
 }
@@ -250,7 +250,7 @@ model UserPreferences {
   id            String    @id @default(cuid())
   userId        String    @unique
   user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-  notifications Json      @default("{}")
+  notifications String    @default("{}")
   theme         String    @default("dark")
   aiPersonality String    @default("professional")
   createdAt     DateTime  @default(now())
@@ -353,7 +353,7 @@ model Wager {
   totalValue      Float         // Total monetary value of the wager
   creatorStake    Float         // Creator's monetary contribution
   opponentStake   Float         // Opponent's monetary contribution
-  performance     Json          // Performance metrics to track
+  performance     String        // Performance metrics to track
   timeframe       WagerTimeframe
   startDate       DateTime
   endDate         DateTime
@@ -365,7 +365,7 @@ model Wager {
   leagueId        String?
   league          League?       @relation(fields: [leagueId], references: [id])
   isPublic        Boolean       @default(true)
-  metadata        Json?         // Additional wager-specific data
+  metadata        String?       // Additional wager-specific data
   createdAt       DateTime      @default(now())
   updatedAt       DateTime      @updatedAt
 
@@ -404,7 +404,7 @@ model EscrowAccount {
   releasedToId    String?
   releasedTo      User?           @relation(fields: [releasedToId], references: [id])
   refundedAt      DateTime?
-  metadata        Json?
+  metadata        String?
   createdAt       DateTime        @default(now())
   updatedAt       DateTime        @updatedAt
   
@@ -441,7 +441,7 @@ model Bounty {
   title           String
   description     String
   bountyAmount    Float
-  targetMetric    Json          // What performance metric to achieve
+  targetMetric    String        // What performance metric to achieve
   timeframe       WagerTimeframe
   startDate       DateTime
   endDate         DateTime
@@ -455,7 +455,7 @@ model Bounty {
   settledAt       DateTime?
   leagueId        String?
   league          League?       @relation(fields: [leagueId], references: [id])
-  metadata        Json?
+  metadata        String?
   createdAt       DateTime      @default(now())
   updatedAt       DateTime      @updatedAt
   
@@ -487,7 +487,7 @@ model WagerUpdate {
   wager       Wager       @relation(fields: [wagerId], references: [id], onDelete: Cascade)
   type        UpdateType
   message     String
-  data        Json?
+  data        String?
   createdAt   DateTime    @default(now())
   
   @@index([wagerId])
@@ -500,7 +500,7 @@ model BountyUpdate {
   bounty      Bounty      @relation(fields: [bountyId], references: [id], onDelete: Cascade)
   type        UpdateType
   message     String
-  data        Json?
+  data        String?
   createdAt   DateTime    @default(now())
   
   @@index([bountyId])
@@ -530,7 +530,7 @@ model ValueSnapshot {
   stockPrice  Float
   timestamp   DateTime  @default(now())
   wagerId     String?   // Optional: link to specific wager if snapshot was for value balancing
-  metadata    Json?
+  metadata    String?
   
   @@index([playerId])
   @@index([timestamp])
@@ -790,7 +790,7 @@ model Draft {
   currentRound      Int           @default(1)
   currentPick       Int           @default(1)
   currentPickerId   String?
-  settings          Json          @default("{}") // Draft-specific settings
+  settings          String        @default("{}") // Draft-specific settings
   createdAt         DateTime      @default(now())
   updatedAt         DateTime      @updatedAt
   
@@ -858,10 +858,10 @@ model DraftBoard {
   id                String    @id @default(cuid())
   draftId           String    @unique
   draft             Draft     @relation(fields: [draftId], references: [id], onDelete: Cascade)
-  availablePlayers  Json      // Array of available players
-  rankings          Json      // Position rankings
-  adp               Json      // Average draft position data
-  projections       Json      // Player projections
+  availablePlayers  String    // Array of available players
+  rankings          String    // Position rankings
+  adp               String    // Average draft position data
+  projections       String    // Player projections
   lastUpdated       DateTime  @default(now())
   
   @@index([draftId])
@@ -876,9 +876,9 @@ model MockDraft {
   teamCount       Int         @default(12)
   rounds          Int         @default(15)
   userPosition    Int         // Which position user drafted from
-  results         Json        // Complete draft results
-  userTeam        Json        // User's drafted team
-  aiAnalysis      Json?       // AI analysis of the draft
+  results         String      // Complete draft results
+  userTeam        String      // User's drafted team
+  aiAnalysis      String?     // AI analysis of the draft
   score           Float?      // Draft grade
   completedAt     DateTime    @default(now())
   
@@ -926,7 +926,7 @@ model Message {
   draft           Draft?        @relation(fields: [draftId], references: [id], onDelete: Cascade)
   messageType     MessageType   @default(TEXT)
   content         String
-  attachments     Json?         // File attachments, images, etc.
+  attachments     String?       // File attachments, images, etc.
   isEdited        Boolean       @default(false)
   editedAt        DateTime?
   isDeleted       Boolean       @default(false)
@@ -954,7 +954,7 @@ model ActivityItem {
   activityType    ActivityType
   title           String
   description     String
-  metadata        Json?         // Additional activity data
+  metadata        String?       // Additional activity data
   isPublic        Boolean       @default(true)
   createdAt       DateTime      @default(now())
   
@@ -1006,7 +1006,7 @@ model Notification {
   notificationType NotificationType
   title           String
   message         String
-  data            Json?             // Additional notification data
+  data            String?           // Additional notification data
   isRead          Boolean           @default(false)
   readAt          DateTime?
   createdAt       DateTime          @default(now())
@@ -1180,7 +1180,7 @@ model BettingInsight {
   recommendation InsightRecommendation
   confidence    Float                // 0-100 confidence percentage
   reasoning     String               // AI explanation
-  keyFactors    Json                 // Array of key factors
+  keyFactors    String               // Array of key factors
   generatedAt   DateTime             @default(now())
   expiresAt     DateTime             // When insight becomes stale
   

@@ -1,0 +1,63 @@
+{
+  "endpoint": "/api/leagues",
+  "method": "GET",
+  "description": "Get all fantasy leagues with player counts",
+  "sampleResponse": {
+    "success": true,
+    "data": [
+      {
+        "id": "cmc6bp2hd0002unwlarak2nya",
+        "name": "NFL 2024 Season",
+        "sport": "FOOTBALL",
+        "provider": "ESPN",
+        "season": "2024",
+        "playerCount": 22,
+        "isActive": true,
+        "lastSync": null
+      },
+      {
+        "id": "cmc6bp2hn0004unwlnzf84dh0",
+        "name": "NBA 2024-25 Season",
+        "sport": "BASKETBALL",
+        "provider": "ESPN",
+        "season": "2024-25",
+        "playerCount": 54,
+        "isActive": true,
+        "lastSync": null
+      },
+      {
+        "id": "cmc6bp2hw0006unwltaumrwa4",
+        "name": "MLB 2024 Season",
+        "sport": "BASEBALL",
+        "provider": "ESPN",
+        "season": "2024",
+        "playerCount": 59,
+        "isActive": true,
+        "lastSync": null
+      },
+      {
+        "id": "cmc6bp2i70008unwlp9ypu5vv",
+        "name": "NHL 2024-25 Season",
+        "sport": "HOCKEY",
+        "provider": "ESPN",
+        "season": "2024-25",
+        "playerCount": 0,
+        "isActive": true,
+        "lastSync": null
+      }
+    ],
+    "meta": {
+      "total": 4,
+      "activeSports": [
+        "FOOTBALL",
+        "BASKETBALL",
+        "BASEBALL"
+      ],
+      "providers": [
+        "ESPN",
+        "Yahoo",
+        "CBS"
+      ]
+    }
+  }
+}

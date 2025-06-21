@@ -1,0 +1,32 @@
+[
+  {
+    "id": "josh-allen",
+    "name": "Josh Allen",
+    "team": "BUF",
+    "position": "QB",
+    "stats": {
+      "passingYards": 4306,
+      "passingTDs": 29,
+      "rushingYards": 524,
+      "rushingTDs": 15
+    },
+    "projection": 24.8,
+    "injury": null,
+    "lastUpdated": "2025-06-21T13:26:14.393Z"
+  },
+  {
+    "id": "christian-mccaffrey",
+    "name": "Christian McCaffrey",
+    "team": "SF",
+    "position": "RB",
+    "stats": {
+      "rushingYards": 1459,
+      "rushingTDs": 14,
+      "receivingYards": 564,
+      "receivingTDs": 7
+    },
+    "projection": 22.4,
+    "injury": null,
+    "lastUpdated": "2025-06-21T13:26:14.393Z"
+  }
+]

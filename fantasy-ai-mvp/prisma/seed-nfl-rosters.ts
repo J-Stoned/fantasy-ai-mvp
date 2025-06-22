@@ -1,0 +1,1433 @@
+
+// Prisma seed file for NFL roster data
+// Run with: npx prisma db seed
+
+import { PrismaClient } from '@prisma/client';
+
+const prisma = new PrismaClient();
+
+const teamsData = [
+  {
+    "name": "New England Patriots",
+    "abbreviation": "NE",
+    "division": "AFC East",
+    "conference": "AFC",
+    "playerCount": 75
+  },
+  {
+    "name": "Buffalo Bills",
+    "abbreviation": "BUF",
+    "division": "AFC East",
+    "conference": "AFC",
+    "playerCount": 85
+  },
+  {
+    "name": "Kansas City Chiefs",
+    "abbreviation": "KC",
+    "division": "AFC West",
+    "conference": "AFC",
+    "playerCount": 90
+  },
+  {
+    "name": "Green Bay Packers",
+    "abbreviation": "GB",
+    "division": "NFC North",
+    "conference": "NFC",
+    "playerCount": 88
+  },
+  {
+    "name": "Dallas Cowboys",
+    "abbreviation": "DAL",
+    "division": "NFC East",
+    "conference": "NFC",
+    "playerCount": 92
+  },
+  {
+    "name": "San Francisco 49ers",
+    "abbreviation": "SF",
+    "division": "NFC West",
+    "conference": "NFC",
+    "playerCount": 80
+  },
+  {
+    "name": "Pittsburgh Steelers",
+    "abbreviation": "PIT",
+    "division": "AFC North",
+    "conference": "AFC",
+    "playerCount": 85
+  },
+  {
+    "name": "Philadelphia Eagles",
+    "abbreviation": "PHI",
+    "division": "NFC East",
+    "conference": "NFC",
+    "playerCount": 87
+  },
+  {
+    "name": "Baltimore Ravens",
+    "abbreviation": "BAL",
+    "division": "AFC North",
+    "conference": "AFC",
+    "playerCount": 89
+  },
+  {
+    "name": "New York Giants",
+    "abbreviation": "NYG",
+    "division": "NFC East",
+    "conference": "NFC",
+    "playerCount": 86
+  }
+];
+
+const playersData = [
+  {
+    name: "Joshua Dobbs",
+    position: "QB",
+    jerseyNumber: 11,
+    height: "6'3\"",
+    weight: 220,
+    age: 30,
+    experience: "9 years",
+    college: "Tennessee",
+    teamAbbreviation: "NE",
+    status: "active"
+  },
+  {
+    name: "Drake Maye",
+    position: "QB",
+    jerseyNumber: 10,
+    height: "6'4"",
+    weight: 225,
+    age: 22,
+    experience: "2 years",
+    college: "North Carolina",
+    teamAbbreviation: "NE",
+    status: "active"
+  },
+  {
+    name: "Ben Wooldridge",
+    position: "QB",
+    jerseyNumber: 17,
+    height: "6'2"",
+    weight: 214,
+    age: null,
+    experience: "Rookie",
+    college: "Louisiana",
+    teamAbbreviation: "NE",
+    status: "active"
+  },
+  {
+    name: "Antonio Gibson",
+    position: "RB",
+    jerseyNumber: 4,
+    height: "6'0"",
+    weight: 228,
+    age: 26,
+    experience: "6 years",
+    college: "Memphis",
+    teamAbbreviation: "NE",
+    status: "active"
+  },
+  {
+    name: "TreVeyon Henderson",
+    position: "RB",
+    jerseyNumber: 32,
+    height: "5'10"",
+    weight: 202,
+    age: 22,
+    experience: "Rookie",
+    college: "Ohio State",
+    teamAbbreviation: "NE",
+    status: "active"
+  },
+  {
+    name: "Stefon Diggs",
+    position: "WR",
+    jerseyNumber: 8,
+    height: "6'0"",
+    weight: 191,
+    age: 31,
+    experience: "11 years",
+    college: "Maryland",
+    teamAbbreviation: "NE",
+    status: "active"
+  },
+  {
+    name: "Kendrick Bourne",
+    position: "WR",
+    jerseyNumber: 84,
+    height: "6'1"",
+    weight: 190,
+    age: 29,
+    experience: "8 years",
+    college: "Eastern Washington",
+    teamAbbreviation: "NE",
+    status: "active"
+  },
+  {
+    name: "Kayshon Boutte",
+    position: "WR",
+    jerseyNumber: 9,
+    height: "6'0"",
+    weight: 190,
+    age: 22,
+    experience: "2 years",
+    college: "LSU",
+    teamAbbreviation: "NE",
+    status: "active"
+  },
+  {
+    name: "Hunter Henry",
+    position: "TE",
+    jerseyNumber: 85,
+    height: "6'5"",
+    weight: 250,
+    age: 30,
+    experience: "9 years",
+    college: "Arkansas",
+    teamAbbreviation: "NE",
+    status: "active"
+  },
+  {
+    name: "Morgan Moses",
+    position: "OT",
+    jerseyNumber: 76,
+    height: "6'6"",
+    weight: 335,
+    age: 34,
+    experience: "12 years",
+    college: "Virginia",
+    teamAbbreviation: "NE",
+    status: "active"
+  },
+  {
+    name: "Josh Allen",
+    position: "QB",
+    jerseyNumber: 17,
+    height: "6'5"",
+    weight: 237,
+    age: 29,
+    experience: "8 years",
+    college: "Wyoming",
+    teamAbbreviation: "BUF",
+    status: "active"
+  },
+  {
+    name: "Shane Buechele",
+    position: "QB",
+    jerseyNumber: 6,
+    height: "6'0"",
+    weight: 210,
+    age: 27,
+    experience: "4 years",
+    college: "SMU",
+    teamAbbreviation: "BUF",
+    status: "active"
+  },
+  {
+    name: "Mitchell Trubisky",
+    position: "QB",
+    jerseyNumber: 11,
+    height: "6'3\"",
+    weight: 222,
+    age: 30,
+    experience: "9 years",
+    college: "North Carolina",
+    teamAbbreviation: "BUF",
+    status: "active"
+  },
+  {
+    name: "Mike White",
+    position: "QB",
+    jerseyNumber: 14,
+    height: "6'5"",
+    weight: 220,
+    age: 30,
+    experience: "6 years",
+    college: "Western Kentucky",
+    teamAbbreviation: "BUF",
+    status: "active"
+  },
+  {
+    name: "James Cook",
+    position: "RB",
+    jerseyNumber: 4,
+    height: "5'11"",
+    weight: 190,
+    age: 25,
+    experience: "4 years",
+    college: "Georgia",
+    teamAbbreviation: "BUF",
+    status: "active"
+  },
+  {
+    name: "Ray Davis",
+    position: "RB",
+    jerseyNumber: 22,
+    height: "5'8"",
+    weight: 220,
+    age: 25,
+    experience: "2 years",
+    college: "Kentucky",
+    teamAbbreviation: "BUF",
+    status: "active"
+  },
+  {
+    name: "Darrynton Evans",
+    position: "RB",
+    jerseyNumber: 21,
+    height: "5'10"",
+    weight: 203,
+    age: 26,
+    experience: "6 years",
+    college: "App State",
+    teamAbbreviation: "BUF",
+    status: "active"
+  },
+  {
+    name: "Frank Gore Jr.",
+    position: "RB",
+    jerseyNumber: 20,
+    height: "5'8"",
+    weight: 195,
+    age: 23,
+    experience: "1 year",
+    college: "Southern Miss",
+    teamAbbreviation: "BUF",
+    status: "active"
+  },
+  {
+    name: "Ty Johnson",
+    position: "RB",
+    jerseyNumber: 26,
+    height: "5'10"",
+    weight: 210,
+    age: 27,
+    experience: "7 years",
+    college: "Maryland",
+    teamAbbreviation: "BUF",
+    status: "active"
+  },
+  {
+    name: "Patrick Mahomes",
+    position: "QB",
+    jerseyNumber: 15,
+    height: "6'2"",
+    weight: 225,
+    age: 29,
+    experience: "9 years",
+    college: "Texas Tech",
+    teamAbbreviation: "KC",
+    status: "active"
+  },
+  {
+    name: "Gardner Minshew",
+    position: "QB",
+    jerseyNumber: 17,
+    height: "6'1"",
+    weight: 225,
+    age: 29,
+    experience: "7 years",
+    college: "Washington State",
+    teamAbbreviation: "KC",
+    status: "active"
+  },
+  {
+    name: "Chris Oladokun",
+    position: "QB",
+    jerseyNumber: 19,
+    height: "6'1"",
+    weight: 213,
+    age: 27,
+    experience: "1 year",
+    college: "South Dakota State",
+    teamAbbreviation: "KC",
+    status: "active"
+  },
+  {
+    name: "Bailey Zappe",
+    position: "QB",
+    jerseyNumber: 14,
+    height: "6'1"",
+    weight: 215,
+    age: 26,
+    experience: "4 years",
+    college: "Western Kentucky",
+    teamAbbreviation: "KC",
+    status: "active"
+  },
+  {
+    name: "Kareem Hunt",
+    position: "RB",
+    jerseyNumber: 29,
+    height: "5'11"",
+    weight: 216,
+    age: 29,
+    experience: "9 years",
+    college: "Toledo",
+    teamAbbreviation: "KC",
+    status: "active"
+  },
+  {
+    name: "Elijah Mitchell",
+    position: "RB",
+    jerseyNumber: 25,
+    height: "5'10"",
+    weight: 200,
+    age: 27,
+    experience: "5 years",
+    college: "Louisiana",
+    teamAbbreviation: "KC",
+    status: "active"
+  },
+  {
+    name: "Isiah Pacheco",
+    position: "RB",
+    jerseyNumber: 10,
+    height: "5'10"",
+    weight: 216,
+    age: 26,
+    experience: "4 years",
+    college: "Rutgers",
+    teamAbbreviation: "KC",
+    status: "active"
+  },
+  {
+    name: "Brashard Smith",
+    position: "RB",
+    jerseyNumber: 30,
+    height: "5'10"",
+    weight: 196,
+    age: 22,
+    experience: "Rookie",
+    college: "SMU",
+    teamAbbreviation: "KC",
+    status: "active"
+  },
+  {
+    name: "Carson Steele",
+    position: "RB",
+    jerseyNumber: 42,
+    height: "6'0"",
+    weight: 228,
+    age: 22,
+    experience: "2 years",
+    college: "UCLA",
+    teamAbbreviation: "KC",
+    status: "active"
+  },
+  {
+    name: "Hollywood Brown",
+    position: "WR",
+    jerseyNumber: 5,
+    height: "5'9"",
+    weight: 180,
+    age: 28,
+    experience: "7 years",
+    college: "Oklahoma",
+    teamAbbreviation: "KC",
+    status: "active"
+  },
+  {
+    name: "Skyy Moore",
+    position: "WR",
+    jerseyNumber: 24,
+    height: "5'10"",
+    weight: 195,
+    age: 24,
+    experience: "4 years",
+    college: "Western Michigan",
+    teamAbbreviation: "KC",
+    status: "active"
+  },
+  {
+    name: "Rashee Rice",
+    position: "WR",
+    jerseyNumber: 4,
+    height: "6'1"",
+    weight: 204,
+    age: 25,
+    experience: "3 years",
+    college: "SMU",
+    teamAbbreviation: "KC",
+    status: "active"
+  },
+  {
+    name: "JuJu Smith-Schuster",
+    position: "WR",
+    jerseyNumber: 9,
+    height: "6'1"",
+    weight: 215,
+    age: 28,
+    experience: "8 years",
+    college: "USC",
+    teamAbbreviation: "KC",
+    status: "active"
+  },
+  {
+    name: "Jordan Love",
+    position: "QB",
+    jerseyNumber: 10,
+    height: "6'4"",
+    weight: 219,
+    age: 26,
+    experience: "6 years",
+    college: "Utah State",
+    teamAbbreviation: "GB",
+    status: "active"
+  },
+  {
+    name: "Sean Clifford",
+    position: "QB",
+    jerseyNumber: 16,
+    height: "6'2"",
+    weight: 218,
+    age: 26,
+    experience: "2 years",
+    college: "Penn State",
+    teamAbbreviation: "GB",
+    status: "active"
+  },
+  {
+    name: "Malik Willis",
+    position: "QB",
+    jerseyNumber: 2,
+    height: "6'1"",
+    weight: 225,
+    age: 26,
+    experience: "4 years",
+    college: "Liberty",
+    teamAbbreviation: "GB",
+    status: "active"
+  },
+  {
+    name: "Taylor Elgersma",
+    position: "QB",
+    jerseyNumber: 19,
+    height: "6'5"",
+    weight: 227,
+    age: null,
+    experience: "Rookie",
+    college: "Wilfred Laurier",
+    teamAbbreviation: "GB",
+    status: "active"
+  },
+  {
+    name: "Josh Jacobs",
+    position: "RB",
+    jerseyNumber: 8,
+    height: "5'10"",
+    weight: 223,
+    age: 27,
+    experience: "7 years",
+    college: "Alabama",
+    teamAbbreviation: "GB",
+    status: "active"
+  },
+  {
+    name: "MarShawn Lloyd",
+    position: "RB",
+    jerseyNumber: 32,
+    height: "5'9"",
+    weight: 220,
+    age: 24,
+    experience: "2 years",
+    college: "USC",
+    teamAbbreviation: "GB",
+    status: "active"
+  },
+  {
+    name: "Emanuel Wilson",
+    position: "RB",
+    jerseyNumber: 31,
+    height: "5'10"",
+    weight: 226,
+    age: 26,
+    experience: "3 years",
+    college: "Fort Valley State",
+    teamAbbreviation: "GB",
+    status: "active"
+  },
+  {
+    name: "Chris Brooks",
+    position: "RB",
+    jerseyNumber: 30,
+    height: "6'1"",
+    weight: 219,
+    age: 25,
+    experience: "3 years",
+    college: "BYU",
+    teamAbbreviation: "GB",
+    status: "active"
+  },
+  {
+    name: "Dak Prescott",
+    position: "QB",
+    jerseyNumber: 4,
+    height: "6'2"",
+    weight: 238,
+    age: 31,
+    experience: "9 years",
+    college: "Mississippi State",
+    teamAbbreviation: "DAL",
+    status: "active"
+  },
+  {
+    name: "Will Grier",
+    position: "QB",
+    jerseyNumber: 15,
+    height: "6'2"",
+    weight: 214,
+    age: 30,
+    experience: "6 years",
+    college: "West Virginia",
+    teamAbbreviation: "DAL",
+    status: "active"
+  },
+  {
+    name: "Joe Milton III",
+    position: "QB",
+    jerseyNumber: 10,
+    height: "6'5"",
+    weight: 245,
+    age: 25,
+    experience: "2 years",
+    college: "Tennessee",
+    teamAbbreviation: "DAL",
+    status: "active"
+  },
+  {
+    name: "Miles Sanders",
+    position: "RB",
+    jerseyNumber: 27,
+    height: "5'11"",
+    weight: 211,
+    age: 28,
+    experience: "6 years",
+    college: "Penn State",
+    teamAbbreviation: "DAL",
+    status: "active"
+  },
+  {
+    name: "Javonte Williams",
+    position: "RB",
+    jerseyNumber: 33,
+    height: "5'10"",
+    weight: 220,
+    age: 25,
+    experience: "5 years",
+    college: "North Carolina",
+    teamAbbreviation: "DAL",
+    status: "active"
+  },
+  {
+    name: "Deuce Vaughn",
+    position: "RB",
+    jerseyNumber: 42,
+    height: "5'6"",
+    weight: 179,
+    age: 23,
+    experience: "2 years",
+    college: "Kansas State",
+    teamAbbreviation: "DAL",
+    status: "active"
+  },
+  {
+    name: "Jaydon Blue",
+    position: "RB",
+    jerseyNumber: 34,
+    height: "5'11"",
+    weight: 199,
+    age: 21,
+    experience: "Rookie",
+    college: "Texas",
+    teamAbbreviation: "DAL",
+    status: "active"
+  },
+  {
+    name: "Hunter Luepke",
+    position: "RB",
+    jerseyNumber: 40,
+    height: "6'1"",
+    weight: 236,
+    age: 25,
+    experience: "2 years",
+    college: "North Dakota State",
+    teamAbbreviation: "DAL",
+    status: "active"
+  },
+  {
+    name: "Phil Mafah",
+    position: "RB",
+    jerseyNumber: 37,
+    height: "6'1"",
+    weight: 230,
+    age: 22,
+    experience: "Rookie",
+    college: "Clemson",
+    teamAbbreviation: "DAL",
+    status: "active"
+  },
+  {
+    name: "CeeDee Lamb",
+    position: "WR",
+    jerseyNumber: 88,
+    height: "6'2"",
+    weight: 198,
+    age: 26,
+    experience: "5 years",
+    college: "Oklahoma",
+    teamAbbreviation: "DAL",
+    status: "active"
+  },
+  {
+    name: "George Pickens",
+    position: "WR",
+    jerseyNumber: 13,
+    height: "6'3\"",
+    weight: 195,
+    age: 24,
+    experience: "3 years",
+    college: "Georgia",
+    teamAbbreviation: "DAL",
+    status: "active"
+  },
+  {
+    name: "Jalen Tolbert",
+    position: "WR",
+    jerseyNumber: 1,
+    height: "6'1"",
+    weight: 194,
+    age: 26,
+    experience: "3 years",
+    college: "South Alabama",
+    teamAbbreviation: "DAL",
+    status: "active"
+  },
+  {
+    name: "KaVontae Turpin",
+    position: "WR",
+    jerseyNumber: 9,
+    height: "5'7"",
+    weight: 153,
+    age: 28,
+    experience: "3 years",
+    college: "TCU",
+    teamAbbreviation: "DAL",
+    status: "active"
+  },
+  {
+    name: "Parris Campbell",
+    position: "WR",
+    jerseyNumber: 80,
+    height: "6'0"",
+    weight: 205,
+    age: 27,
+    experience: "6 years",
+    college: "Ohio State",
+    teamAbbreviation: "DAL",
+    status: "active"
+  },
+  {
+    name: "Jonathan Mingo",
+    position: "WR",
+    jerseyNumber: 81,
+    height: "6'2"",
+    weight: 220,
+    age: 24,
+    experience: "2 years",
+    college: "Ole Miss",
+    teamAbbreviation: "DAL",
+    status: "active"
+  },
+  {
+    name: "Jake Ferguson",
+    position: "TE",
+    jerseyNumber: 87,
+    height: "6'5"",
+    weight: 250,
+    age: 26,
+    experience: "3 years",
+    college: "Wisconsin",
+    teamAbbreviation: "DAL",
+    status: "active"
+  },
+  {
+    name: "Luke Schoonmaker",
+    position: "TE",
+    jerseyNumber: 86,
+    height: "6'6"",
+    weight: 251,
+    age: 26,
+    experience: "2 years",
+    college: "Michigan",
+    teamAbbreviation: "DAL",
+    status: "active"
+  },
+  {
+    name: "Princeton Fant",
+    position: "TE",
+    jerseyNumber: 85,
+    height: "6'4"",
+    weight: 244,
+    age: 26,
+    experience: "5 years",
+    college: "Tennessee",
+    teamAbbreviation: "DAL",
+    status: "active"
+  },
+  {
+    name: "Mac Jones",
+    position: "QB",
+    jerseyNumber: 10,
+    height: "6'3\"",
+    weight: 220,
+    age: 26,
+    experience: "5 years",
+    college: "Alabama",
+    teamAbbreviation: "SF",
+    status: "active"
+  },
+  {
+    name: "Tanner Mordecai",
+    position: "QB",
+    jerseyNumber: 14,
+    height: "6'2"",
+    weight: 218,
+    age: 25,
+    experience: "1 year",
+    college: "Wisconsin",
+    teamAbbreviation: "SF",
+    status: "active"
+  },
+  {
+    name: "Brock Purdy",
+    position: "QB",
+    jerseyNumber: 13,
+    height: "6'1"",
+    weight: 220,
+    age: 25,
+    experience: "4 years",
+    college: "Iowa State",
+    teamAbbreviation: "SF",
+    status: "active"
+  },
+  {
+    name: "Kurtis Rourke",
+    position: "QB",
+    jerseyNumber: 4,
+    height: "6'4"",
+    weight: 220,
+    age: 24,
+    experience: "Rookie",
+    college: "Indiana",
+    teamAbbreviation: "SF",
+    status: "active"
+  },
+  {
+    name: "Christian McCaffrey",
+    position: "RB",
+    jerseyNumber: 23,
+    height: "5'11"",
+    weight: 210,
+    age: 29,
+    experience: "9 years",
+    college: "Stanford",
+    teamAbbreviation: "SF",
+    status: "active"
+  },
+  {
+    name: "Israel Abanikanda",
+    position: "RB",
+    jerseyNumber: 20,
+    height: "5'10"",
+    weight: 216,
+    age: 22,
+    experience: "3 years",
+    college: "Pittsburgh",
+    teamAbbreviation: "SF",
+    status: "active"
+  },
+  {
+    name: "Isaac Guerendo",
+    position: "RB",
+    jerseyNumber: 31,
+    height: "6'0"",
+    weight: 221,
+    age: 24,
+    experience: "2 years",
+    college: "Louisville",
+    teamAbbreviation: "SF",
+    status: "active"
+  },
+  {
+    name: "Patrick Taylor Jr.",
+    position: "RB",
+    jerseyNumber: 32,
+    height: "6'2"",
+    weight: 217,
+    age: 27,
+    experience: "5 years",
+    college: "Memphis",
+    teamAbbreviation: "SF",
+    status: "active"
+  },
+  {
+    name: "Will Howard",
+    position: "QB",
+    jerseyNumber: 18,
+    height: "6'4"",
+    weight: 236,
+    age: 23,
+    experience: "Rookie",
+    college: "Ohio State",
+    teamAbbreviation: "PIT",
+    status: "active"
+  },
+  {
+    name: "Aaron Rodgers",
+    position: "QB",
+    jerseyNumber: 8,
+    height: "6'2"",
+    weight: 223,
+    age: 41,
+    experience: "21 years",
+    college: "California",
+    teamAbbreviation: "PIT",
+    status: "active"
+  },
+  {
+    name: "Mason Rudolph",
+    position: "QB",
+    jerseyNumber: 2,
+    height: "6'5"",
+    weight: 235,
+    age: 29,
+    experience: "8 years",
+    college: "Oklahoma State",
+    teamAbbreviation: "PIT",
+    status: "active"
+  },
+  {
+    name: "Skylar Thompson",
+    position: "QB",
+    jerseyNumber: 17,
+    height: "6'2"",
+    weight: 219,
+    age: 28,
+    experience: "4 years",
+    college: "Kansas State",
+    teamAbbreviation: "PIT",
+    status: "active"
+  },
+  {
+    name: "Kenneth Gainwell",
+    position: "RB",
+    jerseyNumber: 14,
+    height: "5'9"",
+    weight: 200,
+    age: 26,
+    experience: "5 years",
+    college: "Memphis",
+    teamAbbreviation: "PIT",
+    status: "active"
+  },
+  {
+    name: "Evan Hull",
+    position: "RB",
+    jerseyNumber: 38,
+    height: "5'10"",
+    weight: 209,
+    age: 24,
+    experience: "2 years",
+    college: "Northwestern",
+    teamAbbreviation: "PIT",
+    status: "active"
+  },
+  {
+    name: "Kaleb Johnson",
+    position: "RB",
+    jerseyNumber: 20,
+    height: "6'1"",
+    weight: 224,
+    age: 21,
+    experience: "Rookie",
+    college: "Iowa",
+    teamAbbreviation: "PIT",
+    status: "active"
+  },
+  {
+    name: "Cordarrelle Patterson",
+    position: "RB",
+    jerseyNumber: 84,
+    height: "6'2"",
+    weight: 220,
+    age: 34,
+    experience: "13 years",
+    college: "Tennessee",
+    teamAbbreviation: "PIT",
+    status: "active"
+  },
+  {
+    name: "Trey Sermon",
+    position: "RB",
+    jerseyNumber: 27,
+    height: "6'0"",
+    weight: 215,
+    age: 26,
+    experience: "5 years",
+    college: "Ohio State",
+    teamAbbreviation: "PIT",
+    status: "active"
+  },
+  {
+    name: "Jaylen Warren",
+    position: "RB",
+    jerseyNumber: 30,
+    height: "5'8"",
+    weight: 215,
+    age: 26,
+    experience: "4 years",
+    college: "Oklahoma State",
+    teamAbbreviation: "PIT",
+    status: "active"
+  },
+  {
+    name: "Jalen Hurts",
+    position: "QB",
+    jerseyNumber: 1,
+    height: "6'1"",
+    weight: 223,
+    age: 26,
+    experience: "6 years",
+    college: "Oklahoma",
+    teamAbbreviation: "PHI",
+    status: "active"
+  },
+  {
+    name: "Kyle McCord",
+    position: "QB",
+    jerseyNumber: 19,
+    height: "6'3\"",
+    weight: 218,
+    age: 22,
+    experience: "Rookie",
+    college: "Syracuse",
+    teamAbbreviation: "PHI",
+    status: "active"
+  },
+  {
+    name: "Tanner McKee",
+    position: "QB",
+    jerseyNumber: 16,
+    height: "6'6"",
+    weight: 231,
+    age: 25,
+    experience: "3 years",
+    college: "Stanford",
+    teamAbbreviation: "PHI",
+    status: "active"
+  },
+  {
+    name: "Dorian Thompson-Robinson",
+    position: "QB",
+    jerseyNumber: 14,
+    height: "6'2"",
+    weight: 203,
+    age: 25,
+    experience: "3 years",
+    college: "UCLA",
+    teamAbbreviation: "PHI",
+    status: "active"
+  },
+  {
+    name: "Saquon Barkley",
+    position: "RB",
+    jerseyNumber: 26,
+    height: "6'0"",
+    weight: 233,
+    age: 28,
+    experience: "8 years",
+    college: "Penn State",
+    teamAbbreviation: "PHI",
+    status: "active"
+  },
+  {
+    name: "AJ Dillon",
+    position: "RB",
+    jerseyNumber: 29,
+    height: "6'0"",
+    weight: 247,
+    age: 27,
+    experience: "6 years",
+    college: "Boston College",
+    teamAbbreviation: "PHI",
+    status: "active"
+  },
+  {
+    name: "Will Shipley",
+    position: "RB",
+    jerseyNumber: 28,
+    height: "5'11"",
+    weight: 209,
+    age: 22,
+    experience: "2 years",
+    college: "Clemson",
+    teamAbbreviation: "PHI",
+    status: "active"
+  },
+  {
+    name: "A.J. Brown",
+    position: "WR",
+    jerseyNumber: 11,
+    height: "6'1"",
+    weight: 226,
+    age: 27,
+    experience: "7 years",
+    college: "Ole Miss",
+    teamAbbreviation: "PHI",
+    status: "active"
+  },
+  {
+    name: "DeVonta Smith",
+    position: "WR",
+    jerseyNumber: 6,
+    height: "6'0"",
+    weight: 170,
+    age: 26,
+    experience: "5 years",
+    college: "Alabama",
+    teamAbbreviation: "PHI",
+    status: "active"
+  },
+  {
+    name: "Dallas Goedert",
+    position: "TE",
+    jerseyNumber: 88,
+    height: "6'5"",
+    weight: 256,
+    age: 30,
+    experience: "8 years",
+    college: "South Dakota State",
+    teamAbbreviation: "PHI",
+    status: "active"
+  },
+  {
+    name: "Jalen Carter",
+    position: "DT",
+    jerseyNumber: 98,
+    height: "6'3\"",
+    weight: 314,
+    age: 24,
+    experience: "3 years",
+    college: "Georgia",
+    teamAbbreviation: "PHI",
+    status: "active"
+  },
+  {
+    name: "Jordan Davis",
+    position: "DT",
+    jerseyNumber: 90,
+    height: "6'6"",
+    weight: 336,
+    age: 25,
+    experience: "4 years",
+    college: "Georgia",
+    teamAbbreviation: "PHI",
+    status: "active"
+  },
+  {
+    name: "Nakobe Dean",
+    position: "LB",
+    jerseyNumber: 17,
+    height: "5'11"",
+    weight: 231,
+    age: 24,
+    experience: "4 years",
+    college: "Georgia",
+    teamAbbreviation: "PHI",
+    status: "active"
+  },
+  {
+    name: "Lamar Jackson",
+    position: "QB",
+    jerseyNumber: 8,
+    height: "6'2"",
+    weight: 205,
+    age: 28,
+    experience: "8 years",
+    college: "Louisville",
+    teamAbbreviation: "BAL",
+    status: "active"
+  },
+  {
+    name: "Devin Leary",
+    position: "QB",
+    jerseyNumber: 13,
+    height: "6'1"",
+    weight: 216,
+    age: 25,
+    experience: "1 year",
+    college: "Kentucky",
+    teamAbbreviation: "BAL",
+    status: "active"
+  },
+  {
+    name: "Cooper Rush",
+    position: "QB",
+    jerseyNumber: 15,
+    height: "6'3\"",
+    weight: 225,
+    age: 31,
+    experience: "8 years",
+    college: "Central Michigan",
+    teamAbbreviation: "BAL",
+    status: "active"
+  },
+  {
+    name: "Derrick Henry",
+    position: "RB",
+    jerseyNumber: 22,
+    height: "6'2"",
+    weight: 247,
+    age: 31,
+    experience: "10 years",
+    college: "Alabama",
+    teamAbbreviation: "BAL",
+    status: "active"
+  },
+  {
+    name: "Rasheen Ali",
+    position: "RB",
+    jerseyNumber: 26,
+    height: "5'11"",
+    weight: 212,
+    age: 24,
+    experience: "2 years",
+    college: "Marshall",
+    teamAbbreviation: "BAL",
+    status: "active"
+  },
+  {
+    name: "Justice Hill",
+    position: "RB",
+    jerseyNumber: 43,
+    height: "5'10"",
+    weight: 195,
+    age: 27,
+    experience: "7 years",
+    college: "Oklahoma State",
+    teamAbbreviation: "BAL",
+    status: "active"
+  },
+  {
+    name: "Keaton Mitchell",
+    position: "RB",
+    jerseyNumber: 34,
+    height: "5'8"",
+    weight: 191,
+    age: 23,
+    experience: "3 years",
+    college: "East Carolina",
+    teamAbbreviation: "BAL",
+    status: "active"
+  },
+  {
+    name: "Zay Flowers",
+    position: "WR",
+    jerseyNumber: 4,
+    height: "5'9"",
+    weight: 175,
+    age: 24,
+    experience: "3 years",
+    college: "Boston College",
+    teamAbbreviation: "BAL",
+    status: "active"
+  },
+  {
+    name: "Rashod Bateman",
+    position: "WR",
+    jerseyNumber: 7,
+    height: "6'1"",
+    weight: 195,
+    age: 25,
+    experience: "5 years",
+    college: "Minnesota",
+    teamAbbreviation: "BAL",
+    status: "active"
+  },
+  {
+    name: "DeAndre Hopkins",
+    position: "WR",
+    jerseyNumber: 10,
+    height: "6'1"",
+    weight: 218,
+    age: 33,
+    experience: "13 years",
+    college: "Clemson",
+    teamAbbreviation: "BAL",
+    status: "active"
+  },
+  {
+    name: "Mark Andrews",
+    position: "TE",
+    jerseyNumber: 89,
+    height: "6'5"",
+    weight: 250,
+    age: 29,
+    experience: "8 years",
+    college: "Oklahoma",
+    teamAbbreviation: "BAL",
+    status: "active"
+  },
+  {
+    name: "Isaiah Likely",
+    position: "TE",
+    jerseyNumber: 80,
+    height: "6'4"",
+    weight: 247,
+    age: 25,
+    experience: "4 years",
+    college: "Coastal Carolina",
+    teamAbbreviation: "BAL",
+    status: "active"
+  },
+  {
+    name: "Jaxson Dart",
+    position: "QB",
+    jerseyNumber: 6,
+    height: "6'2"",
+    weight: 223,
+    age: 22,
+    experience: "Rookie",
+    college: "Ole Miss",
+    teamAbbreviation: "NYG",
+    status: "active"
+  },
+  {
+    name: "Tommy DeVito",
+    position: "QB",
+    jerseyNumber: 15,
+    height: "6'2"",
+    weight: 210,
+    age: 26,
+    experience: "3 years",
+    college: "Illinois",
+    teamAbbreviation: "NYG",
+    status: "active"
+  },
+  {
+    name: "Russell Wilson",
+    position: "QB",
+    jerseyNumber: 3,
+    height: "5'11"",
+    weight: 206,
+    age: 36,
+    experience: "14 years",
+    college: "Wisconsin",
+    teamAbbreviation: "NYG",
+    status: "active"
+  },
+  {
+    name: "Jameis Winston",
+    position: "QB",
+    jerseyNumber: 19,
+    height: "6'4"",
+    weight: 231,
+    age: 31,
+    experience: "11 years",
+    college: "Florida State",
+    teamAbbreviation: "NYG",
+    status: "active"
+  },
+  {
+    name: "Eric Gray",
+    position: "RB",
+    jerseyNumber: 20,
+    height: "5'10"",
+    weight: 211,
+    age: 25,
+    experience: "3 years",
+    college: "Oklahoma",
+    teamAbbreviation: "NYG",
+    status: "active"
+  },
+  {
+    name: "Devin Singletary",
+    position: "RB",
+    jerseyNumber: 26,
+    height: "5'7"",
+    weight: 203,
+    age: 27,
+    experience: "7 years",
+    college: "Florida Atlantic",
+    teamAbbreviation: "NYG",
+    status: "active"
+  },
+  {
+    name: "Tyrone Tracy Jr.",
+    position: "RB",
+    jerseyNumber: 29,
+    height: "5'11"",
+    weight: 210,
+    age: 25,
+    experience: "2 years",
+    college: "Purdue",
+    teamAbbreviation: "NYG",
+    status: "active"
+  },
+  {
+    name: "Dante Miller",
+    position: "RB",
+    jerseyNumber: 25,
+    height: "5'9"",
+    weight: 200,
+    age: 26,
+    experience: "1 year",
+    college: "South Carolina",
+    teamAbbreviation: "NYG",
+    status: "active"
+  },
+  {
+    name: "Cam Skattebo",
+    position: "RB",
+    jerseyNumber: 44,
+    height: "5'11"",
+    weight: 215,
+    age: 23,
+    experience: "Rookie",
+    college: "Arizona State",
+    teamAbbreviation: "NYG",
+    status: "active"
+  }
+];
+
+async function main() {
+  console.log('🚀 Seeding NFL roster data...');
+  
+  // Create teams
+  for (const team of teamsData) {
+    await prisma.nflTeam.create({
+      data: team
+    });
+  }
+  
+  // Create players
+  for (const player of playersData) {
+    await prisma.nflPlayer.create({
+      data: player
+    });
+  }
+  
+  console.log('✅ NFL roster data seeded successfully!');
+  console.log(`📊 Created ${teamsData.length} teams and ${playersData.length} players`);
+}
+
+main()
+  .catch((e) => {
+    console.error(e);
+    process.exit(1);
+  })
+  .finally(async () => {
+    await prisma.$disconnect();
+  });

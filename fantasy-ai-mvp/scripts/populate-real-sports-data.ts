@@ -26,7 +26,7 @@ async function populateRealSportsData() {
           update: {},
           create: {
             id: `espn_nfl_${player.id || player.name?.replace(/\s+/g, '_')}`,
-            externalId: player.id?.toString() || player.name?.replace(/\s+/g, '_') || 'unknown',
+            externalId: `unique_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
             name: player.name || 'Unknown Player',
             position: player.position || 'FLEX',
             team: player.team || 'FA',
@@ -52,13 +52,13 @@ async function populateRealSportsData() {
           update: {},
           create: {
             id: `espn_nba_${player.id || player.name?.replace(/\s+/g, '_')}`,
+            externalId: `unique_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
             name: player.name || 'Unknown Player',
             position: player.position || 'UTIL',
             team: player.team || 'FA',
-            stats: player.stats || {},
-            projections: player.projections || {},
-            isActive: true,
-            espnId: player.id?.toString(),
+            leagueId: 'demo_league_1',
+            stats: JSON.stringify(player.stats || {}),
+            projections: JSON.stringify(player.projections || {}),
           }
         });
       }
@@ -78,13 +78,13 @@ async function populateRealSportsData() {
           update: {},
           create: {
             id: `espn_mlb_${player.id || player.name?.replace(/\s+/g, '_')}`,
+            externalId: `unique_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
             name: player.name || 'Unknown Player',
             position: player.position || 'UTIL',
             team: player.team || 'FA',
-            stats: player.stats || {},
-            projections: player.projections || {},
-            isActive: true,
-            espnId: player.id?.toString(),
+            leagueId: 'demo_league_1',
+            stats: JSON.stringify(player.stats || {}),
+            projections: JSON.stringify(player.projections || {}),
           }
         });
       }
@@ -104,12 +104,13 @@ async function populateRealSportsData() {
           update: {},
           create: {
             id: `puppeteer_nfl_${player.id || player.name?.replace(/\s+/g, '_')}`,
+            externalId: `unique_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
             name: player.name || 'Unknown Player', 
             position: player.position || 'FLEX',
             team: player.team || 'FA',
-            stats: player.stats || {},
-            projections: player.projections || {},
-            isActive: true,
+            leagueId: 'demo_league_1',
+            stats: JSON.stringify(player.stats || {}),
+            projections: JSON.stringify(player.projections || {}),
           }
         });
       }
@@ -129,12 +130,13 @@ async function populateRealSportsData() {
           update: {},
           create: {
             id: `puppeteer_nba_${player.id || player.name?.replace(/\s+/g, '_')}`,
+            externalId: `unique_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
             name: player.name || 'Unknown Player',
             position: player.position || 'UTIL', 
             team: player.team || 'FA',
-            stats: player.stats || {},
-            projections: player.projections || {},
-            isActive: true,
+            leagueId: 'demo_league_1',
+            stats: JSON.stringify(player.stats || {}),
+            projections: JSON.stringify(player.projections || {}),
           }
         });
       }
@@ -154,12 +156,13 @@ async function populateRealSportsData() {
           update: {},
           create: {
             id: `global_nhl_${player.id || player.name?.replace(/\s+/g, '_')}`,
+            externalId: `unique_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
             name: player.name || 'Unknown Player',
             position: player.position || 'SKATER',
             team: player.team || 'FA',
-            stats: player.stats || {},
-            projections: player.projections || {},
-            isActive: true,
+            leagueId: 'demo_league_1',
+            stats: JSON.stringify(player.stats || {}),
+            projections: JSON.stringify(player.projections || {}),
           }
         });
       }
@@ -179,43 +182,23 @@ async function populateRealSportsData() {
           update: {},
           create: {
             id: `global_soccer_${player.id || player.name?.replace(/\s+/g, '_')}`,
+            externalId: `unique_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
             name: player.name || 'Unknown Player',
             position: player.position || 'MID',
             team: player.team || 'FA',
-            stats: player.stats || {},
-            projections: player.projections || {},
-            isActive: true,
+            leagueId: 'demo_league_1',
+            stats: JSON.stringify(player.stats || {}),
+            projections: JSON.stringify(player.projections || {}),
           }
         });
       }
       console.log(`✅ Loaded ${Math.min(60, Array.isArray(globalSoccerData) ? globalSoccerData.length : 0)} Global Soccer players`);
     }
 
-    // Create some fantasy teams and leagues for demo
-    console.log('🏆 Creating demo leagues and teams...');
-    
-    const demoLeague = await prisma.league.upsert({
-      where: { id: 'demo_league_1' },
-      update: {},
-      create: {
-        id: 'demo_league_1',
-        name: 'Fantasy.AI Championship League',
-        platform: 'CUSTOM',
-        isActive: true,
-        settings: {
-          scoringSystem: 'PPR',
-          maxTeams: 12,
-          draftType: 'Snake',
-          tradeDeadline: '2024-11-15'
-        }
-      }
-    });
-
     // Get actual player count
     const playerCount = await prisma.player.count();
     console.log(`\n🎉 SUCCESS! DATABASE POPULATED WITH REAL SPORTS DATA`);
     console.log(`📊 Total Players in Database: ${playerCount}`);
-    console.log(`🏆 Demo League Created: ${demoLeague.name}`);
     console.log(`🔴 LIVE DATA STATUS: ACTIVE`);
     
     return playerCount;

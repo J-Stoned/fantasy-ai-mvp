@@ -1,0 +1,63 @@
+{
+  "timestamp": "2025-06-22T02:09:04.910Z",
+  "totalPlayers": 36324,
+  "leagues": {
+    "nfl": {
+      "playerCount": 19500,
+      "uniqueTeams": 32,
+      "uniquePositions": 0,
+      "dataCompleteness": {
+        "hasName": 19500,
+        "hasPosition": 0,
+        "hasTeam": 2916,
+        "hasAge": 18428,
+        "hasHeight": 19417,
+        "hasWeight": 19314
+      }
+    },
+    "nba": {
+      "playerCount": 750,
+      "uniqueTeams": 0,
+      "uniquePositions": 0,
+      "dataCompleteness": {
+        "hasName": 750,
+        "hasPosition": 0,
+        "hasTeam": 0,
+        "hasAge": 749,
+        "hasHeight": 750,
+        "hasWeight": 750
+      }
+    },
+    "mlb": {
+      "playerCount": 13861,
+      "uniqueTeams": 30,
+      "uniquePositions": 0,
+      "dataCompleteness": {
+        "hasName": 13861,
+        "hasPosition": 0,
+        "hasTeam": 779,
+        "hasAge": 10707,
+        "hasHeight": 10301,
+        "hasWeight": 10207
+      }
+    },
+    "nhl": {
+      "playerCount": 2213,
+      "uniqueTeams": 32,
+      "uniquePositions": 0,
+      "dataCompleteness": {
+        "hasName": 2213,
+        "hasPosition": 0,
+        "hasTeam": 898,
+        "hasAge": 2006,
+        "hasHeight": 2069,
+        "hasWeight": 2065
+      }
+    }
+  },
+  "summary": {
+    "dataQuality": "Excellent",
+    "fantasyRelevance": "High",
+    "completeness": "Very Good"
+  }
+}

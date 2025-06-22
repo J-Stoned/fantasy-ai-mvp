@@ -1,38 +1,38 @@
 {
-  "timestamp": "2025-06-21T14:19:05.764Z",
-  "totalLeagues": 4,
-  "totalPlayers": 135,
+  "timestamp": "2025-06-22T03:02:48.512Z",
+  "totalLeagues": 5,
+  "totalPlayers": 363,
   "sportBreakdown": {
     "FOOTBALL": {
-      "league": "NFL 2024 Season",
+      "league": "Fantasy.AI Championship League",
       "season": "2024",
       "provider": "ESPN",
-      "playerCount": 22,
+      "playerCount": 228,
       "samplePlayers": [
         {
           "name": "Josh Allen",
-          "team": "BUF",
-          "position": "QB"
+          "team": "LAD",
+          "position": "C"
         },
         {
           "name": "Christian McCaffrey",
-          "team": "SF",
-          "position": "K"
-        },
-        {
-          "name": "Cooper Kupp",
-          "team": "LAR",
-          "position": "TE"
+          "team": "NYY",
+          "position": "1B"
         },
         {
           "name": "Justin Jefferson",
-          "team": "MIN",
-          "position": "QB"
+          "team": "ATL",
+          "position": "SS"
         },
         {
           "name": "Travis Kelce",
-          "team": "KC",
-          "position": "RB"
+          "team": "SD",
+          "position": "C"
+        },
+        {
+          "name": "Aaron Donald",
+          "team": "NYM",
+          "position": "SP"
         }
       ]
     },
@@ -112,48 +112,48 @@
   },
   "topTeams": [
     {
-      "team": "NYY",
-      "playerCount": 9
-    },
-    {
-      "team": "LAD",
-      "playerCount": 9
-    },
-    {
-      "team": "HOU",
-      "playerCount": 9
-    },
-    {
-      "team": "STL",
-      "playerCount": 8
-    },
-    {
-      "team": "SD",
-      "playerCount": 8
-    },
-    {
-      "team": "PHX",
-      "playerCount": 8
-    },
-    {
-      "team": "NYM",
-      "playerCount": 8
-    },
-    {
       "team": "MIA",
-      "playerCount": 8
+      "playerCount": 25
     },
     {
-      "team": "LAL",
-      "playerCount": 8
+      "team": "BOS",
+      "playerCount": 24
     },
     {
       "team": "GSW",
-      "playerCount": 8
+      "playerCount": 23
+    },
+    {
+      "team": "DEN",
+      "playerCount": 23
+    },
+    {
+      "team": "PHX",
+      "playerCount": 21
+    },
+    {
+      "team": "LAL",
+      "playerCount": 21
+    },
+    {
+      "team": "MIL",
+      "playerCount": 18
+    },
+    {
+      "team": "LAD",
+      "playerCount": 17
+    },
+    {
+      "team": "NYY",
+      "playerCount": 16
+    },
+    {
+      "team": "LAR",
+      "playerCount": 16
     }
   ],
   "dataQuality": {
-    "playersWithStats": 135,
-    "playersWithProjections": 135
+    "playersWithStats": 361,
+    "playersWithProjections": 363
   }
 }

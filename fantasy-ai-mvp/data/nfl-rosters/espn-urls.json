@@ -1,0 +1,194 @@
+[
+  {
+    "team": "ARI",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/ari",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/ari",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/ari"
+  },
+  {
+    "team": "ATL",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/atl",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/atl",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/atl"
+  },
+  {
+    "team": "BAL",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/bal",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/bal",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/bal"
+  },
+  {
+    "team": "BUF",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/buf",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/buf",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/buf"
+  },
+  {
+    "team": "CAR",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/car",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/car",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/car"
+  },
+  {
+    "team": "CHI",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/chi",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/chi",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/chi"
+  },
+  {
+    "team": "CIN",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/cin",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/cin",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/cin"
+  },
+  {
+    "team": "CLE",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/cle",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/cle",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/cle"
+  },
+  {
+    "team": "DAL",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/dal",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/dal",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/dal"
+  },
+  {
+    "team": "DEN",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/den",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/den",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/den"
+  },
+  {
+    "team": "DET",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/det",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/det",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/det"
+  },
+  {
+    "team": "GB",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/gb",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/gb",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/gb"
+  },
+  {
+    "team": "HOU",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/hou",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/hou",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/hou"
+  },
+  {
+    "team": "IND",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/ind",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/ind",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/ind"
+  },
+  {
+    "team": "JAX",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/jax",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/jax",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/jax"
+  },
+  {
+    "team": "KC",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/kc",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/kc",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/kc"
+  },
+  {
+    "team": "LV",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/lv",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/lv",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/lv"
+  },
+  {
+    "team": "LAC",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/lac",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/lac",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/lac"
+  },
+  {
+    "team": "LAR",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/lar",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/lar",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/lar"
+  },
+  {
+    "team": "MIA",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/mia",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/mia",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/mia"
+  },
+  {
+    "team": "MIN",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/min",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/min",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/min"
+  },
+  {
+    "team": "NE",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/ne",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/ne",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/ne"
+  },
+  {
+    "team": "NO",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/no",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/no",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/no"
+  },
+  {
+    "team": "NYG",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/nyg",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/nyg",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/nyg"
+  },
+  {
+    "team": "NYJ",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/nyj",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/nyj",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/nyj"
+  },
+  {
+    "team": "PHI",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/phi",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/phi",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/phi"
+  },
+  {
+    "team": "PIT",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/pit",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/pit",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/pit"
+  },
+  {
+    "team": "SF",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/sf",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/sf",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/sf"
+  },
+  {
+    "team": "SEA",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/sea",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/sea",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/sea"
+  },
+  {
+    "team": "TB",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/tb",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/tb",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/tb"
+  },
+  {
+    "team": "TEN",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/ten",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/ten",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/ten"
+  },
+  {
+    "team": "WAS",
+    "roster_url": "https://www.espn.com/nfl/team/roster/_/name/was",
+    "depth_chart_url": "https://www.espn.com/nfl/team/depth/_/name/was",
+    "stats_url": "https://www.espn.com/nfl/team/stats/_/name/was"
+  }
+]

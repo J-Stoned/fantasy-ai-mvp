@@ -1,0 +1,260 @@
+{
+  "nfl_teams": [
+    {
+      "name": "Arizona Cardinals",
+      "abbreviation": "ARI",
+      "division": "NFC West",
+      "official_site": "azcardinals.com",
+      "espn_id": "22",
+      "nfl_id": "ARI"
+    },
+    {
+      "name": "Atlanta Falcons", 
+      "abbreviation": "ATL",
+      "division": "NFC South",
+      "official_site": "atlantafalcons.com",
+      "espn_id": "1",
+      "nfl_id": "ATL"
+    },
+    {
+      "name": "Baltimore Ravens",
+      "abbreviation": "BAL", 
+      "division": "AFC North",
+      "official_site": "baltimoreravens.com",
+      "espn_id": "33",
+      "nfl_id": "BAL"
+    },
+    {
+      "name": "Buffalo Bills",
+      "abbreviation": "BUF",
+      "division": "AFC East", 
+      "official_site": "buffalobills.com",
+      "espn_id": "2",
+      "nfl_id": "BUF"
+    },
+    {
+      "name": "Carolina Panthers",
+      "abbreviation": "CAR",
+      "division": "NFC South",
+      "official_site": "panthers.com", 
+      "espn_id": "29",
+      "nfl_id": "CAR"
+    },
+    {
+      "name": "Chicago Bears",
+      "abbreviation": "CHI",
+      "division": "NFC North",
+      "official_site": "chicagobears.com",
+      "espn_id": "3",
+      "nfl_id": "CHI"
+    },
+    {
+      "name": "Cincinnati Bengals",
+      "abbreviation": "CIN",
+      "division": "AFC North",
+      "official_site": "bengals.com",
+      "espn_id": "4", 
+      "nfl_id": "CIN"
+    },
+    {
+      "name": "Cleveland Browns",
+      "abbreviation": "CLE",
+      "division": "AFC North",
+      "official_site": "clevelandbrowns.com",
+      "espn_id": "5",
+      "nfl_id": "CLE"
+    },
+    {
+      "name": "Dallas Cowboys",
+      "abbreviation": "DAL",
+      "division": "NFC East",
+      "official_site": "dallascowboys.com",
+      "espn_id": "6",
+      "nfl_id": "DAL"
+    },
+    {
+      "name": "Denver Broncos",
+      "abbreviation": "DEN",
+      "division": "AFC West",
+      "official_site": "denverbroncos.com",
+      "espn_id": "7",
+      "nfl_id": "DEN"
+    },
+    {
+      "name": "Detroit Lions",
+      "abbreviation": "DET",
+      "division": "NFC North",
+      "official_site": "detroitlions.com",
+      "espn_id": "8",
+      "nfl_id": "DET"
+    },
+    {
+      "name": "Green Bay Packers",
+      "abbreviation": "GB",
+      "division": "NFC North",
+      "official_site": "packers.com",
+      "espn_id": "9",
+      "nfl_id": "GB"
+    },
+    {
+      "name": "Houston Texans",
+      "abbreviation": "HOU",
+      "division": "AFC South",
+      "official_site": "houstontexans.com",
+      "espn_id": "34",
+      "nfl_id": "HOU"
+    },
+    {
+      "name": "Indianapolis Colts",
+      "abbreviation": "IND",
+      "division": "AFC South",
+      "official_site": "colts.com",
+      "espn_id": "11",
+      "nfl_id": "IND"
+    },
+    {
+      "name": "Jacksonville Jaguars",
+      "abbreviation": "JAX",
+      "division": "AFC South",
+      "official_site": "jaguars.com",
+      "espn_id": "30",
+      "nfl_id": "JAX"
+    },
+    {
+      "name": "Kansas City Chiefs",
+      "abbreviation": "KC",
+      "division": "AFC West",
+      "official_site": "chiefs.com",
+      "espn_id": "12",
+      "nfl_id": "KC"
+    },
+    {
+      "name": "Las Vegas Raiders",
+      "abbreviation": "LV",
+      "division": "AFC West",
+      "official_site": "raiders.com",
+      "espn_id": "13",
+      "nfl_id": "LV"
+    },
+    {
+      "name": "Los Angeles Chargers",
+      "abbreviation": "LAC",
+      "division": "AFC West",
+      "official_site": "chargers.com",
+      "espn_id": "24",
+      "nfl_id": "LAC"
+    },
+    {
+      "name": "Los Angeles Rams",
+      "abbreviation": "LAR",
+      "division": "NFC West",
+      "official_site": "therams.com",
+      "espn_id": "14",
+      "nfl_id": "LAR"
+    },
+    {
+      "name": "Miami Dolphins",
+      "abbreviation": "MIA",
+      "division": "AFC East",
+      "official_site": "miamidolphins.com",
+      "espn_id": "15",
+      "nfl_id": "MIA"
+    },
+    {
+      "name": "Minnesota Vikings",
+      "abbreviation": "MIN",
+      "division": "NFC North",
+      "official_site": "vikings.com",
+      "espn_id": "16",
+      "nfl_id": "MIN"
+    },
+    {
+      "name": "New England Patriots",
+      "abbreviation": "NE",
+      "division": "AFC East",
+      "official_site": "patriots.com",
+      "espn_id": "17",
+      "nfl_id": "NE"
+    },
+    {
+      "name": "New Orleans Saints",
+      "abbreviation": "NO",
+      "division": "NFC South",
+      "official_site": "neworleanssaints.com",
+      "espn_id": "18",
+      "nfl_id": "NO"
+    },
+    {
+      "name": "New York Giants",
+      "abbreviation": "NYG",
+      "division": "NFC East",
+      "official_site": "giants.com",
+      "espn_id": "19",
+      "nfl_id": "NYG"
+    },
+    {
+      "name": "New York Jets",
+      "abbreviation": "NYJ",
+      "division": "AFC East",
+      "official_site": "newyorkjets.com",
+      "espn_id": "20",
+      "nfl_id": "NYJ"
+    },
+    {
+      "name": "Philadelphia Eagles",
+      "abbreviation": "PHI",
+      "division": "NFC East",
+      "official_site": "philadelphiaeagles.com",
+      "espn_id": "21",
+      "nfl_id": "PHI"
+    },
+    {
+      "name": "Pittsburgh Steelers",
+      "abbreviation": "PIT",
+      "division": "AFC North",
+      "official_site": "steelers.com",
+      "espn_id": "23",
+      "nfl_id": "PIT"
+    },
+    {
+      "name": "San Francisco 49ers",
+      "abbreviation": "SF",
+      "division": "NFC West",
+      "official_site": "49ers.com",
+      "espn_id": "25",
+      "nfl_id": "SF"
+    },
+    {
+      "name": "Seattle Seahawks",
+      "abbreviation": "SEA",
+      "division": "NFC West",
+      "official_site": "seahawks.com",
+      "espn_id": "26",
+      "nfl_id": "SEA"
+    },
+    {
+      "name": "Tampa Bay Buccaneers",
+      "abbreviation": "TB",
+      "division": "NFC South",
+      "official_site": "buccaneers.com",
+      "espn_id": "27",
+      "nfl_id": "TB"
+    },
+    {
+      "name": "Tennessee Titans",
+      "abbreviation": "TEN",
+      "division": "AFC South",
+      "official_site": "titansonline.com",
+      "espn_id": "10",
+      "nfl_id": "TEN"
+    },
+    {
+      "name": "Washington Commanders",
+      "abbreviation": "WAS",
+      "division": "NFC East",
+      "official_site": "commanders.com",
+      "espn_id": "28",
+      "nfl_id": "WAS"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "collectionSummary": {
+    "totalPlayers": 715,
+    "totalTeams": 10,
+    "targetProgress": 42,
+    "averagePlayersPerTeam": 72
+  },
+  "playersByPosition": {
+    "QB": 85,
+    "RB": 234,
+    "WR": 156,
+    "TE": 89,
+    "OT": 45,
+    "DT": 67,
+    "LB": 78,
+    "Other": 61
+  },
+  "playersByDivision": {
+    "AFC East": 235,
+    "AFC North": 174,
+    "AFC West": 180,
+    "NFC East": 126
+  },
+  "topColleges": {
+    "Georgia": 5,
+    "Oklahoma": 5,
+    "Tennessee": 4,
+    "Ohio State": 4,
+    "Alabama": 4,
+    "North Carolina": 3,
+    "Memphis": 3,
+    "SMU": 3,
+    "Penn State": 3,
+    "Clemson": 3
+  },
+  "experienceDistribution": {
+    "9 years": 7,
+    "2 years": 16,
+    "Rookie": 12,
+    "6 years": 9,
+    "11 years": 2,
+    "8 years": 9,
+    "12 years": 1,
+    "4 years": 12,
+    "1 year": 5,
+    "7 years": 7,
+    "5 years": 10,
+    "3 years": 15,
+    "21 years": 1,
+    "13 years": 2,
+    "10 years": 1,
+    "14 years": 1
+  },
+  "filenames": {
+    "sql": "nfl-roster-import.sql",
+    "csv": "nfl-players.csv",
+    "apiJson": "nfl-api-export.json",
+    "prismaSeed": "../prisma/seed-nfl-rosters.ts"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "source": "ESPN RSS Feed",
+  "url": "https://www.espn.com/espn/rss/news",
+  "timestamp": "2025-06-22T03:00:03.180Z",
+  "records": 17,
+  "method": "rss",
+  "data": "RSS feed items collected: 17 records"
+}

@@ -37,7 +37,8 @@ export async function GET() {
             MLB: 0,
             NHL: 0
           }
-        }
+        },
+        error: null as string | null
       },
       mcp_servers: {
         total: 24,
@@ -63,23 +64,24 @@ export async function GET() {
 
     // Test database connection
     try {
-      const playerCounts = await prisma.player.groupBy({
-        by: ['league'],
-        _count: true,
-      });
+      // Count players by league type (NFL, NBA, etc) based on leagueId patterns
+      const [nflCount, nbaCount, mlbCount, nhlCount] = await Promise.all([
+        prisma.player.count({ where: { leagueId: { contains: 'NFL' } } }),
+        prisma.player.count({ where: { leagueId: { contains: 'NBA' } } }),
+        prisma.player.count({ where: { leagueId: { contains: 'MLB' } } }),
+        prisma.player.count({ where: { leagueId: { contains: 'NHL' } } }),
+      ]);
 
       const totalPlayers = await prisma.player.count();
       
       tests.database.status = 'connected';
       tests.database.players.total = totalPlayers;
-      
-      playerCounts.forEach(count => {
-        if (count.league && tests.database.players.byLeague[count.league as keyof typeof tests.database.players.byLeague] !== undefined) {
-          tests.database.players.byLeague[count.league as keyof typeof tests.database.players.byLeague] = count._count;
-        }
-      });
+      tests.database.players.byLeague.NFL = nflCount;
+      tests.database.players.byLeague.NBA = nbaCount;
+      tests.database.players.byLeague.MLB = mlbCount;
+      tests.database.players.byLeague.NHL = nhlCount;
 
-      // Get sample players
+      // Get sample players for verification
       const samplePlayers = await prisma.player.findMany({
         take: 5,
         select: {
@@ -87,11 +89,14 @@ export async function GET() {
           name: true,
           position: true,
           team: true,
-          league: true,
+          leagueId: true,
         }
       });
 
-      tests.database.samplePlayers = samplePlayers;
+      // Verify we have players but don't store in response
+      if (samplePlayers.length > 0) {
+        tests.database.status = 'connected';
+      }
 
     } catch (dbError) {
       tests.database.status = 'error';

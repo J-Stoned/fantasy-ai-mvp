@@ -84,7 +84,8 @@
       "Bash(DATABASE_URL=\"file:./prisma/dev.db\" npx tsx scripts/real-player-collector.ts)",
       "Bash(DATABASE_URL=\"file:./prisma/dev.db\" npx prisma db pull)",
       "Bash(DATABASE_URL=\"file:./prisma/dev.db\" npx tsx -e \"\nimport { PrismaClient } from ''@prisma/client'';\nconst prisma = new PrismaClient();\nasync function verify() {\n  const players = await prisma.player.findMany({ \n    select: { name: true, position: true, team: true, stats: true } \n  });\n  console.log(''🔍 REAL PLAYERS IN DATABASE:'');\n  console.log(''============================'');\n  players.forEach((p, i) => {\n    const stats = JSON.parse(p.stats);\n    console.log(\\`${i+1}. ${p.name} (${p.position}, ${p.team}) - Fantasy Points: ${stats.fantasyPoints || ''N/A''}\\`);\n  });\n  console.log(\\`\\n✅ Total Real Players: ${players.length}\\`);\n  await prisma.$disconnect();\n}\nverify();\")",
-      "Bash(DATABASE_URL:*)"
+      "Bash(DATABASE_URL:*)",
+      "Bash(sqlite3:*)"
     ],
     "deny": []
   },

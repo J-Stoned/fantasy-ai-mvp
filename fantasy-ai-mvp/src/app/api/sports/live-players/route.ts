@@ -10,9 +10,7 @@ export async function GET(request: NextRequest) {
     const limit = parseInt(searchParams.get('limit') || '50');
 
     // Build dynamic where clause
-    const whereClause: any = {
-      isActive: true,
-    };
+    const whereClause: any = {};
 
     if (position) {
       whereClause.position = position;
@@ -75,7 +73,7 @@ export async function GET(request: NextRequest) {
         matchupRating,
         isStarter: projectedPoints > getPositionThreshold(player.position),
         ownership: Math.min(100, Math.max(0.1, 50)), // Default ownership
-        injuryStatus: 'healthy', // Will be updated with real injury data
+        injuryStatus: player.injuryStatus || 'healthy', // Use real injury status from DB
         fantasyRelevance: calculateFantasyRelevance(projectedPoints, player.position),
         recentNews: getRecentNews(player.id), // Will implement news aggregation
         weatherImpact: calculateWeatherImpact(player.team, player.position)

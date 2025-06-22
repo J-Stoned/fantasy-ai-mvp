@@ -53,3 +53,7 @@ continuous-updater.log
 
 # Keep only reports
 !data/ultimate-free/reports/
+
+# Keep production database in public directory
+!public/database/production.db
+!public/database/production.db-journal

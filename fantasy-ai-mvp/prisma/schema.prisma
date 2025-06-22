@@ -3,10 +3,9 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
-  // For production, falls back to the committed database file
-  // url      = "file:./prisma/dev.db"
+  // Supabase PostgreSQL database for production
 }
 
 model User {

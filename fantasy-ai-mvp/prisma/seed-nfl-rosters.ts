@@ -264,7 +264,7 @@ const playersData = [
     name: "Ray Davis",
     position: "RB",
     jerseyNumber: 22,
-    height: "5'8"",
+    height: "5'8\"",
     weight: 220,
     age: 25,
     experience: "2 years",
@@ -288,7 +288,7 @@ const playersData = [
     name: "Frank Gore Jr.",
     position: "RB",
     jerseyNumber: 20,
-    height: "5'8"",
+    height: "5'8\"",
     weight: 195,
     age: 23,
     experience: "1 year",
@@ -624,7 +624,7 @@ const playersData = [
     name: "Deuce Vaughn",
     position: "RB",
     jerseyNumber: 42,
-    height: "5'6"",
+    height: "5'6\"",
     weight: 179,
     age: 23,
     experience: "2 years",
@@ -708,7 +708,7 @@ const playersData = [
     name: "KaVontae Turpin",
     position: "WR",
     jerseyNumber: 9,
-    height: "5'7"",
+    height: "5'7\"",
     weight: 153,
     age: 28,
     experience: "3 years",
@@ -984,7 +984,7 @@ const playersData = [
     name: "Jaylen Warren",
     position: "RB",
     jerseyNumber: 30,
-    height: "5'8"",
+    height: "5'8\"",
     weight: 215,
     age: 26,
     experience: "4 years",
@@ -1224,7 +1224,7 @@ const playersData = [
     name: "Keaton Mitchell",
     position: "RB",
     jerseyNumber: 34,
-    height: "5'8"",
+    height: "5'8\"",
     weight: 191,
     age: 23,
     experience: "3 years",
@@ -1356,7 +1356,7 @@ const playersData = [
     name: "Devin Singletary",
     position: "RB",
     jerseyNumber: 26,
-    height: "5'7"",
+    height: "5'7\"",
     weight: 203,
     age: 27,
     experience: "7 years",
@@ -1407,14 +1407,14 @@ async function main() {
   
   // Create teams
   for (const team of teamsData) {
-    await prisma.nflTeam.create({
+    await prisma.team.create({
       data: team
     });
   }
   
   // Create players
   for (const player of playersData) {
-    await prisma.nflPlayer.create({
+    await prisma.player.create({
       data: player
     });
   }

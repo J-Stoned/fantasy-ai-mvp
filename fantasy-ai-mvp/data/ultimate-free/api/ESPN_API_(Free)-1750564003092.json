@@ -1,0 +1,8 @@
+{
+  "source": "ESPN API (Free)",
+  "url": "https://site.api.espn.com/apis/site/v2/sports",
+  "timestamp": "2025-06-22T03:46:43.092Z",
+  "records": 56,
+  "method": "api",
+  "data": "API data collected: 56 records"
+}

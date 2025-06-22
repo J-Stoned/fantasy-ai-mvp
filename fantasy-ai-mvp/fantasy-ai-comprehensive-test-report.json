@@ -5,7 +5,7 @@
     "failedTests": 3,
     "warningTests": 0,
     "successRate": 87.5,
-    "totalTime": 87142
+    "totalTime": 99286
   },
   "testSuites": [
     {
@@ -41,14 +41,14 @@
           "test": "Package Dependencies",
           "status": "PASS",
           "message": "All package dependencies are properly installed",
-          "duration": 868
+          "duration": 929
         },
         {
           "category": "Pre-flight",
           "test": "File System Structure",
           "status": "PASS",
           "message": "All required directories and files present",
-          "duration": 5
+          "duration": 4
         },
         {
           "category": "Pre-flight",
@@ -58,7 +58,7 @@
           "duration": 0
         }
       ],
-      "totalTime": 874,
+      "totalTime": 935,
       "passCount": 3,
       "failCount": 2,
       "warnCount": 0
@@ -72,7 +72,7 @@
           "test": "Install Missing Packages",
           "status": "PASS",
           "message": "Missing packages installation completed",
-          "duration": 4455,
+          "duration": 5393,
           "details": {
             "packagesToInstall": [
               "socket.io",
@@ -93,10 +93,10 @@
           "test": "Build Verification",
           "status": "PASS",
           "message": "Build completed successfully",
-          "duration": 77266
+          "duration": 87358
         }
       ],
-      "totalTime": 81724,
+      "totalTime": 92754,
       "passCount": 3,
       "failCount": 0,
       "warnCount": 0
@@ -110,7 +110,7 @@
           "test": "Database Connection",
           "status": "FAIL",
           "message": "Database connection failed: Error: Command failed: node scripts/test-db-connection.js\n❌ Database connection failed: \nInvalid `prisma.$queryRaw()` invocation:\n\n\nRaw query failed. Code: `1`. Message: `no such function: version`\n🔧 Check your DATABASE_URL and network connection\n",
-          "duration": 451
+          "duration": 499
         },
         {
           "category": "Database",
@@ -127,10 +127,10 @@
           "test": "API Endpoints",
           "status": "PASS",
           "message": "API structure validated",
-          "duration": 1
+          "duration": 2
         }
       ],
-      "totalTime": 456,
+      "totalTime": 504,
       "passCount": 2,
       "failCount": 1,
       "warnCount": 0
@@ -144,17 +144,17 @@
           "test": "Sports Data Sync",
           "status": "PASS",
           "message": "Sports data sync completed successfully",
-          "duration": 1390
+          "duration": 1843
         },
         {
           "category": "Data Population",
           "test": "Data Quality Check",
           "status": "PASS",
           "message": "Data quality verification passed",
-          "duration": 1318
+          "duration": 1703
         }
       ],
-      "totalTime": 2709,
+      "totalTime": 3548,
       "passCount": 2,
       "failCount": 0,
       "warnCount": 0
@@ -168,14 +168,14 @@
           "test": "Homepage Load",
           "status": "PASS",
           "message": "Homepage structure validated",
-          "duration": 2
+          "duration": 3
         },
         {
           "category": "User Journey",
           "test": "Dashboard Access",
           "status": "PASS",
           "message": "Dashboard structure validated",
-          "duration": 3
+          "duration": 2
         },
         {
           "category": "User Journey",
@@ -185,7 +185,7 @@
           "duration": 2
         }
       ],
-      "totalTime": 7,
+      "totalTime": 8,
       "passCount": 3,
       "failCount": 0,
       "warnCount": 0
@@ -199,7 +199,7 @@
           "test": "Voice Assistant Components",
           "status": "PASS",
           "message": "Voice components found",
-          "duration": 1
+          "duration": 2
         },
         {
           "category": "Features",
@@ -223,7 +223,7 @@
           "duration": 1
         }
       ],
-      "totalTime": 5,
+      "totalTime": 6,
       "passCount": 4,
       "failCount": 0,
       "warnCount": 0
@@ -237,7 +237,7 @@
           "test": "Dashboard Integration",
           "status": "PASS",
           "message": "Dashboard integration completed",
-          "duration": 1360
+          "duration": 1523
         },
         {
           "category": "Database Content",
@@ -247,7 +247,7 @@
           "duration": 2
         }
       ],
-      "totalTime": 1362,
+      "totalTime": 1525,
       "passCount": 2,
       "failCount": 0,
       "warnCount": 0
@@ -271,7 +271,7 @@
           "duration": 2
         }
       ],
-      "totalTime": 2,
+      "totalTime": 3,
       "passCount": 2,
       "failCount": 0,
       "warnCount": 0
@@ -307,14 +307,14 @@
       "test": "Package Dependencies",
       "status": "PASS",
       "message": "All package dependencies are properly installed",
-      "duration": 868
+      "duration": 929
     },
     {
       "category": "Pre-flight",
       "test": "File System Structure",
       "status": "PASS",
       "message": "All required directories and files present",
-      "duration": 5
+      "duration": 4
     },
     {
       "category": "Pre-flight",
@@ -328,7 +328,7 @@
       "test": "Install Missing Packages",
       "status": "PASS",
       "message": "Missing packages installation completed",
-      "duration": 4455,
+      "duration": 5393,
       "details": {
         "packagesToInstall": [
           "socket.io",
@@ -349,14 +349,14 @@
       "test": "Build Verification",
       "status": "PASS",
       "message": "Build completed successfully",
-      "duration": 77266
+      "duration": 87358
     },
     {
       "category": "Database",
       "test": "Database Connection",
       "status": "FAIL",
       "message": "Database connection failed: Error: Command failed: node scripts/test-db-connection.js\n❌ Database connection failed: \nInvalid `prisma.$queryRaw()` invocation:\n\n\nRaw query failed. Code: `1`. Message: `no such function: version`\n🔧 Check your DATABASE_URL and network connection\n",
-      "duration": 451
+      "duration": 499
     },
     {
       "category": "Database",
@@ -373,35 +373,35 @@
       "test": "API Endpoints",
       "status": "PASS",
       "message": "API structure validated",
-      "duration": 1
+      "duration": 2
     },
     {
       "category": "Data Population",
       "test": "Sports Data Sync",
       "status": "PASS",
       "message": "Sports data sync completed successfully",
-      "duration": 1390
+      "duration": 1843
     },
     {
       "category": "Data Population",
       "test": "Data Quality Check",
       "status": "PASS",
       "message": "Data quality verification passed",
-      "duration": 1318
+      "duration": 1703
     },
     {
       "category": "User Journey",
       "test": "Homepage Load",
       "status": "PASS",
       "message": "Homepage structure validated",
-      "duration": 2
+      "duration": 3
     },
     {
       "category": "User Journey",
       "test": "Dashboard Access",
       "status": "PASS",
       "message": "Dashboard structure validated",
-      "duration": 3
+      "duration": 2
     },
     {
       "category": "User Journey",
@@ -415,7 +415,7 @@
       "test": "Voice Assistant Components",
       "status": "PASS",
       "message": "Voice components found",
-      "duration": 1
+      "duration": 2
     },
     {
       "category": "Features",
@@ -443,7 +443,7 @@
       "test": "Dashboard Integration",
       "status": "PASS",
       "message": "Dashboard integration completed",
-      "duration": 1360
+      "duration": 1523
     },
     {
       "category": "Database Content",
@@ -467,7 +467,7 @@
       "duration": 2
     }
   ],
-  "timestamp": "2025-06-21T14:53:28.650Z",
+  "timestamp": "2025-06-22T04:02:33.456Z",
   "recommendations": [
     "Address failed tests before production deployment",
     "Review error logs for specific failure reasons",

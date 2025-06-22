@@ -150,7 +150,7 @@ class NHLFantasyServer {
     try {
       // Get all teams first
       const teams = await this.makeNHLRequest('/standings/now');
-      const allPlayers = [];
+      const allPlayers: any[] = [];
 
       // Fetch roster for each team
       for (const team of teams.standings || []) {

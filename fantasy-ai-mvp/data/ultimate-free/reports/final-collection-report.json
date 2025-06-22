@@ -1,10 +1,10 @@
 {
   "mission": "ULTIMATE FREE DATA COLLECTION",
-  "timestamp": "2025-06-22T03:00:03.198Z",
+  "timestamp": "2025-06-22T03:46:43.128Z",
   "execution": {
-    "totalTime": 28,
-    "recordsPerSecond": 240,
-    "recordsPerHour": 864000,
+    "totalTime": 29,
+    "recordsPerSecond": 246,
+    "recordsPerHour": 885600,
     "costPerRecord": 0,
     "totalCost": 0
   },
@@ -13,40 +13,40 @@
     "activeSources": 119,
     "failedSources": 5,
     "successRate": 96,
-    "totalRecords": 6718,
-    "averageRecordsPerSource": 56
+    "totalRecords": 7132,
+    "averageRecordsPerSource": 60
   },
   "breakdown": {
     "byRegion": {
-      "usa": 6421,
-      "uk": 134,
-      "canada": 68,
-      "global": 95
+      "usa": 6805,
+      "uk": 98,
+      "canada": 127,
+      "global": 102
     },
     "bySport": {
-      "NFL": 2420,
-      "NBA": 2217,
-      "MLB": 2449,
-      "NHL": 463,
-      "Soccer": 228,
-      "College": 98,
-      "Fantasy": 232,
-      "Olympics": 54,
-      "All": 85,
-      "Rugby": 105,
-      "Cricket": 134,
-      "F1": 124,
-      "CFL": 31,
-      "NASCAR": 100
+      "NFL": 2648,
+      "NBA": 2597,
+      "MLB": 2542,
+      "NHL": 571,
+      "Soccer": 408,
+      "College": 137,
+      "Fantasy": 64,
+      "Olympics": 37,
+      "All": 121,
+      "Rugby": 75,
+      "Cricket": 98,
+      "F1": 125,
+      "CFL": 105,
+      "NASCAR": 103
     },
     "byType": {
-      "official": 5778,
-      "news": 556,
-      "social": 63,
-      "rss": 48,
+      "official": 6147,
+      "news": 799,
+      "social": 59,
+      "rss": 43,
       "video": 0,
       "podcast": 0,
-      "api": 273
+      "api": 84
     }
   },
   "competitiveAnalysis": {

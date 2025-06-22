@@ -1,0 +1,8 @@
+{
+  "source": "Yahoo Sports",
+  "url": "https://sports.yahoo.com",
+  "timestamp": "2025-06-22T03:46:43.044Z",
+  "records": 36,
+  "method": "firecrawl",
+  "data": "Collected 36 records from Yahoo Sports"
+}

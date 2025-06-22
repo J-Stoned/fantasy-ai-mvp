@@ -451,7 +451,7 @@ export class SubscriptionManager {
         orderBy: { createdAt: 'desc' }
       });
 
-      return subscription;
+      return subscription as UserSubscription | null;
     } catch (error) {
       console.error("Error getting user subscription:", error);
       return null;

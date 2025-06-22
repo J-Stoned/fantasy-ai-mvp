@@ -1,8 +1,0 @@
-{
-  "source": "MLB Official",
-  "url": "https://www.mlb.com",
-  "timestamp": "2025-06-22T03:00:03.161Z",
-  "records": 54,
-  "method": "puppeteer",
-  "data": "Dynamic content collected: 54 records"
-}

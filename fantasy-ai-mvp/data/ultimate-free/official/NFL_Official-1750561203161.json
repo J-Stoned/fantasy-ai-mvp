@@ -1,8 +1,0 @@
-{
-  "source": "NFL Official",
-  "url": "https://www.nfl.com",
-  "timestamp": "2025-06-22T03:00:03.161Z",
-  "records": 51,
-  "method": "puppeteer",
-  "data": "Dynamic content collected: 51 records"
-}

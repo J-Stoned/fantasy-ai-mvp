@@ -1,8 +1,0 @@
-{
-  "source": "NBA Official",
-  "url": "https://www.nba.com",
-  "timestamp": "2025-06-22T03:00:03.161Z",
-  "records": 12,
-  "method": "puppeteer",
-  "data": "Dynamic content collected: 12 records"
-}

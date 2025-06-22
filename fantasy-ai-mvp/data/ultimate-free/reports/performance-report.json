@@ -1,10 +1,10 @@
 {
-  "timestamp": "2025-06-22T04:28:04.583Z",
+  "timestamp": "2025-06-22T05:55:14.250Z",
   "totalSources": 124,
   "activeSources": 119,
   "successRate": 96,
-  "recordsPerSource": 55,
-  "executionTime": 29,
+  "recordsPerSource": 62,
+  "executionTime": 0,
   "sources": [
     {
       "name": "PATRIOTS Official",

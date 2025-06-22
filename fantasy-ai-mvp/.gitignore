@@ -41,3 +41,15 @@ yarn-error.log*
 next-env.d.ts
 
 .vercel
+
+# Data collection files
+data/ultimate-free/api/
+data/ultimate-free/news/
+data/ultimate-free/official/
+data/ultimate-free/social/
+data/ultimate-free/rss/
+continuous-updater.log
+*.log
+
+# Keep only reports
+!data/ultimate-free/reports/

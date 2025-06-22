@@ -11,11 +11,7 @@
   "env": {
     "SKIP_ENV_VALIDATION": "true",
     "VERCEL": "1",
-    "DATABASE_URL": "file:./prisma/dev.db",
-    "NEXTAUTH_SECRET": "otKRVmQeRXBMBSLby6edymvU2HE4Z9OVGi78W+nXqvM=",
-    "OPENAI_API_KEY": "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",
-    "STRIPE_SECRET_KEY": "sk_test_51Rb5oIFvsEr7ne6FQ364dJn34yJo8XEECZxjwLBVmom7BxhjnzdlVyZoHYvo8qvChlziKUNaMJUuImG3KOXK1oOQ00WqRCsjmP",
-    "STRIPE_PUBLISHABLE_KEY": "pk_test_51Rb5oIFvsEr7ne6FNld3LUfVXFRTdqkdVemnFJKHlYal39fIgFb9AFrOlekjr81e7SLKR9ExPTq4gBPvdRzW3C5N00pTzEDKli"
+    "DATABASE_URL": "file:./prisma/dev.db"
   },
   "build": {
     "env": {

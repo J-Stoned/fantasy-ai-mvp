@@ -918,3 +918,114 @@ model BettingInsight {
   @@index([confidence])
   @@index([expiresAt])
 }
+
+// ============================================
+// DATA COLLECTION & PROCESSING TABLES
+// ============================================
+
+model DataCollectionRun {
+  id            String        @id @default(cuid())
+  source        String        // ESPN API, Yahoo Fantasy, etc.
+  dataType      String        // api, news, official
+  startTime     DateTime      @default(now())
+  endTime       DateTime?
+  recordsCount  Int           @default(0)
+  status        String        @default("RUNNING") // RUNNING, COMPLETED, FAILED
+  error         String?
+  createdAt     DateTime      @default(now())
+  rawDataItems  RawDataCache[]
+
+  @@index([source])
+  @@index([dataType])
+  @@index([status])
+  @@index([createdAt])
+}
+
+model RawDataCache {
+  id               String            @id @default(cuid())
+  collectionRunId  String
+  source           String
+  dataType         String
+  url              String?
+  rawData          String            // JSON blob of actual data
+  recordCount      Int               @default(0)
+  isProcessed      Boolean           @default(false)
+  processedAt      DateTime?
+  createdAt        DateTime          @default(now())
+  collectionRun    DataCollectionRun @relation(fields: [collectionRunId], references: [id], onDelete: Cascade)
+  processingLogs   ProcessingLog[]
+
+  @@index([collectionRunId])
+  @@index([source])
+  @@index([isProcessed])
+  @@index([createdAt])
+}
+
+model ProcessingLog {
+  id            String       @id @default(cuid())
+  rawDataId     String
+  processType   String       // PLAYER_STATS, NEWS_ARTICLES, GAME_DATA, etc.
+  recordsProcessed Int       @default(0)
+  recordsFailed    Int       @default(0)
+  status        String       @default("PROCESSING") // PROCESSING, COMPLETED, FAILED
+  error         String?
+  startTime     DateTime     @default(now())
+  endTime       DateTime?
+  rawData       RawDataCache @relation(fields: [rawDataId], references: [id], onDelete: Cascade)
+
+  @@index([rawDataId])
+  @@index([processType])
+  @@index([status])
+}
+
+model NewsArticle {
+  id           String   @id @default(cuid())
+  source       String   // ESPN, CBS Sports, etc.
+  title        String
+  content      String
+  summary      String?
+  url          String   @unique
+  author       String?
+  publishedAt  DateTime
+  sport        String?
+  teams        String?  // JSON array of team names
+  players      String?  // JSON array of player names
+  sentiment    Float?   // -1 to 1 sentiment score
+  category     String?  // injury, trade, game recap, etc.
+  imageUrl     String?
+  isProcessed  Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([source])
+  @@index([sport])
+  @@index([publishedAt])
+  @@index([isProcessed])
+}
+
+model GameData {
+  id           String   @id @default(cuid())
+  externalId   String   @unique
+  sport        String
+  homeTeam     String
+  awayTeam     String
+  gameTime     DateTime
+  venue        String?
+  weather      String?  // JSON object with weather data
+  homeScore    Int?
+  awayScore    Int?
+  status       String   // SCHEDULED, IN_PROGRESS, FINAL
+  quarter      Int?
+  timeLeft     String?
+  lastPlay     String?
+  scoringPlays String?  // JSON array
+  statistics   String?  // JSON object with game stats
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([sport])
+  @@index([gameTime])
+  @@index([status])
+  @@index([homeTeam])
+  @@index([awayTeam])
+}

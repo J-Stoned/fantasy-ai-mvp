@@ -1,8 +1,0 @@
-{
-  "source": "NHL Official",
-  "url": "https://www.nhl.com",
-  "timestamp": "2025-06-22T03:00:03.161Z",
-  "records": 6,
-  "method": "puppeteer",
-  "data": "Dynamic content collected: 6 records"
-}

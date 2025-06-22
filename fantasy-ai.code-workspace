@@ -1,0 +1,12 @@
+{
+  "folders": [
+    {
+      "name": "Fantasy AI MVP",
+      "path": "./fantasy-ai-mvp"
+    }
+  ],
+  "settings": {
+    "terminal.integrated.cwd": "./fantasy-ai-mvp",
+    "terminal.integrated.defaultProfile.windows": "PowerShell"
+  }
+} 

@@ -1,9 +1,9 @@
 {
-  "timestamp": "2025-06-22T03:46:43.123Z",
+  "timestamp": "2025-06-22T04:28:04.583Z",
   "totalSources": 124,
   "activeSources": 119,
   "successRate": 96,
-  "recordsPerSource": 60,
+  "recordsPerSource": 55,
   "executionTime": 29,
   "sources": [
     {

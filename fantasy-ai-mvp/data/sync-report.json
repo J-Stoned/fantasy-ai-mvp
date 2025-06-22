@@ -1,17 +1,53 @@
 {
-  "timestamp": "2025-06-21T14:17:22.045Z",
+  "timestamp": "2025-06-22T04:26:07.275Z",
   "summary": {
-    "totalPlayers": 135,
-    "totalLeagues": 4,
-    "playersWithInjuries": 0,
-    "uniqueTeams": 20
+    "totalPlayers": 33193,
+    "totalLeagues": 5,
+    "playersWithInjuries": 32,
+    "uniqueTeams": 119
   },
   "teamBreakdown": [
     {
       "_count": {
-        "team": 8
+        "team": 9
       },
       "team": "ATL"
+    },
+    {
+      "_count": {
+        "team": 52
+      },
+      "team": "Anaheim Ducks"
+    },
+    {
+      "_count": {
+        "team": 132
+      },
+      "team": "Arizona Cardinals"
+    },
+    {
+      "_count": {
+        "team": 3
+      },
+      "team": "Arizona Diamondbacks"
+    },
+    {
+      "_count": {
+        "team": 1
+      },
+      "team": "Atlanta Braves"
+    },
+    {
+      "_count": {
+        "team": 126
+      },
+      "team": "Atlanta Falcons"
+    },
+    {
+      "_count": {
+        "team": 3
+      },
+      "team": "BAL"
     },
     {
       "_count": {
@@ -21,55 +57,19 @@
     },
     {
       "_count": {
-        "team": 4
+        "team": 6
       },
       "team": "BUF"
     },
     {
       "_count": {
-        "team": 3
+        "team": 2
       },
-      "team": "CLE"
-    },
-    {
-      "_count": {
-        "team": 7
-      },
-      "team": "DEN"
-    },
-    {
-      "_count": {
-        "team": 8
-      },
-      "team": "GSW"
-    },
-    {
-      "_count": {
-        "team": 9
-      },
-      "team": "HOU"
-    },
-    {
-      "_count": {
-        "team": 3
-      },
-      "team": "KC"
-    },
-    {
-      "_count": {
-        "team": 9
-      },
-      "team": "LAD"
-    },
-    {
-      "_count": {
-        "team": 8
-      },
-      "team": "LAL"
+      "team": "Baltimore Orioles"
     }
   ],
   "dataQuality": {
-    "playersWithStats": 135,
-    "playersWithProjections": 135
+    "playersWithStats": 33193,
+    "playersWithProjections": 33193
   }
 }

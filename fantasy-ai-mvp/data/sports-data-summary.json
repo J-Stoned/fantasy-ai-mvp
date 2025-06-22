@@ -1,38 +1,38 @@
 {
-  "timestamp": "2025-06-22T03:02:48.512Z",
+  "timestamp": "2025-06-22T04:28:49.576Z",
   "totalLeagues": 5,
-  "totalPlayers": 363,
+  "totalPlayers": 33193,
   "sportBreakdown": {
     "FOOTBALL": {
-      "league": "Fantasy.AI Championship League",
+      "league": "NFL 2024 Season",
       "season": "2024",
       "provider": "ESPN",
-      "playerCount": 228,
+      "playerCount": 22,
       "samplePlayers": [
         {
           "name": "Josh Allen",
-          "team": "LAD",
-          "position": "C"
+          "team": "BUF",
+          "position": "QB"
         },
         {
           "name": "Christian McCaffrey",
-          "team": "NYY",
-          "position": "1B"
+          "team": "SF",
+          "position": "K"
+        },
+        {
+          "name": "Cooper Kupp",
+          "team": "LAR",
+          "position": "TE"
         },
         {
           "name": "Justin Jefferson",
-          "team": "ATL",
-          "position": "SS"
+          "team": "MIN",
+          "position": "QB"
         },
         {
           "name": "Travis Kelce",
-          "team": "SD",
-          "position": "C"
-        },
-        {
-          "name": "Aaron Donald",
-          "team": "NYM",
-          "position": "SP"
+          "team": "KC",
+          "position": "RB"
         }
       ]
     },
@@ -112,48 +112,48 @@
   },
   "topTeams": [
     {
-      "team": "MIA",
-      "playerCount": 25
+      "team": "UNK",
+      "playerCount": 27201
     },
     {
-      "team": "BOS",
-      "playerCount": 24
+      "team": "Miami Dolphins",
+      "playerCount": 134
     },
     {
-      "team": "GSW",
-      "playerCount": 23
+      "team": "Buffalo Bills",
+      "playerCount": 133
     },
     {
-      "team": "DEN",
-      "playerCount": 23
+      "team": "San Francisco 49ers",
+      "playerCount": 132
     },
     {
-      "team": "PHX",
-      "playerCount": 21
+      "team": "Arizona Cardinals",
+      "playerCount": 132
     },
     {
-      "team": "LAL",
-      "playerCount": 21
+      "team": "New York Giants",
+      "playerCount": 130
     },
     {
-      "team": "MIL",
-      "playerCount": 18
+      "team": "Dallas Cowboys",
+      "playerCount": 129
     },
     {
-      "team": "LAD",
-      "playerCount": 17
+      "team": "Indianapolis Colts",
+      "playerCount": 128
     },
     {
-      "team": "NYY",
-      "playerCount": 16
+      "team": "Washington Commanders",
+      "playerCount": 127
     },
     {
-      "team": "LAR",
-      "playerCount": 16
+      "team": "Atlanta Falcons",
+      "playerCount": 126
     }
   ],
   "dataQuality": {
-    "playersWithStats": 361,
-    "playersWithProjections": 363
+    "playersWithStats": 33193,
+    "playersWithProjections": 33193
   }
 }

@@ -4,7 +4,7 @@
   "sport": "NBA",
   "roster": [
     {
-      "id": "cmc6bp2y4003kunwl64wumdkx",
+      "id": "cmc7606f2003kunf25ha0c58r",
       "name": "Josh Allen",
       "position": "PG",
       "stats": {
@@ -28,7 +28,7 @@
       }
     },
     {
-      "id": "cmc6bp2zw003yunwls773k75f",
+      "id": "cmc7606h8003yunf2u41lm1ze",
       "name": "Josh Allen",
       "position": "C",
       "stats": {
@@ -52,7 +52,7 @@
       }
     },
     {
-      "id": "cmc6bp31q004cunwlmz0hxh80",
+      "id": "cmc7606jd004cunf2ws2ozgm2",
       "name": "Josh Allen",
       "position": "C",
       "stats": {
@@ -76,7 +76,7 @@
       }
     },
     {
-      "id": "cmc6bp33l004qunwlu1776thy",
+      "id": "cmc7606ln004qunf266wu7kvl",
       "name": "Josh Allen",
       "position": "SG",
       "stats": {
@@ -100,7 +100,7 @@
       }
     },
     {
-      "id": "cmc6bp35f0054unwl09wifk7u",
+      "id": "cmc7606nw0054unf2fchs1wnz",
       "name": "Josh Allen",
       "position": "PF",
       "stats": {
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "cmc6bp378005iunwl4droo8zu",
+      "id": "cmc7606q2005iunf2g2elp50e",
       "name": "Josh Allen",
       "position": "PF",
       "stats": {
@@ -148,7 +148,7 @@
       }
     },
     {
-      "id": "cmc6bp395005wunwlhwnrluuj",
+      "id": "cmc7606s7005wunf2j8dbvajz",
       "name": "Josh Allen",
       "position": "C",
       "stats": {
@@ -172,7 +172,7 @@
       }
     },
     {
-      "id": "cmc6bp3az006aunwl0vnan810",
+      "id": "cmc7606u9006aunf2hse5xa1t",
       "name": "Josh Allen",
       "position": "PG",
       "stats": {
@@ -194,111 +194,6 @@
         "experience": 6,
         "college": "Alabama"
       }
-    },
-    {
-      "id": "espn_nba_player-0",
-      "name": "Josh Allen",
-      "position": "PG",
-      "stats": {
-        "points": 22,
-        "rebounds": 10,
-        "assists": 2,
-        "steals": 0,
-        "blocks": 1,
-        "fieldGoalPct": "0.853",
-        "threePointPct": "0.600"
-      },
-      "projections": {}
-    },
-    {
-      "id": "espn_nba_player-14",
-      "name": "Josh Allen",
-      "position": "C",
-      "stats": {
-        "points": 10,
-        "rebounds": 1,
-        "assists": 10,
-        "steals": 0,
-        "blocks": 1,
-        "fieldGoalPct": "0.577",
-        "threePointPct": "0.262"
-      },
-      "projections": {}
-    },
-    {
-      "id": "espn_nba_player-21",
-      "name": "Josh Allen",
-      "position": "SG",
-      "stats": {
-        "points": 7,
-        "rebounds": 1,
-        "assists": 2,
-        "steals": 1,
-        "blocks": 1,
-        "fieldGoalPct": "0.305",
-        "threePointPct": "0.466"
-      },
-      "projections": {}
-    },
-    {
-      "id": "espn_nba_player-28",
-      "name": "Josh Allen",
-      "position": "PF",
-      "stats": {
-        "points": 16,
-        "rebounds": 6,
-        "assists": 1,
-        "steals": 2,
-        "blocks": 2,
-        "fieldGoalPct": "0.719",
-        "threePointPct": "0.531"
-      },
-      "projections": {}
-    },
-    {
-      "id": "espn_nba_player-35",
-      "name": "Josh Allen",
-      "position": "PF",
-      "stats": {
-        "points": 32,
-        "rebounds": 14,
-        "assists": 4,
-        "steals": 1,
-        "blocks": 3,
-        "fieldGoalPct": "0.712",
-        "threePointPct": "0.587"
-      },
-      "projections": {}
-    },
-    {
-      "id": "espn_nba_player-42",
-      "name": "Josh Allen",
-      "position": "C",
-      "stats": {
-        "points": 4,
-        "rebounds": 5,
-        "assists": 0,
-        "steals": 1,
-        "blocks": 0,
-        "fieldGoalPct": "0.326",
-        "threePointPct": "0.530"
-      },
-      "projections": {}
-    },
-    {
-      "id": "espn_nba_player-49",
-      "name": "Josh Allen",
-      "position": "PG",
-      "stats": {
-        "points": 11,
-        "rebounds": 1,
-        "assists": 5,
-        "steals": 0,
-        "blocks": 2,
-        "fieldGoalPct": "0.368",
-        "threePointPct": "0.519"
-      },
-      "projections": {}
     }
   ]
 }

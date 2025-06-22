@@ -5,373 +5,293 @@ generator client {
 datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
+  // For production, falls back to the committed database file
+  // url      = "file:./prisma/dev.db"
 }
 
 model User {
-  id            String    @id @default(cuid())
-  email         String    @unique
-  name          String?
-  image         String?
-  password      String?
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
-  
-  subscription  Subscription?
-  userSubscriptions UserSubscription[] @relation("UserSubscriptions")
-  leagues       League[]
-  teams         Team[]
-  predictions   Prediction[]
-  alerts        Alert[]
-  preferences   UserPreferences?
-  
-  // Wagering system relationships
-  wallet              UserWallet?
-  wagersCreated       Wager[]             @relation("WagerCreator")
-  wagersOpposed       Wager[]             @relation("WagerOpponent")
-  wagersWon           Wager[]             @relation("WagerWinner")
-  bountiesCreated     Bounty[]            @relation("BountyCreator")
-  bountiesWon         Bounty[]            @relation("BountyWinner")
-  bountyParticipation BountyParticipant[] @relation("BountyParticipant")
-  escrowTransactions  EscrowTransaction[]
-  escrowReleases      EscrowAccount[]
-  wageringOptIns      MemberWageringOptIn[]
-  
-  // DFS relationships
+  id                  String                @id @default(cuid())
+  email               String                @unique
+  name                String?
+  image               String?
+  password            String?
+  createdAt           DateTime              @default(now())
+  updatedAt           DateTime              @updatedAt
+  activityItems       ActivityItem[]
+  alerts              Alert[]
+  bettingSlips        BettingSlip[]         @relation("UserBettingSlips")
+  bountiesWon         Bounty[]              @relation("BountyWinner")
+  bountiesCreated     Bounty[]              @relation("BountyCreator")
+  bountyParticipation BountyParticipant[]   @relation("BountyParticipant")
   contestEntries      ContestEntry[]
-  dfsLineups          DFSLineup[]
   contestResults      ContestResult[]
-  
-  // Draft relationships
-  draftsCreated       Draft[]           @relation("DraftCreator")
+  dfsLineups          DFSLineup[]
+  draftsCreated       Draft[]               @relation("DraftCreator")
   draftParticipants   DraftParticipant[]
   draftPicks          DraftPick[]
+  escrowReleases      EscrowAccount[]
+  escrowTransactions  EscrowTransaction[]
+  friendsReceived     Friendship[]          @relation("FriendshipRecipient")
+  friendsInitiated    Friendship[]          @relation("FriendshipInitiator")
+  leagues             League[]
+  wageringOptIns      MemberWageringOptIn[]
+  receivedMessages    Message[]             @relation("MessageRecipient")
+  sentMessages        Message[]             @relation("MessageSender")
   mockDrafts          MockDraft[]
-  
-  // Social relationships
-  sentMessages        Message[]         @relation("MessageSender")
-  receivedMessages    Message[]         @relation("MessageRecipient")
-  activityItems       ActivityItem[]
-  reactions           Reaction[]
-  friendsInitiated    Friendship[]      @relation("FriendshipInitiator")
-  friendsReceived     Friendship[]      @relation("FriendshipRecipient")
   notifications       Notification[]
-  
-  // Betting relationships
-  bettingSlips        BettingSlip[]     @relation("UserBettingSlips")
+  predictions         Prediction[]
+  reactions           Reaction[]
+  subscription        Subscription?
+  teams               Team[]
+  preferences         UserPreferences?
+  userSubscriptions   UserSubscription[]    @relation("UserSubscriptions")
+  wallet              UserWallet?
+  wagersWon           Wager[]               @relation("WagerWinner")
+  wagersOpposed       Wager[]               @relation("WagerOpponent")
+  wagersCreated       Wager[]               @relation("WagerCreator")
 }
 
 model Subscription {
-  id            String    @id @default(cuid())
-  userId        String    @unique
-  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-  tier          SubscriptionTier @default(FREE)
-  status        SubscriptionStatus @default(ACTIVE)
-  startDate     DateTime  @default(now())
-  endDate       DateTime?
-  stripeCustomerId String?
+  id                   String    @id @default(cuid())
+  userId               String    @unique
+  tier                 String    @default("FREE")
+  status               String    @default("ACTIVE")
+  startDate            DateTime  @default(now())
+  endDate              DateTime?
+  stripeCustomerId     String?
   stripeSubscriptionId String?
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
+  createdAt            DateTime  @default(now())
+  updatedAt            DateTime  @updatedAt
+  user                 User      @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model League {
-  id            String    @id @default(cuid())
-  userId        String
-  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-  provider      FantasyProvider
-  providerId    String
-  name          String
-  season        String
-  sport         Sport     @default(FOOTBALL)
-  isActive      Boolean   @default(true)
-  settings      String
-  lastSync      DateTime?
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
-  
-  // Wagering Feature Toggle
-  wageringEnabled     Boolean   @default(false)
-  wageringSettings    WageringSettings?
-  
-  teams         Team[]
-  players       Player[]
-  wagers        Wager[]
-  bounties      Bounty[]
-  drafts        Draft[]
-  messages      Message[]
-  activities    ActivityItem[]
-  
+  id               String            @id @default(cuid())
+  userId           String
+  provider         String
+  providerId       String
+  name             String
+  season           String
+  sport            String            @default("FOOTBALL")
+  isActive         Boolean           @default(true)
+  settings         String
+  lastSync         DateTime?
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+  wageringEnabled  Boolean           @default(false)
+  activities       ActivityItem[]
+  bounties         Bounty[]
+  drafts           Draft[]
+  user             User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  messages         Message[]
+  players          Player[]
+  teams            Team[]
+  wagers           Wager[]
+  wageringSettings WageringSettings?
+
   @@unique([provider, providerId])
 }
 
 model WageringSettings {
-  id                String    @id @default(cuid())
-  leagueId          String    @unique
-  league            League    @relation(fields: [leagueId], references: [id], onDelete: Cascade)
-  
-  // Feature Toggles
-  enablePlayerTrading    Boolean   @default(true)
-  enableLiveBetting      Boolean   @default(false)
-  enableBounties         Boolean   @default(true)
-  enablePropBets         Boolean   @default(false)
-  enableCrypto           Boolean   @default(false)
-  
-  // Limits & Controls
-  minWagerAmount         Float     @default(5.0)
-  maxWagerAmount         Float     @default(1000.0)
-  maxDailyWagerTotal     Float     @default(5000.0)
-  requireCommissionerApproval Boolean @default(false)
-  allowGuestBetting      Boolean   @default(false)
-  
-  // Member Controls
-  memberOptIns          MemberWageringOptIn[]
-  blockedMembers        String    @default("[]")
-  wageringAdmins        String    @default("[]")
-  
-  // Advanced Settings
-  allowCrossLeagueBetting Boolean  @default(false)
-  profitSharingPercent   Float     @default(0.0) // League takes % of winnings
-  escrowHoldDays         Int       @default(0)    // Days to hold funds after settlement
-  
-  createdAt         DateTime  @default(now())
-  updatedAt         DateTime  @updatedAt
+  id                          String                @id @default(cuid())
+  leagueId                    String                @unique
+  enablePlayerTrading         Boolean               @default(true)
+  enableLiveBetting           Boolean               @default(false)
+  enableBounties              Boolean               @default(true)
+  enablePropBets              Boolean               @default(false)
+  enableCrypto                Boolean               @default(false)
+  minWagerAmount              Float                 @default(5.0)
+  maxWagerAmount              Float                 @default(1000.0)
+  maxDailyWagerTotal          Float                 @default(5000.0)
+  requireCommissionerApproval Boolean               @default(false)
+  allowGuestBetting           Boolean               @default(false)
+  blockedMembers              String                @default("[]")
+  wageringAdmins              String                @default("[]")
+  allowCrossLeagueBetting     Boolean               @default(false)
+  profitSharingPercent        Float                 @default(0.0)
+  escrowHoldDays              Int                   @default(0)
+  createdAt                   DateTime              @default(now())
+  updatedAt                   DateTime              @updatedAt
+  memberOptIns                MemberWageringOptIn[]
+  league                      League                @relation(fields: [leagueId], references: [id], onDelete: Cascade)
 }
 
 model MemberWageringOptIn {
-  id                String    @id @default(cuid())
-  userId            String
-  user              User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id                 String           @id @default(cuid())
+  userId             String
   wageringSettingsId String
-  wageringSettings  WageringSettings @relation(fields: [wageringSettingsId], references: [id], onDelete: Cascade)
-  
-  optedIn           Boolean   @default(false)
-  dailyLimit        Float?    // Personal daily limit
-  weeklyLimit       Float?    // Personal weekly limit
-  allowLiveBetting  Boolean   @default(true)
-  allowPlayerTrades Boolean   @default(true)
-  
-  createdAt         DateTime  @default(now())
-  updatedAt         DateTime  @updatedAt
-  
+  optedIn            Boolean          @default(false)
+  dailyLimit         Float?
+  weeklyLimit        Float?
+  allowLiveBetting   Boolean          @default(true)
+  allowPlayerTrades  Boolean          @default(true)
+  createdAt          DateTime         @default(now())
+  updatedAt          DateTime         @updatedAt
+  wageringSettings   WageringSettings @relation(fields: [wageringSettingsId], references: [id], onDelete: Cascade)
+  user               User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+
   @@unique([userId, wageringSettingsId])
 }
 
 model Team {
-  id            String    @id @default(cuid())
-  userId        String
-  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-  leagueId      String
-  league        League    @relation(fields: [leagueId], references: [id], onDelete: Cascade)
-  name          String
-  rank          Int       @default(0)
-  points        Float     @default(0)
-  wins          Int       @default(0)
-  losses        Int       @default(0)
-  ties          Int       @default(0)
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
-  
-  roster        Roster[]
+  id        String   @id @default(cuid())
+  userId    String
+  leagueId  String
+  name      String
+  rank      Int      @default(0)
+  points    Float    @default(0)
+  wins      Int      @default(0)
+  losses    Int      @default(0)
+  ties      Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  roster    Roster[]
+  league    League   @relation(fields: [leagueId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model Player {
-  id            String    @id @default(cuid())
-  externalId    String
-  name          String
-  position      String
-  team          String
-  leagueId      String
-  league        League    @relation(fields: [leagueId], references: [id], onDelete: Cascade)
-  stats         String
-  projections   String?
-  injuryStatus  String?
-  imageUrl      String?
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
-  
-  roster          Roster[]
-  predictions     Prediction[]
-  wagerPlayers    WagerPlayer[]
-  valueSnapshots  ValueSnapshot[]
-  
-  // Betting relationships
-  bettingOdds     BettingOdds[]     @relation("PlayerBettingOdds")
+  id              String              @id @default(cuid())
+  externalId      String
+  name            String
+  position        String
+  team            String
+  leagueId        String
+  stats           String
+  projections     String?
+  injuryStatus    String?
+  imageUrl        String?
+  createdAt       DateTime            @default(now())
+  updatedAt       DateTime            @updatedAt
+  bettingInsights BettingInsight[]    @relation("PlayerBettingInsights")
+  bettingOdds     BettingOdds[]       @relation("PlayerBettingOdds")
+  league          League              @relation(fields: [leagueId], references: [id], onDelete: Cascade)
   propHistory     PlayerPropHistory[] @relation("PlayerPropHistory")
-  bettingInsights BettingInsight[]  @relation("PlayerBettingInsights")
-  
+  predictions     Prediction[]
+  roster          Roster[]
+  valueSnapshots  ValueSnapshot[]
+  wagerPlayers    WagerPlayer[]
+
   @@unique([externalId, leagueId])
 }
 
 model Roster {
-  id            String    @id @default(cuid())
-  teamId        String
-  team          Team      @relation(fields: [teamId], references: [id], onDelete: Cascade)
-  playerId      String
-  player        Player    @relation(fields: [playerId], references: [id], onDelete: Cascade)
-  position      String
-  isStarter     Boolean   @default(true)
-  week          Int?
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
-  
+  id        String   @id @default(cuid())
+  teamId    String
+  playerId  String
+  position  String
+  isStarter Boolean  @default(true)
+  week      Int?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  player    Player   @relation(fields: [playerId], references: [id], onDelete: Cascade)
+  team      Team     @relation(fields: [teamId], references: [id], onDelete: Cascade)
+
   @@unique([teamId, playerId, week])
 }
 
 model Prediction {
-  id            String    @id @default(cuid())
-  userId        String
-  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-  playerId      String
-  player        Player    @relation(fields: [playerId], references: [id], onDelete: Cascade)
-  type          PredictionType
-  week          Int
-  season        String
-  prediction    String
-  confidence    Float
-  actual        String?
-  accuracy      Float?
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
+  id         String   @id @default(cuid())
+  userId     String
+  playerId   String
+  type       String
+  week       Int
+  season     String
+  prediction String
+  confidence Float
+  actual     String?
+  accuracy   Float?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  player     Player   @relation(fields: [playerId], references: [id], onDelete: Cascade)
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model Alert {
-  id            String    @id @default(cuid())
-  userId        String
-  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-  type          AlertType
-  title         String
-  message       String
-  data          String?
-  read          Boolean   @default(false)
-  createdAt     DateTime  @default(now())
+  id        String   @id @default(cuid())
+  userId    String
+  type      String
+  title     String
+  message   String
+  data      String?
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model UserPreferences {
-  id            String    @id @default(cuid())
-  userId        String    @unique
-  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-  notifications String    @default("{}")
-  theme         String    @default("dark")
-  aiPersonality String    @default("professional")
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
+  id            String   @id @default(cuid())
+  userId        String   @unique
+  notifications String   @default("{}")
+  theme         String   @default("dark")
+  aiPersonality String   @default("professional")
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
-enum SubscriptionTier {
-  FREE
-  PRO
-  ELITE
-}
-
-enum SubscriptionStatus {
-  ACTIVE
-  CANCELLED
-  EXPIRED
-  TRIAL
-}
-
-// Enhanced subscription system models
 model UserSubscription {
-  id                    String    @id @default(cuid())
-  userId                String
-  user                  User      @relation("UserSubscriptions", fields: [userId], references: [id], onDelete: Cascade)
-  tier                  SubscriptionTier
-  status                SubscriptionStatus
-  billingInterval       BillingInterval
-  currentPeriodStart    DateTime
-  currentPeriodEnd      DateTime
-  cancelAtPeriodEnd     Boolean   @default(false)
-  stripeSubscriptionId  String?
-  stripeCustomerId      String?
-  createdAt             DateTime  @default(now())
-  updatedAt             DateTime  @updatedAt
+  id                   String   @id @default(cuid())
+  userId               String
+  tier                 String
+  status               String
+  billingInterval      String
+  currentPeriodStart   DateTime
+  currentPeriodEnd     DateTime
+  cancelAtPeriodEnd    Boolean  @default(false)
+  stripeSubscriptionId String?
+  stripeCustomerId     String?
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+  user                 User     @relation("UserSubscriptions", fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
 }
 
 model SubscriptionUsage {
-  userId            String
-  period            String  // YYYY-MM format
-  aiInsightsUsed    Int     @default(0)
-  voiceMinutesUsed  Int     @default(0)
-  leaguesCreated    Int     @default(0)
-  apiCallsMade      Int     @default(0)
-  lastUpdated       DateTime @default(now())
+  userId           String
+  period           String
+  aiInsightsUsed   Int      @default(0)
+  voiceMinutesUsed Int      @default(0)
+  leaguesCreated   Int      @default(0)
+  apiCallsMade     Int      @default(0)
+  lastUpdated      DateTime @default(now())
 
   @@id([userId, period])
   @@map("subscription_usage")
 }
 
-enum BillingInterval {
-  monthly
-  yearly
-}
-
-enum FantasyProvider {
-  YAHOO
-  ESPN
-  CBS
-  SLEEPER
-}
-
-enum Sport {
-  FOOTBALL
-  BASKETBALL
-  BASEBALL
-  HOCKEY
-}
-
-enum PredictionType {
-  POINTS
-  PERFORMANCE
-  INJURY_RISK
-  TRADE_VALUE
-}
-
-enum AlertType {
-  PLAYER_UPDATE
-  TRADE_SUGGESTION
-  LINEUP_RECOMMENDATION
-  INJURY_ALERT
-  SCORING_UPDATE
-  WAGER_UPDATE
-  BOUNTY_ALERT
-  ESCROW_UPDATE
-}
-
-// Wagering System Models
 model Wager {
-  id              String        @id @default(cuid())
-  creatorId       String
-  creator         User          @relation("WagerCreator", fields: [creatorId], references: [id], onDelete: Cascade)
-  opponentId      String?
-  opponent        User?         @relation("WagerOpponent", fields: [opponentId], references: [id], onDelete: Cascade)
-  type            WagerType
-  status          WagerStatus   @default(OPEN)
-  title           String
-  description     String
-  totalValue      Float         // Total monetary value of the wager
-  creatorStake    Float         // Creator's monetary contribution
-  opponentStake   Float         // Opponent's monetary contribution
-  performance     String        // Performance metrics to track
-  timeframe       WagerTimeframe
-  startDate       DateTime
-  endDate         DateTime
-  settledAt       DateTime?
-  winnerId        String?
-  winner          User?         @relation("WagerWinner", fields: [winnerId], references: [id])
-  escrowId        String        @unique
-  escrow          EscrowAccount @relation(fields: [escrowId], references: [id], onDelete: Cascade)
-  leagueId        String?
-  league          League?       @relation(fields: [leagueId], references: [id])
-  isPublic        Boolean       @default(true)
-  metadata        String?       // Additional wager-specific data
-  createdAt       DateTime      @default(now())
-  updatedAt       DateTime      @updatedAt
+  id            String        @id @default(cuid())
+  creatorId     String
+  opponentId    String?
+  type          String
+  status        String        @default("OPEN")
+  title         String
+  description   String
+  totalValue    Float
+  creatorStake  Float
+  opponentStake Float
+  performance   String
+  timeframe     String
+  startDate     DateTime
+  endDate       DateTime
+  settledAt     DateTime?
+  winnerId      String?
+  escrowId      String        @unique
+  leagueId      String?
+  isPublic      Boolean       @default(true)
+  metadata      String?
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+  league        League?       @relation(fields: [leagueId], references: [id])
+  escrow        EscrowAccount @relation(fields: [escrowId], references: [id], onDelete: Cascade)
+  winner        User?         @relation("WagerWinner", fields: [winnerId], references: [id])
+  opponent      User?         @relation("WagerOpponent", fields: [opponentId], references: [id], onDelete: Cascade)
+  creator       User          @relation("WagerCreator", fields: [creatorId], references: [id], onDelete: Cascade)
+  wagerPlayers  WagerPlayer[]
+  wagerUpdates  WagerUpdate[]
 
-  wagerPlayers    WagerPlayer[]
-  wagerUpdates    WagerUpdate[]
-  
   @@index([creatorId])
   @@index([opponentId])
   @@index([status])
@@ -379,262 +299,184 @@ model Wager {
 }
 
 model WagerPlayer {
-  id          String      @id @default(cuid())
-  wagerId     String
-  wager       Wager       @relation(fields: [wagerId], references: [id], onDelete: Cascade)
-  playerId    String
-  player      Player      @relation(fields: [playerId], references: [id], onDelete: Cascade)
-  side        WagerSide   // CREATOR or OPPONENT
-  stockPrice  Float       // Player's stock price when wager was created
-  currentValue Float      // Current stock value (for live updates)
-  isTraded    Boolean     @default(false) // Will this player be traded as part of the wager?
-  createdAt   DateTime    @default(now())
-  
+  id           String   @id @default(cuid())
+  wagerId      String
+  playerId     String
+  side         String
+  stockPrice   Float
+  currentValue Float
+  isTraded     Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  player       Player   @relation(fields: [playerId], references: [id], onDelete: Cascade)
+  wager        Wager    @relation(fields: [wagerId], references: [id], onDelete: Cascade)
+
   @@unique([wagerId, playerId, side])
 }
 
 model EscrowAccount {
-  id              String          @id @default(cuid())
-  totalAmount     Float
-  creatorAmount   Float
-  opponentAmount  Float
-  status          EscrowStatus    @default(ACTIVE)
+  id                    String              @id @default(cuid())
+  totalAmount           Float
+  creatorAmount         Float
+  opponentAmount        Float
+  status                String              @default("ACTIVE")
   stripePaymentIntentId String?
-  releasedAt      DateTime?
-  releasedToId    String?
-  releasedTo      User?           @relation(fields: [releasedToId], references: [id])
-  refundedAt      DateTime?
-  metadata        String?
-  createdAt       DateTime        @default(now())
-  updatedAt       DateTime        @updatedAt
-  
-  wager           Wager?
-  bounty          Bounty?
-  transactions    EscrowTransaction[]
-  
+  releasedAt            DateTime?
+  releasedToId          String?
+  refundedAt            DateTime?
+  metadata              String?
+  createdAt             DateTime            @default(now())
+  updatedAt             DateTime            @updatedAt
+  bounty                Bounty?
+  releasedTo            User?               @relation(fields: [releasedToId], references: [id])
+  transactions          EscrowTransaction[]
+  wager                 Wager?
+
   @@index([status])
 }
 
 model EscrowTransaction {
-  id            String        @id @default(cuid())
-  escrowId      String
-  escrow        EscrowAccount @relation(fields: [escrowId], references: [id], onDelete: Cascade)
-  userId        String
-  user          User          @relation(fields: [userId], references: [id], onDelete: Cascade)
-  type          TransactionType
-  amount        Float
-  status        TransactionStatus @default(PENDING)
+  id                  String        @id @default(cuid())
+  escrowId            String
+  userId              String
+  type                String
+  amount              Float
+  status              String        @default("PENDING")
   stripeTransactionId String?
-  description   String
-  processedAt   DateTime?
-  createdAt     DateTime      @default(now())
-  
+  description         String
+  processedAt         DateTime?
+  createdAt           DateTime      @default(now())
+  user                User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  escrow              EscrowAccount @relation(fields: [escrowId], references: [id], onDelete: Cascade)
+
   @@index([userId])
   @@index([type])
   @@index([status])
 }
 
 model Bounty {
-  id              String        @id @default(cuid())
+  id              String              @id @default(cuid())
   creatorId       String
-  creator         User          @relation("BountyCreator", fields: [creatorId], references: [id], onDelete: Cascade)
   title           String
   description     String
   bountyAmount    Float
-  targetMetric    String        // What performance metric to achieve
-  timeframe       WagerTimeframe
+  targetMetric    String
+  timeframe       String
   startDate       DateTime
   endDate         DateTime
-  status          BountyStatus  @default(OPEN)
-  maxParticipants Int           @default(1)
-  isPublic        Boolean       @default(true)
-  escrowId        String        @unique
-  escrow          EscrowAccount @relation(fields: [escrowId], references: [id], onDelete: Cascade)
+  status          String              @default("OPEN")
+  maxParticipants Int                 @default(1)
+  isPublic        Boolean             @default(true)
+  escrowId        String              @unique
   winnerId        String?
-  winner          User?         @relation("BountyWinner", fields: [winnerId], references: [id])
   settledAt       DateTime?
   leagueId        String?
-  league          League?       @relation(fields: [leagueId], references: [id])
   metadata        String?
-  createdAt       DateTime      @default(now())
-  updatedAt       DateTime      @updatedAt
-  
+  createdAt       DateTime            @default(now())
+  updatedAt       DateTime            @updatedAt
+  league          League?             @relation(fields: [leagueId], references: [id])
+  winner          User?               @relation("BountyWinner", fields: [winnerId], references: [id])
+  escrow          EscrowAccount       @relation(fields: [escrowId], references: [id], onDelete: Cascade)
+  creator         User                @relation("BountyCreator", fields: [creatorId], references: [id], onDelete: Cascade)
   participants    BountyParticipant[]
   updates         BountyUpdate[]
-  
+
   @@index([creatorId])
   @@index([status])
   @@index([bountyAmount])
 }
 
 model BountyParticipant {
-  id            String        @id @default(cuid())
+  id            String   @id @default(cuid())
   bountyId      String
-  bounty        Bounty        @relation(fields: [bountyId], references: [id], onDelete: Cascade)
   participantId String
-  participant   User          @relation("BountyParticipant", fields: [participantId], references: [id], onDelete: Cascade)
-  stakeAmount   Float         // Amount participant put up to match bounty
-  currentScore  Float         @default(0)
-  joinedAt      DateTime      @default(now())
-  
+  stakeAmount   Float
+  currentScore  Float    @default(0)
+  joinedAt      DateTime @default(now())
+  participant   User     @relation("BountyParticipant", fields: [participantId], references: [id], onDelete: Cascade)
+  bounty        Bounty   @relation(fields: [bountyId], references: [id], onDelete: Cascade)
+
   @@unique([bountyId, participantId])
   @@index([participantId])
 }
 
 model WagerUpdate {
-  id          String      @id @default(cuid())
-  wagerId     String
-  wager       Wager       @relation(fields: [wagerId], references: [id], onDelete: Cascade)
-  type        UpdateType
-  message     String
-  data        String?
-  createdAt   DateTime    @default(now())
-  
+  id        String   @id @default(cuid())
+  wagerId   String
+  type      String
+  message   String
+  data      String?
+  createdAt DateTime @default(now())
+  wager     Wager    @relation(fields: [wagerId], references: [id], onDelete: Cascade)
+
   @@index([wagerId])
   @@index([type])
 }
 
 model BountyUpdate {
-  id          String      @id @default(cuid())
-  bountyId    String
-  bounty      Bounty      @relation(fields: [bountyId], references: [id], onDelete: Cascade)
-  type        UpdateType
-  message     String
-  data        String?
-  createdAt   DateTime    @default(now())
-  
+  id        String   @id @default(cuid())
+  bountyId  String
+  type      String
+  message   String
+  data      String?
+  createdAt DateTime @default(now())
+  bounty    Bounty   @relation(fields: [bountyId], references: [id], onDelete: Cascade)
+
   @@index([bountyId])
   @@index([type])
 }
 
 model UserWallet {
-  id              String    @id @default(cuid())
-  userId          String    @unique
-  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-  balance         Float     @default(0)
-  lockedAmount    Float     @default(0) // Amount locked in active wagers/bounties
-  stripeCustomerId String?
+  id                     String   @id @default(cuid())
+  userId                 String   @unique
+  balance                Float    @default(0)
+  lockedAmount           Float    @default(0)
+  stripeCustomerId       String?
   defaultPaymentMethodId String?
-  totalDeposited  Float     @default(0)
-  totalWithdrawn  Float     @default(0)
-  totalWon        Float     @default(0)
-  totalLost       Float     @default(0)
-  createdAt       DateTime  @default(now())
-  updatedAt       DateTime  @updatedAt
+  totalDeposited         Float    @default(0)
+  totalWithdrawn         Float    @default(0)
+  totalWon               Float    @default(0)
+  totalLost              Float    @default(0)
+  createdAt              DateTime @default(now())
+  updatedAt              DateTime @updatedAt
+  user                   User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model ValueSnapshot {
-  id          String    @id @default(cuid())
-  playerId    String
-  player      Player    @relation(fields: [playerId], references: [id], onDelete: Cascade)
-  stockPrice  Float
-  timestamp   DateTime  @default(now())
-  wagerId     String?   // Optional: link to specific wager if snapshot was for value balancing
-  metadata    String?
-  
+  id         String   @id @default(cuid())
+  playerId   String
+  stockPrice Float
+  timestamp  DateTime @default(now())
+  wagerId    String?
+  metadata   String?
+  player     Player   @relation(fields: [playerId], references: [id], onDelete: Cascade)
+
   @@index([playerId])
   @@index([timestamp])
 }
 
-enum WagerType {
-  PERFORMANCE_BET
-  HEAD_TO_HEAD
-  PROP_BET
-  PLAYER_TRADE
-  CUSTOM
-}
-
-enum WagerStatus {
-  OPEN
-  MATCHED
-  ACTIVE
-  PENDING_SETTLEMENT
-  SETTLED
-  CANCELLED
-  DISPUTED
-}
-
-enum WagerTimeframe {
-  SINGLE_GAME
-  DAILY
-  WEEKLY
-  MONTHLY
-  SEASON
-  CUSTOM
-}
-
-enum WagerSide {
-  CREATOR
-  OPPONENT
-}
-
-enum BountyStatus {
-  OPEN
-  ACTIVE
-  COMPLETED
-  EXPIRED
-  CANCELLED
-}
-
-enum EscrowStatus {
-  ACTIVE
-  RELEASED
-  REFUNDED
-  DISPUTED
-}
-
-enum TransactionType {
-  DEPOSIT
-  WITHDRAWAL
-  ESCROW_LOCK
-  ESCROW_RELEASE
-  WAGER_WIN
-  WAGER_LOSS
-  BOUNTY_WIN
-  BOUNTY_LOSS
-  REFUND
-}
-
-enum TransactionStatus {
-  PENDING
-  COMPLETED
-  FAILED
-  CANCELLED
-}
-
-enum UpdateType {
-  SCORE_UPDATE
-  STATUS_CHANGE
-  PAYMENT_UPDATE
-  PLAYER_UPDATE
-  SYSTEM_MESSAGE
-}
-
-// Daily Fantasy Sports (DFS) Models
 model Contest {
-  id                String        @id @default(cuid())
-  name              String
-  description       String
-  sport             Sport         @default(FOOTBALL)
-  contestType       ContestType
-  entryFee          Float
-  totalPrizePool    Float
-  maxEntries        Int
-  currentEntries    Int           @default(0)
-  salaryCap         Float         @default(50000)
-  startTime         DateTime
-  endTime           DateTime
-  status            ContestStatus @default(UPCOMING)
-  isPublic          Boolean       @default(true)
-  isGuaranteed      Boolean       @default(false)
-  createdAt         DateTime      @default(now())
-  updatedAt         DateTime      @updatedAt
-  
-  entries           ContestEntry[]
-  dfsPlayers        DFSPlayer[]
-  dfsLineups        DFSLineup[]
-  results           ContestResult[]
-  
+  id             String          @id @default(cuid())
+  name           String
+  description    String
+  sport          String          @default("FOOTBALL")
+  contestType    String
+  entryFee       Float
+  totalPrizePool Float
+  maxEntries     Int
+  currentEntries Int             @default(0)
+  salaryCap      Float           @default(50000)
+  startTime      DateTime
+  endTime        DateTime
+  status         String          @default("UPCOMING")
+  isPublic       Boolean         @default(true)
+  isGuaranteed   Boolean         @default(false)
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  entries        ContestEntry[]
+  results        ContestResult[]
+  dfsLineups     DFSLineup[]
+  dfsPlayers     DFSPlayer[]
+
   @@index([sport])
   @@index([contestType])
   @@index([status])
@@ -642,21 +484,20 @@ model Contest {
 }
 
 model ContestEntry {
-  id            String      @id @default(cuid())
-  contestId     String
-  contest       Contest     @relation(fields: [contestId], references: [id], onDelete: Cascade)
-  userId        String
-  user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
-  lineupId      String      @unique
-  lineup        DFSLineup   @relation(fields: [lineupId], references: [id], onDelete: Cascade)
-  entryNumber   Int         // Multiple entries per user
-  totalPoints   Float       @default(0)
-  rank          Int?
-  payout        Float       @default(0)
-  createdAt     DateTime    @default(now())
-  
-  results       ContestResult[]
-  
+  id          String          @id @default(cuid())
+  contestId   String
+  userId      String
+  lineupId    String          @unique
+  entryNumber Int
+  totalPoints Float           @default(0)
+  rank        Int?
+  payout      Float           @default(0)
+  createdAt   DateTime        @default(now())
+  lineup      DFSLineup       @relation(fields: [lineupId], references: [id], onDelete: Cascade)
+  user        User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  contest     Contest         @relation(fields: [contestId], references: [id], onDelete: Cascade)
+  results     ContestResult[]
+
   @@unique([contestId, userId, entryNumber])
   @@index([contestId])
   @@index([userId])
@@ -664,62 +505,60 @@ model ContestEntry {
 }
 
 model DFSLineup {
-  id            String      @id @default(cuid())
-  userId        String
-  user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
-  contestId     String
-  contest       Contest     @relation(fields: [contestId], references: [id], onDelete: Cascade)
-  name          String
-  totalSalary   Float
-  totalPoints   Float       @default(0)
-  isOptimal     Boolean     @default(false)
-  isLocked      Boolean     @default(false)
-  createdAt     DateTime    @default(now())
-  updatedAt     DateTime    @updatedAt
-  
-  players       DFSLineupPlayer[]
-  entry         ContestEntry?
-  
+  id          String            @id @default(cuid())
+  userId      String
+  contestId   String
+  name        String
+  totalSalary Float
+  totalPoints Float             @default(0)
+  isOptimal   Boolean           @default(false)
+  isLocked    Boolean           @default(false)
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+  entry       ContestEntry?
+  contest     Contest           @relation(fields: [contestId], references: [id], onDelete: Cascade)
+  user        User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  players     DFSLineupPlayer[]
+
   @@index([userId])
   @@index([contestId])
   @@index([totalPoints])
 }
 
 model DFSLineupPlayer {
-  id            String      @id @default(cuid())
-  lineupId      String
-  lineup        DFSLineup   @relation(fields: [lineupId], references: [id], onDelete: Cascade)
-  dfsPlayerId   String
-  dfsPlayer     DFSPlayer   @relation(fields: [dfsPlayerId], references: [id], onDelete: Cascade)
-  position      String      // QB, RB, WR, TE, K, DST, etc.
-  slotPosition  String      // FLEX, SUPER_FLEX, etc.
-  salary        Float
-  points        Float       @default(0)
-  
+  id           String    @id @default(cuid())
+  lineupId     String
+  dfsPlayerId  String
+  position     String
+  slotPosition String
+  salary       Float
+  points       Float     @default(0)
+  dfsPlayer    DFSPlayer @relation(fields: [dfsPlayerId], references: [id], onDelete: Cascade)
+  lineup       DFSLineup @relation(fields: [lineupId], references: [id], onDelete: Cascade)
+
   @@unique([lineupId, slotPosition])
   @@index([lineupId])
   @@index([dfsPlayerId])
 }
 
 model DFSPlayer {
-  id                String      @id @default(cuid())
-  contestId         String
-  contest           Contest     @relation(fields: [contestId], references: [id], onDelete: Cascade)
-  externalPlayerId  String      // Link to main Player model
-  name              String
-  team              String
-  position          String
-  salary            Float
-  projectedPoints   Float
-  actualPoints      Float       @default(0)
-  ownership         Float       @default(0) // Percentage owned
-  value             Float       @default(0) // Points per $1000 salary
-  gameTime          DateTime?
-  isActive          Boolean     @default(true)
-  injuryStatus      String?
-  
-  lineupPlayers     DFSLineupPlayer[]
-  
+  id               String            @id @default(cuid())
+  contestId        String
+  externalPlayerId String
+  name             String
+  team             String
+  position         String
+  salary           Float
+  projectedPoints  Float
+  actualPoints     Float             @default(0)
+  ownership        Float             @default(0)
+  value            Float             @default(0)
+  gameTime         DateTime?
+  isActive         Boolean           @default(true)
+  injuryStatus     String?
+  lineupPlayers    DFSLineupPlayer[]
+  contest          Contest           @relation(fields: [contestId], references: [id], onDelete: Cascade)
+
   @@unique([contestId, externalPlayerId])
   @@index([contestId])
   @@index([position])
@@ -728,77 +567,58 @@ model DFSPlayer {
 }
 
 model ContestResult {
-  id            String      @id @default(cuid())
-  contestId     String
-  contest       Contest     @relation(fields: [contestId], references: [id], onDelete: Cascade)
-  userId        String
-  user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
-  entryId       String
-  entry         ContestEntry @relation(fields: [entryId], references: [id], onDelete: Cascade)
-  finalRank     Int
-  finalPoints   Float
-  payout        Float
-  createdAt     DateTime    @default(now())
-  
+  id          String       @id @default(cuid())
+  contestId   String
+  userId      String
+  entryId     String
+  finalRank   Int
+  finalPoints Float
+  payout      Float
+  createdAt   DateTime     @default(now())
+  entry       ContestEntry @relation(fields: [entryId], references: [id], onDelete: Cascade)
+  user        User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  contest     Contest      @relation(fields: [contestId], references: [id], onDelete: Cascade)
+
   @@unique([contestId, entryId])
   @@index([contestId])
   @@index([userId])
   @@index([finalRank])
 }
 
-enum ContestType {
-  TOURNAMENT
-  CASH_GAME
-  HEAD_TO_HEAD
-  FIFTY_FIFTY
-  DOUBLE_UP
-  MULTIPLIER
-  SATELLITE
-}
-
-enum ContestStatus {
-  UPCOMING
-  LIVE
-  COMPLETED
-  CANCELLED
-}
-
-// Draft System Models
 model Draft {
-  id                String        @id @default(cuid())
-  creatorId         String
-  creator           User          @relation("DraftCreator", fields: [creatorId], references: [id], onDelete: Cascade)
-  leagueId          String?
-  league            League?       @relation(fields: [leagueId], references: [id])
-  name              String
-  description       String?
-  sport             Sport         @default(FOOTBALL)
-  draftType         DraftType
-  draftOrder        DraftOrder    @default(STANDARD)
-  totalRounds       Int           @default(15)
-  timePerPick       Int           @default(90) // seconds
-  isAuction         Boolean       @default(false)
-  auctionBudget     Float?        // For auction drafts
-  isSnakeDraft      Boolean       @default(true)
-  isMockDraft       Boolean       @default(false)
-  isPublic          Boolean       @default(true)
-  maxParticipants   Int           @default(12)
-  scheduledStart    DateTime?
-  actualStart       DateTime?
-  endedAt           DateTime?
-  status            DraftStatus   @default(SCHEDULED)
-  currentRound      Int           @default(1)
-  currentPick       Int           @default(1)
-  currentPickerId   String?
-  settings          String        @default("{}") // Draft-specific settings
-  createdAt         DateTime      @default(now())
-  updatedAt         DateTime      @updatedAt
-  
-  participants      DraftParticipant[]
-  picks             DraftPick[]
-  board             DraftBoard?
-  messages          Message[]
-  
+  id              String             @id @default(cuid())
+  creatorId       String
+  leagueId        String?
+  name            String
+  description     String?
+  sport           String             @default("FOOTBALL")
+  draftType       String
+  draftOrder      String             @default("STANDARD")
+  totalRounds     Int                @default(15)
+  timePerPick     Int                @default(90)
+  isAuction       Boolean            @default(false)
+  auctionBudget   Float?
+  isSnakeDraft    Boolean            @default(true)
+  isMockDraft     Boolean            @default(false)
+  isPublic        Boolean            @default(true)
+  maxParticipants Int                @default(12)
+  scheduledStart  DateTime?
+  actualStart     DateTime?
+  endedAt         DateTime?
+  status          String             @default("SCHEDULED")
+  currentRound    Int                @default(1)
+  currentPick     Int                @default(1)
+  currentPickerId String?
+  settings        String             @default("{}")
+  createdAt       DateTime           @default(now())
+  updatedAt       DateTime           @updatedAt
+  league          League?            @relation(fields: [leagueId], references: [id])
+  creator         User               @relation("DraftCreator", fields: [creatorId], references: [id], onDelete: Cascade)
+  board           DraftBoard?
+  participants    DraftParticipant[]
+  picks           DraftPick[]
+  messages        Message[]
+
   @@index([sport])
   @@index([draftType])
   @@index([status])
@@ -806,21 +626,20 @@ model Draft {
 }
 
 model DraftParticipant {
-  id              String      @id @default(cuid())
-  draftId         String
-  draft           Draft       @relation(fields: [draftId], references: [id], onDelete: Cascade)
-  userId          String
-  user            User        @relation(fields: [userId], references: [id], onDelete: Cascade)
-  draftPosition   Int         // 1-12 for standard league
-  teamName        String?
-  isReady         Boolean     @default(false)
-  isAutoPick      Boolean     @default(false)
-  timeouts        Int         @default(3)
-  totalSpent      Float       @default(0) // For auction drafts
-  joinedAt        DateTime    @default(now())
-  
-  picks           DraftPick[]
-  
+  id            String      @id @default(cuid())
+  draftId       String
+  userId        String
+  draftPosition Int
+  teamName      String?
+  isReady       Boolean     @default(false)
+  isAutoPick    Boolean     @default(false)
+  timeouts      Int         @default(3)
+  totalSpent    Float       @default(0)
+  joinedAt      DateTime    @default(now())
+  user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  draft         Draft       @relation(fields: [draftId], references: [id], onDelete: Cascade)
+  picks         DraftPick[]
+
   @@unique([draftId, userId])
   @@unique([draftId, draftPosition])
   @@index([draftId])
@@ -828,26 +647,26 @@ model DraftParticipant {
 }
 
 model DraftPick {
-  id                String            @id @default(cuid())
-  draftId           String
-  draft             Draft             @relation(fields: [draftId], references: [id], onDelete: Cascade)
-  participantId     String
-  participant       DraftParticipant  @relation(fields: [participantId], references: [id], onDelete: Cascade)
-  userId            String
-  user              User              @relation(fields: [userId], references: [id], onDelete: Cascade)
-  playerId          String            // Reference to external player
-  playerName        String
-  playerPosition    String
-  playerTeam        String
-  round             Int
-  pick              Int               // Overall pick number
-  pickInRound       Int               // Pick within the round
-  auctionPrice      Float?            // For auction drafts
-  isKeeper          Boolean           @default(false)
-  pickTime          DateTime          @default(now())
-  timeToMake        Int?              // Seconds taken to make pick
-  isAutoPick        Boolean           @default(false)
-  
+  id             String           @id @default(cuid())
+  draftId        String
+  participantId  String
+  userId         String
+  playerId       String
+  playerName     String
+  playerPosition String
+  playerTeam     String
+  round          Int
+  pick           Int
+  pickInRound    Int
+  auctionPrice   Float?
+  isKeeper       Boolean          @default(false)
+  pickTime       DateTime         @default(now())
+  timeToMake     Int?
+  isAutoPick     Boolean          @default(false)
+  user           User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  participant    DraftParticipant @relation(fields: [participantId], references: [id], onDelete: Cascade)
+  draft          Draft            @relation(fields: [draftId], references: [id], onDelete: Cascade)
+
   @@unique([draftId, round, pickInRound])
   @@index([draftId])
   @@index([participantId])
@@ -855,90 +674,61 @@ model DraftPick {
 }
 
 model DraftBoard {
-  id                String    @id @default(cuid())
-  draftId           String    @unique
-  draft             Draft     @relation(fields: [draftId], references: [id], onDelete: Cascade)
-  availablePlayers  String    // Array of available players
-  rankings          String    // Position rankings
-  adp               String    // Average draft position data
-  projections       String    // Player projections
-  lastUpdated       DateTime  @default(now())
-  
+  id               String   @id @default(cuid())
+  draftId          String   @unique
+  availablePlayers String
+  rankings         String
+  adp              String
+  projections      String
+  lastUpdated      DateTime @default(now())
+  draft            Draft    @relation(fields: [draftId], references: [id], onDelete: Cascade)
+
   @@index([draftId])
 }
 
 model MockDraft {
-  id              String      @id @default(cuid())
-  userId          String
-  user            User        @relation(fields: [userId], references: [id], onDelete: Cascade)
-  sport           Sport       @default(FOOTBALL)
-  draftType       DraftType
-  teamCount       Int         @default(12)
-  rounds          Int         @default(15)
-  userPosition    Int         // Which position user drafted from
-  results         String      // Complete draft results
-  userTeam        String      // User's drafted team
-  aiAnalysis      String?     // AI analysis of the draft
-  score           Float?      // Draft grade
-  completedAt     DateTime    @default(now())
-  
+  id           String   @id @default(cuid())
+  userId       String
+  sport        String   @default("FOOTBALL")
+  draftType    String
+  teamCount    Int      @default(12)
+  rounds       Int      @default(15)
+  userPosition Int
+  results      String
+  userTeam     String
+  aiAnalysis   String?
+  score        Float?
+  completedAt  DateTime @default(now())
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
   @@index([userId])
   @@index([sport])
 }
 
-enum DraftType {
-  STANDARD
-  PPR
-  HALF_PPR
-  SUPERFLEX
-  DYNASTY
-  KEEPER
-  IDP // Individual Defensive Players
-  BEST_BALL
-}
-
-enum DraftOrder {
-  STANDARD
-  SNAKE
-  LINEAR
-  THIRD_ROUND_REVERSAL
-}
-
-enum DraftStatus {
-  SCHEDULED
-  WAITING_FOR_PLAYERS
-  IN_PROGRESS
-  PAUSED
-  COMPLETED
-  CANCELLED
-}
-
-// Social System Models
 model Message {
-  id              String        @id @default(cuid())
-  senderId        String
-  sender          User          @relation("MessageSender", fields: [senderId], references: [id], onDelete: Cascade)
-  recipientId     String?       // For direct messages
-  recipient       User?         @relation("MessageRecipient", fields: [recipientId], references: [id], onDelete: Cascade)
-  leagueId        String?       // For league chat
-  league          League?       @relation(fields: [leagueId], references: [id], onDelete: Cascade)
-  draftId         String?       // For draft chat
-  draft           Draft?        @relation(fields: [draftId], references: [id], onDelete: Cascade)
-  messageType     MessageType   @default(TEXT)
-  content         String
-  attachments     String?       // File attachments, images, etc.
-  isEdited        Boolean       @default(false)
-  editedAt        DateTime?
-  isDeleted       Boolean       @default(false)
-  deletedAt       DateTime?
-  parentId        String?       // For replies/threads
-  parent          Message?      @relation("MessageReplies", fields: [parentId], references: [id])
-  replies         Message[]     @relation("MessageReplies")
-  createdAt       DateTime      @default(now())
-  updatedAt       DateTime      @updatedAt
-  
-  reactions       Reaction[]
-  
+  id          String     @id @default(cuid())
+  senderId    String
+  recipientId String?
+  leagueId    String?
+  draftId     String?
+  messageType String     @default("TEXT")
+  content     String
+  attachments String?
+  isEdited    Boolean    @default(false)
+  editedAt    DateTime?
+  isDeleted   Boolean    @default(false)
+  deletedAt   DateTime?
+  parentId    String?
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  parent      Message?   @relation("MessageReplies", fields: [parentId], references: [id])
+  replies     Message[]  @relation("MessageReplies")
+  draft       Draft?     @relation(fields: [draftId], references: [id], onDelete: Cascade)
+  league      League?    @relation(fields: [leagueId], references: [id], onDelete: Cascade)
+  recipient   User?      @relation("MessageRecipient", fields: [recipientId], references: [id], onDelete: Cascade)
+  sender      User       @relation("MessageSender", fields: [senderId], references: [id], onDelete: Cascade)
+  reactions   Reaction[]
+
   @@index([leagueId])
   @@index([draftId])
   @@index([senderId])
@@ -946,20 +736,19 @@ model Message {
 }
 
 model ActivityItem {
-  id              String        @id @default(cuid())
-  userId          String
-  user            User          @relation(fields: [userId], references: [id], onDelete: Cascade)
-  leagueId        String?
-  league          League?       @relation(fields: [leagueId], references: [id], onDelete: Cascade)
-  activityType    ActivityType
-  title           String
-  description     String
-  metadata        String?       // Additional activity data
-  isPublic        Boolean       @default(true)
-  createdAt       DateTime      @default(now())
-  
-  reactions       Reaction[]
-  
+  id           String     @id @default(cuid())
+  userId       String
+  leagueId     String?
+  activityType String
+  title        String
+  description  String
+  metadata     String?
+  isPublic     Boolean    @default(true)
+  createdAt    DateTime   @default(now())
+  league       League?    @relation(fields: [leagueId], references: [id], onDelete: Cascade)
+  user         User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  reactions    Reaction[]
+
   @@index([userId])
   @@index([leagueId])
   @@index([activityType])
@@ -967,16 +756,16 @@ model ActivityItem {
 }
 
 model Reaction {
-  id              String        @id @default(cuid())
-  userId          String
-  user            User          @relation(fields: [userId], references: [id], onDelete: Cascade)
-  messageId       String?
-  message         Message?      @relation(fields: [messageId], references: [id], onDelete: Cascade)
-  activityId      String?
-  activity        ActivityItem? @relation(fields: [activityId], references: [id], onDelete: Cascade)
-  reactionType    ReactionType
-  createdAt       DateTime      @default(now())
-  
+  id           String        @id @default(cuid())
+  userId       String
+  messageId    String?
+  activityId   String?
+  reactionType String
+  createdAt    DateTime      @default(now())
+  activity     ActivityItem? @relation(fields: [activityId], references: [id], onDelete: Cascade)
+  message      Message?      @relation(fields: [messageId], references: [id], onDelete: Cascade)
+  user         User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+
   @@unique([userId, messageId, reactionType])
   @@unique([userId, activityId, reactionType])
   @@index([messageId])
@@ -984,15 +773,15 @@ model Reaction {
 }
 
 model Friendship {
-  id              String          @id @default(cuid())
-  initiatorId     String
-  initiator       User            @relation("FriendshipInitiator", fields: [initiatorId], references: [id], onDelete: Cascade)
-  recipientId     String
-  recipient       User            @relation("FriendshipRecipient", fields: [recipientId], references: [id], onDelete: Cascade)
-  status          FriendshipStatus @default(PENDING)
-  createdAt       DateTime        @default(now())
-  updatedAt       DateTime        @updatedAt
-  
+  id          String   @id @default(cuid())
+  initiatorId String
+  recipientId String
+  status      String   @default("PENDING")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  recipient   User     @relation("FriendshipRecipient", fields: [recipientId], references: [id], onDelete: Cascade)
+  initiator   User     @relation("FriendshipInitiator", fields: [initiatorId], references: [id], onDelete: Cascade)
+
   @@unique([initiatorId, recipientId])
   @@index([initiatorId])
   @@index([recipientId])
@@ -1000,99 +789,41 @@ model Friendship {
 }
 
 model Notification {
-  id              String            @id @default(cuid())
-  userId          String
-  user            User              @relation(fields: [userId], references: [id], onDelete: Cascade)
-  notificationType NotificationType
-  title           String
-  message         String
-  data            String?           // Additional notification data
-  isRead          Boolean           @default(false)
-  readAt          DateTime?
-  createdAt       DateTime          @default(now())
-  
+  id               String    @id @default(cuid())
+  userId           String
+  notificationType String
+  title            String
+  message          String
+  data             String?
+  isRead           Boolean   @default(false)
+  readAt           DateTime?
+  createdAt        DateTime  @default(now())
+  user             User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
   @@index([userId])
   @@index([isRead])
   @@index([createdAt])
 }
 
-enum MessageType {
-  TEXT
-  IMAGE
-  FILE
-  TRADE_PROPOSAL
-  WAGER_CHALLENGE
-  DRAFT_PICK
-  SYSTEM_MESSAGE
-}
-
-enum ActivityType {
-  TRADE_COMPLETED
-  WAIVER_CLAIM
-  LINEUP_SET
-  PLAYER_DROPPED
-  PLAYER_ADDED
-  DRAFT_PICK_MADE
-  CONTEST_WON
-  WAGER_WON
-  ACHIEVEMENT_UNLOCKED
-  MILESTONE_REACHED
-}
-
-enum ReactionType {
-  LIKE
-  LOVE
-  LAUGH
-  ANGRY
-  SURPRISED
-  FIRE
-  TROPHY
-}
-
-enum FriendshipStatus {
-  PENDING
-  ACCEPTED
-  BLOCKED
-  DECLINED
-}
-
-enum NotificationType {
-  FRIEND_REQUEST
-  MESSAGE_RECEIVED
-  TRADE_PROPOSAL
-  WAGER_CHALLENGE
-  DRAFT_STARTING
-  LINEUP_REMINDER
-  PLAYER_NEWS
-  ACHIEVEMENT
-  SYSTEM_UPDATE
-}
-
-// ============================================================================
-// BETTING SYSTEM MODELS
-// ============================================================================
-
 model BettingOdds {
-  id           String    @id @default(cuid())
-  playerId     String
-  player       Player    @relation("PlayerBettingOdds", fields: [playerId], references: [id], onDelete: Cascade)
-  gameId       String
-  propType     PropType
-  propName     String    // "Passing Yards", "Receiving TDs", etc.
-  line         Float     // The betting line (e.g., 267.5 yards)
-  overOdds     Int       // American odds for over (e.g., -110)
-  underOdds    Int       // American odds for under (e.g., -110)
-  sportsbook   String    // "DraftKings", "FanDuel", etc.
-  volume       Int       @default(0) // Number of bets placed
-  isLive       Boolean   @default(true)
-  confidence   Float     @default(50) // AI confidence in line accuracy
-  createdAt    DateTime  @default(now())
-  lastUpdated  DateTime  @updatedAt
-  
-  // Relationships
+  id                String             @id @default(cuid())
+  playerId          String
+  gameId            String
+  propType          String
+  propName          String
+  line              Float
+  overOdds          Int
+  underOdds         Int
+  sportsbook        String
+  volume            Int                @default(0)
+  isLive            Boolean            @default(true)
+  confidence        Float              @default(50)
+  createdAt         DateTime           @default(now())
+  lastUpdated       DateTime           @updatedAt
+  player            Player             @relation("PlayerBettingOdds", fields: [playerId], references: [id], onDelete: Cascade)
   bettingSelections BettingSelection[]
   oddsMovements     OddsMovement[]
-  
+
   @@index([playerId])
   @@index([gameId])
   @@index([propType])
@@ -1100,136 +831,90 @@ model BettingOdds {
 }
 
 model BettingSlip {
-  id               String             @id @default(cuid())
-  userId           String
-  user             User               @relation("UserBettingSlips", fields: [userId], references: [id], onDelete: Cascade)
-  totalOdds        Float              // Combined odds for parlay
-  potentialPayout  Float              // Total potential payout
-  stake            Float              // Amount wagered
-  status           BettingSlipStatus  @default(PENDING)
-  placedAt         DateTime           @default(now())
-  settledAt        DateTime?
-  actualPayout     Float?             // Actual payout if won
-  
-  // Relationships
-  selections       BettingSelection[]
-  
+  id              String             @id @default(cuid())
+  userId          String
+  totalOdds       Float
+  potentialPayout Float
+  stake           Float
+  status          String             @default("PENDING")
+  placedAt        DateTime           @default(now())
+  settledAt       DateTime?
+  actualPayout    Float?
+  selections      BettingSelection[]
+  user            User               @relation("UserBettingSlips", fields: [userId], references: [id], onDelete: Cascade)
+
   @@index([userId])
   @@index([status])
   @@index([placedAt])
 }
 
 model BettingSelection {
-  id             String      @id @default(cuid())
-  bettingSlipId  String
-  bettingSlip    BettingSlip @relation(fields: [bettingSlipId], references: [id], onDelete: Cascade)
-  oddsId         String
-  odds           BettingOdds @relation(fields: [oddsId], references: [id], onDelete: Cascade)
-  selection      BetSelection // OVER or UNDER
-  line           Float       // Line at time of bet
-  oddsValue      Int         // Odds at time of bet
-  stake          Float       // Amount staked on this selection
-  potentialPayout Float      // Potential payout for this selection
-  isWon          Boolean?    // null = pending, true = won, false = lost
-  actualResult   Float?      // Actual statistical result
-  
+  id              String      @id @default(cuid())
+  bettingSlipId   String
+  oddsId          String
+  selection       String
+  line            Float
+  oddsValue       Int
+  stake           Float
+  potentialPayout Float
+  isWon           Boolean?
+  actualResult    Float?
+  odds            BettingOdds @relation(fields: [oddsId], references: [id], onDelete: Cascade)
+  bettingSlip     BettingSlip @relation(fields: [bettingSlipId], references: [id], onDelete: Cascade)
+
   @@index([bettingSlipId])
   @@index([oddsId])
 }
 
 model OddsMovement {
-  id          String      @id @default(cuid())
-  oddsId      String
-  odds        BettingOdds @relation(fields: [oddsId], references: [id], onDelete: Cascade)
-  previousLine Float
-  newLine      Float
-  previousOverOdds Int
-  newOverOdds  Int
+  id                String      @id @default(cuid())
+  oddsId            String
+  previousLine      Float
+  newLine           Float
+  previousOverOdds  Int
+  newOverOdds       Int
   previousUnderOdds Int
-  newUnderOdds Int
-  movement     Float       // Positive = line moved up, negative = moved down
-  trigger      String      // "volume", "injury_news", "ai_adjustment", etc.
-  timestamp    DateTime    @default(now())
-  
+  newUnderOdds      Int
+  movement          Float
+  trigger           String
+  timestamp         DateTime    @default(now())
+  odds              BettingOdds @relation(fields: [oddsId], references: [id], onDelete: Cascade)
+
   @@index([oddsId])
   @@index([timestamp])
 }
 
 model PlayerPropHistory {
-  id           String    @id @default(cuid())
+  id           String   @id @default(cuid())
   playerId     String
-  player       Player    @relation("PlayerPropHistory", fields: [playerId], references: [id], onDelete: Cascade)
   gameId       String
-  propType     PropType
-  line         Float     // The line that was set
-  actualResult Float     // What actually happened
-  hit          Boolean   // Did it go over the line?
+  propType     String
+  line         Float
+  actualResult Float
+  hit          Boolean
   gameDate     DateTime
   opponent     String
-  
+  player       Player   @relation("PlayerPropHistory", fields: [playerId], references: [id], onDelete: Cascade)
+
   @@index([playerId])
   @@index([propType])
   @@index([gameDate])
 }
 
 model BettingInsight {
-  id            String               @id @default(cuid())
-  playerId      String
-  player        Player               @relation("PlayerBettingInsights", fields: [playerId], references: [id], onDelete: Cascade)
-  propType      PropType
-  recommendation InsightRecommendation
-  confidence    Float                // 0-100 confidence percentage
-  reasoning     String               // AI explanation
-  keyFactors    String               // Array of key factors
-  generatedAt   DateTime             @default(now())
-  expiresAt     DateTime             // When insight becomes stale
-  
+  id             String   @id @default(cuid())
+  playerId       String
+  propType       String
+  recommendation String
+  confidence     Float
+  reasoning      String
+  keyFactors     String
+  generatedAt    DateTime @default(now())
+  expiresAt      DateTime
+  player         Player   @relation("PlayerBettingInsights", fields: [playerId], references: [id], onDelete: Cascade)
+
   @@index([playerId])
   @@index([propType])
   @@index([confidence])
   @@index([expiresAt])
-}
-
-// Note: Player model updated to include betting relationships
-
-enum PropType {
-  PASSING_YARDS
-  PASSING_TOUCHDOWNS
-  PASSING_ATTEMPTS
-  PASSING_COMPLETIONS
-  RUSHING_YARDS
-  RUSHING_TOUCHDOWNS
-  RUSHING_ATTEMPTS
-  RECEIVING_YARDS
-  RECEIVING_TOUCHDOWNS
-  RECEPTIONS
-  RECEIVING_TARGETS
-  FIELD_GOALS_MADE
-  EXTRA_POINTS_MADE
-  KICKING_POINTS
-  INTERCEPTIONS_THROWN
-  FUMBLES_LOST
-  SACKS_TAKEN
-  FANTASY_POINTS
-}
-
-enum BetSelection {
-  OVER
-  UNDER
-}
-
-enum BettingSlipStatus {
-  PENDING
-  WON
-  LOST
-  CANCELLED
-  PARTIALLY_WON  // For parlays where some legs hit
-}
-
-enum InsightRecommendation {
-  OVER
-  UNDER
-  AVOID
-  STRONG_OVER
-  STRONG_UNDER
 }

@@ -3,7 +3,7 @@
   "league": "NBA 2024-25 Season",
   "players": [
     {
-      "id": "cmc6bp2y4003kunwl64wumdkx",
+      "id": "cmc7606f2003kunf25ha0c58r",
       "name": "Josh Allen",
       "team": "LAL",
       "position": "PG",
@@ -28,7 +28,7 @@
       }
     },
     {
-      "id": "cmc6bp2yd003munwlgiqkm7nl",
+      "id": "cmc7606fd003munf2ngsahp7a",
       "name": "Christian McCaffrey",
       "team": "GSW",
       "position": "PF",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "cmc6bp2yl003ounwl7jb43vj4",
+      "id": "cmc7606fn003ounf2x0445994",
       "name": "Cooper Kupp",
       "team": "BOS",
       "position": "C",
@@ -78,7 +78,7 @@
       }
     },
     {
-      "id": "cmc6bp2yv003qunwlnoex92zb",
+      "id": "cmc7606fy003qunf2jdjvkp87",
       "name": "Justin Jefferson",
       "team": "MIA",
       "position": "SG",
@@ -103,7 +103,7 @@
       }
     },
     {
-      "id": "cmc6bp2z5003sunwl7l0p8t3x",
+      "id": "cmc7606ga003sunf22zu0ly99",
       "name": "Travis Kelce",
       "team": "PHX",
       "position": "C",
@@ -128,7 +128,7 @@
       }
     },
     {
-      "id": "cmc6bp2zd003uunwl4iqpdfr3",
+      "id": "cmc7606gm003uunf2tmdk2li3",
       "name": "Aaron Donald",
       "team": "MIL",
       "position": "C",
@@ -153,7 +153,7 @@
       }
     },
     {
-      "id": "cmc6bp2zn003wunwlgb02pzx5",
+      "id": "cmc7606gx003wunf2nividamw",
       "name": "Myles Garrett",
       "team": "DEN",
       "position": "SF",
@@ -178,7 +178,7 @@
       }
     },
     {
-      "id": "cmc6bp2zw003yunwls773k75f",
+      "id": "cmc7606h8003yunf2u41lm1ze",
       "name": "Josh Allen",
       "team": "LAL",
       "position": "C",
@@ -203,7 +203,7 @@
       }
     },
     {
-      "id": "cmc6bp3050040unwlhqpzr4kv",
+      "id": "cmc7606hj0040unf280d8magx",
       "name": "Christian McCaffrey",
       "team": "GSW",
       "position": "C",
@@ -228,7 +228,7 @@
       }
     },
     {
-      "id": "cmc6bp30f0042unwl7q5ksb1v",
+      "id": "cmc7606hu0042unf2aplxgomv",
       "name": "Cooper Kupp",
       "team": "BOS",
       "position": "C",

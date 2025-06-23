@@ -1,0 +1,13 @@
+# Exclude large data files from deployment
+data/
+*.log
+continuous-updater.log
+node_modules/
+.next/
+.vercel/
+prisma/dev.db*
+prisma/fantasy-ai-production.db*
+public/database/
+scripts/
+*.sql
+.env.local

@@ -1,0 +1,84 @@
+{
+  "expo": {
+    "name": "Fantasy.AI",
+    "slug": "fantasy-ai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0F172A"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.fantasyai.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Fantasy.AI needs camera access for AR player stats viewing",
+        "NSMicrophoneUsageDescription": "Fantasy.AI needs microphone access for voice commands",
+        "NSFaceIDUsageDescription": "Fantasy.AI uses Face ID for secure authentication",
+        "NSUserTrackingUsageDescription": "Fantasy.AI uses tracking to provide personalized recommendations"
+      },
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "associatedDomains": ["applinks:fantasy.ai"]
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0F172A"
+      },
+      "package": "com.fantasyai.app",
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT",
+        "VIBRATE",
+        "RECEIVE_BOOT_COMPLETED"
+      ],
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": [{
+            "scheme": "fantasyai",
+            "host": "*"
+          }],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-notifications",
+      "expo-camera",
+      "expo-local-authentication",
+      "expo-speech",
+      [
+        "expo-background-fetch",
+        {
+          "minimumInterval": 900
+        }
+      ],
+      [
+        "react-native-branch",
+        {
+          "apiKey": "key_live_fantasyai",
+          "iosAppDomain": "fantasy.ai"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "fantasy-ai-project-id"
+      }
+    }
+  }
+}

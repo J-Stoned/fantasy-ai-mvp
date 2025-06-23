@@ -1,0 +1,19 @@
+{
+  "team": "Wizards",
+  "timestamp": "2025-06-22T22:20:36.471Z",
+  "roster": {
+    "active": 23,
+    "injured": 1,
+    "questionable": 0
+  },
+  "news": [
+    "Wizards announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "BUF",
+    "date": "2025-06-25T22:20:36.471Z",
+    "location": "away"
+  }
+}

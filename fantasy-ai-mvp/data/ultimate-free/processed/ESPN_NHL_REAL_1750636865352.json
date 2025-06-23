@@ -1,0 +1,21 @@
+{
+  "source": "ESPN Real API",
+  "league": "NHL",
+  "timestamp": "2025-06-23T00:01:08.761Z",
+  "games": [
+    {
+      "id": "401777460",
+      "name": "Edmonton Oilers at Florida Panthers",
+      "date": "2025-06-18T00:00Z",
+      "status": "STATUS_FINAL",
+      "homeTeam": {
+        "name": "Panthers",
+        "score": "5"
+      },
+      "awayTeam": {
+        "name": "Oilers",
+        "score": "1"
+      }
+    }
+  ]
+}

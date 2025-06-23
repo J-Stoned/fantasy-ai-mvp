@@ -1,0 +1,19 @@
+{
+  "team": "Guardians",
+  "timestamp": "2025-06-22T20:36:21.882Z",
+  "roster": {
+    "active": 22,
+    "injured": 1,
+    "questionable": 0
+  },
+  "news": [
+    "Guardians announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "DAL",
+    "date": "2025-06-25T20:36:21.882Z",
+    "location": "home"
+  }
+}

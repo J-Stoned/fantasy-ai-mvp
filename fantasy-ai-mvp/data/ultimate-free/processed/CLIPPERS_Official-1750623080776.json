@@ -1,0 +1,19 @@
+{
+  "team": "Clippers",
+  "timestamp": "2025-06-22T20:11:20.776Z",
+  "roster": {
+    "active": 21,
+    "injured": 1,
+    "questionable": 0
+  },
+  "news": [
+    "Clippers announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "BUF",
+    "date": "2025-06-25T20:11:20.776Z",
+    "location": "away"
+  }
+}

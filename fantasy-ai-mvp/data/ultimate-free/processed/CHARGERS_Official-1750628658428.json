@@ -1,0 +1,19 @@
+{
+  "team": "Chargers",
+  "timestamp": "2025-06-22T21:44:18.428Z",
+  "roster": {
+    "active": 21,
+    "injured": 1,
+    "questionable": 1
+  },
+  "news": [
+    "Chargers announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "KC",
+    "date": "2025-06-25T21:44:18.428Z",
+    "location": "home"
+  }
+}

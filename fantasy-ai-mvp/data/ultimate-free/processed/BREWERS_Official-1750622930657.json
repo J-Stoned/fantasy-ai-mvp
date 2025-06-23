@@ -1,0 +1,19 @@
+{
+  "team": "Brewers",
+  "timestamp": "2025-06-22T20:08:50.657Z",
+  "roster": {
+    "active": 21,
+    "injured": 2,
+    "questionable": 0
+  },
+  "news": [
+    "Brewers announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "DAL",
+    "date": "2025-06-25T20:08:50.657Z",
+    "location": "away"
+  }
+}

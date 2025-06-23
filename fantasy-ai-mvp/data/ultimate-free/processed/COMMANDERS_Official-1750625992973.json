@@ -1,0 +1,19 @@
+{
+  "team": "Commanders",
+  "timestamp": "2025-06-22T20:59:52.973Z",
+  "roster": {
+    "active": 22,
+    "injured": 1,
+    "questionable": 0
+  },
+  "news": [
+    "Commanders announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "SF",
+    "date": "2025-06-25T20:59:52.973Z",
+    "location": "away"
+  }
+}

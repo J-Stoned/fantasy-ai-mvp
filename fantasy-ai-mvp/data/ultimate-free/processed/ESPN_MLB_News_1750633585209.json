@@ -1,0 +1,37 @@
+{
+  "timestamp": "2025-06-22T23:06:25.209Z",
+  "source": "Fantasy.AI Real Data Engine",
+  "sport": "MLB",
+  "articles": [
+    {
+      "headline": "Jose Iglesias drives in the tying and winning runs as the Padres beat the Royals 3-2",
+      "description": "— Jose Iglesias tied the game with two-run, two-out, bases-loaded pinch-hit single in the seventh inning and then drove in the winning run with a grounder in the ninth for the San Diego...",
+      "published": "2025-06-22T23:03:47Z"
+    },
+    {
+      "headline": "Heliot Ramos drives in four runs as Giants rally to beat Red Sox 9-5",
+      "description": "— Heliot Ramos doubled home two runs to highlight San Francisco's decisive seventh inning after an earlier two-run single, and the Giants rallied to beat the Boston Red Sox 9-5 on Sunday.",
+      "published": "2025-06-22T23:02:46Z"
+    },
+    {
+      "headline": "Cleveland Guardians vs. Athletics: Game Highlights",
+      "description": "Cleveland Guardians vs. Athletics: Game Highlights",
+      "published": "2025-06-22T23:00:34Z"
+    },
+    {
+      "headline": "Houston Astros vs. Los Angeles Angels: Game Highlights",
+      "description": "Houston Astros vs. Los Angeles Angels: Game Highlights",
+      "published": "2025-06-22T22:58:59Z"
+    },
+    {
+      "headline": "Chisholm rallies Yankees to 4-2 win as New York takes 2 of 3 from Orioles",
+      "description": "— Jazz Chisholm Jr. hit a go-ahead, two-run double off the right-center field wall in a three-run eighth inning, leading the New York Yankees over the Baltimore Orioles 4-2 Sunday.",
+      "published": "2025-06-22T22:53:01Z"
+    },
+    {
+      "headline": "Yankees' Jazz Chisholm Jr. crosses plate without both shoes",
+      "description": "A century after Shoeless Joe, both of Jazz Chisholm Jr.'s cleats flew off his feet as he scored from second base in the Yankees' 4-2 win over the Orioles in an unusual morning start Sunday.",
+      "published": "2025-06-22T22:39:00Z"
+    }
+  ]
+}

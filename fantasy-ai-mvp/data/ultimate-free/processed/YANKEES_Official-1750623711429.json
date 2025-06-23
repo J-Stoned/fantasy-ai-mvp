@@ -1,0 +1,19 @@
+{
+  "team": "Yankees",
+  "timestamp": "2025-06-22T20:21:51.429Z",
+  "roster": {
+    "active": 23,
+    "injured": 2,
+    "questionable": 1
+  },
+  "news": [
+    "Yankees announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "BUF",
+    "date": "2025-06-25T20:21:51.429Z",
+    "location": "home"
+  }
+}

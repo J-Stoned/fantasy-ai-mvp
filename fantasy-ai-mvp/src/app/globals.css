@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Fantasy.AI Global Styles */
 * {
   margin: 0;

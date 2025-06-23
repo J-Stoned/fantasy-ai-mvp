@@ -1,0 +1,19 @@
+{
+  "team": "Raptors",
+  "timestamp": "2025-06-22T22:14:43.754Z",
+  "roster": {
+    "active": 20,
+    "injured": 2,
+    "questionable": 1
+  },
+  "news": [
+    "Raptors announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "DAL",
+    "date": "2025-06-25T22:14:43.754Z",
+    "location": "away"
+  }
+}

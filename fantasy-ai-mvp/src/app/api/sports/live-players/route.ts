@@ -20,14 +20,9 @@ export async function GET(request: NextRequest) {
       whereClause.team = team;
     }
 
-    // Fetch real players from database with available relations
+    // Fetch real players from database - simplified query
     const players = await prisma.player.findMany({
       where: whereClause,
-      include: {
-        league: true,
-        predictions: true,
-        bettingOdds: true,
-      },
       orderBy: [
         { name: 'asc' }
       ],
@@ -36,14 +31,26 @@ export async function GET(request: NextRequest) {
 
     // Transform to frontend format with calculated projections
     const transformedPlayers = players.map(player => {
-      // Player.stats is Json field, so we parse it
-      const currentWeekStats = typeof player.stats === 'object' ? player.stats : null;
-      const projections = typeof player.projections === 'object' ? player.projections : null;
+      // Parse stats and projections from JSON strings
+      let currentWeekStats: any = {};
+      let projections: any = {};
+      
+      try {
+        if (player.stats) currentWeekStats = JSON.parse(player.stats);
+      } catch (e) {
+        currentWeekStats = {};
+      }
+      
+      try {
+        if (player.projections) projections = JSON.parse(player.projections);
+      } catch (e) {
+        projections = {};
+      }
       
       // Calculate dynamic projections based on recent performance
       const recentGames = 1; // Will be updated when we have real stats
-      const avgPoints = (currentWeekStats as any)?.points || (projections as any)?.points || 12.5;
-      const lastWeekPoints = (currentWeekStats as any)?.points || avgPoints;
+      const avgPoints = currentWeekStats?.points || projections?.points || 12.5;
+      const lastWeekPoints = currentWeekStats?.points || avgPoints;
       
       // AI-powered projection adjustment based on matchup
       const matchupMultiplier = calculateMatchupMultiplier(player.team, player.position);
@@ -93,6 +100,10 @@ export async function GET(request: NextRequest) {
 
   } catch (error) {
     console.error('❌ Live players API error:', error);
+    console.error('Error details:', {
+      message: error instanceof Error ? error.message : 'Unknown error',
+      stack: error instanceof Error ? error.stack : undefined
+    });
     
     // Fallback to enhanced mock data with realistic projections
     const fallbackPlayers = await generateEnhancedMockData();

@@ -1,0 +1,18 @@
+{
+  "timestamp": "2025-06-23T03:08:01.590Z",
+  "collection": {
+    "startTime": "2025-06-23T03:08:01.590Z",
+    "endTime": "2025-06-23T03:08:11.948Z",
+    "duration": 10358,
+    "dataPoints": 169,
+    "totalCollections": 592,
+    "totalDataPoints": 100048,
+    "sources": [
+      "ESPN Real API",
+      "ESPN News API",
+      "ESPN Teams API"
+    ]
+  },
+  "status": "success",
+  "dataType": "REAL"
+}

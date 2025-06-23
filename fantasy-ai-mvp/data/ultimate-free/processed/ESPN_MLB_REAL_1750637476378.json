@@ -1,0 +1,217 @@
+{
+  "source": "ESPN Real API",
+  "league": "MLB",
+  "timestamp": "2025-06-23T00:11:18.738Z",
+  "games": [
+    {
+      "id": "401696063",
+      "name": "Baltimore Orioles at New York Yankees",
+      "date": "2025-06-22T15:35Z",
+      "status": "STATUS_FINAL",
+      "homeTeam": {
+        "name": "Yankees",
+        "score": "4"
+      },
+      "awayTeam": {
+        "name": "Orioles",
+        "score": "2"
+      }
+    },
+    {
+      "id": "401696065",
+      "name": "Detroit Tigers at Tampa Bay Rays",
+      "date": "2025-06-22T16:10Z",
+      "status": "STATUS_FINAL",
+      "homeTeam": {
+        "name": "Rays",
+        "score": "3"
+      },
+      "awayTeam": {
+        "name": "Tigers",
+        "score": "9"
+      }
+    },
+    {
+      "id": "401696067",
+      "name": "Texas Rangers at Pittsburgh Pirates",
+      "date": "2025-06-22T17:35Z",
+      "status": "STATUS_FINAL",
+      "homeTeam": {
+        "name": "Pirates",
+        "score": "8"
+      },
+      "awayTeam": {
+        "name": "Rangers",
+        "score": "3"
+      }
+    },
+    {
+      "id": "401696064",
+      "name": "Chicago White Sox at Toronto Blue Jays",
+      "date": "2025-06-22T17:37Z",
+      "status": "STATUS_FINAL",
+      "homeTeam": {
+        "name": "Blue Jays",
+        "score": "2"
+      },
+      "awayTeam": {
+        "name": "White Sox",
+        "score": "4"
+      }
+    },
+    {
+      "id": "401696062",
+      "name": "Atlanta Braves at Miami Marlins",
+      "date": "2025-06-22T17:40Z",
+      "status": "STATUS_FINAL",
+      "homeTeam": {
+        "name": "Marlins",
+        "score": "5"
+      },
+      "awayTeam": {
+        "name": "Braves",
+        "score": "3"
+      }
+    },
+    {
+      "id": "401696069",
+      "name": "Milwaukee Brewers at Minnesota Twins",
+      "date": "2025-06-22T18:10Z",
+      "status": "STATUS_FINAL",
+      "homeTeam": {
+        "name": "Twins",
+        "score": "8"
+      },
+      "awayTeam": {
+        "name": "Brewers",
+        "score": "9"
+      }
+    },
+    {
+      "id": "401696068",
+      "name": "Cincinnati Reds at St. Louis Cardinals",
+      "date": "2025-06-22T18:15Z",
+      "status": "STATUS_FINAL",
+      "homeTeam": {
+        "name": "Cardinals",
+        "score": "1"
+      },
+      "awayTeam": {
+        "name": "Reds",
+        "score": "4"
+      }
+    },
+    {
+      "id": "401696070",
+      "name": "Seattle Mariners at Chicago Cubs",
+      "date": "2025-06-22T18:20Z",
+      "status": "STATUS_FINAL",
+      "homeTeam": {
+        "name": "Cubs",
+        "score": "6"
+      },
+      "awayTeam": {
+        "name": "Mariners",
+        "score": "14"
+      }
+    },
+    {
+      "id": "401696071",
+      "name": "Arizona Diamondbacks at Colorado Rockies",
+      "date": "2025-06-22T19:10Z",
+      "status": "STATUS_FINAL",
+      "homeTeam": {
+        "name": "Rockies",
+        "score": "4"
+      },
+      "awayTeam": {
+        "name": "Diamondbacks",
+        "score": "2"
+      }
+    },
+    {
+      "id": "401696072",
+      "name": "Boston Red Sox at San Francisco Giants",
+      "date": "2025-06-22T20:05Z",
+      "status": "STATUS_FINAL",
+      "homeTeam": {
+        "name": "Giants",
+        "score": "9"
+      },
+      "awayTeam": {
+        "name": "Red Sox",
+        "score": "5"
+      }
+    },
+    {
+      "id": "401764560",
+      "name": "Cleveland Guardians at Athletics Athletics",
+      "date": "2025-06-22T20:05Z",
+      "status": "STATUS_FINAL",
+      "homeTeam": {
+        "name": "Athletics",
+        "score": "0"
+      },
+      "awayTeam": {
+        "name": "Guardians",
+        "score": "3"
+      }
+    },
+    {
+      "id": "401696074",
+      "name": "Houston Astros at Los Angeles Angels",
+      "date": "2025-06-22T20:07Z",
+      "status": "STATUS_FINAL",
+      "homeTeam": {
+        "name": "Angels",
+        "score": "7"
+      },
+      "awayTeam": {
+        "name": "Astros",
+        "score": "8"
+      }
+    },
+    {
+      "id": "401696075",
+      "name": "Kansas City Royals at San Diego Padres",
+      "date": "2025-06-22T20:10Z",
+      "status": "STATUS_FINAL",
+      "homeTeam": {
+        "name": "Padres",
+        "score": "3"
+      },
+      "awayTeam": {
+        "name": "Royals",
+        "score": "2"
+      }
+    },
+    {
+      "id": "401696076",
+      "name": "Washington Nationals at Los Angeles Dodgers",
+      "date": "2025-06-22T20:10Z",
+      "status": "STATUS_FINAL",
+      "homeTeam": {
+        "name": "Dodgers",
+        "score": "13"
+      },
+      "awayTeam": {
+        "name": "Nationals",
+        "score": "7"
+      }
+    },
+    {
+      "id": "401696066",
+      "name": "New York Mets at Philadelphia Phillies",
+      "date": "2025-06-22T23:00Z",
+      "status": "STATUS_IN_PROGRESS",
+      "homeTeam": {
+        "name": "Phillies",
+        "score": "1"
+      },
+      "awayTeam": {
+        "name": "Mets",
+        "score": "0"
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "timestamp": "2025-06-23T02:06:58.516Z",
+  "source": "Fantasy.AI Real Data Engine",
+  "sport": "NHL",
+  "games": [
+    {
+      "id": "401777460",
+      "name": "Edmonton Oilers at Florida Panthers",
+      "date": "2025-06-18T00:00Z",
+      "status": "STATUS_FINAL",
+      "competitors": [
+        {
+          "name": "Florida Panthers",
+          "score": "5",
+          "winner": true
+        },
+        {
+          "name": "Edmonton Oilers",
+          "score": "1",
+          "winner": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,10 +1,18 @@
-import { RevolutionaryAnalyticsDashboard } from "@/components/advanced/RevolutionaryAnalyticsDashboard";
+import { AnalyticsDashboard } from "@/components/analytics/AnalyticsDashboard";
 
 export default function AnalyticsDashboardPage() {
-  return <RevolutionaryAnalyticsDashboard />;
+  return (
+    <div className="min-h-screen bg-background p-6">
+      <AnalyticsDashboard 
+        userId="user-123" 
+        currentWeek={12}
+        className="max-w-7xl mx-auto"
+      />
+    </div>
+  );
 }
 
 export const metadata = {
-  title: "Revolutionary Analytics | Fantasy.AI",
-  description: "Multi-modal AI analytics with computer vision, social intelligence, and biometric data - 340% faster than competitors"
+  title: "Advanced Analytics | Fantasy.AI",
+  description: "AI-powered fantasy analytics with 7 ML models, real-time data visualization, and strategic insights - Maximum Power Mode"
 };

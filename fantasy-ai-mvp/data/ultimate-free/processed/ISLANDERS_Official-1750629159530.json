@@ -1,0 +1,19 @@
+{
+  "team": "Islanders",
+  "timestamp": "2025-06-22T21:52:39.530Z",
+  "roster": {
+    "active": 23,
+    "injured": 1,
+    "questionable": 1
+  },
+  "news": [
+    "Islanders announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "BUF",
+    "date": "2025-06-25T21:52:39.530Z",
+    "location": "away"
+  }
+}

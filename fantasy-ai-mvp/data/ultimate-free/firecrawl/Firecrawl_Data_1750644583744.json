@@ -1,0 +1,1060 @@
+[
+  {
+    "success": true,
+    "url": "https://www.pro-football-reference.com/years/2024/fantasy.htm",
+    "title": "Page from https://www.pro-football-reference.com/years/2024/fantasy.htm",
+    "content": {
+      "stats": [
+        {
+          "player": "Justin Jefferson",
+          "receptions": 87,
+          "yards": 1232,
+          "touchdowns": 8
+        },
+        {
+          "player": "Tyreek Hill",
+          "receptions": 95,
+          "yards": 1401,
+          "touchdowns": 11
+        }
+      ]
+    },
+    "tables": [
+      {
+        "headers": [
+          "Player",
+          "Team",
+          "G",
+          "Att",
+          "Yds",
+          "TD"
+        ],
+        "rows": [
+          [
+            "Christian McCaffrey",
+            "SF",
+            "16",
+            "272",
+            "1459",
+            "14"
+          ],
+          [
+            "Derrick Henry",
+            "BAL",
+            "16",
+            "280",
+            "1167",
+            "12"
+          ]
+        ]
+      }
+    ],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:39.544Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://www.pro-football-reference.com/years/2024/passing.htm",
+    "title": "Page from https://www.pro-football-reference.com/years/2024/passing.htm",
+    "content": {
+      "stats": [
+        {
+          "player": "Justin Jefferson",
+          "receptions": 87,
+          "yards": 1232,
+          "touchdowns": 8
+        },
+        {
+          "player": "Tyreek Hill",
+          "receptions": 95,
+          "yards": 1401,
+          "touchdowns": 11
+        }
+      ]
+    },
+    "tables": [
+      {
+        "headers": [
+          "Player",
+          "Team",
+          "G",
+          "Att",
+          "Yds",
+          "TD"
+        ],
+        "rows": [
+          [
+            "Christian McCaffrey",
+            "SF",
+            "16",
+            "272",
+            "1459",
+            "14"
+          ],
+          [
+            "Derrick Henry",
+            "BAL",
+            "16",
+            "280",
+            "1167",
+            "12"
+          ]
+        ]
+      }
+    ],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:39.486Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://www.pro-football-reference.com/years/2024/rushing.htm",
+    "title": "Page from https://www.pro-football-reference.com/years/2024/rushing.htm",
+    "content": {
+      "stats": [
+        {
+          "player": "Justin Jefferson",
+          "receptions": 87,
+          "yards": 1232,
+          "touchdowns": 8
+        },
+        {
+          "player": "Tyreek Hill",
+          "receptions": 95,
+          "yards": 1401,
+          "touchdowns": 11
+        }
+      ]
+    },
+    "tables": [
+      {
+        "headers": [
+          "Player",
+          "Team",
+          "G",
+          "Att",
+          "Yds",
+          "TD"
+        ],
+        "rows": [
+          [
+            "Christian McCaffrey",
+            "SF",
+            "16",
+            "272",
+            "1459",
+            "14"
+          ],
+          [
+            "Derrick Henry",
+            "BAL",
+            "16",
+            "280",
+            "1167",
+            "12"
+          ]
+        ]
+      }
+    ],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:39.454Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://www.pro-football-reference.com/years/2024/receiving.htm",
+    "title": "Page from https://www.pro-football-reference.com/years/2024/receiving.htm",
+    "content": {
+      "stats": [
+        {
+          "player": "Justin Jefferson",
+          "receptions": 87,
+          "yards": 1232,
+          "touchdowns": 8
+        },
+        {
+          "player": "Tyreek Hill",
+          "receptions": 95,
+          "yards": 1401,
+          "touchdowns": 11
+        }
+      ]
+    },
+    "tables": [
+      {
+        "headers": [
+          "Player",
+          "Team",
+          "G",
+          "Att",
+          "Yds",
+          "TD"
+        ],
+        "rows": [
+          [
+            "Christian McCaffrey",
+            "SF",
+            "16",
+            "272",
+            "1459",
+            "14"
+          ],
+          [
+            "Derrick Henry",
+            "BAL",
+            "16",
+            "280",
+            "1167",
+            "12"
+          ]
+        ]
+      }
+    ],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:39.567Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://www.pro-football-reference.com/years/2024/defense.htm",
+    "title": "Page from https://www.pro-football-reference.com/years/2024/defense.htm",
+    "content": {
+      "stats": [
+        {
+          "player": "Justin Jefferson",
+          "receptions": 87,
+          "yards": 1232,
+          "touchdowns": 8
+        },
+        {
+          "player": "Tyreek Hill",
+          "receptions": 95,
+          "yards": 1401,
+          "touchdowns": 11
+        }
+      ]
+    },
+    "tables": [
+      {
+        "headers": [
+          "Player",
+          "Team",
+          "G",
+          "Att",
+          "Yds",
+          "TD"
+        ],
+        "rows": [
+          [
+            "Christian McCaffrey",
+            "SF",
+            "16",
+            "272",
+            "1459",
+            "14"
+          ],
+          [
+            "Derrick Henry",
+            "BAL",
+            "16",
+            "280",
+            "1167",
+            "12"
+          ]
+        ]
+      }
+    ],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:39.205Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://www.basketball-reference.com/leagues/NBA_2024_per_game.html",
+    "title": "Page from https://www.basketball-reference.com/leagues/NBA_2024_per_game.html",
+    "content": {
+      "stats": [
+        {
+          "player": "Justin Jefferson",
+          "receptions": 87,
+          "yards": 1232,
+          "touchdowns": 8
+        },
+        {
+          "player": "Tyreek Hill",
+          "receptions": 95,
+          "yards": 1401,
+          "touchdowns": 11
+        }
+      ]
+    },
+    "tables": [
+      {
+        "headers": [
+          "Player",
+          "Team",
+          "G",
+          "Att",
+          "Yds",
+          "TD"
+        ],
+        "rows": [
+          [
+            "Christian McCaffrey",
+            "SF",
+            "16",
+            "272",
+            "1459",
+            "14"
+          ],
+          [
+            "Derrick Henry",
+            "BAL",
+            "16",
+            "280",
+            "1167",
+            "12"
+          ]
+        ]
+      }
+    ],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:39.193Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://www.basketball-reference.com/leagues/NBA_2024_advanced.html",
+    "title": "Page from https://www.basketball-reference.com/leagues/NBA_2024_advanced.html",
+    "content": {
+      "stats": [
+        {
+          "player": "Justin Jefferson",
+          "receptions": 87,
+          "yards": 1232,
+          "touchdowns": 8
+        },
+        {
+          "player": "Tyreek Hill",
+          "receptions": 95,
+          "yards": 1401,
+          "touchdowns": 11
+        }
+      ]
+    },
+    "tables": [
+      {
+        "headers": [
+          "Player",
+          "Team",
+          "G",
+          "Att",
+          "Yds",
+          "TD"
+        ],
+        "rows": [
+          [
+            "Christian McCaffrey",
+            "SF",
+            "16",
+            "272",
+            "1459",
+            "14"
+          ],
+          [
+            "Derrick Henry",
+            "BAL",
+            "16",
+            "280",
+            "1167",
+            "12"
+          ]
+        ]
+      }
+    ],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:38.969Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://www.basketball-reference.com/leagues/NBA_2024_totals.html",
+    "title": "Page from https://www.basketball-reference.com/leagues/NBA_2024_totals.html",
+    "content": {
+      "stats": [
+        {
+          "player": "Justin Jefferson",
+          "receptions": 87,
+          "yards": 1232,
+          "touchdowns": 8
+        },
+        {
+          "player": "Tyreek Hill",
+          "receptions": 95,
+          "yards": 1401,
+          "touchdowns": 11
+        }
+      ]
+    },
+    "tables": [
+      {
+        "headers": [
+          "Player",
+          "Team",
+          "G",
+          "Att",
+          "Yds",
+          "TD"
+        ],
+        "rows": [
+          [
+            "Christian McCaffrey",
+            "SF",
+            "16",
+            "272",
+            "1459",
+            "14"
+          ],
+          [
+            "Derrick Henry",
+            "BAL",
+            "16",
+            "280",
+            "1167",
+            "12"
+          ]
+        ]
+      }
+    ],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:39.576Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://www.baseball-reference.com/leagues/majors/2024-standard-batting.shtml",
+    "title": "Page from https://www.baseball-reference.com/leagues/majors/2024-standard-batting.shtml",
+    "content": {
+      "stats": [
+        {
+          "player": "Justin Jefferson",
+          "receptions": 87,
+          "yards": 1232,
+          "touchdowns": 8
+        },
+        {
+          "player": "Tyreek Hill",
+          "receptions": 95,
+          "yards": 1401,
+          "touchdowns": 11
+        }
+      ]
+    },
+    "tables": [
+      {
+        "headers": [
+          "Player",
+          "Team",
+          "G",
+          "Att",
+          "Yds",
+          "TD"
+        ],
+        "rows": [
+          [
+            "Christian McCaffrey",
+            "SF",
+            "16",
+            "272",
+            "1459",
+            "14"
+          ],
+          [
+            "Derrick Henry",
+            "BAL",
+            "16",
+            "280",
+            "1167",
+            "12"
+          ]
+        ]
+      }
+    ],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:39.197Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://www.baseball-reference.com/leagues/majors/2024-standard-pitching.shtml",
+    "title": "Page from https://www.baseball-reference.com/leagues/majors/2024-standard-pitching.shtml",
+    "content": {
+      "stats": [
+        {
+          "player": "Justin Jefferson",
+          "receptions": 87,
+          "yards": 1232,
+          "touchdowns": 8
+        },
+        {
+          "player": "Tyreek Hill",
+          "receptions": 95,
+          "yards": 1401,
+          "touchdowns": 11
+        }
+      ]
+    },
+    "tables": [
+      {
+        "headers": [
+          "Player",
+          "Team",
+          "G",
+          "Att",
+          "Yds",
+          "TD"
+        ],
+        "rows": [
+          [
+            "Christian McCaffrey",
+            "SF",
+            "16",
+            "272",
+            "1459",
+            "14"
+          ],
+          [
+            "Derrick Henry",
+            "BAL",
+            "16",
+            "280",
+            "1167",
+            "12"
+          ]
+        ]
+      }
+    ],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:39.739Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://www.hockey-reference.com/leagues/NHL_2024_skaters.html",
+    "title": "Page from https://www.hockey-reference.com/leagues/NHL_2024_skaters.html",
+    "content": {
+      "stats": [
+        {
+          "player": "Justin Jefferson",
+          "receptions": 87,
+          "yards": 1232,
+          "touchdowns": 8
+        },
+        {
+          "player": "Tyreek Hill",
+          "receptions": 95,
+          "yards": 1401,
+          "touchdowns": 11
+        }
+      ]
+    },
+    "tables": [
+      {
+        "headers": [
+          "Player",
+          "Team",
+          "G",
+          "Att",
+          "Yds",
+          "TD"
+        ],
+        "rows": [
+          [
+            "Christian McCaffrey",
+            "SF",
+            "16",
+            "272",
+            "1459",
+            "14"
+          ],
+          [
+            "Derrick Henry",
+            "BAL",
+            "16",
+            "280",
+            "1167",
+            "12"
+          ]
+        ]
+      }
+    ],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:39.041Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://www.hockey-reference.com/leagues/NHL_2024_goalies.html",
+    "title": "Page from https://www.hockey-reference.com/leagues/NHL_2024_goalies.html",
+    "content": {
+      "stats": [
+        {
+          "player": "Justin Jefferson",
+          "receptions": 87,
+          "yards": 1232,
+          "touchdowns": 8
+        },
+        {
+          "player": "Tyreek Hill",
+          "receptions": 95,
+          "yards": 1401,
+          "touchdowns": 11
+        }
+      ]
+    },
+    "tables": [
+      {
+        "headers": [
+          "Player",
+          "Team",
+          "G",
+          "Att",
+          "Yds",
+          "TD"
+        ],
+        "rows": [
+          [
+            "Christian McCaffrey",
+            "SF",
+            "16",
+            "272",
+            "1459",
+            "14"
+          ],
+          [
+            "Derrick Henry",
+            "BAL",
+            "16",
+            "280",
+            "1167",
+            "12"
+          ]
+        ]
+      }
+    ],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:38.918Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://www.chiefs.com/team/injury-report/",
+    "title": "Page from https://www.chiefs.com/team/injury-report/",
+    "content": {
+      "injuries": [
+        {
+          "player": "Patrick Mahomes",
+          "status": "Questionable",
+          "injury": "Ankle"
+        },
+        {
+          "player": "Josh Allen",
+          "status": "Probable",
+          "injury": "Shoulder"
+        }
+      ]
+    },
+    "tables": [],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:39.696Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://www.buffalobills.com/team/injury-report/",
+    "title": "Page from https://www.buffalobills.com/team/injury-report/",
+    "content": {
+      "injuries": [
+        {
+          "player": "Patrick Mahomes",
+          "status": "Questionable",
+          "injury": "Ankle"
+        },
+        {
+          "player": "Josh Allen",
+          "status": "Probable",
+          "injury": "Shoulder"
+        }
+      ]
+    },
+    "tables": [],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:39.261Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://www.philadelphiaeagles.com/team/injury-report/",
+    "title": "Page from https://www.philadelphiaeagles.com/team/injury-report/",
+    "content": {
+      "injuries": [
+        {
+          "player": "Patrick Mahomes",
+          "status": "Questionable",
+          "injury": "Ankle"
+        },
+        {
+          "player": "Josh Allen",
+          "status": "Probable",
+          "injury": "Shoulder"
+        }
+      ]
+    },
+    "tables": [],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:39.806Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://www.dallascowboys.com/team/injury-report/",
+    "title": "Page from https://www.dallascowboys.com/team/injury-report/",
+    "content": {
+      "injuries": [
+        {
+          "player": "Patrick Mahomes",
+          "status": "Questionable",
+          "injury": "Ankle"
+        },
+        {
+          "player": "Josh Allen",
+          "status": "Probable",
+          "injury": "Shoulder"
+        }
+      ]
+    },
+    "tables": [],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:39.668Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://www.49ers.com/team/injury-report/",
+    "title": "Page from https://www.49ers.com/team/injury-report/",
+    "content": {
+      "injuries": [
+        {
+          "player": "Patrick Mahomes",
+          "status": "Questionable",
+          "injury": "Ankle"
+        },
+        {
+          "player": "Josh Allen",
+          "status": "Probable",
+          "injury": "Shoulder"
+        }
+      ]
+    },
+    "tables": [],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:39.832Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://www.nba.com/lakers/news",
+    "title": "Page from https://www.nba.com/lakers/news",
+    "content": {
+      "content": "Page content"
+    },
+    "tables": [],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:39.120Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://www.nba.com/warriors/news",
+    "title": "Page from https://www.nba.com/warriors/news",
+    "content": {
+      "content": "Page content"
+    },
+    "tables": [],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:39.013Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://www.nba.com/celtics/news",
+    "title": "Page from https://www.nba.com/celtics/news",
+    "content": {
+      "content": "Page content"
+    },
+    "tables": [],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:39.333Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://www.fantasypros.com/nfl/rankings/consensus-cheatsheets.php",
+    "title": "Page from https://www.fantasypros.com/nfl/rankings/consensus-cheatsheets.php",
+    "content": {
+      "stats": [
+        {
+          "player": "Justin Jefferson",
+          "receptions": 87,
+          "yards": 1232,
+          "touchdowns": 8
+        },
+        {
+          "player": "Tyreek Hill",
+          "receptions": 95,
+          "yards": 1401,
+          "touchdowns": 11
+        }
+      ]
+    },
+    "tables": [],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:38.940Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://www.nbcsports.com/fantasy/football/news",
+    "title": "Page from https://www.nbcsports.com/fantasy/football/news",
+    "content": {
+      "stats": [
+        {
+          "player": "Justin Jefferson",
+          "receptions": 87,
+          "yards": 1232,
+          "touchdowns": 8
+        },
+        {
+          "player": "Tyreek Hill",
+          "receptions": 95,
+          "yards": 1401,
+          "touchdowns": 11
+        }
+      ]
+    },
+    "tables": [],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:39.267Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://www.fftoday.com/rankings/playerrank.php",
+    "title": "Page from https://www.fftoday.com/rankings/playerrank.php",
+    "content": {
+      "content": "Page content"
+    },
+    "tables": [],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:39.517Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://subscribers.footballguys.com/rate-my-team/depth.php",
+    "title": "Page from https://subscribers.footballguys.com/rate-my-team/depth.php",
+    "content": {
+      "content": "Page content"
+    },
+    "tables": [],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:39.426Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://www.espn.com/nfl/injuries",
+    "title": "Page from https://www.espn.com/nfl/injuries",
+    "content": {
+      "content": "Page content"
+    },
+    "tables": [],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:39.777Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://www.cbssports.com/fantasy/football/news/",
+    "title": "Page from https://www.cbssports.com/fantasy/football/news/",
+    "content": {
+      "stats": [
+        {
+          "player": "Justin Jefferson",
+          "receptions": 87,
+          "yards": 1232,
+          "touchdowns": 8
+        },
+        {
+          "player": "Tyreek Hill",
+          "receptions": 95,
+          "yards": 1401,
+          "touchdowns": 11
+        }
+      ]
+    },
+    "tables": [],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:39.202Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://theathletic.com/fantasy-football/",
+    "title": "Page from https://theathletic.com/fantasy-football/",
+    "content": {
+      "stats": [
+        {
+          "player": "Justin Jefferson",
+          "receptions": 87,
+          "yards": 1232,
+          "touchdowns": 8
+        },
+        {
+          "player": "Tyreek Hill",
+          "receptions": 95,
+          "yards": 1401,
+          "touchdowns": 11
+        }
+      ]
+    },
+    "tables": [],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:39.051Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://sports.yahoo.com/fantasy/",
+    "title": "Page from https://sports.yahoo.com/fantasy/",
+    "content": {
+      "stats": [
+        {
+          "player": "Justin Jefferson",
+          "receptions": 87,
+          "yards": 1232,
+          "touchdowns": 8
+        },
+        {
+          "player": "Tyreek Hill",
+          "receptions": 95,
+          "yards": 1401,
+          "touchdowns": 11
+        }
+      ]
+    },
+    "tables": [],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:39.426Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://sportsbook.draftkings.com/leagues/football/nfl",
+    "title": "Page from https://sportsbook.draftkings.com/leagues/football/nfl",
+    "content": {
+      "content": "Page content"
+    },
+    "tables": [],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:39.280Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://sportsbook.fanduel.com/football/nfl",
+    "title": "Page from https://sportsbook.fanduel.com/football/nfl",
+    "content": {
+      "content": "Page content"
+    },
+    "tables": [],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:38.926Z",
+      "source": "Firecrawl MCP"
+    }
+  },
+  {
+    "success": true,
+    "url": "https://sports.betmgm.com/en/sports/football-11/betting/usa-9/nfl-35",
+    "title": "Page from https://sports.betmgm.com/en/sports/football-11/betting/usa-9/nfl-35",
+    "content": {
+      "content": "Page content"
+    },
+    "tables": [],
+    "links": [],
+    "metadata": {
+      "timestamp": "2025-06-23T02:09:38.920Z",
+      "source": "Firecrawl MCP"
+    }
+  }
+]

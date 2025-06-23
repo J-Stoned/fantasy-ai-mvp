@@ -1,0 +1,19 @@
+{
+  "team": "Padres",
+  "timestamp": "2025-06-22T21:13:45.604Z",
+  "roster": {
+    "active": 24,
+    "injured": 2,
+    "questionable": 1
+  },
+  "news": [
+    "Padres announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "DAL",
+    "date": "2025-06-25T21:13:45.604Z",
+    "location": "away"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "team": "Hornets",
+  "timestamp": "2025-06-22T21:38:24.325Z",
+  "roster": {
+    "active": 24,
+    "injured": 1,
+    "questionable": 0
+  },
+  "news": [
+    "Hornets announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "KC",
+    "date": "2025-06-25T21:38:24.325Z",
+    "location": "away"
+  }
+}

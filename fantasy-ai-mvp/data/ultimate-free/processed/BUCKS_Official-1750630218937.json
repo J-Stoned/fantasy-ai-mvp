@@ -1,0 +1,19 @@
+{
+  "team": "Bucks",
+  "timestamp": "2025-06-22T22:10:18.937Z",
+  "roster": {
+    "active": 20,
+    "injured": 2,
+    "questionable": 1
+  },
+  "news": [
+    "Bucks announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "SF",
+    "date": "2025-06-25T22:10:18.937Z",
+    "location": "home"
+  }
+}

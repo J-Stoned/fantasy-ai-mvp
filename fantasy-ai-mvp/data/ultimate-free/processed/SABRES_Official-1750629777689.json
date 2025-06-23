@@ -1,0 +1,19 @@
+{
+  "team": "Sabres",
+  "timestamp": "2025-06-22T22:02:57.689Z",
+  "roster": {
+    "active": 22,
+    "injured": 0,
+    "questionable": 0
+  },
+  "news": [
+    "Sabres announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "KC",
+    "date": "2025-06-25T22:02:57.689Z",
+    "location": "home"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "team": "Sharks",
+  "timestamp": "2025-06-22T19:48:19.176Z",
+  "roster": {
+    "active": 21,
+    "injured": 1,
+    "questionable": 0
+  },
+  "news": [
+    "Sharks announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "KC",
+    "date": "2025-06-25T19:48:19.176Z",
+    "location": "away"
+  }
+}

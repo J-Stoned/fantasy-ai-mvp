@@ -1,0 +1,19 @@
+{
+  "team": "Rams",
+  "timestamp": "2025-06-22T19:47:19.124Z",
+  "roster": {
+    "active": 20,
+    "injured": 2,
+    "questionable": 1
+  },
+  "news": [
+    "Rams announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "DAL",
+    "date": "2025-06-25T19:47:19.124Z",
+    "location": "away"
+  }
+}

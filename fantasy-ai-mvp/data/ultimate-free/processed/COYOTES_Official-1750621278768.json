@@ -1,0 +1,19 @@
+{
+  "team": "Coyotes",
+  "timestamp": "2025-06-22T19:41:18.768Z",
+  "roster": {
+    "active": 20,
+    "injured": 1,
+    "questionable": 0
+  },
+  "news": [
+    "Coyotes announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "SF",
+    "date": "2025-06-25T19:41:18.768Z",
+    "location": "away"
+  }
+}

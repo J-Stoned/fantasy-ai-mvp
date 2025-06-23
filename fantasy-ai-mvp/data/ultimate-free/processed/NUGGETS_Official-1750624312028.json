@@ -1,0 +1,19 @@
+{
+  "team": "Nuggets",
+  "timestamp": "2025-06-22T20:31:52.028Z",
+  "roster": {
+    "active": 20,
+    "injured": 1,
+    "questionable": 1
+  },
+  "news": [
+    "Nuggets announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "KC",
+    "date": "2025-06-25T20:31:52.028Z",
+    "location": "away"
+  }
+}

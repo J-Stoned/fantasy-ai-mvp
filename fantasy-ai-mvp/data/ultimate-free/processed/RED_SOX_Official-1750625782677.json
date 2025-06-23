@@ -1,0 +1,19 @@
+{
+  "team": "Red Sox",
+  "timestamp": "2025-06-22T20:56:22.677Z",
+  "roster": {
+    "active": 20,
+    "injured": 2,
+    "questionable": 0
+  },
+  "news": [
+    "Red Sox announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "SF",
+    "date": "2025-06-25T20:56:22.677Z",
+    "location": "away"
+  }
+}

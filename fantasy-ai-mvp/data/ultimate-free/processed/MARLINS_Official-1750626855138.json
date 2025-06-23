@@ -1,0 +1,19 @@
+{
+  "team": "Marlins",
+  "timestamp": "2025-06-22T21:14:15.138Z",
+  "roster": {
+    "active": 23,
+    "injured": 2,
+    "questionable": 1
+  },
+  "news": [
+    "Marlins announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "KC",
+    "date": "2025-06-25T21:14:15.138Z",
+    "location": "home"
+  }
+}

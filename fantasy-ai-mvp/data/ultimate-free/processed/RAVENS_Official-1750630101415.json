@@ -1,0 +1,19 @@
+{
+  "team": "Ravens",
+  "timestamp": "2025-06-22T22:08:21.415Z",
+  "roster": {
+    "active": 20,
+    "injured": 1,
+    "questionable": 0
+  },
+  "news": [
+    "Ravens announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "DAL",
+    "date": "2025-06-25T22:08:21.415Z",
+    "location": "home"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "source": "ESPN Real API",
+  "league": "NBA",
+  "timestamp": "2025-06-23T01:53:41.950Z",
+  "games": [
+    {
+      "id": "401766128",
+      "name": "Indiana Pacers at Oklahoma City Thunder",
+      "date": "2025-06-23T00:00Z",
+      "status": "STATUS_IN_PROGRESS",
+      "homeTeam": {
+        "name": "Thunder",
+        "score": "77"
+      },
+      "awayTeam": {
+        "name": "Pacers",
+        "score": "66"
+      }
+    }
+  ]
+}

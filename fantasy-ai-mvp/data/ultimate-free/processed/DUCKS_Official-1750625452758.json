@@ -1,0 +1,19 @@
+{
+  "team": "Ducks",
+  "timestamp": "2025-06-22T20:50:52.758Z",
+  "roster": {
+    "active": 21,
+    "injured": 2,
+    "questionable": 1
+  },
+  "news": [
+    "Ducks announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "KC",
+    "date": "2025-06-25T20:50:52.758Z",
+    "location": "home"
+  }
+}

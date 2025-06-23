@@ -1,0 +1,19 @@
+{
+  "team": "Mavericks",
+  "timestamp": "2025-06-22T22:17:39.792Z",
+  "roster": {
+    "active": 21,
+    "injured": 1,
+    "questionable": 0
+  },
+  "news": [
+    "Mavericks announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "SF",
+    "date": "2025-06-25T22:17:39.792Z",
+    "location": "home"
+  }
+}

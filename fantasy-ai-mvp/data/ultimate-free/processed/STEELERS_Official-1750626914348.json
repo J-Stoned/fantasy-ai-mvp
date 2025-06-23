@@ -1,0 +1,19 @@
+{
+  "team": "Steelers",
+  "timestamp": "2025-06-22T21:15:14.348Z",
+  "roster": {
+    "active": 22,
+    "injured": 1,
+    "questionable": 1
+  },
+  "news": [
+    "Steelers announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "BUF",
+    "date": "2025-06-25T21:15:14.348Z",
+    "location": "away"
+  }
+}

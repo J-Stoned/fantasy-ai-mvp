@@ -1,0 +1,19 @@
+{
+  "team": "Athletics",
+  "timestamp": "2025-06-22T20:00:50.009Z",
+  "roster": {
+    "active": 23,
+    "injured": 1,
+    "questionable": 0
+  },
+  "news": [
+    "Athletics announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "KC",
+    "date": "2025-06-25T20:00:50.009Z",
+    "location": "home"
+  }
+}

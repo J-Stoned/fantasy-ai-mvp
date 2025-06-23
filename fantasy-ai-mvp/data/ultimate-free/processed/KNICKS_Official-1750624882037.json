@@ -1,0 +1,19 @@
+{
+  "team": "Knicks",
+  "timestamp": "2025-06-22T20:41:22.037Z",
+  "roster": {
+    "active": 23,
+    "injured": 1,
+    "questionable": 1
+  },
+  "news": [
+    "Knicks announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "BUF",
+    "date": "2025-06-25T20:41:22.037Z",
+    "location": "away"
+  }
+}

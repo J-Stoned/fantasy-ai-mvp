@@ -1,0 +1,19 @@
+{
+  "team": "Jaguars",
+  "timestamp": "2025-06-22T22:21:05.785Z",
+  "roster": {
+    "active": 22,
+    "injured": 2,
+    "questionable": 1
+  },
+  "news": [
+    "Jaguars announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "SF",
+    "date": "2025-06-25T22:21:05.785Z",
+    "location": "home"
+  }
+}

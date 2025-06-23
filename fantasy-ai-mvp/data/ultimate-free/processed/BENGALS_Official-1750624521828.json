@@ -1,0 +1,19 @@
+{
+  "team": "Bengals",
+  "timestamp": "2025-06-22T20:35:21.828Z",
+  "roster": {
+    "active": 23,
+    "injured": 1,
+    "questionable": 0
+  },
+  "news": [
+    "Bengals announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "KC",
+    "date": "2025-06-25T20:35:21.828Z",
+    "location": "home"
+  }
+}

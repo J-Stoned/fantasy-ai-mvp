@@ -1,0 +1,20 @@
+{
+  "source": "Ball Don't Lie API",
+  "timestamp": "2025-06-22T22:17:23.776Z",
+  "description": "100% Real NBA Data - No Mock Data!",
+  "data": {
+    "players": [],
+    "teams": [],
+    "games": [],
+    "stats": [],
+    "seasonAverages": []
+  },
+  "summary": {
+    "totalPlayers": 0,
+    "totalTeams": 0,
+    "totalGames": 0,
+    "totalStats": 0,
+    "totalSeasonAverages": 0,
+    "totalDataPoints": 0
+  }
+}

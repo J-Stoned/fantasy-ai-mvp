@@ -1,0 +1,19 @@
+{
+  "team": "Vikings",
+  "timestamp": "2025-06-22T20:35:51.855Z",
+  "roster": {
+    "active": 24,
+    "injured": 1,
+    "questionable": 0
+  },
+  "news": [
+    "Vikings announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "KC",
+    "date": "2025-06-25T20:35:51.855Z",
+    "location": "away"
+  }
+}

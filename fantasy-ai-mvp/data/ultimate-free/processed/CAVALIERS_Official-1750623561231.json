@@ -1,0 +1,19 @@
+{
+  "team": "Cavaliers",
+  "timestamp": "2025-06-22T20:19:21.232Z",
+  "roster": {
+    "active": 22,
+    "injured": 1,
+    "questionable": 1
+  },
+  "news": [
+    "Cavaliers announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "SF",
+    "date": "2025-06-25T20:19:21.232Z",
+    "location": "away"
+  }
+}

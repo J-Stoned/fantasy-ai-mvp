@@ -1,0 +1,19 @@
+{
+  "team": "Falcons",
+  "timestamp": "2025-06-22T20:08:20.644Z",
+  "roster": {
+    "active": 20,
+    "injured": 0,
+    "questionable": 0
+  },
+  "news": [
+    "Falcons announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "KC",
+    "date": "2025-06-25T20:08:20.644Z",
+    "location": "away"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "team": "Avalanche",
+  "timestamp": "2025-06-22T21:44:18.428Z",
+  "roster": {
+    "active": 22,
+    "injured": 1,
+    "questionable": 1
+  },
+  "news": [
+    "Avalanche announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "SF",
+    "date": "2025-06-25T21:44:18.428Z",
+    "location": "away"
+  }
+}

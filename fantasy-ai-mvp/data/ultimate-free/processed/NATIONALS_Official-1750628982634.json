@@ -1,0 +1,19 @@
+{
+  "team": "Nationals",
+  "timestamp": "2025-06-22T21:49:42.634Z",
+  "roster": {
+    "active": 21,
+    "injured": 1,
+    "questionable": 1
+  },
+  "news": [
+    "Nationals announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "KC",
+    "date": "2025-06-25T21:49:42.634Z",
+    "location": "away"
+  }
+}

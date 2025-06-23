@@ -1,0 +1,19 @@
+{
+  "team": "Magic",
+  "timestamp": "2025-06-22T19:46:19.088Z",
+  "roster": {
+    "active": 20,
+    "injured": 2,
+    "questionable": 0
+  },
+  "news": [
+    "Magic announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "DAL",
+    "date": "2025-06-25T19:46:19.088Z",
+    "location": "home"
+  }
+}

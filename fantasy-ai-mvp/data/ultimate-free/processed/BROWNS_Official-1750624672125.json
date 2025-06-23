@@ -1,0 +1,19 @@
+{
+  "team": "Browns",
+  "timestamp": "2025-06-22T20:37:52.125Z",
+  "roster": {
+    "active": 20,
+    "injured": 2,
+    "questionable": 0
+  },
+  "news": [
+    "Browns announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "BUF",
+    "date": "2025-06-25T20:37:52.125Z",
+    "location": "home"
+  }
+}

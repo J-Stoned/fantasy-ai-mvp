@@ -1,0 +1,226 @@
+{
+  "timestamp": "2025-06-22T23:07:25.216Z",
+  "stats": {
+    "totalEntities": 143,
+    "totalRelationships": 113,
+    "entityTypes": {
+      "player": 100,
+      "league": 4,
+      "team": 7,
+      "position": 22,
+      "stat": 5,
+      "matchup": 3,
+      "injury": 2
+    }
+  },
+  "sample": {
+    "entities": [
+      {
+        "id": "player:00069d4b-4d97-4c95-954a-666db99ecc81",
+        "type": "player",
+        "name": "Nick Ahmed",
+        "properties": {
+          "position": "SS",
+          "team": "SF",
+          "injuryStatus": "HEALTHY",
+          "dbId": "00069d4b-4d97-4c95-954a-666db99ecc81"
+        }
+      },
+      {
+        "id": "player:00186ee5-2f0a-4ad4-b0ce-b9e5f31e565a",
+        "type": "player",
+        "name": "Blue Jackets D4",
+        "properties": {
+          "position": "D",
+          "team": "CBJ",
+          "injuryStatus": "HEALTHY",
+          "dbId": "00186ee5-2f0a-4ad4-b0ce-b9e5f31e565a"
+        }
+      },
+      {
+        "id": "player:002e2ced-576a-43a4-8b14-a2d5bad4570d",
+        "type": "player",
+        "name": "Blue Jays MiLB1",
+        "properties": {
+          "position": "C",
+          "team": "TOR",
+          "injuryStatus": "HEALTHY",
+          "dbId": "002e2ced-576a-43a4-8b14-a2d5bad4570d"
+        }
+      },
+      {
+        "id": "player:003f70c5-a436-40a4-b8f4-dc0e2db2566b",
+        "type": "player",
+        "name": "Nikita Kucherov",
+        "properties": {
+          "position": "RW",
+          "team": "TBL",
+          "injuryStatus": "HEALTHY",
+          "dbId": "003f70c5-a436-40a4-b8f4-dc0e2db2566b"
+        }
+      },
+      {
+        "id": "player:0047f114-177d-491f-9a64-540fe745dc85",
+        "type": "player",
+        "name": "Chiefs CB2",
+        "properties": {
+          "position": "CB",
+          "team": "KC",
+          "injuryStatus": "HEALTHY",
+          "dbId": "0047f114-177d-491f-9a64-540fe745dc85"
+        }
+      },
+      {
+        "id": "player:00537a23-85a2-4d88-8575-36d9eecc36c4",
+        "type": "player",
+        "name": "Pirates C3",
+        "properties": {
+          "position": "C",
+          "team": "PIT",
+          "injuryStatus": "HEALTHY",
+          "dbId": "00537a23-85a2-4d88-8575-36d9eecc36c4"
+        }
+      },
+      {
+        "id": "player:006af352-1df0-4997-b93b-fa1e886c7d26",
+        "type": "player",
+        "name": "Mariners OF2",
+        "properties": {
+          "position": "OF",
+          "team": "SEA",
+          "injuryStatus": "HEALTHY",
+          "dbId": "006af352-1df0-4997-b93b-fa1e886c7d26"
+        }
+      },
+      {
+        "id": "player:007566ce-baa1-42dd-ac6d-14a8173c0298",
+        "type": "player",
+        "name": "Broncos DT4",
+        "properties": {
+          "position": "DT",
+          "team": "DEN",
+          "injuryStatus": "HEALTHY",
+          "dbId": "007566ce-baa1-42dd-ac6d-14a8173c0298"
+        }
+      },
+      {
+        "id": "player:007a19cc-e47f-401d-ab42-3d7d7ececfd9",
+        "type": "player",
+        "name": "Dodgers MiLB8",
+        "properties": {
+          "position": "P",
+          "team": "LAD",
+          "injuryStatus": "HEALTHY",
+          "dbId": "007a19cc-e47f-401d-ab42-3d7d7ececfd9"
+        }
+      },
+      {
+        "id": "player:00a07490-6f66-446c-b6eb-05210f976d17",
+        "type": "player",
+        "name": "Alec Bohm",
+        "properties": {
+          "position": "3B",
+          "team": "PHI",
+          "injuryStatus": "HEALTHY",
+          "dbId": "00a07490-6f66-446c-b6eb-05210f976d17"
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "from": "team:Chiefs",
+        "to": "league:NFL",
+        "type": "PLAYS_IN",
+        "properties": {
+          "division": "AFC West",
+          "since": "2024"
+        }
+      },
+      {
+        "from": "team:Eagles",
+        "to": "league:NFL",
+        "type": "PLAYS_IN",
+        "properties": {
+          "division": "NFC East",
+          "since": "2024"
+        }
+      },
+      {
+        "from": "team:Bills",
+        "to": "league:NFL",
+        "type": "PLAYS_IN",
+        "properties": {
+          "division": "AFC East",
+          "since": "2024"
+        }
+      },
+      {
+        "from": "team:Lakers",
+        "to": "league:NBA",
+        "type": "PLAYS_IN",
+        "properties": {
+          "division": "Pacific",
+          "since": "2024"
+        }
+      },
+      {
+        "from": "team:Celtics",
+        "to": "league:NBA",
+        "type": "PLAYS_IN",
+        "properties": {
+          "division": "Atlantic",
+          "since": "2024"
+        }
+      },
+      {
+        "from": "team:Yankees",
+        "to": "league:MLB",
+        "type": "PLAYS_IN",
+        "properties": {
+          "division": "AL East",
+          "since": "2024"
+        }
+      },
+      {
+        "from": "team:Dodgers",
+        "to": "league:MLB",
+        "type": "PLAYS_IN",
+        "properties": {
+          "division": "NL West",
+          "since": "2024"
+        }
+      },
+      {
+        "from": "player:00069d4b-4d97-4c95-954a-666db99ecc81",
+        "to": "team:SF",
+        "type": "PLAYS_FOR",
+        "properties": {
+          "position": "SS",
+          "since": "2024",
+          "status": "HEALTHY"
+        },
+        "strength": 1
+      },
+      {
+        "from": "player:00069d4b-4d97-4c95-954a-666db99ecc81",
+        "to": "position:SS",
+        "type": "PLAYS_POSITION",
+        "properties": {
+          "primary": true
+        },
+        "strength": 1
+      },
+      {
+        "from": "player:00186ee5-2f0a-4ad4-b0ce-b9e5f31e565a",
+        "to": "team:CBJ",
+        "type": "PLAYS_FOR",
+        "properties": {
+          "position": "D",
+          "since": "2024",
+          "status": "HEALTHY"
+        },
+        "strength": 1
+      }
+    ]
+  }
+}

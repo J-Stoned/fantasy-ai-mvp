@@ -1,0 +1,19 @@
+{
+  "team": "Saints",
+  "timestamp": "2025-06-22T19:55:19.620Z",
+  "roster": {
+    "active": 20,
+    "injured": 1,
+    "questionable": 0
+  },
+  "news": [
+    "Saints announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "DAL",
+    "date": "2025-06-25T19:55:19.620Z",
+    "location": "home"
+  }
+}

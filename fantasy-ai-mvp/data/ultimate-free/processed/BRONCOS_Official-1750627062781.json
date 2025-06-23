@@ -1,0 +1,19 @@
+{
+  "team": "Broncos",
+  "timestamp": "2025-06-22T21:17:42.781Z",
+  "roster": {
+    "active": 21,
+    "injured": 1,
+    "questionable": 0
+  },
+  "news": [
+    "Broncos announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "KC",
+    "date": "2025-06-25T21:17:42.781Z",
+    "location": "home"
+  }
+}

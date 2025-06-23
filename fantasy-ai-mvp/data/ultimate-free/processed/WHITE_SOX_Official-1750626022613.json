@@ -1,0 +1,19 @@
+{
+  "team": "White Sox",
+  "timestamp": "2025-06-22T21:00:22.613Z",
+  "roster": {
+    "active": 24,
+    "injured": 2,
+    "questionable": 0
+  },
+  "news": [
+    "White Sox announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "SF",
+    "date": "2025-06-25T21:00:22.613Z",
+    "location": "away"
+  }
+}

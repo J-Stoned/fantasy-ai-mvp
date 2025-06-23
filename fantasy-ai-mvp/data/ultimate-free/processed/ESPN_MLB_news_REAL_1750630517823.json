@@ -1,0 +1,534 @@
+{
+  "source": "ESPN",
+  "league": "MLB",
+  "dataType": "news",
+  "timestamp": "2025-06-22T22:15:28.927Z",
+  "stats": {
+    "totalArticles": 6
+  },
+  "articles": [
+    {
+      "headline": "Mickey Moniak's 3-run homer helps MLB-worst Rockies avoid sweep with 4-2 win over D-backs",
+      "description": "— Mickey Moniak hit a three-run homer to cap a four-run fifth inning, Antonio Senzatala won his second straight start, and the major league-worst Colorado Rockies snapped a three-game skid...",
+      "published": "2025-06-22T21:59:48Z",
+      "images": [
+        {
+          "type": "stitcher",
+          "name": "espn.applewatch.awayhome.1",
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696071.png?templateId=espn.applewatch.awayhome.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.applewatch.homeaway.1",
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696071.png?templateId=espn.applewatch.homeaway.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.awayhome.16x9.1",
+          "ratio": "16x9",
+          "height": 173,
+          "width": 308,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696071.png?templateId=espn.all.awayhome.16x9.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.homeaway.16x9.1",
+          "ratio": "16x9",
+          "height": 173,
+          "width": 308,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696071.png?templateId=espn.all.homeaway.16x9.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.awayhome.1x1.1",
+          "ratio": "1x1",
+          "height": 308,
+          "width": 308,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696071.png?templateId=espn.all.awayhome.1x1.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.homeaway.1x1.1",
+          "ratio": "1x1",
+          "height": 308,
+          "width": 308,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696071.png?templateId=espn.all.homeaway.1x1.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.awayhome.5x2.1",
+          "ratio": "5x2",
+          "height": 124,
+          "width": 308,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696071.png?templateId=espn.all.awayhome.5x2.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.homeaway.5x2.1",
+          "ratio": "5x2",
+          "height": 124,
+          "width": 308,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696071.png?templateId=espn.all.homeaway.5x2.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.awayhome.16x9.2",
+          "ratio": "16x9",
+          "height": 353,
+          "width": 628,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696071.png?templateId=espn.all.awayhome.16x9.2"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.homeaway.16x9.2",
+          "ratio": "16x9",
+          "height": 353,
+          "width": 628,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696071.png?templateId=espn.all.homeaway.16x9.2"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.awayhome.5x2.2",
+          "ratio": "5x2",
+          "height": 251,
+          "width": 628,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696071.png?templateId=espn.all.awayhome.5x2.2"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.homeaway.5x2.2",
+          "ratio": "5x2",
+          "height": 251,
+          "width": 628,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696071.png?templateId=espn.all.homeaway.5x2.2"
+        }
+      ],
+      "links": "http://www.espn.com/mlb/recap?gameId=401696071",
+      "categories": [
+        "Colorado Rockies",
+        "MLB",
+        "Arizona Diamondbacks",
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "headline": "Brewers pound 17 hits to complete 3-game sweep of Twins with 9-8 win",
+      "description": "— Rhys Hoskins homered, doubled and drove in two runs on Sunday as the Milwaukee Brewers completed a three-game sweep of the Minnesota Twins with a 9-8 victory.",
+      "published": "2025-06-22T21:42:48Z",
+      "images": [
+        {
+          "type": "stitcher",
+          "name": "espn.applewatch.awayhome.1",
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696069.png?templateId=espn.applewatch.awayhome.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.applewatch.homeaway.1",
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696069.png?templateId=espn.applewatch.homeaway.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.awayhome.16x9.1",
+          "ratio": "16x9",
+          "height": 173,
+          "width": 308,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696069.png?templateId=espn.all.awayhome.16x9.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.homeaway.16x9.1",
+          "ratio": "16x9",
+          "height": 173,
+          "width": 308,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696069.png?templateId=espn.all.homeaway.16x9.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.awayhome.1x1.1",
+          "ratio": "1x1",
+          "height": 308,
+          "width": 308,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696069.png?templateId=espn.all.awayhome.1x1.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.homeaway.1x1.1",
+          "ratio": "1x1",
+          "height": 308,
+          "width": 308,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696069.png?templateId=espn.all.homeaway.1x1.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.awayhome.5x2.1",
+          "ratio": "5x2",
+          "height": 124,
+          "width": 308,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696069.png?templateId=espn.all.awayhome.5x2.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.homeaway.5x2.1",
+          "ratio": "5x2",
+          "height": 124,
+          "width": 308,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696069.png?templateId=espn.all.homeaway.5x2.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.awayhome.16x9.2",
+          "ratio": "16x9",
+          "height": 353,
+          "width": 628,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696069.png?templateId=espn.all.awayhome.16x9.2"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.homeaway.16x9.2",
+          "ratio": "16x9",
+          "height": 353,
+          "width": 628,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696069.png?templateId=espn.all.homeaway.16x9.2"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.awayhome.5x2.2",
+          "ratio": "5x2",
+          "height": 251,
+          "width": 628,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696069.png?templateId=espn.all.awayhome.5x2.2"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.homeaway.5x2.2",
+          "ratio": "5x2",
+          "height": 251,
+          "width": 628,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696069.png?templateId=espn.all.homeaway.5x2.2"
+        },
+        {
+          "type": "Media",
+          "name": "Byron Buxton ties it with solo homer for Twins",
+          "caption": "Byron Buxton evens the score at 1-1 with a solo home run to left.\n",
+          "height": 324,
+          "width": 576,
+          "url": "https://a.espncdn.com/media/motion/2025/0622/ss_20250622_155914492_2882133/ss_20250622_155914492_2882133.jpg"
+        }
+      ],
+      "links": "http://www.espn.com/mlb/recap?gameId=401696069",
+      "categories": [
+        "Milwaukee Brewers",
+        "MLB",
+        "Minnesota Twins",
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "headline": "Blue Jays' Max Scherzer (thumb) expected to start Wednesday",
+      "description": "Three-time Cy Young Award winner Max Scherzer is expected to be activated from the 60-day injured list to start for the Toronto Blue Jays at Cleveland on Wednesday.",
+      "published": "2025-06-22T21:27:00Z",
+      "images": [
+        {
+          "dataSourceIdentifier": "17cbdd0559ab4",
+          "id": 45563319,
+          "type": "header",
+          "name": "Max Scherzer [600x400]",
+          "credit": "Christopher Katsarov/The Canadian Press via AP, File",
+          "height": 400,
+          "width": 600,
+          "url": "https://a.espncdn.com/photo/2025/0622/r1509957_600x400_3-2.jpg"
+        }
+      ],
+      "links": "https://www.espn.com/mlb/story/_/id/45563277/blue-jays-max-scherzer-thumb-expected-start-wednesday",
+      "categories": [
+        "Max Scherzer",
+        "news",
+        "MLB",
+        "Toronto Blue Jays",
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "headline": "Seattle Mariners vs. Chicago Cubs: Game Highlights",
+      "description": "Seattle Mariners vs. Chicago Cubs: Game Highlights",
+      "published": "2025-06-22T21:26:00Z",
+      "images": [
+        {
+          "name": "Seattle Mariners vs. Chicago Cubs: Game Highlights",
+          "caption": "Seattle Mariners vs. Chicago Cubs: Game Highlights",
+          "alt": "",
+          "height": 324,
+          "width": 576,
+          "url": "https://a.espncdn.com/media/motion/wsc/2025/0622/71d8c76e-e631-46d1-bae1-75e88424bf05/71d8c76e-e631-46d1-bae1-75e88424bf05.jpg"
+        }
+      ],
+      "links": "https://www.espn.com/video/clip?id=45563304",
+      "categories": [
+        "Seattle Mariners",
+        "MLB",
+        "Kyle Tucker",
+        "Cal Raleigh",
+        "4 Star Rating",
+        "Dominic Canzone",
+        "Seiya Suzuki",
+        "Chicago Cubs",
+        "Donovan Solano",
+        "Fantasy MLB",
+        "SC4U  - Eligible",
+        "SC4U - Full Highlight",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "headline": "Donovan Solano hits 2 homers as the Seattle Mariners beat the Chicago Cubs 14-6",
+      "description": "— Donovan Solano homered twice and drove in five runs, helping the Seattle Mariners outslug the Chicago Cubs for a 14-6 victory on Sunday.",
+      "published": "2025-06-22T21:21:46Z",
+      "images": [
+        {
+          "type": "stitcher",
+          "name": "espn.applewatch.awayhome.1",
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696070.png?templateId=espn.applewatch.awayhome.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.applewatch.homeaway.1",
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696070.png?templateId=espn.applewatch.homeaway.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.awayhome.16x9.1",
+          "ratio": "16x9",
+          "height": 173,
+          "width": 308,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696070.png?templateId=espn.all.awayhome.16x9.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.homeaway.16x9.1",
+          "ratio": "16x9",
+          "height": 173,
+          "width": 308,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696070.png?templateId=espn.all.homeaway.16x9.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.awayhome.1x1.1",
+          "ratio": "1x1",
+          "height": 308,
+          "width": 308,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696070.png?templateId=espn.all.awayhome.1x1.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.homeaway.1x1.1",
+          "ratio": "1x1",
+          "height": 308,
+          "width": 308,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696070.png?templateId=espn.all.homeaway.1x1.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.awayhome.5x2.1",
+          "ratio": "5x2",
+          "height": 124,
+          "width": 308,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696070.png?templateId=espn.all.awayhome.5x2.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.homeaway.5x2.1",
+          "ratio": "5x2",
+          "height": 124,
+          "width": 308,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696070.png?templateId=espn.all.homeaway.5x2.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.awayhome.16x9.2",
+          "ratio": "16x9",
+          "height": 353,
+          "width": 628,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696070.png?templateId=espn.all.awayhome.16x9.2"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.homeaway.16x9.2",
+          "ratio": "16x9",
+          "height": 353,
+          "width": 628,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696070.png?templateId=espn.all.homeaway.16x9.2"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.awayhome.5x2.2",
+          "ratio": "5x2",
+          "height": 251,
+          "width": 628,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696070.png?templateId=espn.all.awayhome.5x2.2"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.homeaway.5x2.2",
+          "ratio": "5x2",
+          "height": 251,
+          "width": 628,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696070.png?templateId=espn.all.homeaway.5x2.2"
+        },
+        {
+          "type": "Media",
+          "name": "Seattle Mariners vs. Chicago Cubs: Game Highlights",
+          "caption": "Seattle Mariners vs. Chicago Cubs: Game Highlights",
+          "height": 324,
+          "width": 576,
+          "url": "https://a.espncdn.com/media/motion/wsc/2025/0622/71d8c76e-e631-46d1-bae1-75e88424bf05/71d8c76e-e631-46d1-bae1-75e88424bf05.jpg"
+        }
+      ],
+      "links": "http://www.espn.com/mlb/recap?gameId=401696070",
+      "categories": [
+        "Seattle Mariners",
+        "Chicago Cubs",
+        "MLB",
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "headline": "Vargas has tiebreaking hit in 8th inning as White Sox rally to beat Blue Jays 4-2",
+      "description": "— Miguel Vargas hit a tiebreaking double in the eighth inning and the Chicago White Sox rallied to beat the Toronto Blue Jays 4-2 on Sunday.",
+      "published": "2025-06-22T21:13:46Z",
+      "images": [
+        {
+          "type": "stitcher",
+          "name": "espn.applewatch.awayhome.1",
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696064.png?templateId=espn.applewatch.awayhome.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.applewatch.homeaway.1",
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696064.png?templateId=espn.applewatch.homeaway.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.awayhome.16x9.1",
+          "ratio": "16x9",
+          "height": 173,
+          "width": 308,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696064.png?templateId=espn.all.awayhome.16x9.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.homeaway.16x9.1",
+          "ratio": "16x9",
+          "height": 173,
+          "width": 308,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696064.png?templateId=espn.all.homeaway.16x9.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.awayhome.1x1.1",
+          "ratio": "1x1",
+          "height": 308,
+          "width": 308,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696064.png?templateId=espn.all.awayhome.1x1.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.homeaway.1x1.1",
+          "ratio": "1x1",
+          "height": 308,
+          "width": 308,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696064.png?templateId=espn.all.homeaway.1x1.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.awayhome.5x2.1",
+          "ratio": "5x2",
+          "height": 124,
+          "width": 308,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696064.png?templateId=espn.all.awayhome.5x2.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.homeaway.5x2.1",
+          "ratio": "5x2",
+          "height": 124,
+          "width": 308,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696064.png?templateId=espn.all.homeaway.5x2.1"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.awayhome.16x9.2",
+          "ratio": "16x9",
+          "height": 353,
+          "width": 628,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696064.png?templateId=espn.all.awayhome.16x9.2"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.homeaway.16x9.2",
+          "ratio": "16x9",
+          "height": 353,
+          "width": 628,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696064.png?templateId=espn.all.homeaway.16x9.2"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.awayhome.5x2.2",
+          "ratio": "5x2",
+          "height": 251,
+          "width": 628,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696064.png?templateId=espn.all.awayhome.5x2.2"
+        },
+        {
+          "type": "stitcher",
+          "name": "espn.all.homeaway.5x2.2",
+          "ratio": "5x2",
+          "height": 251,
+          "width": 628,
+          "url": "https://s.espncdn.com/stitcher/sports/baseball/mlb/events/401696064.png?templateId=espn.all.homeaway.5x2.2"
+        },
+        {
+          "type": "Media",
+          "name": "Chicago White Sox vs. Toronto Blue Jays: Game Highlights",
+          "caption": "Chicago White Sox vs. Toronto Blue Jays: Game Highlights",
+          "height": 324,
+          "width": 576,
+          "url": "https://a.espncdn.com/media/motion/wsc/2025/0622/0ed1c5b0-c483-4d49-95b9-53f8c777a6ee/0ed1c5b0-c483-4d49-95b9-53f8c777a6ee.jpg"
+        }
+      ],
+      "links": "http://www.espn.com/mlb/recap?gameId=401696064",
+      "categories": [
+        "MLB",
+        "Chicago White Sox",
+        "Toronto Blue Jays",
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ]
+}

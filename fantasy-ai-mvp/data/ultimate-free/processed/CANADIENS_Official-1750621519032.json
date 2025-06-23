@@ -1,0 +1,19 @@
+{
+  "team": "Canadiens",
+  "timestamp": "2025-06-22T19:45:19.032Z",
+  "roster": {
+    "active": 23,
+    "injured": 2,
+    "questionable": 0
+  },
+  "news": [
+    "Canadiens announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "SF",
+    "date": "2025-06-25T19:45:19.032Z",
+    "location": "home"
+  }
+}

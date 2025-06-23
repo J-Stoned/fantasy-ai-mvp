@@ -1,0 +1,19 @@
+{
+  "team": "Rockets",
+  "timestamp": "2025-06-22T22:02:28.280Z",
+  "roster": {
+    "active": 22,
+    "injured": 2,
+    "questionable": 1
+  },
+  "news": [
+    "Rockets announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "DAL",
+    "date": "2025-06-25T22:02:28.280Z",
+    "location": "home"
+  }
+}

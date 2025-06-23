@@ -1,0 +1,17 @@
+{
+  "timestamp": "2025-06-23T02:10:13.699Z",
+  "totalPages": 9,
+  "byCategory": {
+    "liveScores": 2,
+    "fantasy": 5,
+    "betting": 2,
+    "injuries": 1,
+    "props": 1
+  },
+  "stats": {
+    "pagesScraped": 10,
+    "screenshotsTaken": 5,
+    "errors": 0,
+    "successRate": "100.0"
+  }
+}

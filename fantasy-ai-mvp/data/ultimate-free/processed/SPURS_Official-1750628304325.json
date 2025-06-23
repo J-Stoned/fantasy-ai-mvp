@@ -1,0 +1,19 @@
+{
+  "team": "Spurs",
+  "timestamp": "2025-06-22T21:38:24.325Z",
+  "roster": {
+    "active": 23,
+    "injured": 2,
+    "questionable": 0
+  },
+  "news": [
+    "Spurs announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "DAL",
+    "date": "2025-06-25T21:38:24.325Z",
+    "location": "away"
+  }
+}

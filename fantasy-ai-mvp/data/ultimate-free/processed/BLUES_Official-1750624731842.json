@@ -1,0 +1,19 @@
+{
+  "team": "Blues",
+  "timestamp": "2025-06-22T20:38:51.842Z",
+  "roster": {
+    "active": 24,
+    "injured": 2,
+    "questionable": 1
+  },
+  "news": [
+    "Blues announces practice squad changes",
+    "Injury report: Key player limited in practice",
+    "Coach optimistic about team's playoff chances"
+  ],
+  "nextGame": {
+    "opponent": "SF",
+    "date": "2025-06-25T20:38:51.842Z",
+    "location": "home"
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "source": "ESPN",
+  "league": "NFL",
+  "dataType": "news",
+  "timestamp": "2025-06-22T22:15:19.102Z",
+  "stats": {
+    "totalArticles": 6
+  },
+  "articles": [
+    {
+      "headline": "Tom Brady wins inaugural Fanatics Games, $1M prize",
+      "description": "Tom Brady emerged Sunday as the winner of the inaugural Fanatics Games, which pitted athletes and celebrities against fans in eight competitions this weekend at Fanatics Fest in New York.",
+      "published": "2025-06-22T21:21:00Z",
+      "images": [
+        {
+          "dataSourceIdentifier": "45c283a8fd3f5",
+          "id": 45563230,
+          "type": "header",
+          "name": "Tom Brady (June 22, 2025) [1296x729]",
+          "credit": "Slaven Vlasic/Getty Images",
+          "height": 729,
+          "width": 1296,
+          "url": "https://a.espncdn.com/photo/2025/0622/r1509955_1296x729_16-9.jpg"
+        },
+        {
+          "type": "Media",
+          "name": "Tom Brady declares LeBron the GOAT of the NBA",
+          "caption": "Tom Brady shouts out LeBron James on \"The Shop Live,\" calling him basketball's greatest of all time.",
+          "height": 324,
+          "width": 576,
+          "url": "https://a.espncdn.com/media/motion/2025/0621/dm_250621_nfl_nba_brady_calls_bron_the_goat/dm_250621_nfl_nba_brady_calls_bron_the_goat.jpg"
+        }
+      ],
+      "links": "https://www.espn.com/nfl/story/_/id/45563279/tom-brady-wins-inaugural-fanatics-games-1m-prize",
+      "categories": [
+        "Tampa Bay Buccaneers",
+        "news",
+        "Las Vegas Raiders",
+        "Tom Brady",
+        "New England Patriots",
+        "Justin Gaethje",
+        "NFL",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "headline": "Pennsylvania governor to work with Eagles, Steelers on stadium needs",
+      "description": "Pennsylvania Gov. Josh Shapiro declined to get into specifics about funding for any new sports arenas -- a possibility with the Eagles' lease set to expire in 2032.",
+      "published": "2025-06-22T19:19:00Z",
+      "images": [
+        {
+          "dataSourceIdentifier": "74e64556ecb1d",
+          "id": 29140223,
+          "type": "header",
+          "name": "Lincoln Financial Field [600x600]",
+          "credit": "Eric Hartline-USA TODAY Sports",
+          "height": 600,
+          "width": 600,
+          "url": "https://a.espncdn.com/photo/2020/0506/r695937_600x600_1-1.jpg"
+        }
+      ],
+      "links": "https://www.espn.com/nfl/story/_/id/45562487/pennsylvania-governor-steadfast-no-state-money-new-venues",
+      "categories": [
+        "Pittsburgh Steelers",
+        "news",
+        "Philadelphia Eagles",
+        "NFL",
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "headline": "Jayden Daniels card sells for $500,000 to Commanders' Josh Harris",
+      "description": "Jayden Daniels rookie card sells for $500,000 at Fanatics Fest 2025.",
+      "published": "2025-06-22T19:05:00Z",
+      "images": [
+        {
+          "dataSourceIdentifier": "aaff64531065b",
+          "id": 45562307,
+          "type": "header",
+          "name": "Jayden Daniels card [608x342]",
+          "caption": "Jacob Ramos (left), Jayden Daniels (middle left), Josh Roth (middle right), Josh Harris (right).",
+          "credit": "Courtesy of Fanatics",
+          "height": 342,
+          "width": 608,
+          "url": "https://a.espncdn.com/photo/2025/0622/r1509883_608x342_16-9.png"
+        },
+        {
+          "dataSourceIdentifier": "79d0c6a9acabc",
+          "id": 45562342,
+          "type": "inline",
+          "name": "Jayden Daniels card [400x600]",
+          "credit": "Courtesy of Fanatics",
+          "height": 600,
+          "width": 400,
+          "url": "https://a.espncdn.com/photo/2025/0622/r1509887_400x600_2-3.jpg"
+        },
+        {
+          "type": "Media",
+          "name": "Tom Brady declares LeBron the GOAT of the NBA",
+          "caption": "Tom Brady shouts out LeBron James on \"The Shop Live,\" calling him basketball's greatest of all time.",
+          "height": 324,
+          "width": 576,
+          "url": "https://a.espncdn.com/media/motion/2025/0621/dm_250621_nfl_nba_brady_calls_bron_the_goat/dm_250621_nfl_nba_brady_calls_bron_the_goat.jpg"
+        }
+      ],
+      "links": "https://www.espn.com/nfl/story/_/id/45562432/washington-commanders-josh-harris-buys-jayden-daniels-rookie-card-500000",
+      "categories": [
+        "Washington Commanders",
+        "Jayden Daniels",
+        "180625 Dan Hajducky COLUMNIST PROFILE",
+        "NFL",
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "headline": "How Puka Nacua, Davante Adams are working together on Rams",
+      "description": "Sarah Barshop reports on the early bond Davante Adams and Puka Nacua have formed on the Rams.",
+      "published": "2025-06-22T19:02:12Z",
+      "images": [
+        {
+          "name": "How Puka Nacua, Davante Adams are working together on Rams",
+          "caption": "Sarah Barshop reports on the early bond Davante Adams and Puka Nacua have formed on the Rams.",
+          "alt": "",
+          "height": 324,
+          "width": 576,
+          "url": "https://a.espncdn.com/media/motion/2025/0622/dm_250622_sc_barshop_rams/dm_250622_sc_barshop_rams.jpg"
+        }
+      ],
+      "links": "https://www.espn.com/video/clip?id=45562531",
+      "categories": [
+        "Puka Nacua",
+        "Los Angeles Rams",
+        "Davante Adams",
+        "NFL",
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "headline": "Fred Smith, ex-Washington NFL team part-owner, FedEx founder, dies",
+      "description": "Fred Smith, a former minority owner of the Washington NFL franchise and the founder of FedEx Corp., a prominent sponsor across the landscape of sports, has died.",
+      "published": "2025-06-22T15:47:00Z",
+      "images": [
+        {
+          "dataSourceIdentifier": "439a7f4821f3a",
+          "id": 45561463,
+          "type": "header",
+          "name": "Fred Smith (June 22, 2025) [1296x729]",
+          "caption": "Fred Smith, seen here supporting his son Arthur Smith before a Falcons game in 2021, has died. The FedEx Corp. founder was 80.",
+          "alt": "Fred Smith",
+          "credit": "AP Photo/John Bazemore, File",
+          "height": 729,
+          "width": 1296,
+          "url": "https://a.espncdn.com/photo/2025/0622/r1509824_1296x729_16-9.jpg"
+        }
+      ],
+      "links": "https://www.espn.com/nfl/story/_/id/45561511/fred-smith-ex-washington-nfl-team-part-owner-fedex-founder-dies",
+      "categories": [
+        "Pittsburgh Steelers",
+        "Washington Commanders",
+        "news",
+        "Memphis Tigers",
+        "Memphis Tigers",
+        "PGA TOUR",
+        "NFL",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "headline": "How flag football has revived Chuba Hubbard's Olympic dreams",
+      "description": "Hubbard set aside his Olympic track goals to reach the NFL, but flag football has revived his chances of competing on the international stage.",
+      "published": "2025-06-22T10:00:00Z",
+      "images": [
+        {
+          "dataSourceIdentifier": "7a82a6ef9a150",
+          "id": 45530296,
+          "type": "header",
+          "name": "Chuba 1 [608x342]",
+          "caption": "Sticking to his Canadian roots, Panthers running back Chuba Hubbard attended Game 2 of the Stanley Cup Final in Edmonton.",
+          "credit": "Steph Chambers/Getty Images",
+          "height": 342,
+          "width": 608,
+          "url": "https://a.espncdn.com/photo/2025/0617/r1507716_608x342_16-9.jpg"
+        },
+        {
+          "dataSourceIdentifier": "6cd4b13f69c84",
+          "id": 45530320,
+          "type": "header",
+          "name": "Chuba Hubbard [608x342]",
+          "caption": "Chuba Hubbard rushed for a career-high 1,195 yards and 10 touchdowns for the Carolina Panthers in 2025.",
+          "credit": "Jim Dedmon-Imagn Images",
+          "height": 342,
+          "width": 608,
+          "url": "https://a.espncdn.com/photo/2025/0617/r1507717_608x342_16-9.jpg"
+        }
+      ],
+      "links": "https://www.espn.com/nfl/story/_/id/45498715/nfl-carolina-panthers-chuba-hubbard-olympics-flag-football-track",
+      "categories": [
+        "Rico Dowdle",
+        "Trevor Etienne",
+        "Carolina Panthers",
+        "Chuba Hubbard",
+        "David Newton",
+        "NFL",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ]
+}

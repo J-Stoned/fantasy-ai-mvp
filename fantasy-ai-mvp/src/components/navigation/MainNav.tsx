@@ -56,6 +56,12 @@ const mainRoutes = [
     description: "ElevenLabs AI"
   },
   {
+    name: "Voice Assistant",
+    href: "/voice-assistant-demo",
+    icon: Mic,
+    description: "Hey Fantasy!"
+  },
+  {
     name: "Betting",
     href: "/betting",
     icon: DollarSign,

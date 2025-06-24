@@ -48,6 +48,42 @@ export default function PricingPage() {
   const handleSubscribe = async (planId: string) => {
     setSelectedPlan(planId);
     
+    try {
+      // Get the price ID from Stripe based on plan and interval
+      const response = await fetch('/api/stripe/prices', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ planId, interval: billingInterval })
+      });
+      
+      const { priceId } = await response.json();
+      
+      if (!priceId) {
+        throw new Error('Price not found');
+      }
+      
+      // Create checkout session
+      const checkoutResponse = await fetch('/api/stripe/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          priceId, 
+          planId,
+          interval: billingInterval 
+        })
+      });
+      
+      const { url } = await checkoutResponse.json();
+      
+      if (url) {
+        // Redirect to Stripe checkout
+        window.location.href = url;
+      }
+    } catch (error) {
+      console.error('Subscription error:', error);
+      alert('Failed to start subscription. Please try again.');
+    }
+    
     // TODO: Implement actual checkout
     console.log(`💳 Subscribing to plan: ${planId} (${billingInterval})`);
     

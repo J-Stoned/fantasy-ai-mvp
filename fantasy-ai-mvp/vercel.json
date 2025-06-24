@@ -38,11 +38,7 @@
     },
     {
       "path": "/api/cron/train-ml",
-      "schedule": "0 12 * * *"
-    },
-    {
-      "path": "/api/cron/sync-database",
-      "schedule": "0 0 * * *"
+      "schedule": "0 20 * * *"
     }
   ]
 }

@@ -170,8 +170,10 @@ Format your response as JSON matching this structure:
       return {
         playerId: `player_${Date.now()}`, // Would be actual ID in production
         playerName,
+        projectedPoints: validatedAnalysis.projectedPoints || 0,
+        confidence: validatedAnalysis.confidence || 0,
         ...validatedAnalysis,
-      };
+      } as PlayerAnalysis;
 
     } catch (error) {
       console.error("Error analyzing player:", error);
@@ -269,7 +271,15 @@ Format as JSON:
       }
 
       const aiNarrative = JSON.parse(content);
-      return LineupNarrativeSchema.parse(aiNarrative);
+      const validatedNarrative = LineupNarrativeSchema.parse(aiNarrative);
+      
+      return {
+        overallStory: validatedNarrative.overallStory ?? "Your lineup is powered by AI-driven insights and optimized for maximum performance.",
+        keyPlayers: validatedNarrative.keyPlayers ?? [],
+        gameScripts: validatedNarrative.gameScripts ?? {},
+        riskAssessment: validatedNarrative.riskAssessment ?? "Balanced risk profile",
+        confidenceLevel: validatedNarrative.confidenceLevel ?? 75,
+      } as LineupNarrative;
 
     } catch (error) {
       console.error("Error generating lineup narrative:", error);

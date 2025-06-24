@@ -1,0 +1,287 @@
+name: Continuous Data Collection Pipeline
+
+on:
+  schedule:
+    # Run every 5 minutes
+    - cron: '*/5 * * * *'
+  
+  workflow_dispatch:
+    inputs:
+      data_sources:
+        description: 'Data sources to collect (comma-separated: nfl,nba,mlb,nhl,all)'
+        required: false
+        default: 'all'
+        type: string
+      force_update:
+        description: 'Force update even if data exists'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  data-collection:
+    name: Collect Fantasy Sports Data
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    
+    strategy:
+      matrix:
+        source: [espn, yahoo, cbs, draftkings, fanduel, official]
+      fail-fast: false
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Cache Dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      
+      - name: Install Dependencies
+        run: |
+          npm ci --prefer-offline --no-audit
+          npm install -g tsx
+      
+      - name: Check Rate Limits
+        id: rate_check
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: |
+          echo "Checking API rate limits for ${{ matrix.source }}..."
+          tsx scripts/check-rate-limits.ts --source=${{ matrix.source }}
+        continue-on-error: true
+      
+      - name: Collect Data - ${{ matrix.source }}
+        id: collect
+        if: steps.rate_check.outcome == 'success'
+        env:
+          NODE_ENV: production
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          ESPN_API_KEY: ${{ secrets.ESPN_API_KEY }}
+          YAHOO_API_KEY: ${{ secrets.YAHOO_API_KEY }}
+          YAHOO_API_SECRET: ${{ secrets.YAHOO_API_SECRET }}
+          CBS_API_KEY: ${{ secrets.CBS_API_KEY }}
+          DRAFTKINGS_API_KEY: ${{ secrets.DRAFTKINGS_API_KEY }}
+          FANDUEL_API_KEY: ${{ secrets.FANDUEL_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          DATA_SOURCES: ${{ github.event.inputs.data_sources || 'all' }}
+          FORCE_UPDATE: ${{ github.event.inputs.force_update || 'false' }}
+        run: |
+          echo "Starting data collection from ${{ matrix.source }}..."
+          tsx scripts/collect-data-${{ matrix.source }}.ts
+        timeout-minutes: 5
+      
+      - name: Validate Collected Data
+        if: steps.collect.outcome == 'success'
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: |
+          echo "Validating data from ${{ matrix.source }}..."
+          tsx scripts/validate-collected-data.ts --source=${{ matrix.source }}
+      
+      - name: Upload Error Logs
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: error-logs-${{ matrix.source }}-${{ github.run_number }}
+          path: |
+            logs/
+            *.log
+          retention-days: 7
+  
+  process-analytics:
+    name: Process Analytics & AI Insights
+    needs: data-collection
+    runs-on: ubuntu-latest
+    if: always() && !cancelled()
+    timeout-minutes: 10
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install Dependencies
+        run: |
+          npm ci --prefer-offline --no-audit
+          npm install -g tsx
+      
+      - name: Process Player Analytics
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          echo "Processing player analytics and AI insights..."
+          tsx scripts/process-player-analytics.ts
+      
+      - name: Update Projections
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          echo "Updating player projections..."
+          tsx scripts/update-projections.ts
+      
+      - name: Generate Performance Reports
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: |
+          echo "Generating performance reports..."
+          tsx scripts/generate-performance-report.ts
+      
+      - name: Upload Reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: performance-reports-${{ github.run_number }}
+          path: |
+            data/reports/
+            data/analytics/
+          retention-days: 30
+  
+  notify-status:
+    name: Send Notifications
+    needs: [data-collection, process-analytics]
+    runs-on: ubuntu-latest
+    if: always()
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install Dependencies
+        run: |
+          npm ci --prefer-offline --no-audit
+          npm install -g tsx
+      
+      - name: Check Job Status
+        id: job_status
+        run: |
+          if [[ "${{ needs.data-collection.result }}" == "failure" ]] || [[ "${{ needs.process-analytics.result }}" == "failure" ]]; then
+            echo "status=failed" >> $GITHUB_OUTPUT
+          else
+            echo "status=success" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Send Discord Notification
+        if: vars.DISCORD_WEBHOOK_URL != ''
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          STATUS_EMOJI=$([[ "${{ steps.job_status.outputs.status }}" == "success" ]] && echo "✅" || echo "❌")
+          STATUS_COLOR=$([[ "${{ steps.job_status.outputs.status }}" == "success" ]] && echo "3066993" || echo "15158332")
+          
+          curl -H "Content-Type: application/json" \
+            -X POST \
+            -d "{
+              \"embeds\": [{
+                \"title\": \"${STATUS_EMOJI} Data Collection Pipeline\",
+                \"description\": \"Run #${{ github.run_number }} completed\",
+                \"color\": ${STATUS_COLOR},
+                \"fields\": [
+                  {
+                    \"name\": \"Status\",
+                    \"value\": \"${{ steps.job_status.outputs.status }}\",
+                    \"inline\": true
+                  },
+                  {
+                    \"name\": \"Trigger\",
+                    \"value\": \"${{ github.event_name }}\",
+                    \"inline\": true
+                  },
+                  {
+                    \"name\": \"Run URL\",
+                    \"value\": \"[View Run](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\"
+                  }
+                ],
+                \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"
+              }]
+            }" \
+            $DISCORD_WEBHOOK_URL
+      
+      - name: Send Email Notification (on failure)
+        if: steps.job_status.outputs.status == 'failed' && vars.SENDGRID_API_KEY != ''
+        env:
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          ADMIN_EMAIL: ${{ secrets.ADMIN_EMAIL }}
+        run: |
+          tsx scripts/send-failure-notification.ts
+      
+      - name: Update Status Dashboard
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: |
+          tsx scripts/update-status-dashboard.ts \
+            --status=${{ steps.job_status.outputs.status }} \
+            --run-id=${{ github.run_id }} \
+            --run-number=${{ github.run_number }}
+  
+  cleanup:
+    name: Cleanup Old Data
+    needs: [process-analytics]
+    runs-on: ubuntu-latest
+    if: github.event.schedule != '' # Only run on scheduled executions
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install Dependencies
+        run: |
+          npm ci --prefer-offline --no-audit
+          npm install -g tsx
+      
+      - name: Clean Old Data
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: |
+          echo "Cleaning data older than 7 days..."
+          tsx scripts/cleanup-old-data.ts --days=7
+      
+      - name: Optimize Database
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: |
+          echo "Optimizing database performance..."
+          tsx scripts/optimize-database.ts
+
+# Concurrency control to prevent overlapping runs
+concurrency:
+  group: data-collection-${{ github.ref }}
+  cancel-in-progress: true

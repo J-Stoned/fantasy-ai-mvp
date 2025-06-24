@@ -93,8 +93,14 @@ export class EnsemblePredictionEngine extends EventEmitter {
   constructor() {
     super();
     this.openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-    this.initializeModelEnsemble();
-    this.setupRealTimeLearning();
+    
+    // Skip initialization during build time
+    if (process.env.SKIP_MCP_INIT !== 'true' && !process.env.VERCEL_ENV) {
+      this.initializeModelEnsemble();
+      this.setupRealTimeLearning();
+    } else {
+      console.log("⏳ Deferring Ensemble AI initialization to runtime...");
+    }
   }
 
   /**

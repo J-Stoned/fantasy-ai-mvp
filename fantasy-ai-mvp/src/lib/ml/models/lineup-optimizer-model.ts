@@ -313,7 +313,8 @@ export class LineupOptimizerModel extends BaseMLModel {
       const requirement = constraints.positions[pos as keyof typeof constraints.positions];
       if (!requirement) continue;
       
-      const count = typeof requirement === 'number' ? requirement : requirement.min;
+      const count = typeof requirement === 'number' ? requirement : 
+        (requirement && typeof requirement === 'object' && 'min' in requirement) ? requirement.min : 1;
       const eligible = players.filter(p => 
         p.position === pos && 
         !usedPlayers.has(p.playerId) &&

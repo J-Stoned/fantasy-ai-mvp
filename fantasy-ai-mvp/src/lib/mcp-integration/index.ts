@@ -67,6 +67,13 @@ export class MCPIntegrationManager {
    */
   async initialize(): Promise<void> {
     if (this.initialized) return;
+    
+    // Skip initialization during build time
+    if (process.env.SKIP_MCP_INIT === 'true' || process.env.VERCEL_ENV) {
+      console.log("⏳ Deferring MCP initialization to runtime...");
+      this.initialized = true; // Mark as initialized to prevent retries
+      return;
+    }
 
     console.log("🚀 Initializing MCP Integration Suite...");
 
@@ -396,7 +403,10 @@ export class MCPIntegrationManager {
 export const mcpIntegrationManager = MCPIntegrationManager.getInstance();
 
 // Auto-initialize when imported (can be disabled by setting env var)
-if (process.env.NODE_ENV !== "test" && process.env.MCP_AUTO_INIT !== "false") {
+if (process.env.NODE_ENV !== "test" && 
+    process.env.MCP_AUTO_INIT !== "false" &&
+    !process.env.SKIP_MCP_INIT && 
+    !process.env.VERCEL_ENV) {
   mcpIntegrationManager.initialize().catch(console.error);
 }
 

@@ -117,15 +117,25 @@ export class UnifiedMCPManager extends EventEmitter {
   constructor() {
     super();
     this.systemMetrics = this.initializeSystemMetrics();
-    this.initializeServers();
-    this.startHealthChecks();
-    this.startMetricsCollection();
+    
+    // Only start services if not in build mode
+    if (process.env.SKIP_MCP_INIT !== 'true' && !process.env.VERCEL_ENV) {
+      this.initializeServers();
+      this.startHealthChecks();
+      this.startMetricsCollection();
+    }
   }
 
   /**
    * Initialize all 23 MCP servers
    */
   private initializeServers() {
+    // Skip initialization during build time
+    if (process.env.SKIP_MCP_INIT === 'true' || process.env.VERCEL_ENV) {
+      console.log("⏳ Deferring MCP server initialization to runtime...");
+      return;
+    }
+    
     console.log("🚀 Initializing 23 MCP servers...");
 
     // Core Development Servers

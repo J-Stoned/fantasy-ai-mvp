@@ -1,0 +1,24 @@
+# Data Collector Docker Image
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+COPY prisma ./prisma/
+
+# Install dependencies
+RUN npm ci --only=production
+RUN npx prisma generate
+
+# Copy application code
+COPY src ./src
+COPY scripts ./scripts
+COPY tsconfig.json ./
+
+# Set environment
+ENV NODE_ENV=production
+ENV SKIP_MCP_INIT=false
+
+# Run data collector
+CMD ["npx", "tsx", "scripts/REAL-API-DATA-COLLECTOR.ts", "--continuous"]

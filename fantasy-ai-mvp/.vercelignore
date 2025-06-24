@@ -1,13 +1,59 @@
-# Exclude large data files from deployment
-data/
+# Logs and temporary files
 *.log
+logs/
 continuous-updater.log
-node_modules/
-.next/
-.vercel/
-prisma/dev.db*
-prisma/fantasy-ai-production.db*
-public/database/
+
+# Local database files (we use Supabase in production)
+*.db
+prisma/dev.db
+prisma/*.db
+prisma/migrations/dev/
+
+# Scripts directory (collectors run on GitHub/AWS, not Vercel)
 scripts/
-*.sql
+
+# Development data (production uses Supabase)
+data/collected/
+data/ultimate-free/
+
+# Development files
+voice-demos/
+*.mp3
+*.mp4
+*.mov
+
+# Build artifacts
+.next/
+.git/
+.vercel/
+
+# Environment files
+.env
 .env.local
+.env.development
+
+# Test files
+__tests__/
+coverage/
+*.test.ts
+*.spec.ts
+jest.config.js
+
+# Documentation (optional, not needed for app)
+README.md
+docs/
+*.md
+
+# Large/unnecessary files
+*.zip
+*.tar.gz
+*.sql
+public/database/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/

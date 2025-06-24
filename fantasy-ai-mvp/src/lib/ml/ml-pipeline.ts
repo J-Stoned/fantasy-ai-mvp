@@ -168,7 +168,7 @@ export class MLPipeline {
       playerPrediction.confidence,
       matchupAnalysis.advantage,
       injuryAssessment.metadata.riskScore,
-      weatherImpact.confidenceScore
+      (weatherImpact as any).confidenceScore ?? weatherImpact.confidence ?? 0.75
     );
     
     // Calculate start confidence (0-100)
@@ -228,7 +228,7 @@ export class MLPipeline {
       
       matchup: {
         advantage: matchupAnalysis.advantage,
-        rating: matchupAnalysis.matchupRating,
+        rating: (matchupAnalysis as any).matchupRating ?? matchupAnalysis.advantage ?? 0,
         keyFactors: matchupAnalysis.keyFactors.slice(0, 3).map(f => f.factor),
       },
       

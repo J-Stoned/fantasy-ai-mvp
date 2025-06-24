@@ -52,6 +52,7 @@ export interface WeatherImpact {
   impactScore: number; // -1 to 1 (-1 = very negative, 1 = very positive)
   projectionMultiplier: number; // Apply to base projection
   confidenceAdjustment: number; // Increase/decrease confidence
+  confidence: number; // Overall confidence in the weather impact assessment
   keyFactors: {
     factor: string;
     impact: number;
@@ -137,10 +138,35 @@ export class WeatherImpactModel extends BaseMLModel {
     return model;
   }
 
-  protected preprocessInput(
-    weather: WeatherConditions,
-    profile: PlayerWeatherProfile
-  ): tf.Tensor {
+  protected preprocessInput(data: any): tf.Tensor {
+    // Handle both single parameter (from base class) and dual parameters
+    let weather: WeatherConditions;
+    let profile: PlayerWeatherProfile;
+    
+    if (data.weather && data.profile) {
+      weather = data.weather;
+      profile = data.profile;
+    } else {
+      // Default values for base class compatibility
+      weather = data as WeatherConditions;
+      profile = {
+        playerId: 'default',
+        position: 'WR',
+        coldWeatherGames: 0,
+        coldWeatherAverage: 0,
+        warmWeatherGames: 0,
+        warmWeatherAverage: 0,
+        windGames: 0,
+        windAverage: 0,
+        precipitationGames: 0,
+        precipitationAverage: 0,
+        domeGames: 0,
+        domeAverage: 0,
+        outdoorGames: 0,
+        outdoorAverage: 0
+      };
+    }
+    
     const features = [
       // Weather conditions (normalized)
       weather.temperature / 100,
@@ -243,6 +269,7 @@ export class WeatherImpactModel extends BaseMLModel {
     
     return {
       ...baseImpact,
+      confidence: result.confidence,
       positionSpecificImpacts,
       recommendation,
     };

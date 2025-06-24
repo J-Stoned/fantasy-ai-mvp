@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "npm run build:production",
   "installCommand": "npm install",
   "framework": "nextjs",
   "functions": {
@@ -29,6 +29,20 @@
           "value": "s-maxage=10, stale-while-revalidate"
         }
       ]
+    }
+  ],
+  "crons": [
+    {
+      "path": "/api/cron/collect-data",
+      "schedule": "0 8 * * *"
+    },
+    {
+      "path": "/api/cron/train-ml",
+      "schedule": "0 12 * * *"
+    },
+    {
+      "path": "/api/cron/sync-database",
+      "schedule": "0 0 * * *"
     }
   ]
 }

@@ -125,8 +125,21 @@ export class KnowledgeGraphService extends EventEmitter {
 
   constructor() {
     super();
-    this.initializeMCPConnection();
-    this.seedInitialData();
+    
+    // Skip initialization during build time
+    if (process.env.SKIP_MCP_INIT !== 'true' && !process.env.VERCEL_ENV) {
+      this.initializeMCPConnection();
+      this.seedInitialData();
+    } else {
+      console.log("⏳ Deferring Knowledge Graph initialization to runtime...");
+      // Set up minimal mock connection for build time
+      this.mcpKnowledgeGraph = {
+        storeEntity: async () => ({ success: true }),
+        storeRelationship: async () => ({ success: true }),
+        queryGraph: async () => [],
+        findPatterns: async () => []
+      };
+    }
   }
 
   /**

@@ -6,6 +6,7 @@
     "dev": "next dev",
     "dev:safe": "next dev --turbo=false",
     "build": "prisma generate && node scripts/prepare-vercel-db.js && next build",
+    "build:production": "SKIP_MCP_INIT=true SKIP_ML_INIT=true prisma generate && next build",
     "build:safe": "next build --no-lint",
     "build:emergency": "next build --no-lint --experimental-build-mode=skip-validation",
     "postinstall": "prisma generate",
@@ -135,6 +136,7 @@
     "sqlite3": "^5.1.7",
     "stripe": "^14.25.0",
     "superjson": "^2.2.2",
+    "tailwind-merge": "^3.3.1",
     "tsx": "^4.20.3",
     "zod": "^3.25.64"
   },

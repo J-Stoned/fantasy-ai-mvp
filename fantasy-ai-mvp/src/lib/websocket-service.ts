@@ -33,7 +33,7 @@ class WebSocketService extends EventEmitter {
   private reconnectAttempts = 0;
   private maxReconnectAttempts = 5;
   private reconnectDelay = 1000;
-  private isConnected = false;
+  private _isConnected = false;
   private subscriptions: Set<string> = new Set();
 
   constructor() {
@@ -65,7 +65,7 @@ class WebSocketService extends EventEmitter {
 
     this.socket.on('connect', () => {
       console.log('✅ WebSocket connected');
-      this.isConnected = true;
+      this._isConnected = true;
       this.reconnectAttempts = 0;
       this.emit('connected');
       
@@ -77,7 +77,7 @@ class WebSocketService extends EventEmitter {
 
     this.socket.on('disconnect', (reason) => {
       console.log('❌ WebSocket disconnected:', reason);
-      this.isConnected = false;
+      this._isConnected = false;
       this.emit('disconnected', reason);
     });
 
@@ -205,7 +205,7 @@ class WebSocketService extends EventEmitter {
 
   // Utility methods
   isConnected(): boolean {
-    return this.isConnected && this.socket?.connected || false;
+    return this._isConnected && this.socket?.connected || false;
   }
 
   disconnect() {
@@ -218,7 +218,7 @@ class WebSocketService extends EventEmitter {
 
   // Simulate data for testing (remove in production)
   simulateData() {
-    if (!this.isConnected) return;
+    if (!this._isConnected) return;
 
     // Simulate live score updates
     setInterval(() => {

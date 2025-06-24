@@ -85,7 +85,7 @@ export default function TrophyRoomPage() {
   const [selectedTrophy, setSelectedTrophy] = useState<TrophyData | null>(null);
   const [soundEnabled, setSoundEnabled] = useState(true);
   const [viewMode, setViewMode] = useState<'grid' | '3d'>('grid');
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number>(0);
 
   // Simple 3D animation using Canvas (in production, would use Three.js)
   useEffect(() => {

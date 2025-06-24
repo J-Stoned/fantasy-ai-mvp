@@ -86,7 +86,8 @@ export abstract class BaseMLModel {
    */
   async train(
     trainData: tf.Tensor | tf.data.Dataset<any>,
-    validationData?: tf.Tensor | tf.data.Dataset<any>,
+    trainLabels?: tf.Tensor,
+    validationData?: tf.Tensor | tf.data.Dataset<any> | [tf.Tensor, tf.Tensor],
     callbacks?: tf.CustomCallbackArgs
   ): Promise<tf.History> {
     if (!this.model) {
@@ -94,15 +95,31 @@ export abstract class BaseMLModel {
     }
 
     this.isTraining = true;
+    let history: tf.History;
 
-    const history = await this.model.fit(trainData, {
-      epochs: this.config.epochs || 50,
-      batchSize: this.config.batchSize || 32,
-      validationData,
-      callbacks,
-    });
-
-    this.isTraining = false;
+    try {
+      // Handle both Tensor and Dataset types
+      if (trainData instanceof tf.data.Dataset) {
+        history = await this.model.fitDataset(trainData as tf.data.Dataset<any>, {
+          epochs: this.config.epochs || 50,
+          validationData: validationData as tf.data.Dataset<any> | undefined,
+          callbacks,
+        });
+      } else {
+        if (!trainLabels) {
+          throw new Error('trainLabels required when trainData is a Tensor');
+        }
+        history = await this.model.fit(trainData as tf.Tensor, trainLabels, {
+          epochs: this.config.epochs || 50,
+          batchSize: this.config.batchSize || 32,
+          validationData: validationData ? validationData as [tf.Tensor, tf.Tensor] : undefined,
+          callbacks,
+        });
+      }
+    } finally {
+      this.isTraining = false;
+    }
+    
     return history;
   }
 

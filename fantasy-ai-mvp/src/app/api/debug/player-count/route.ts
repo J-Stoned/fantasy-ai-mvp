@@ -1,12 +1,8 @@
 import { NextResponse } from 'next/server'
-import { getProductionPrisma } from '@/lib/db-production'
+import { prisma } from '@/lib/prisma'
 
 export async function GET() {
-  let prisma;
-  
   try {
-    // Get production-ready Prisma instance
-    prisma = await getProductionPrisma()
     
     // Count total players
     const totalPlayers = await prisma.player.count()
@@ -37,7 +33,8 @@ export async function GET() {
       })),
       database: {
         type: dbType,
-        isConfigured: !!process.env.DATABASE_URL
+        isConfigured: !!process.env.DATABASE_URL,
+        usingDirectUrl: !!process.env.DIRECT_URL
       },
       timestamp: new Date().toISOString()
     })
@@ -48,13 +45,9 @@ export async function GET() {
       error: error instanceof Error ? error.message : 'Unknown error',
       database: {
         type: 'Unknown',
-        isConfigured: !!process.env.DATABASE_URL
+        isConfigured: !!process.env.DATABASE_URL,
+        usingDirectUrl: !!process.env.DIRECT_URL
       }
     }, { status: 500 })
-  } finally {
-    // Don't disconnect in production as we're reusing the connection
-    if (prisma && process.env.NODE_ENV !== 'production') {
-      await prisma.$disconnect()
-    }
   }
 }

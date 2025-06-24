@@ -1,0 +1,1285 @@
+// 🚀 FANTASY.AI MEGA DATABASE EXPANSION
+// Optimized for Ryzen 5 7600X + RTX 4060
+// 200+ tables for COMPLETE sports domination!
+
+// ==========================================
+// NCAA & COLLEGE SPORTS
+// ==========================================
+
+model NCAADivision {
+  id          String   @id
+  name        String   // Division I, II, III
+  sport       String
+  level       String
+  conferences NCAAConference[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime
+}
+
+model NCAAConference {
+  id         String         @id
+  name       String         // SEC, Big Ten, ACC, etc.
+  divisionId String
+  region     String
+  division   NCAADivision   @relation(fields: [divisionId], references: [id])
+  schools    NCAASchool[]
+  createdAt  DateTime       @default(now())
+  updatedAt  DateTime
+
+  @@index([divisionId])
+}
+
+model NCAASchool {
+  id           String       @id
+  name         String
+  mascot       String
+  conferenceId String
+  location     String
+  enrollment   Int
+  conference   NCAAConference @relation(fields: [conferenceId], references: [id])
+  teams        NCAATeam[]
+  players      NCAAPlayer[]
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime
+
+  @@index([conferenceId])
+}
+
+model NCAATeam {
+  id        String        @id
+  schoolId  String
+  sport     String
+  division  String
+  ranking   Int?
+  record    String        // "10-2"
+  school    NCAASchool    @relation(fields: [schoolId], references: [id])
+  players   NCAAPlayer[]
+  games     NCAAGame[]
+  stats     NCAAStats[]
+  createdAt DateTime      @default(now())
+  updatedAt DateTime
+
+  @@index([schoolId])
+  @@index([sport])
+}
+
+model NCAAPlayer {
+  id            String       @id
+  name          String
+  schoolId      String
+  teamId        String
+  position      String
+  year          String       // Freshman, Sophomore, etc.
+  jerseyNumber  String
+  height        String
+  weight        Int
+  hometown      String
+  highSchoolId  String?
+  recruitRating Int?         // 1-5 stars
+  school        NCAASchool   @relation(fields: [schoolId], references: [id])
+  team          NCAATeam     @relation(fields: [teamId], references: [id])
+  stats         NCAAStats[]
+  recruiting    NCAARecruiting[]
+  transferPortal NCAATransferPortal[]
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime
+
+  @@index([schoolId])
+  @@index([teamId])
+  @@index([position])
+}
+
+model NCAAGame {
+  id          String     @id
+  homeTeamId  String
+  awayTeamId  String
+  gameDate    DateTime
+  venue       String
+  attendance  Int?
+  homeScore   Int?
+  awayScore   Int?
+  status      String
+  homeTeam    NCAATeam   @relation(fields: [homeTeamId], references: [id], name: "homeGames")
+  awayTeam    NCAATeam   @relation(fields: [awayTeamId], references: [id], name: "awayGames")
+  stats       NCAAStats[]
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime
+
+  @@index([homeTeamId])
+  @@index([awayTeamId])
+  @@index([gameDate])
+}
+
+model NCAAStats {
+  id        String      @id
+  playerId  String
+  teamId    String
+  gameId    String?
+  statType  String      // season, game, career
+  stats     Json        // Flexible stats object
+  player    NCAAPlayer  @relation(fields: [playerId], references: [id])
+  team      NCAATeam    @relation(fields: [teamId], references: [id])
+  game      NCAAGame?   @relation(fields: [gameId], references: [id])
+  createdAt DateTime    @default(now())
+  updatedAt DateTime
+
+  @@index([playerId])
+  @@index([teamId])
+  @@index([gameId])
+}
+
+model NCAARecruiting {
+  id            String      @id
+  playerId      String
+  schoolId      String
+  status        String      // offered, committed, signed
+  offerDate     DateTime?
+  commitDate    DateTime?
+  signingDate   DateTime?
+  player        NCAAPlayer  @relation(fields: [playerId], references: [id])
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime
+
+  @@index([playerId])
+  @@index([status])
+}
+
+model NCAATransferPortal {
+  id           String      @id
+  playerId     String
+  fromSchoolId String
+  toSchoolId   String?
+  enteredDate  DateTime
+  committedDate DateTime?
+  eligibility  String
+  player       NCAAPlayer  @relation(fields: [playerId], references: [id])
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime
+
+  @@index([playerId])
+}
+
+// ==========================================
+// HIGH SCHOOL SPORTS
+// ==========================================
+
+model HighSchoolDivision {
+  id          String        @id
+  name        String        // 6A, 5A, 4A, etc.
+  state       String
+  conferences HighSchoolConference[]
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime
+
+  @@index([state])
+}
+
+model HighSchoolConference {
+  id         String              @id
+  name       String
+  divisionId String
+  region     String
+  division   HighSchoolDivision  @relation(fields: [divisionId], references: [id])
+  schools    HighSchool[]
+  createdAt  DateTime            @default(now())
+  updatedAt  DateTime
+
+  @@index([divisionId])
+}
+
+model HighSchool {
+  id           String                @id
+  name         String
+  mascot       String
+  conferenceId String
+  city         String
+  state        String
+  enrollment   Int
+  conference   HighSchoolConference  @relation(fields: [conferenceId], references: [id])
+  teams        HighSchoolTeam[]
+  players      HighSchoolPlayer[]
+  createdAt    DateTime              @default(now())
+  updatedAt    DateTime
+
+  @@index([conferenceId])
+  @@index([state])
+}
+
+model HighSchoolTeam {
+  id        String              @id
+  schoolId  String
+  sport     String
+  division  String
+  ranking   Int?                // State ranking
+  record    String
+  school    HighSchool          @relation(fields: [schoolId], references: [id])
+  players   HighSchoolPlayer[]
+  games     HighSchoolGame[]
+  stats     HighSchoolStats[]
+  createdAt DateTime            @default(now())
+  updatedAt DateTime
+
+  @@index([schoolId])
+  @@index([sport])
+}
+
+model HighSchoolPlayer {
+  id            String              @id
+  name          String
+  schoolId      String
+  teamId        String
+  position      String
+  year          String              // 9, 10, 11, 12
+  jerseyNumber  String
+  height        String
+  weight        Int
+  gpa           Float?
+  recruitRating Int?                // 1-5 stars
+  school        HighSchool          @relation(fields: [schoolId], references: [id])
+  team          HighSchoolTeam      @relation(fields: [teamId], references: [id])
+  stats         HighSchoolStats[]
+  recruiting    HighSchoolRecruiting[]
+  pipeline      TalentPipeline[]
+  createdAt     DateTime            @default(now())
+  updatedAt     DateTime
+
+  @@index([schoolId])
+  @@index([teamId])
+  @@index([position])
+}
+
+model HighSchoolGame {
+  id          String            @id
+  homeTeamId  String
+  awayTeamId  String
+  gameDate    DateTime
+  venue       String
+  homeScore   Int?
+  awayScore   Int?
+  status      String
+  homeTeam    HighSchoolTeam    @relation(fields: [homeTeamId], references: [id], name: "hsHomeGames")
+  awayTeam    HighSchoolTeam    @relation(fields: [awayTeamId], references: [id], name: "hsAwayGames")
+  stats       HighSchoolStats[]
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime
+
+  @@index([homeTeamId])
+  @@index([awayTeamId])
+  @@index([gameDate])
+}
+
+model HighSchoolStats {
+  id        String            @id
+  playerId  String
+  teamId    String
+  gameId    String?
+  statType  String            // season, game, career
+  stats     Json
+  player    HighSchoolPlayer  @relation(fields: [playerId], references: [id])
+  team      HighSchoolTeam    @relation(fields: [teamId], references: [id])
+  game      HighSchoolGame?   @relation(fields: [gameId], references: [id])
+  createdAt DateTime          @default(now())
+  updatedAt DateTime
+
+  @@index([playerId])
+  @@index([teamId])
+}
+
+model HighSchoolRecruiting {
+  id           String            @id
+  playerId     String
+  collegeId    String
+  status       String            // contacted, offered, visited, committed
+  offerDate    DateTime?
+  visitDate    DateTime?
+  commitDate   DateTime?
+  player       HighSchoolPlayer  @relation(fields: [playerId], references: [id])
+  createdAt    DateTime          @default(now())
+  updatedAt    DateTime
+
+  @@index([playerId])
+  @@index([status])
+}
+
+model TalentPipeline {
+  id              String            @id
+  hsPlayerId      String
+  projectedLevel  String            // D1, D2, D3, Pro
+  confidenceScore Float
+  scoutingNotes   String
+  player          HighSchoolPlayer  @relation(fields: [hsPlayerId], references: [id])
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime
+
+  @@index([hsPlayerId])
+}
+
+// ==========================================
+// EQUIPMENT & SAFETY
+// ==========================================
+
+model Equipment {
+  id           String              @id
+  name         String
+  category     String              // helmet, pads, shoes, etc.
+  sport        String
+  brandId      String
+  modelId      String
+  brand        EquipmentBrand      @relation(fields: [brandId], references: [id])
+  model        EquipmentModel      @relation(fields: [modelId], references: [id])
+  performance  EquipmentPerformance[]
+  safety       SafetyRating[]
+  failures     EquipmentFailure[]
+  createdAt    DateTime            @default(now())
+  updatedAt    DateTime
+
+  @@index([brandId])
+  @@index([modelId])
+  @@index([category])
+  @@index([sport])
+}
+
+model EquipmentBrand {
+  id          String            @id
+  name        String
+  website     String?
+  equipment   Equipment[]
+  models      EquipmentModel[]
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime
+}
+
+model EquipmentModel {
+  id          String            @id
+  brandId     String
+  modelName   String
+  modelYear   Int
+  msrp        Float
+  brand       EquipmentBrand    @relation(fields: [brandId], references: [id])
+  equipment   Equipment[]
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime
+
+  @@index([brandId])
+}
+
+model EquipmentPerformance {
+  id            String      @id
+  equipmentId   String
+  testDate      DateTime
+  testType      String      // impact, durability, comfort
+  testResults   Json
+  equipment     Equipment   @relation(fields: [equipmentId], references: [id])
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime
+
+  @@index([equipmentId])
+}
+
+model SafetyRating {
+  id            String      @id
+  equipmentId   String
+  ratingAgency  String      // NOCSAE, CE, etc.
+  safetyScore   Float       // 0-100
+  certification String
+  testDate      DateTime
+  expiryDate    DateTime?
+  equipment     Equipment   @relation(fields: [equipmentId], references: [id])
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime
+
+  @@index([equipmentId])
+}
+
+model InjuryReport {
+  id              String      @id
+  playerId        String
+  injuryType      String
+  severity        String      // minor, moderate, severe
+  bodyPart        String
+  dateOccurred    DateTime
+  equipmentId     String?
+  returnDate      DateTime?
+  preventable     Boolean?
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime
+
+  @@index([playerId])
+  @@index([injuryType])
+}
+
+model EquipmentFailure {
+  id            String      @id
+  equipmentId   String
+  failureType   String
+  failureDate   DateTime
+  description   String
+  injuryRelated Boolean     @default(false)
+  equipment     Equipment   @relation(fields: [equipmentId], references: [id])
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime
+
+  @@index([equipmentId])
+}
+
+model SafetyProtocol {
+  id            String      @id
+  sport         String
+  level         String      // youth, hs, college, pro
+  protocolName  String
+  description   String
+  requirements  Json
+  compliance    Float       // 0-100%
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime
+
+  @@index([sport])
+  @@index([level])
+}
+
+model WearableData {
+  id            String      @id
+  playerId      String
+  deviceType    String      // watch, chest strap, shoe sensor
+  metricType    String      // heart rate, impact, speed
+  timestamp     DateTime
+  value         Float
+  unit          String
+  createdAt     DateTime    @default(now())
+
+  @@index([playerId])
+  @@index([timestamp])
+}
+
+// ==========================================
+// FINANCIAL/SALARY DATA
+// ==========================================
+
+model PlayerContract {
+  id              String      @id
+  playerId        String
+  teamId          String
+  startDate       DateTime
+  endDate         DateTime
+  totalValue      Float
+  guaranteedValue Float
+  signingBonus    Float?
+  incentives      Json?       // Performance bonuses
+  capHit          Float[]     // Year by year
+  status          String      // active, expired, terminated
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime
+
+  @@index([playerId])
+  @@index([teamId])
+  @@index([status])
+}
+
+model TeamSalaryCap {
+  id            String      @id
+  teamId        String
+  season        String
+  leagueCap     Float       // League salary cap
+  teamPayroll   Float       // Current payroll
+  capSpace      Float       // Available space
+  deadMoney     Float       // Dead cap hits
+  projectedCap  Float       // Next year projection
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime
+
+  @@index([teamId])
+  @@index([season])
+}
+
+model ContractNegotiation {
+  id            String      @id
+  playerId      String
+  teamId        String
+  agentId       String?
+  initialOffer  Float
+  finalOffer    Float?
+  status        String      // ongoing, accepted, rejected
+  startDate     DateTime
+  endDate       DateTime?
+  notes         String?
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime
+
+  @@index([playerId])
+  @@index([teamId])
+  @@index([status])
+}
+
+model PerformanceBonus {
+  id            String      @id
+  contractId    String
+  bonusType     String      // games played, stats, awards
+  threshold     Float       // Target to hit
+  bonusAmount   Float
+  achieved      Boolean     @default(false)
+  achievedDate  DateTime?
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime
+
+  @@index([contractId])
+}
+
+model EndorsementDeal {
+  id            String      @id
+  playerId      String
+  brandName     String
+  dealValue     Float
+  startDate     DateTime
+  endDate       DateTime
+  dealType      String      // equipment, apparel, other
+  requirements  Json        // Social posts, appearances
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime
+
+  @@index([playerId])
+}
+
+model MarketValue {
+  id            String      @id
+  playerId      String
+  valuationDate DateTime
+  marketValue   Float
+  methodology   String      // comparable, projection, algorithm
+  confidence    Float       // 0-100%
+  factors       Json        // What drove the valuation
+  createdAt     DateTime    @default(now())
+
+  @@index([playerId])
+  @@index([valuationDate])
+}
+
+// ==========================================
+// GLOBAL SPORTS EXPANSION
+// ==========================================
+
+// Cricket
+model CricketPlayer {
+  id            String          @id
+  name          String
+  country       String
+  team          String
+  role          String          // Batsman, Bowler, All-rounder
+  battingStyle  String          // Right/Left handed
+  bowlingStyle  String?         // Fast, Spin, etc.
+  matches       CricketMatch[]
+  stats         CricketStats[]
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime
+
+  @@index([country])
+  @@index([team])
+}
+
+model CricketMatch {
+  id            String          @id
+  matchType     String          // Test, ODI, T20
+  team1         String
+  team2         String
+  venue         String
+  matchDate     DateTime
+  result        String?
+  players       CricketPlayer[]
+  stats         CricketStats[]
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime
+
+  @@index([matchDate])
+  @@index([matchType])
+}
+
+model CricketStats {
+  id            String          @id
+  playerId      String
+  matchId       String
+  runs          Int?
+  wickets       Int?
+  catches       Int?
+  strikeRate    Float?
+  economy       Float?
+  player        CricketPlayer   @relation(fields: [playerId], references: [id])
+  match         CricketMatch    @relation(fields: [matchId], references: [id])
+  createdAt     DateTime        @default(now())
+
+  @@index([playerId])
+  @@index([matchId])
+}
+
+// Soccer/Football
+model SoccerPlayer {
+  id            String          @id
+  name          String
+  nationality   String
+  clubId        String
+  position      String          // GK, DEF, MID, FWD
+  preferredFoot String          // Left, Right, Both
+  jerseyNumber  Int
+  marketValue   Float?
+  club          SoccerClub      @relation(fields: [clubId], references: [id])
+  stats         SoccerStats[]
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime
+
+  @@index([clubId])
+  @@index([nationality])
+}
+
+model SoccerClub {
+  id            String          @id
+  name          String
+  leagueId      String
+  country       String
+  stadium       String
+  capacity      Int
+  league        SoccerLeague    @relation(fields: [leagueId], references: [id])
+  players       SoccerPlayer[]
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime
+
+  @@index([leagueId])
+}
+
+model SoccerLeague {
+  id            String          @id
+  name          String          // Premier League, La Liga, etc.
+  country       String
+  tier          Int             // 1st division, 2nd division
+  clubs         SoccerClub[]
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime
+
+  @@index([country])
+}
+
+model SoccerStats {
+  id            String          @id
+  playerId      String
+  season        String
+  goals         Int             @default(0)
+  assists       Int             @default(0)
+  yellowCards   Int             @default(0)
+  redCards      Int             @default(0)
+  minutesPlayed Int             @default(0)
+  player        SoccerPlayer    @relation(fields: [playerId], references: [id])
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime
+
+  @@index([playerId])
+  @@index([season])
+}
+
+// Formula 1
+model FormulaOneDriver {
+  id            String          @id
+  name          String
+  nationality   String
+  teamId        String
+  carNumber     Int
+  worldTitles   Int             @default(0)
+  team          FormulaOneTeam  @relation(fields: [teamId], references: [id])
+  results       F1RaceResult[]
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime
+
+  @@index([teamId])
+}
+
+model FormulaOneTeam {
+  id            String              @id
+  name          String
+  baseCountry   String
+  teamPrincipal String
+  engine        String
+  drivers       FormulaOneDriver[]
+  createdAt     DateTime            @default(now())
+  updatedAt     DateTime
+}
+
+model F1Race {
+  id            String          @id
+  name          String          // Monaco Grand Prix
+  circuit       String
+  country       String
+  raceDate      DateTime
+  laps          Int
+  results       F1RaceResult[]
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime
+
+  @@index([raceDate])
+}
+
+model F1RaceResult {
+  id            String              @id
+  raceId        String
+  driverId      String
+  position      Int?
+  points        Float               @default(0)
+  fastestLap    Boolean             @default(false)
+  dnf           Boolean             @default(false)
+  race          F1Race              @relation(fields: [raceId], references: [id])
+  driver        FormulaOneDriver    @relation(fields: [driverId], references: [id])
+  createdAt     DateTime            @default(now())
+
+  @@index([raceId])
+  @@index([driverId])
+}
+
+// NASCAR
+model NASCARDriver {
+  id            String          @id
+  name          String
+  carNumber     Int
+  teamId        String
+  manufacturer  String          // Ford, Chevy, Toyota
+  wins          Int             @default(0)
+  championships Int             @default(0)
+  results       NASCARResult[]
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime
+
+  @@index([teamId])
+}
+
+model NASCARRace {
+  id            String          @id
+  name          String          // Daytona 500
+  track         String
+  series        String          // Cup, Xfinity, Truck
+  raceDate      DateTime
+  laps          Int
+  distance      Float           // miles
+  results       NASCARResult[]
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime
+
+  @@index([raceDate])
+  @@index([series])
+}
+
+model NASCARResult {
+  id            String          @id
+  raceId        String
+  driverId      String
+  startPos      Int
+  finishPos     Int?
+  lapsLed       Int             @default(0)
+  points        Int             @default(0)
+  status        String          // running, accident, mechanical
+  race          NASCARRace      @relation(fields: [raceId], references: [id])
+  driver        NASCARDriver    @relation(fields: [driverId], references: [id])
+  createdAt     DateTime        @default(now())
+
+  @@index([raceId])
+  @@index([driverId])
+}
+
+// Olympics
+model OlympicAthlete {
+  id            String          @id
+  name          String
+  country       String
+  sport         String
+  discipline    String
+  dateOfBirth   DateTime
+  height        Float?          // cm
+  weight        Float?          // kg
+  events        OlympicEvent[]
+  medals        OlympicMedal[]
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime
+
+  @@index([country])
+  @@index([sport])
+}
+
+model OlympicEvent {
+  id            String              @id
+  name          String              // 100m Sprint
+  sport         String
+  olympicsYear  Int
+  eventDate     DateTime
+  venue         String
+  athletes      OlympicAthlete[]
+  results       OlympicResult[]
+  createdAt     DateTime            @default(now())
+  updatedAt     DateTime
+
+  @@index([sport])
+  @@index([olympicsYear])
+}
+
+model OlympicResult {
+  id            String          @id
+  eventId       String
+  athleteId     String
+  position      Int?
+  time          Float?          // seconds
+  distance      Float?          // meters
+  score         Float?
+  event         OlympicEvent    @relation(fields: [eventId], references: [id])
+  createdAt     DateTime        @default(now())
+
+  @@index([eventId])
+}
+
+model OlympicMedal {
+  id            String          @id
+  athleteId     String
+  eventName     String
+  olympicsYear  Int
+  medalType     String          // Gold, Silver, Bronze
+  athlete       OlympicAthlete  @relation(fields: [athleteId], references: [id])
+  createdAt     DateTime        @default(now())
+
+  @@index([athleteId])
+  @@index([olympicsYear])
+}
+
+// eSports
+model EsportsPlayer {
+  id            String          @id
+  gamertag      String
+  realName      String?
+  nationality   String
+  teamId        String?
+  game          String          // LoL, DOTA2, CS:GO, etc.
+  team          EsportsTeam?    @relation(fields: [teamId], references: [id])
+  stats         EsportsStats[]
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime
+
+  @@index([teamId])
+  @@index([game])
+}
+
+model EsportsTeam {
+  id            String          @id
+  name          String
+  abbreviation  String
+  region        String
+  game          String
+  players       EsportsPlayer[]
+  tournaments   EsportsTournament[]
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime
+
+  @@index([game])
+  @@index([region])
+}
+
+model EsportsTournament {
+  id            String          @id
+  name          String
+  game          String
+  prizePool     Float
+  startDate     DateTime
+  endDate       DateTime
+  teams         EsportsTeam[]
+  matches       EsportsMatch[]
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime
+
+  @@index([game])
+  @@index([startDate])
+}
+
+model EsportsMatch {
+  id            String              @id
+  tournamentId  String
+  team1Id       String
+  team2Id       String
+  matchDate     DateTime
+  bestOf        Int                 // Best of 3, 5, etc.
+  winner        String?
+  tournament    EsportsTournament   @relation(fields: [tournamentId], references: [id])
+  stats         EsportsStats[]
+  createdAt     DateTime            @default(now())
+  updatedAt     DateTime
+
+  @@index([tournamentId])
+  @@index([matchDate])
+}
+
+model EsportsStats {
+  id            String          @id
+  playerId      String
+  matchId       String?
+  kills         Int             @default(0)
+  deaths        Int             @default(0)
+  assists       Int             @default(0)
+  cs            Int?            // Creep score
+  gpm           Float?          // Gold per minute
+  player        EsportsPlayer   @relation(fields: [playerId], references: [id])
+  match         EsportsMatch?   @relation(fields: [matchId], references: [id])
+  createdAt     DateTime        @default(now())
+
+  @@index([playerId])
+  @@index([matchId])
+}
+
+// ==========================================
+// ML MODEL MANAGEMENT
+// ==========================================
+
+model MLModel {
+  id              String          @id
+  name            String
+  version         String
+  modelType       String          // classification, regression, etc.
+  framework       String          // tensorflow, pytorch, etc.
+  sport           String?
+  purpose         String          // player prediction, injury risk, etc.
+  accuracy        Float?
+  precision       Float?
+  recall          Float?
+  f1Score         Float?
+  trainedDate     DateTime
+  deployedDate    DateTime?
+  status          String          // training, deployed, archived
+  hyperparameters Json
+  features        String[]
+  deployments     MLModelDeployment[]
+  predictions     MLPrediction[]
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime
+
+  @@index([status])
+  @@index([sport])
+  @@index([purpose])
+}
+
+model MLModelDeployment {
+  id              String          @id
+  modelId         String
+  deploymentType  String          // local, cloud, edge
+  hardware        String          // RTX4060, CPU, cloud-gpu
+  quantization    String          // INT8, FP16, FP32
+  vramUsage       Int             // MB
+  inferenceTimeMs Float
+  throughput      Float           // predictions/second
+  isActive        Boolean         @default(true)
+  model           MLModel         @relation(fields: [modelId], references: [id])
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime
+
+  @@index([modelId])
+  @@index([isActive])
+}
+
+model MLTrainingData {
+  id              String          @id
+  modelId         String
+  dataType        String          // train, validation, test
+  recordCount     Int
+  features        Json
+  labels          Json
+  sport           String?
+  dateRange       String?
+  quality         Float           // 0-100
+  createdAt       DateTime        @default(now())
+
+  @@index([modelId])
+  @@index([dataType])
+}
+
+model MLPrediction {
+  id              String          @id
+  modelId         String
+  predictionType  String          // player_performance, injury_risk, etc.
+  entityId        String          // playerId, teamId, etc.
+  prediction      Json
+  confidence      Float
+  actualOutcome   Json?
+  accuracy        Float?
+  predictionDate  DateTime
+  model           MLModel         @relation(fields: [modelId], references: [id])
+  createdAt       DateTime        @default(now())
+
+  @@index([modelId])
+  @@index([entityId])
+  @@index([predictionDate])
+}
+
+model MLAccuracy {
+  id              String          @id
+  modelId         String
+  evaluationDate  DateTime
+  testSize        Int
+  accuracy        Float
+  precision       Float
+  recall          Float
+  f1Score         Float
+  confusionMatrix Json
+  rocAuc          Float?
+  sport           String?
+  createdAt       DateTime        @default(now())
+
+  @@index([modelId])
+  @@index([evaluationDate])
+}
+
+model ModelVersion {
+  id              String          @id
+  modelId         String
+  versionNumber   String
+  changelog       String
+  improvements    Json
+  performance     Json
+  isProduction    Boolean         @default(false)
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime
+
+  @@index([modelId])
+}
+
+model FeatureImportance {
+  id              String          @id
+  modelId         String
+  featureName     String
+  importance      Float           // 0-1
+  category        String          // player, team, game, weather, etc.
+  createdAt       DateTime        @default(now())
+
+  @@index([modelId])
+  @@index([importance])
+}
+
+// ==========================================
+// ADVANCED ANALYTICS TABLES
+// ==========================================
+
+model PlayerBiometrics {
+  id              String          @id
+  playerId        String
+  measurementDate DateTime
+  height          Float           // cm
+  weight          Float           // kg
+  bodyFat         Float?          // percentage
+  wingSpan        Float?          // cm
+  verticalJump    Float?          // inches
+  fortyYardDash   Float?          // seconds
+  benchPress      Int?            // reps
+  gpuProcessed    Boolean         @default(false)
+  movementVector  Float[]         // GPU tensor data
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime
+
+  @@index([playerId])
+  @@index([measurementDate])
+}
+
+model PerformanceMetrics {
+  id              String          @id
+  playerId        String
+  gameId          String
+  metricType      String          // speed, acceleration, distance
+  metricValue     Float
+  timestamp       DateTime
+  gpuAnalyzed     Boolean         @default(false)
+  createdAt       DateTime        @default(now())
+
+  @@index([playerId])
+  @@index([gameId])
+  @@index([timestamp])
+}
+
+model InjuryPrediction {
+  id              String          @id
+  playerId        String
+  predictionDate  DateTime
+  injuryType      String
+  bodyPart        String
+  riskScore       Float           // 0-100
+  confidence      Float           // 0-1
+  factors         Json            // Contributing factors
+  preventionTips  String[]
+  modelVersion    String
+  createdAt       DateTime        @default(now())
+
+  @@index([playerId])
+  @@index([riskScore])
+}
+
+model WeatherData {
+  id              String          @id
+  venueId         String
+  gameTime        DateTime
+  temperature     Float           // Celsius
+  humidity        Float           // percentage
+  windSpeed       Float           // km/h
+  windDirection   String
+  precipitation   Float           // mm
+  visibility      Float           // km
+  pressure        Float           // hPa
+  conditions      String          // clear, rain, snow, etc.
+  createdAt       DateTime        @default(now())
+
+  @@index([venueId])
+  @@index([gameTime])
+}
+
+model VenueConditions {
+  id              String          @id
+  venueName       String
+  surface         String          // grass, turf, court, ice
+  altitude        Float           // meters
+  capacity        Int
+  roofType        String          // open, closed, retractable
+  dimensions      Json
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime
+
+  @@index([venueName])
+}
+
+model SocialMediaSentiment {
+  id              String          @id
+  entityId        String          // player, team, etc.
+  entityType      String
+  platform        String          // twitter, reddit, etc.
+  sentimentScore  Float           // -1 to 1
+  volume          Int             // number of mentions
+  trending        Boolean         @default(false)
+  topics          String[]
+  analysisDate    DateTime
+  createdAt       DateTime        @default(now())
+
+  @@index([entityId])
+  @@index([analysisDate])
+}
+
+model VideoAnalysis {
+  id              String          @id
+  gameId          String
+  videoUrl        String
+  duration        Int             // seconds
+  fps             Int
+  resolution      String
+  gpuBatchId      String          // For GPU batch processing
+  frameData       Bytes           // Compressed frame analysis
+  objectTracking  Json            // Player/ball tracking
+  actionRecognition Json          // Play recognition
+  highlights      Json            // Timestamp of highlights
+  processedDate   DateTime
+  createdAt       DateTime        @default(now())
+
+  @@index([gameId])
+  @@index([gpuBatchId])
+}
+
+model MovementTracking {
+  id              String          @id
+  playerId        String
+  gameId          String
+  timestamp       DateTime
+  position        Float[]         // [x, y, z]
+  velocity        Float[]         // [vx, vy, vz]
+  acceleration    Float[]         // [ax, ay, az]
+  distance        Float           // meters
+  gpuProcessed    Boolean         @default(false)
+  createdAt       DateTime        @default(now())
+
+  @@index([playerId])
+  @@index([gameId])
+  @@index([timestamp])
+}
+
+// ==========================================
+// HYBRID CPU-GPU PROCESSING
+// ==========================================
+
+model HybridProcessingJob {
+  id              String          @id
+  jobName         String
+  cpuTaskId       String          // Preprocessing on CPU
+  gpuTaskId       String          // ML inference on GPU
+  cpuThreads      Int             @default(6)
+  gpuBatchSize    Int             @default(32)
+  pipelineStage   String          // CPU_PREP | GPU_PROCESS | CPU_POST
+  inputSize       Int             // MB
+  outputSize      Int             // MB
+  cpuTimeMs       Float
+  gpuTimeMs       Float
+  totalLatencyMs  Float
+  status          String          // queued, processing, completed, failed
+  error           String?
+  createdAt       DateTime        @default(now())
+  completedAt     DateTime?
+
+  @@index([status])
+  @@index([createdAt])
+}
+
+model ParallelDataStream {
+  id              String          @id
+  streamId        Int             // 0-11 for 12 threads
+  cpuCore         Int             // 0-5 for 6 cores
+  dataType        String          // api, websocket, file, database
+  sourceUrl       String
+  throughputMBps  Float
+  recordsPerSec   Int
+  processingStage String          // ingestion, parsing, validation, storage
+  isActive        Boolean         @default(true)
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime
+
+  @@index([streamId])
+  @@index([isActive])
+}
+
+model GPUMemorySnapshot {
+  id              String          @id
+  timestamp       DateTime
+  totalMemoryMB   Int             // 8192 for RTX 4060
+  usedMemoryMB    Int
+  freeMemoryMB    Int
+  activeModels    String[]        // Model IDs currently loaded
+  batchesInFlight Int
+  temperature     Float           // GPU temp in Celsius
+  utilization     Float           // 0-100%
+  powerDraw       Float           // Watts
+  createdAt       DateTime        @default(now())
+
+  @@index([timestamp])
+}
+
+model ModelSwapEvent {
+  id              String          @id
+  fromModelId     String?
+  toModelId       String
+  swapReason      String          // memory_pressure, scheduled, priority
+  swapTimeMs      Float
+  vramFreedMB     Int
+  timestamp       DateTime
+  createdAt       DateTime        @default(now())
+
+  @@index([timestamp])
+}
+
+// ==========================================
+// REAL-TIME DATA PIPELINE
+// ==========================================
+
+model DataPipelineConfig {
+  id              String          @id
+  pipelineName    String
+  sport           String
+  dataSource      String
+  updateFrequency Int             // seconds
+  priority        Int             // 1-10
+  cpuThreads      Int
+  gpuEnabled      Boolean
+  isActive        Boolean         @default(true)
+  lastRun         DateTime?
+  nextRun         DateTime?
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime
+
+  @@index([sport])
+  @@index([isActive])
+}

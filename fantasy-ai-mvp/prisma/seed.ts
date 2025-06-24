@@ -1,4 +1,4 @@
-import { PrismaClient, Sport } from '@prisma/client';
+import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
@@ -78,7 +78,7 @@ async function seed() {
         providerId: 'demo-league-123',
         name: 'Fantasy.AI Demo League',
         season: '2024',
-        sport: Sport.FOOTBALL,
+        sport: "FOOTBALL",
         isActive: true,
         settings: JSON.stringify({
           rosterSize: 16,

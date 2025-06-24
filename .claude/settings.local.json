@@ -57,7 +57,9 @@
       "Bash(DATABASE_URL=postgresql://postgres:[YOUR-PASSWORD]@db.jhfhsbqrdblytrlrconc.supabase.co:5432/postgres npx prisma db push)",
       "WebFetch(domain:magicui.design)",
       "Bash(git commit:*)",
-      "Bash(docker run:*)"
+      "Bash(docker run:*)",
+      "Bash(kill:*)",
+      "Bash(PORT=3002 npm run dev)"
     ],
     "deny": []
   },
@@ -358,7 +360,7 @@
     "description": "Automated build pipeline with comprehensive validation and batch error resolution.",
     "pipeline_steps": [
       "collect_all_typescript_errors",
-      "collect_all_lint_errors", 
+      "collect_all_lint_errors",
       "collect_all_test_failures",
       "collect_all_import_issues",
       "collect_all_duplicate_exports",

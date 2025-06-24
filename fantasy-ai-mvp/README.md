@@ -1,9 +1,10 @@
 # 🏈 Fantasy.AI MVP - Revolutionary Voice-Powered Fantasy Sports Platform
 
-[![Production Ready](https://img.shields.io/badge/Production-Ready-brightgreen.svg)](https://fantasy-ai-4mecs949g-justinrstone81-gmailcoms-projects.vercel.app)
+[![Production Ready](https://img.shields.io/badge/Production-Ready-brightgreen.svg)](https://fantasy-ai-mvp.vercel.app)
 [![Test Coverage](https://img.shields.io/badge/Tests-87.5%25-green.svg)](./fantasy-ai-comprehensive-test-report.json)
 [![Data Sources](https://img.shields.io/badge/Data%20Sources-13%2B-blue.svg)](#data-sources)
 [![Sports Records](https://img.shields.io/badge/Sports%20Records-537%2B-purple.svg)](#live-data)
+[![Database Fix](https://img.shields.io/badge/Database-Fixed-success.svg)](#deployment)
 
 > **The world's first voice-powered fantasy sports platform with AI analytics, real-time insights, and enterprise-grade infrastructure.**
 

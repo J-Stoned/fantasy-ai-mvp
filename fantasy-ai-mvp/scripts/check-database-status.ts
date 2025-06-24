@@ -6,7 +6,14 @@
 
 import { PrismaClient } from '@prisma/client';
 
-const DATABASE_URL = 'postgresql://postgres.jhfhsbqrdblytrlrconc:3O4X69OIECpNNjoW@aws-0-us-east-1.pooler.supabase.com:6543/postgres?pgbouncer=true';
+// Use environment variables instead of hardcoded URL
+const DATABASE_URL = process.env.DIRECT_URL || process.env.DATABASE_URL || '';
+
+if (!DATABASE_URL) {
+  console.error('❌ No database URL found in environment variables');
+  console.error('   Please set DIRECT_URL or DATABASE_URL');
+  process.exit(1);
+}
 
 const prisma = new PrismaClient({
   datasources: {

@@ -5,7 +5,8 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
-  // Supabase PostgreSQL database for production
+  directUrl = env("DIRECT_URL")
+  // Supabase PostgreSQL database for production - using direct connection
 }
 
 model User {

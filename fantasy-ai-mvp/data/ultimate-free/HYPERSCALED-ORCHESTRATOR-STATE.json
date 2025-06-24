@@ -1,0 +1,29 @@
+{
+  "timestamp": "2025-06-24T00:14:16.337Z",
+  "orchestrator": {
+    "totalWorkers": 500,
+    "activeWorkers": 144,
+    "workerPools": 12,
+    "taskQueueSize": 0
+  },
+  "performance": {
+    "tasksProcessed": 1385,
+    "elapsedTime": 15.027,
+    "tasksPerSecond": 92.16743195581287,
+    "projectedHourly": 331802.75504092633
+  },
+  "workerDistribution": {
+    "express-processor": 100,
+    "standard-processor": 150,
+    "bulk-processor": 100,
+    "video-processor": 20,
+    "audio-specialist": 20,
+    "content-discoverer": 30,
+    "expert-validator": 20,
+    "quality-controller": 15,
+    "real-time-monitor": 15,
+    "ai-enhancer": 10,
+    "trend-analyzer": 10,
+    "sentiment-processor": 10
+  }
+}

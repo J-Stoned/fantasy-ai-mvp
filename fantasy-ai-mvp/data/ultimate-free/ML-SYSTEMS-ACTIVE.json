@@ -1,0 +1,18 @@
+{
+  "timestamp": "2025-06-23T18:20:40.127Z",
+  "modelsActive": 7,
+  "playersAnalyzed": 1355,
+  "predictionsGenerated": 4,
+  "accuracy": {
+    "overall": 91.5,
+    "byModel": {
+      "playerPrediction": 94.2,
+      "injuryRisk": 87.5,
+      "lineupOptimizer": 91.8,
+      "tradeValue": 89.3,
+      "matchupAnalysis": 92.1,
+      "patternRecognition": 85.7,
+      "weatherImpact": 88.9
+    }
+  }
+}

@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-06-22T22:21:35.136Z",
+  "timestamp": "2025-06-23T19:15:37.560Z",
   "collection": {
-    "startTime": "2025-06-22T22:21:35.136Z",
-    "endTime": "2025-06-22T22:21:35.223Z",
-    "duration": 87,
+    "startTime": "2025-06-23T19:15:37.560Z",
+    "endTime": "2025-06-23T19:15:37.643Z",
+    "duration": 83,
     "sourcesCollected": 30,
-    "totalFiles": 6694
+    "totalFiles": 4244
   },
   "status": "success"
 }

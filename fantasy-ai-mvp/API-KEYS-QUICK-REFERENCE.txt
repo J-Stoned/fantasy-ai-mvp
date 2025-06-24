@@ -1,0 +1,34 @@
+🔑 API KEYS QUICK REFERENCE CARD
+================================
+
+Copy this into your .env file after getting each key:
+
+# Free APIs (get these now)
+OPENWEATHER_API_KEY=""
+ODDS_API_KEY=""
+NEWS_API_KEY=""
+ELEVENLABS_API_KEY=""
+
+# Your existing keys
+OPENAI_API_KEY=""
+STRIPE_SECRET_KEY=""
+STRIPE_PUBLISHABLE_KEY=""
+
+URLs TO OPEN:
+1. https://openweathermap.org/api
+2. https://the-odds-api.com/
+3. https://newsapi.org/
+4. https://elevenlabs.io/
+
+WHAT TO DO AT EACH SITE:
+- Sign up for free account
+- Verify email if needed
+- Find API Keys section
+- Copy the key
+- Paste into .env file
+
+TEST YOUR KEYS:
+npx tsx scripts/TEST-API-KEYS.ts
+
+START DATA COLLECTION:
+npx tsx scripts/REAL-API-DATA-COLLECTOR.ts --continuous

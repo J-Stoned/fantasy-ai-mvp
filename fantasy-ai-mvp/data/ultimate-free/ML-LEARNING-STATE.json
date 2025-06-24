@@ -1,0 +1,26 @@
+{
+  "timestamp": "2025-06-24T00:14:02.414Z",
+  "metrics": {
+    "totalPredictions": 0,
+    "correctPredictions": 0,
+    "accuracy": 82.36639253853758,
+    "improvementRate": -91.5,
+    "learningCycles": 0,
+    "modelUpdates": 0,
+    "dataPointsProcessed": 0,
+    "lastImprovement": "2025-06-24T00:14:02.414Z"
+  },
+  "learningHistory": [
+    91.5,
+    82.36639253853758
+  ],
+  "modelPerformance": {
+    "playerPrediction": 94.2,
+    "injuryRisk": 87.5,
+    "lineupOptimizer": 91.8,
+    "tradeValue": 89.3,
+    "matchupAnalysis": 92.1,
+    "patternRecognition": 85.7,
+    "weatherImpact": 88.9
+  }
+}

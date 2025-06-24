@@ -1,0 +1,182 @@
+{
+  "timestamp": "2025-06-23T19:12:22.321Z",
+  "dataSources": {
+    "total": 24,
+    "categories": 5,
+    "connections": [
+      {
+        "name": "ESPN GameCast",
+        "category": "LIVE_GAMES",
+        "status": "connected",
+        "lastUpdate": "2025-06-23T19:12:22.321Z",
+        "dataPoints": 2790
+      },
+      {
+        "name": "NFL GamePass",
+        "category": "LIVE_GAMES",
+        "status": "connected",
+        "lastUpdate": "2025-06-23T19:12:22.321Z",
+        "dataPoints": 2576
+      },
+      {
+        "name": "NBA League Pass",
+        "category": "LIVE_GAMES",
+        "status": "connected",
+        "lastUpdate": "2025-06-23T19:12:22.321Z",
+        "dataPoints": 2791
+      },
+      {
+        "name": "MLB Gameday",
+        "category": "LIVE_GAMES",
+        "status": "connected",
+        "lastUpdate": "2025-06-23T19:12:22.321Z",
+        "dataPoints": 3057
+      },
+      {
+        "name": "NHL.tv",
+        "category": "LIVE_GAMES",
+        "status": "connected",
+        "lastUpdate": "2025-06-23T19:12:22.321Z",
+        "dataPoints": 2769
+      },
+      {
+        "name": "Twitter/X Sports",
+        "category": "SOCIAL_MEDIA",
+        "status": "connected",
+        "lastUpdate": "2025-06-23T19:12:22.321Z",
+        "dataPoints": 2902
+      },
+      {
+        "name": "Reddit r/fantasyfootball",
+        "category": "SOCIAL_MEDIA",
+        "status": "connected",
+        "lastUpdate": "2025-06-23T19:12:22.321Z",
+        "dataPoints": 2885
+      },
+      {
+        "name": "Instagram Athletes",
+        "category": "SOCIAL_MEDIA",
+        "status": "connected",
+        "lastUpdate": "2025-06-23T19:12:22.321Z",
+        "dataPoints": 2842
+      },
+      {
+        "name": "TikTok Sports",
+        "category": "SOCIAL_MEDIA",
+        "status": "connected",
+        "lastUpdate": "2025-06-23T19:12:22.321Z",
+        "dataPoints": 2733
+      },
+      {
+        "name": "Discord Fantasy Servers",
+        "category": "SOCIAL_MEDIA",
+        "status": "connected",
+        "lastUpdate": "2025-06-23T19:12:22.321Z",
+        "dataPoints": 2712
+      },
+      {
+        "name": "NOAA Real-time",
+        "category": "WEATHER_DATA",
+        "status": "connected",
+        "lastUpdate": "2025-06-23T19:12:22.321Z",
+        "dataPoints": 2896
+      },
+      {
+        "name": "Weather.com Premium",
+        "category": "WEATHER_DATA",
+        "status": "connected",
+        "lastUpdate": "2025-06-23T19:12:22.321Z",
+        "dataPoints": 3003
+      },
+      {
+        "name": "Dark Sky API",
+        "category": "WEATHER_DATA",
+        "status": "connected",
+        "lastUpdate": "2025-06-23T19:12:22.321Z",
+        "dataPoints": 2750
+      },
+      {
+        "name": "Stadium Sensors",
+        "category": "WEATHER_DATA",
+        "status": "connected",
+        "lastUpdate": "2025-06-23T19:12:22.321Z",
+        "dataPoints": 2844
+      },
+      {
+        "name": "DraftKings Sportsbook",
+        "category": "BETTING_ODDS",
+        "status": "connected",
+        "lastUpdate": "2025-06-23T19:12:22.321Z",
+        "dataPoints": 3158
+      },
+      {
+        "name": "FanDuel Sportsbook",
+        "category": "BETTING_ODDS",
+        "status": "connected",
+        "lastUpdate": "2025-06-23T19:12:22.321Z",
+        "dataPoints": 3025
+      },
+      {
+        "name": "BetMGM",
+        "category": "BETTING_ODDS",
+        "status": "connected",
+        "lastUpdate": "2025-06-23T19:12:22.321Z",
+        "dataPoints": 3126
+      },
+      {
+        "name": "Caesars",
+        "category": "BETTING_ODDS",
+        "status": "connected",
+        "lastUpdate": "2025-06-23T19:12:22.321Z",
+        "dataPoints": 3078
+      },
+      {
+        "name": "Vegas Insider",
+        "category": "BETTING_ODDS",
+        "status": "connected",
+        "lastUpdate": "2025-06-23T19:12:22.321Z",
+        "dataPoints": 2944
+      },
+      {
+        "name": "NFL Next Gen Stats",
+        "category": "ADVANCED_ANALYTICS",
+        "status": "connected",
+        "lastUpdate": "2025-06-23T19:12:22.321Z",
+        "dataPoints": 3046
+      },
+      {
+        "name": "NBA Tracking Data",
+        "category": "ADVANCED_ANALYTICS",
+        "status": "connected",
+        "lastUpdate": "2025-06-23T19:12:22.321Z",
+        "dataPoints": 2991
+      },
+      {
+        "name": "MLB Statcast",
+        "category": "ADVANCED_ANALYTICS",
+        "status": "connected",
+        "lastUpdate": "2025-06-23T19:12:22.321Z",
+        "dataPoints": 3000
+      },
+      {
+        "name": "NHL Edge",
+        "category": "ADVANCED_ANALYTICS",
+        "status": "connected",
+        "lastUpdate": "2025-06-23T19:12:22.321Z",
+        "dataPoints": 2629
+      },
+      {
+        "name": "PFF Premium",
+        "category": "ADVANCED_ANALYTICS",
+        "status": "connected",
+        "lastUpdate": "2025-06-23T19:12:22.321Z",
+        "dataPoints": 2775
+      }
+    ]
+  },
+  "metrics": {
+    "totalDataPoints": 69322,
+    "dataPerSecond": 2387.6145209065235,
+    "uptime": 29.034
+  }
+}

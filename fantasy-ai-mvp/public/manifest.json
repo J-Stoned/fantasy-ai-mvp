@@ -81,6 +81,20 @@
       "description": "Get AI-powered fantasy advice",
       "url": "/dashboard?voice=true",
       "icons": [{"src": "/icons/ai-shortcut.png", "sizes": "96x96"}]
+    },
+    {
+      "name": "Voice Assistant",
+      "short_name": "Voice",
+      "description": "Hey Fantasy voice commands",
+      "url": "/voice-assistant-demo",
+      "icons": [{"src": "/icons/voice-shortcut.png", "sizes": "96x96"}]
+    },
+    {
+      "name": "AI Analytics",
+      "short_name": "Analytics",
+      "description": "Advanced AI predictions",
+      "url": "/ai-analytics",
+      "icons": [{"src": "/icons/analytics-shortcut.png", "sizes": "96x96"}]
     }
   ],
   "screenshots": [

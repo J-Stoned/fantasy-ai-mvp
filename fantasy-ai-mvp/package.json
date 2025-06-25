@@ -5,8 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "dev:socket": "tsx server.ts",
-    "build": "prisma generate && next build",
-    "postinstall": "prisma generate",
+    "build": "npm run prebuild && npm run prisma:generate && next build",
+    "prebuild": "rm -rf node_modules/.prisma && rm -rf .next",
+    "postinstall": "npm run prisma:generate",
+    "prisma:generate": "prisma generate --schema=./prisma/schema.prisma",
+    "vercel-build": "npm run prebuild && npm run prisma:generate && next build",
     "start": "next start",
     "start:socket": "NODE_ENV=production tsx server.ts",
     "lint": "next lint",

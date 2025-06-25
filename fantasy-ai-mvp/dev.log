@@ -8,12 +8,20 @@
    - Environments: .env
 
  ✓ Starting...
- ✓ Ready in 15.3s
- ○ Compiling /api/sports/live-players ...
- ✓ Compiled /api/sports/live-players in 4.5s (363 modules)
+ ✓ Ready in 14.7s
+ ○ Compiling /api/health ...
+ ✓ Compiled /api/health in 3.3s (363 modules)
+🔧 Initializing Prisma Client for: development
+📊 Database URL exists: true
+🏥 Health check started
+Environment: development
+DATABASE_URL exists: true
+VERCEL env: undefined
 prisma:info Starting a postgresql pool with 13 connections.
+prisma:query SELECT COUNT(*) AS "_count._all" FROM (SELECT "public"."Player"."id" FROM "public"."Player" WHERE 1=1 OFFSET $1) AS "sub"
+✅ Database connected successfully
+📊 Players in database: 5000
+⚡ Database response time: 889ms
 prisma:query SELECT "public"."Player"."id", "public"."Player"."externalId", "public"."Player"."name", "public"."Player"."position", "public"."Player"."team", "public"."Player"."leagueId", "public"."Player"."stats", "public"."Player"."projections", "public"."Player"."injuryStatus", "public"."Player"."imageUrl", "public"."Player"."createdAt", "public"."Player"."updatedAt" FROM "public"."Player" WHERE 1=1 ORDER BY "public"."Player"."name" ASC LIMIT $1 OFFSET $2
-prisma:query SELECT "public"."League"."id", "public"."League"."userId", "public"."League"."provider", "public"."League"."providerId", "public"."League"."name", "public"."League"."season", "public"."League"."sport", "public"."League"."isActive", "public"."League"."settings", "public"."League"."lastSync", "public"."League"."createdAt", "public"."League"."updatedAt", "public"."League"."wageringEnabled", "public"."League"."currentWeek", "public"."League"."externalId", "public"."League"."lastScoreUpdate", "public"."League"."platform", "public"."League"."scoringSettings" FROM "public"."League" WHERE "public"."League"."id" IN ($1,$2) OFFSET $3
-prisma:query SELECT "public"."Prediction"."id", "public"."Prediction"."userId", "public"."Prediction"."playerId", "public"."Prediction"."type", "public"."Prediction"."week", "public"."Prediction"."season", "public"."Prediction"."prediction", "public"."Prediction"."confidence", "public"."Prediction"."actual", "public"."Prediction"."accuracy", "public"."Prediction"."createdAt", "public"."Prediction"."updatedAt" FROM "public"."Prediction" WHERE "public"."Prediction"."playerId" IN ($1,$2,$3) OFFSET $4
-prisma:query SELECT "public"."BettingOdds"."id", "public"."BettingOdds"."playerId", "public"."BettingOdds"."gameId", "public"."BettingOdds"."propType", "public"."BettingOdds"."propName", "public"."BettingOdds"."line", "public"."BettingOdds"."overOdds", "public"."BettingOdds"."underOdds", "public"."BettingOdds"."sportsbook", "public"."BettingOdds"."volume", "public"."BettingOdds"."isLive", "public"."BettingOdds"."confidence", "public"."BettingOdds"."createdAt", "public"."BettingOdds"."lastUpdated" FROM "public"."BettingOdds" WHERE "public"."BettingOdds"."playerId" IN ($1,$2,$3) OFFSET $4
- GET /api/sports/live-players?limit=3 200 in 6485ms
+prisma:query SELECT "public"."League"."id", "public"."League"."userId", "public"."League"."provider", "public"."League"."providerId", "public"."League"."name", "public"."League"."season", "public"."League"."sport", "public"."League"."isActive", "public"."League"."settings", "public"."League"."lastSync", "public"."League"."createdAt", "public"."League"."updatedAt", "public"."League"."wageringEnabled", "public"."League"."currentWeek", "public"."League"."externalId", "public"."League"."lastScoreUpdate", "public"."League"."platform", "public"."League"."scoringSettings" FROM "public"."League" WHERE "public"."League"."id" IN ($1) OFFSET $2
+ GET /api/health 200 in 5030ms

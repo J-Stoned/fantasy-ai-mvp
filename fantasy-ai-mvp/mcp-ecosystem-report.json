@@ -1,0 +1,166 @@
+{
+  "timestamp": "2025-06-25T13:56:28.845Z",
+  "totalServers": 24,
+  "activeServers": 24,
+  "serverStatus": {
+    "Filesystem MCP": {
+      "status": "running",
+      "pid": 4354,
+      "uptime": 2720,
+      "memoryUsage": 140
+    },
+    "GitHub MCP": {
+      "status": "running",
+      "pid": 1013,
+      "uptime": 2720,
+      "memoryUsage": 120
+    },
+    "Memory MCP": {
+      "status": "running",
+      "pid": 3226,
+      "uptime": 2720,
+      "memoryUsage": 137
+    },
+    "Sequential Thinking MCP": {
+      "status": "running",
+      "pid": 5062,
+      "uptime": 2720,
+      "memoryUsage": 146
+    },
+    "PostgreSQL MCP": {
+      "status": "running",
+      "pid": 4856,
+      "uptime": 2720,
+      "memoryUsage": 84
+    },
+    "Knowledge Graph MCP": {
+      "status": "running",
+      "pid": 136,
+      "uptime": 2720,
+      "memoryUsage": 68
+    },
+    "Chart Visualization MCP": {
+      "status": "running",
+      "pid": 8114,
+      "uptime": 2720,
+      "memoryUsage": 97
+    },
+    "Playwright Official MCP": {
+      "status": "running",
+      "pid": 2841,
+      "uptime": 2720,
+      "memoryUsage": 136
+    },
+    "Puppeteer MCP": {
+      "status": "running",
+      "pid": 2874,
+      "uptime": 2720,
+      "memoryUsage": 119
+    },
+    "Firecrawl MCP": {
+      "status": "running",
+      "pid": 4287,
+      "uptime": 2720,
+      "memoryUsage": 90
+    },
+    "Vercel MCP": {
+      "status": "running",
+      "pid": 6411,
+      "uptime": 2719,
+      "memoryUsage": 83
+    },
+    "ElevenLabs MCP": {
+      "status": "running",
+      "pid": 9036,
+      "uptime": 2719,
+      "memoryUsage": 109
+    },
+    "Supabase MCP": {
+      "status": "running",
+      "pid": 2004,
+      "uptime": 2719,
+      "memoryUsage": 102
+    },
+    "MagicUI Design MCP": {
+      "status": "running",
+      "pid": 4505,
+      "uptime": 1307,
+      "memoryUsage": 100
+    },
+    "MagicUI Components MCP": {
+      "status": "running",
+      "pid": 1931,
+      "uptime": 1307,
+      "memoryUsage": 110
+    },
+    "Figma Dev MCP": {
+      "status": "running",
+      "pid": 9984,
+      "uptime": 1307,
+      "memoryUsage": 139
+    },
+    "Playwright Automation MCP": {
+      "status": "running",
+      "pid": 2429,
+      "uptime": 1306,
+      "memoryUsage": 110
+    },
+    "Desktop Commander MCP": {
+      "status": "running",
+      "pid": 2540,
+      "uptime": 1306,
+      "memoryUsage": 64
+    },
+    "Kubernetes MCP": {
+      "status": "running",
+      "pid": 5522,
+      "uptime": 1306,
+      "memoryUsage": 102
+    },
+    "SQLite MCP": {
+      "status": "running",
+      "pid": 5029,
+      "uptime": 1306,
+      "memoryUsage": 107
+    },
+    "Context7 MCP": {
+      "status": "running",
+      "pid": 8663,
+      "uptime": 1306,
+      "memoryUsage": 115
+    },
+    "MCP Installer": {
+      "status": "running",
+      "pid": 5885,
+      "uptime": 1306,
+      "memoryUsage": 134
+    },
+    "Azure MCP": {
+      "status": "running",
+      "pid": 5583,
+      "uptime": 1306,
+      "memoryUsage": 68
+    },
+    "Nx Monorepo MCP": {
+      "status": "running",
+      "pid": 5742,
+      "uptime": 1306,
+      "memoryUsage": 114
+    }
+  },
+  "capabilities": [
+    "File Operations",
+    "Git Automation",
+    "AI Memory",
+    "Problem Solving",
+    "Database Management",
+    "Knowledge Graph",
+    "UI Generation",
+    "Design Integration",
+    "Data Visualization",
+    "Testing Automation",
+    "Web Scraping",
+    "Cloud Deployment",
+    "Voice AI"
+  ]
+}

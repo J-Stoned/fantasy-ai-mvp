@@ -1,0 +1,6 @@
+{
+  "type": "lineup-optimizer-dnn",
+  "features": 90,
+  "accuracy": "93.1",
+  "trained": "2025-06-25T01:52:02.450Z"
+}

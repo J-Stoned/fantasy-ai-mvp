@@ -1,0 +1,51 @@
+[
+  {
+    "playerId": "cmc9eif4z0004unjtz58zrd6v",
+    "timestamp": "2025-06-25T01:29:08.304Z",
+    "news": {
+      "sentiment": 0.38245158536821755,
+      "mentions": 25,
+      "headlines": [
+        "Patrick Mahomes looking strong in practice",
+        "Coach optimistic about Patrick Mahomes's performance"
+      ]
+    }
+  },
+  {
+    "playerId": "cmc9eifdg0008unjtrjt4v8qk",
+    "timestamp": "2025-06-25T01:29:08.304Z",
+    "news": {
+      "sentiment": -0.5101973894040994,
+      "mentions": 49,
+      "headlines": [
+        "Josh Allen looking strong in practice",
+        "Coach optimistic about Josh Allen's performance"
+      ]
+    }
+  },
+  {
+    "playerId": "cmc9eiflq000cunjt4wzrtr9z",
+    "timestamp": "2025-06-25T01:29:08.304Z",
+    "news": {
+      "sentiment": 0.6519642038236033,
+      "mentions": 20,
+      "headlines": [
+        "Lamar Jackson looking strong in practice",
+        "Coach optimistic about Lamar Jackson's performance"
+      ]
+    }
+  },
+  {
+    "playerId": "cmc9eifu2000gunjthdnsi3bg",
+    "timestamp": "2025-06-25T01:29:08.304Z"
+  },
+  {
+    "playerId": "cmc9eig2h000kunjtttiij5gf",
+    "timestamp": "2025-06-25T01:29:08.304Z",
+    "weather": {
+      "temp": 80.28550072294614,
+      "wind": 9.853940268440349,
+      "conditions": "Cloudy"
+    }
+  }
+]

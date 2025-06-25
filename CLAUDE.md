@@ -22,6 +22,7 @@ fantasy-ai-mvp/
 │   └── types/        # TypeScript type definitions
 ├── prisma/           # Database schema and migrations
 ├── scripts/          # Setup and utility scripts
+├── archive/          # Phase 1 experimental features (34 archived)
 └── docker-compose.yml # Database and services config
 ```
 
@@ -126,6 +127,31 @@ Claude has access to 24 powerful MCP servers for enhanced development:
     - Demo page at `/mcp-showcase` showing all capabilities
     - 22 MCP servers integrated and ready for production
     - Enterprise-level tooling competitive with major platforms
+
+## 📦 Archived Experimental Features
+**Phase 1 Archive**: 34 innovative experimental features preserved in `/archive/phase1-experimental-features/`
+
+### 🗂️ Archive Categories (Total: 34 features)
+- **🤖 AI Systems (6)**: AI therapist, personality trainers, AGI commissioner, predictive injury AI
+- **🥽 AR/VR (3)**: Live game overlays, social AR, reality simulation
+- **🎰 Gambling/Wagering (5)**: Dynamic odds, live betting, sentiment markets
+- **🪙 Crypto/Blockchain (3)**: NFT integration, fantasy stock market
+- **🧠 Advanced Interfaces (4)**: Neuralink, biometrics, voice assistant, consciousness interface
+- **👥 Social Systems (3)**: Viral engine, psychological warfare, bounty system
+- **🚀 Futuristic Tech (4)**: Quantum computing, time travel predictions, interplanetary communication
+- **🌍 Global Expansion (4)**: Multi-sport engine, localization AI, autonomous management
+- **🔌 Integrations (2)**: Alternative Stripe, expert data collector
+- **🌐 Browser Extensions (1)**: Hey Fantasy browser plugin
+
+### 📋 Archive Details
+- **Archive Date**: 2025-06-25
+- **Archive Location**: `/archive/phase1-experimental-features/`
+- **Documentation**: Complete README.md with feature descriptions and restoration procedures
+- **Code Quality**: TypeScript strict mode, full type definitions, proper error handling
+- **Future Implementation**: Features categorized by priority and technical feasibility
+
+### 🔄 Restoration Process
+To restore any archived feature: Copy from archive → Remove .disabled → Install dependencies → Update imports → Test integration
 
 ## Development Guidelines
 - Use TypeScript strict mode

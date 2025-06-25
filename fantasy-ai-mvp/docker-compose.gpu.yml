@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  ml-training:
+    image: tensorflow/tensorflow:latest-gpu
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    command: npm run train:gpu

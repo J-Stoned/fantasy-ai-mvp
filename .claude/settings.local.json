@@ -59,7 +59,18 @@
       "Bash(git commit:*)",
       "Bash(docker run:*)",
       "Bash(kill:*)",
-      "Bash(PORT=3002 npm run dev)"
+      "Bash(PORT=3002 npm run dev)",
+      "Bash(tsx scripts/train-player-performance-model.ts:*)",
+      "Bash(tsx scripts/test-live-predictions.ts:*)",
+      "Bash(tsx scripts/collect-live-stats.ts:*)",
+      "Bash(tsx scripts/collect-injury-training-data.ts:*)",
+      "Bash(tsx:*)",
+      "Bash(touch:*)",
+      "Bash(nvidia-smi:*)",
+      "Bash(echo:*)",
+      "Bash(export:*)",
+      "Bash(dpkg:*)",
+      "Bash(wget:*)"
     ],
     "deny": []
   },

@@ -1,94 +1,199 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getAllUserLeagues, getStoredConnections, getIntegrationStats } from '@/lib/fantasy-oauth';
+import { getServerSession } from 'next-auth';
+import { prisma } from '@/lib/prisma';
+import { playerPerformanceModel } from '@/lib/ml/models/player-performance-predictor';
+import { injuryRiskModel } from '@/lib/ml/models/injury-risk-assessment';
 
-// GET /api/leagues - Get all user leagues across platforms
-export async function GET(request: NextRequest) {
+export async function GET(req: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url);
-    const platform = searchParams.get('platform');
-    const sport = searchParams.get('sport');
-
-    // Get all connections and leagues
-    const connections = getStoredConnections();
-    let leagues = getAllUserLeagues();
-
-    // Filter by platform if specified
-    if (platform) {
-      leagues = leagues.filter(league => league.platform === platform);
+    const session = await getServerSession();
+    
+    if (!session?.user?.id) {
+      return NextResponse.json(
+        { error: 'Not authenticated' },
+        { status: 401 }
+      );
     }
-
-    // Filter by sport if specified
-    if (sport) {
-      leagues = leagues.filter(league => league.sport.toLowerCase() === sport.toLowerCase());
-    }
-
-    // Get integration stats
-    const stats = getIntegrationStats();
-
-    return NextResponse.json({
-      success: true,
-      leagues,
-      stats,
-      connections: connections.map(conn => ({
-        platformId: conn.platformId,
-        connectedAt: conn.connectedAt,
-        leagueCount: conn.leagues.length
-      }))
+    
+    // Get all connected leagues
+    const leagues = await prisma.connectedLeague.findMany({
+      where: { userId: session.user.id },
+      include: {
+        teams: {
+          where: { userId: session.user.id }
+        },
+        standings: {
+          orderBy: { createdAt: 'desc' },
+          take: 1
+        }
+      },
+      orderBy: { createdAt: 'desc' }
     });
-
+    
+    // Get platform connections
+    const connections = await prisma.platformConnection.findMany({
+      where: { userId: session.user.id }
+    });
+    
+    // Process leagues with ML insights
+    const leaguesWithInsights = await Promise.all(
+      leagues.map(async (league) => {
+        const team = league.teams[0];
+        let insights = null;
+        
+        if (team?.roster) {
+          // Initialize ML models
+          await playerPerformanceModel.initialize();
+          await injuryRiskModel.initialize();
+          
+          // Get top players from roster
+          const topPlayers = (team.roster as any).players?.slice(0, 3) || [];
+          
+          // Generate insights for top players
+          const playerInsights = await Promise.all(
+            topPlayers.map(async (player: any) => {
+              try {
+                // Player performance prediction
+                const performance = await playerPerformanceModel.predictPoints({
+                  playerId: player.player_id || player.id,
+                  name: player.full_name || player.name,
+                  position: player.position,
+                  team: player.team,
+                  week: league.currentWeek + 1,
+                  opponent: 'TBD', // Would need schedule data
+                  isHome: true,
+                  weather: { temperature: 72, wind: 5, precipitation: 0 },
+                  restDays: 7,
+                  injuryStatus: player.injury_status || 'healthy'
+                });
+                
+                // Injury risk
+                const injury = await injuryRiskModel.assessRisk(
+                  player.player_id || player.id,
+                  4
+                );
+                
+                return {
+                  player: player.full_name || player.name,
+                  projectedPoints: performance.points,
+                  confidence: performance.confidence,
+                  injuryRisk: injury.highRiskAlert,
+                  weeklyRisks: injury.weeklyRisks
+                };
+              } catch (error) {
+                return null;
+              }
+            })
+          );
+          
+          insights = {
+            topPerformers: playerInsights.filter(p => p !== null),
+            teamProjection: playerInsights
+              .filter(p => p !== null)
+              .reduce((sum, p) => sum + p.projectedPoints, 0),
+            injuryAlerts: playerInsights
+              .filter(p => p?.injuryRisk)
+              .map(p => p.player)
+          };
+        }
+        
+        return {
+          id: league.id,
+          platform: league.platform,
+          name: league.name,
+          sport: league.sport,
+          season: league.season,
+          currentWeek: league.currentWeek,
+          team: team ? {
+            id: team.id,
+            name: team.name,
+            rosterSize: (team.roster as any).players?.length || 0
+          } : null,
+          standings: league.standings[0]?.standings || [],
+          insights
+        };
+      })
+    );
+    
+    return NextResponse.json({
+      leagues: leaguesWithInsights,
+      connections: connections.map(c => ({
+        platform: c.platform,
+        isActive: c.isActive,
+        connectedAt: c.createdAt
+      })),
+      summary: {
+        totalLeagues: leagues.length,
+        byPlatform: leagues.reduce((acc, l) => {
+          acc[l.platform] = (acc[l.platform] || 0) + 1;
+          return acc;
+        }, {} as Record<string, number>),
+        bySport: leagues.reduce((acc, l) => {
+          acc[l.sport] = (acc[l.sport] || 0) + 1;
+          return acc;
+        }, {} as Record<string, number>)
+      }
+    });
+    
   } catch (error) {
     console.error('Get leagues error:', error);
     return NextResponse.json(
-      { success: false, error: 'Failed to fetch leagues' },
+      { error: 'Failed to fetch leagues' },
       { status: 500 }
     );
   }
 }
 
-// POST /api/leagues - Manually add/sync leagues (for testing)
-export async function POST(request: NextRequest) {
+// DELETE endpoint to disconnect a league
+export async function DELETE(req: NextRequest) {
   try {
-    const { action, platform, leagues } = await request.json();
-
-    if (action === 'sync') {
-      // Simulate syncing leagues from platform
-      const mockLeagues = leagues || [
-        {
-          id: `${platform}_mock_league_${Date.now()}`,
-          name: `Mock ${platform.toUpperCase()} League`,
-          platform,
-          sport: 'NFL',
-          season: '2024',
-          totalTeams: 12,
-          currentWeek: 14,
-          userTeam: {
-            id: `${platform}_team_1`,
-            name: 'Fantasy.AI Powered Team',
-            wins: Math.floor(Math.random() * 12) + 1,
-            losses: Math.floor(Math.random() * 12) + 1,
-            rank: Math.floor(Math.random() * 12) + 1
-          }
-        }
-      ];
-
-      return NextResponse.json({
-        success: true,
-        action: 'sync',
-        platform,
-        leagues: mockLeagues,
-        message: `Synced ${mockLeagues.length} leagues from ${platform}`
-      });
+    const session = await getServerSession();
+    
+    if (!session?.user?.id) {
+      return NextResponse.json(
+        { error: 'Not authenticated' },
+        { status: 401 }
+      );
     }
-
-    return NextResponse.json(
-      { success: false, error: 'Invalid action' },
-      { status: 400 }
-    );
-
+    
+    const { leagueId } = await req.json();
+    
+    if (!leagueId) {
+      return NextResponse.json(
+        { error: 'League ID is required' },
+        { status: 400 }
+      );
+    }
+    
+    // Verify ownership
+    const league = await prisma.connectedLeague.findFirst({
+      where: {
+        id: leagueId,
+        userId: session.user.id
+      }
+    });
+    
+    if (!league) {
+      return NextResponse.json(
+        { error: 'League not found' },
+        { status: 404 }
+      );
+    }
+    
+    // Delete league and related data
+    await prisma.connectedLeague.delete({
+      where: { id: leagueId }
+    });
+    
+    return NextResponse.json({
+      success: true,
+      message: 'League disconnected successfully'
+    });
+    
   } catch (error) {
-    console.error('Post leagues error:', error);
+    console.error('Delete league error:', error);
     return NextResponse.json(
-      { success: false, error: 'Failed to process request' },
+      { error: 'Failed to disconnect league' },
       { status: 500 }
     );
   }

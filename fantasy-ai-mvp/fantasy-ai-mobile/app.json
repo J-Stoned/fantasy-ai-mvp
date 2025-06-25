@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "Fantasy.AI",
+    "slug": "fantasy-ai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0F172A"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.fantasyai.app",
+      "buildNumber": "1.0.0",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Fantasy.AI uses the camera for AR features and team photos.",
+        "NSMicrophoneUsageDescription": "Fantasy.AI needs microphone access for voice commands.",
+        "NSLocationWhenInUseUsageDescription": "Fantasy.AI uses your location for local game information.",
+        "NSFaceIDUsageDescription": "Fantasy.AI uses Face ID for secure authentication.",
+        "NSMotionUsageDescription": "Fantasy.AI uses motion sensors for gesture controls."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0F172A"
+      },
+      "package": "com.fantasyai.app",
+      "versionCode": 1,
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "ACCESS_FINE_LOCATION",
+        "VIBRATE",
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT"
+      ]
+    },
+    "jsEngine": "hermes",
+    "newArchEnabled": true,
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-local-authentication",
+      "expo-av",
+      "expo-notifications"
+    ],
+    "extra": {
+      "apiUrl": "https://fantasy-ai-mvp.vercel.app/api",
+      "websocketUrl": "wss://fantasy-ai-mvp.vercel.app"
+    }
+  }
+}

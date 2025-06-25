@@ -522,29 +522,25 @@ model League {
   isActive         Boolean           @default(true)
   settings         String
   lastSync         DateTime?
-  lastScoreUpdate  DateTime?
-  currentWeek      Int?
-  platform         String?
-  externalId       String?
-  scoringSettings  Json?
   createdAt        DateTime          @default(now())
   updatedAt        DateTime
   wageringEnabled  Boolean           @default(false)
+  currentWeek      Int?
+  externalId       String?
+  lastScoreUpdate  DateTime?
+  platform         String?
+  scoringSettings  Json?
   ActivityItem     ActivityItem[]
   Bounty           Bounty[]
   Draft            Draft[]
   User             User              @relation(fields: [userId], references: [id], onDelete: Cascade)
   Message          Message[]
   Player           Player[]
+  ScoreSnapshot    ScoreSnapshot[]
+  SocialPost       SocialPost[]
   Team             Team[]
   Wager            Wager[]
   WageringSettings WageringSettings?
-  
-  // Social Relations
-  SocialPost       SocialPost[]
-  
-  // Real-time Relations
-  ScoreSnapshot    ScoreSnapshot[]
 
   @@unique([provider, providerId])
 }
@@ -688,18 +684,16 @@ model Player {
   imageUrl          String?
   createdAt         DateTime            @default(now())
   updatedAt         DateTime
+  AnomalyDetection  AnomalyDetection[]
   BettingInsight    BettingInsight[]
   BettingOdds       BettingOdds[]
+  MLPrediction      MLPrediction[]
   League            League              @relation(fields: [leagueId], references: [id], onDelete: Cascade)
   PlayerPropHistory PlayerPropHistory[]
   Prediction        Prediction[]
   Roster            Roster[]
   ValueSnapshot     ValueSnapshot[]
   WagerPlayer       WagerPlayer[]
-  
-  // ML Relations
-  MLPrediction      MLPrediction[]
-  AnomalyDetection  AnomalyDetection[]
 
   @@unique([externalId, leagueId])
 }
@@ -848,6 +842,7 @@ model User {
   updatedAt                               DateTime
   ActivityItem                            ActivityItem[]
   Alert                                   Alert[]
+  BattleParticipant                       BattleParticipant[]
   BettingSlip                             BettingSlip[]
   Bounty_Bounty_creatorIdToUser           Bounty[]              @relation("Bounty_creatorIdToUser")
   Bounty_Bounty_winnerIdToUser            Bounty[]              @relation("Bounty_winnerIdToUser")
@@ -860,8 +855,12 @@ model User {
   DraftPick                               DraftPick[]
   EscrowAccount                           EscrowAccount[]
   EscrowTransaction                       EscrowTransaction[]
+  FriendUsers                             FriendConnection[]    @relation("FriendUsers")
+  UserFriends                             FriendConnection[]    @relation("UserFriends")
   Friendship_Friendship_initiatorIdToUser Friendship[]          @relation("Friendship_initiatorIdToUser")
   Friendship_Friendship_recipientIdToUser Friendship[]          @relation("Friendship_recipientIdToUser")
+  ChallengedChallenges                    HeadToHeadChallenge[] @relation("ChallengedChallenges")
+  ChallengerChallenges                    HeadToHeadChallenge[] @relation("ChallengerChallenges")
   League                                  League[]
   MemberWageringOptIn                     MemberWageringOptIn[]
   Message_Message_recipientIdToUser       Message[]             @relation("Message_recipientIdToUser")
@@ -870,27 +869,20 @@ model User {
   Notification                            Notification[]
   Prediction                              Prediction[]
   Reaction                                Reaction[]
+  SocialComment                           SocialComment[]
+  SocialPost                              SocialPost[]
+  SocialReaction                          SocialReaction[]
   Subscription                            Subscription?
   Team                                    Team[]
+  UserAchievement                         UserAchievement[]
+  UserChallenge                           UserChallenge[]
+  UserGameStats                           UserGameStats?
   UserPreferences                         UserPreferences?
   UserSubscription                        UserSubscription[]
   UserWallet                              UserWallet?
   Wager_Wager_creatorIdToUser             Wager[]               @relation("Wager_creatorIdToUser")
   Wager_Wager_opponentIdToUser            Wager[]               @relation("Wager_opponentIdToUser")
   Wager_Wager_winnerIdToUser              Wager[]               @relation("Wager_winnerIdToUser")
-  
-  // Gamification & Social Relations
-  UserAchievement                         UserAchievement[]
-  UserGameStats                           UserGameStats?
-  UserChallenge                           UserChallenge[]
-  SocialPost                              SocialPost[]
-  SocialReaction                          SocialReaction[]
-  SocialComment                           SocialComment[]
-  UserFriends                             FriendConnection[]    @relation("UserFriends")
-  FriendUsers                             FriendConnection[]    @relation("FriendUsers")
-  ChallengerChallenges                    HeadToHeadChallenge[] @relation("ChallengerChallenges")
-  ChallengedChallenges                    HeadToHeadChallenge[] @relation("ChallengedChallenges")
-  BattleParticipant                       BattleParticipant[]
 }
 
 model UserPreferences {
@@ -1052,110 +1044,84 @@ model subscription_usage {
   @@id([userId, period])
 }
 
-// ============================================
-// GAMIFICATION & ACHIEVEMENT MODELS
-// ============================================
-
 model Achievement {
-  id          String   @id @default(cuid())
-  name        String
-  description String
-  icon        String
-  category    String   // performance, social, strategy, collector, special
-  rarity      String   // common, rare, epic, legendary
-  xpReward    Int
-  gemReward   Int?
-  secret      Boolean  @default(false)
-  
-  // Requirements stored as JSON
-  requirements Json
-  
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  
+  id              String            @id @default(cuid())
+  name            String
+  description     String
+  icon            String
+  category        String
+  rarity          String
+  xpReward        Int
+  gemReward       Int?
+  secret          Boolean           @default(false)
+  requirements    Json
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
   UserAchievement UserAchievement[]
-  
+
   @@index([category])
   @@index([rarity])
 }
 
 model UserAchievement {
-  id            String   @id @default(cuid())
+  id            String      @id @default(cuid())
   userId        String
   achievementId String
-  unlockedAt    DateTime @default(now())
-  progress      Json?    // Current progress towards achievement
-  
-  User          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  unlockedAt    DateTime    @default(now())
+  progress      Json?
   Achievement   Achievement @relation(fields: [achievementId], references: [id], onDelete: Cascade)
-  
+  User          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+
   @@unique([userId, achievementId])
   @@index([userId])
   @@index([unlockedAt])
 }
 
 model UserGameStats {
-  id                String   @id @default(cuid())
-  userId            String   @unique
-  level             Int      @default(1)
-  currentXP         Int      @default(0)
-  totalXP           Int      @default(0)
-  gems              Int      @default(0)
-  
-  // Stats
-  gamesWon          Int      @default(0)
-  gamesLost         Int      @default(0)
-  perfectLineups    Int      @default(0)
-  tradesMade        Int      @default(0)
-  predictionsCorrect Int     @default(0)
-  totalPoints       Float    @default(0)
-  highestWeeklyScore Float   @default(0)
-  championshipsWon  Int      @default(0)
-  
-  // Streaks
-  dailyStreak       Int      @default(0)
-  weeklyStreak      Int      @default(0)
-  winningStreak     Int      @default(0)
-  
-  createdAt         DateTime @default(now())
-  updatedAt         DateTime @updatedAt
-  
-  User              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  
+  id                 String   @id @default(cuid())
+  userId             String   @unique
+  level              Int      @default(1)
+  currentXP          Int      @default(0)
+  totalXP            Int      @default(0)
+  gems               Int      @default(0)
+  gamesWon           Int      @default(0)
+  gamesLost          Int      @default(0)
+  perfectLineups     Int      @default(0)
+  tradesMade         Int      @default(0)
+  predictionsCorrect Int      @default(0)
+  totalPoints        Float    @default(0)
+  highestWeeklyScore Float    @default(0)
+  championshipsWon   Int      @default(0)
+  dailyStreak        Int      @default(0)
+  weeklyStreak       Int      @default(0)
+  winningStreak      Int      @default(0)
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+  User               User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
   @@index([level])
   @@index([totalXP])
 }
 
-// ============================================
-// CHALLENGES & COMPETITIONS
-// ============================================
-
 model Challenge {
-  id          String   @id @default(cuid())
-  name        String
-  description String
-  icon        String
-  type        String   // individual, league, global
-  category    String   // scoring, roster, prediction, social, special
-  difficulty  String   // easy, medium, hard, insane
-  
-  // Requirements and rewards as JSON
-  requirements Json
-  rewards      Json
-  
-  // Time limits
-  startDate    DateTime
-  endDate      DateTime
-  
-  isActive     Boolean  @default(true)
-  participants Int      @default(0)
-  
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
-  
-  UserChallenge UserChallenge[]
+  id                   String                 @id @default(cuid())
+  name                 String
+  description          String
+  icon                 String
+  type                 String
+  category             String
+  difficulty           String
+  requirements         Json
+  rewards              Json
+  startDate            DateTime
+  endDate              DateTime
+  isActive             Boolean                @default(true)
+  participants         Int                    @default(0)
+  createdAt            DateTime               @default(now())
+  updatedAt            DateTime               @updatedAt
   ChallengeLeaderboard ChallengeLeaderboard[]
-  
+  UserChallenge        UserChallenge[]
+
   @@index([type])
   @@index([category])
   @@index([isActive])
@@ -1163,62 +1129,54 @@ model Challenge {
 }
 
 model UserChallenge {
-  id          String   @id @default(cuid())
+  id          String    @id @default(cuid())
   userId      String
   challengeId String
-  startedAt   DateTime @default(now())
+  startedAt   DateTime  @default(now())
   completedAt DateTime?
-  progress    Json     // Progress tracking data
+  progress    Json
   score       Float?
-  claimed     Boolean  @default(false)
-  
-  User        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  claimed     Boolean   @default(false)
   Challenge   Challenge @relation(fields: [challengeId], references: [id], onDelete: Cascade)
-  
+  User        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
   @@unique([userId, challengeId])
   @@index([userId])
   @@index([completedAt])
 }
 
 model ChallengeLeaderboard {
-  id          String   @id @default(cuid())
+  id          String    @id @default(cuid())
   challengeId String
   userId      String
   username    String
   score       Float
   rank        Int
   completedAt DateTime
-  
   Challenge   Challenge @relation(fields: [challengeId], references: [id], onDelete: Cascade)
-  
+
   @@unique([challengeId, userId])
   @@index([challengeId, rank])
   @@index([score])
 }
 
-// ============================================
-// LEADERBOARDS & RANKINGS
-// ============================================
-
 model Leaderboard {
-  id          String   @id @default(cuid())
-  name        String
-  type        String   // global, league, friends, category
-  category    String?  // overall, weekly, accuracy, trading, social, achievements
-  timeframe   String   // all-time, season, month, week, daily
-  
-  metadata    Json?    // Additional leaderboard info
-  lastUpdated DateTime @default(now())
-  
+  id               String             @id @default(cuid())
+  name             String
+  type             String
+  category         String?
+  timeframe        String
+  metadata         Json?
+  lastUpdated      DateTime           @default(now())
   LeaderboardEntry LeaderboardEntry[]
-  
+
   @@unique([type, category, timeframe])
   @@index([type])
   @@index([lastUpdated])
 }
 
 model LeaderboardEntry {
-  id            String   @id @default(cuid())
+  id            String      @id @default(cuid())
   leaderboardId String
   userId        String
   username      String
@@ -1227,44 +1185,35 @@ model LeaderboardEntry {
   score         Float
   rank          Int
   previousRank  Int?
-  trend         String?  // up, down, same, new
-  metadata      Json?    // Additional stats
-  lastUpdated   DateTime @default(now())
-  
+  trend         String?
+  metadata      Json?
+  lastUpdated   DateTime    @default(now())
   Leaderboard   Leaderboard @relation(fields: [leaderboardId], references: [id], onDelete: Cascade)
-  
+
   @@unique([leaderboardId, userId])
   @@index([leaderboardId, rank])
   @@index([score])
   @@index([userId])
 }
 
-// ============================================
-// SOCIAL FEATURES
-// ============================================
-
 model SocialPost {
-  id          String   @id @default(cuid())
-  authorId    String
-  leagueId    String?
-  type        String   // status, achievement, trade, lineup, prediction, highlight, trash_talk
-  content     String   @db.Text
-  media       Json?    // Media attachments
-  attachments Json?    // Game/player/trade attachments
-  visibility  String   @default("league") // public, league, friends
-  
-  viewCount   Int      @default(0)
-  shareCount  Int      @default(0)
-  
-  createdAt   DateTime @default(now())
-  editedAt    DateTime?
-  
-  User        User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
-  League      League?  @relation(fields: [leagueId], references: [id], onDelete: Cascade)
-  
-  SocialReaction SocialReaction[]
+  id             String           @id @default(cuid())
+  authorId       String
+  leagueId       String?
+  type           String
+  content        String
+  media          Json?
+  attachments    Json?
+  visibility     String           @default("league")
+  viewCount      Int              @default(0)
+  shareCount     Int              @default(0)
+  createdAt      DateTime         @default(now())
+  editedAt       DateTime?
   SocialComment  SocialComment[]
-  
+  User           User             @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  League         League?          @relation(fields: [leagueId], references: [id], onDelete: Cascade)
+  SocialReaction SocialReaction[]
+
   @@index([authorId])
   @@index([leagueId])
   @@index([type])
@@ -1272,17 +1221,16 @@ model SocialPost {
 }
 
 model SocialReaction {
-  id        String   @id @default(cuid())
+  id        String         @id @default(cuid())
   postId    String?
   commentId String?
   userId    String
   emoji     String
-  createdAt DateTime @default(now())
-  
-  Post      SocialPost?    @relation(fields: [postId], references: [id], onDelete: Cascade)
+  createdAt DateTime       @default(now())
   Comment   SocialComment? @relation(fields: [commentId], references: [id], onDelete: Cascade)
+  Post      SocialPost?    @relation(fields: [postId], references: [id], onDelete: Cascade)
   User      User           @relation(fields: [userId], references: [id], onDelete: Cascade)
-  
+
   @@unique([postId, userId, emoji])
   @@unique([commentId, userId, emoji])
   @@index([postId])
@@ -1291,48 +1239,38 @@ model SocialReaction {
 }
 
 model SocialComment {
-  id        String   @id @default(cuid())
-  postId    String
-  authorId  String
-  content   String   @db.Text
-  parentId  String?  // For nested comments
-  createdAt DateTime @default(now())
-  
-  Post      SocialPost @relation(fields: [postId], references: [id], onDelete: Cascade)
-  User      User       @relation(fields: [authorId], references: [id], onDelete: Cascade)
-  Parent    SocialComment? @relation("CommentReplies", fields: [parentId], references: [id])
-  Replies   SocialComment[] @relation("CommentReplies")
-  
+  id             String           @id @default(cuid())
+  postId         String
+  authorId       String
+  content        String
+  parentId       String?
+  createdAt      DateTime         @default(now())
+  User           User             @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  Parent         SocialComment?   @relation("CommentReplies", fields: [parentId], references: [id])
+  Replies        SocialComment[]  @relation("CommentReplies")
+  Post           SocialPost       @relation(fields: [postId], references: [id], onDelete: Cascade)
   SocialReaction SocialReaction[]
-  
+
   @@index([postId])
   @@index([authorId])
   @@index([parentId])
 }
 
-// ============================================
-// FRIEND SYSTEM & HEAD-TO-HEAD
-// ============================================
-
 model FriendConnection {
-  id          String   @id @default(cuid())
-  userId      String
-  friendId    String
-  status      String   @default("pending") // pending, accepted, blocked
-  friendsSince DateTime?
-  
-  // Stats
-  headToHeadWins   Int @default(0)
-  headToHeadLosses Int @default(0)
-  headToHeadTies   Int @default(0)
+  id               String    @id @default(cuid())
+  userId           String
+  friendId         String
+  status           String    @default("pending")
+  friendsSince     DateTime?
+  headToHeadWins   Int       @default(0)
+  headToHeadLosses Int       @default(0)
+  headToHeadTies   Int       @default(0)
   lastMatchup      DateTime?
-  
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  
-  User        User     @relation("UserFriends", fields: [userId], references: [id], onDelete: Cascade)
-  Friend      User     @relation("FriendUsers", fields: [friendId], references: [id], onDelete: Cascade)
-  
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+  Friend           User      @relation("FriendUsers", fields: [friendId], references: [id], onDelete: Cascade)
+  User             User      @relation("UserFriends", fields: [userId], references: [id], onDelete: Cascade)
+
   @@unique([userId, friendId])
   @@index([userId])
   @@index([friendId])
@@ -1340,27 +1278,23 @@ model FriendConnection {
 }
 
 model HeadToHeadChallenge {
-  id           String   @id @default(cuid())
+  id           String    @id @default(cuid())
   challengerId String
   challengedId String
-  type         String   // weekly, season, custom
-  stakes       Json     // Stakes details
-  conditions   Json     // Challenge conditions
-  status       String   @default("pending") // pending, active, completed, declined
-  
+  type         String
+  stakes       Json
+  conditions   Json
+  status       String    @default("pending")
   startDate    DateTime
   endDate      DateTime
-  
-  result       Json?    // Challenge results
+  result       Json?
   winnerId     String?
   completedAt  DateTime?
-  
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
-  
-  Challenger   User     @relation("ChallengerChallenges", fields: [challengerId], references: [id], onDelete: Cascade)
-  Challenged   User     @relation("ChallengedChallenges", fields: [challengedId], references: [id], onDelete: Cascade)
-  
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  Challenged   User      @relation("ChallengedChallenges", fields: [challengedId], references: [id], onDelete: Cascade)
+  Challenger   User      @relation("ChallengerChallenges", fields: [challengerId], references: [id], onDelete: Cascade)
+
   @@index([challengerId])
   @@index([challengedId])
   @@index([status])
@@ -1368,46 +1302,40 @@ model HeadToHeadChallenge {
 }
 
 model Battle {
-  id          String   @id @default(cuid())
-  type        String   // quick, tournament, ladder, custom
-  format      String   // classic, draft, best_ball, survivor
-  status      String   @default("waiting") // waiting, drafting, active, completed
-  
-  settings    Json     // Battle settings
-  prizes      Json     // Prize structure
-  
-  currentRound Int?
-  winnerId     String?
-  
-  chatEnabled Boolean  @default(true)
-  
-  startedAt   DateTime?
-  completedAt DateTime?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  
+  id                String              @id @default(cuid())
+  type              String
+  format            String
+  status            String              @default("waiting")
+  settings          Json
+  prizes            Json
+  currentRound      Int?
+  winnerId          String?
+  chatEnabled       Boolean             @default(true)
+  startedAt         DateTime?
+  completedAt       DateTime?
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime            @updatedAt
   BattleParticipant BattleParticipant[]
   BattleRound       BattleRound[]
-  
+
   @@index([type])
   @@index([status])
   @@index([startedAt])
 }
 
 model BattleParticipant {
-  id        String   @id @default(cuid())
-  battleId  String
-  userId    String
-  roster    Json?    // Player roster
-  score     Float    @default(0)
-  rank      Int?
-  eliminated Boolean @default(false)
-  powerUpsUsed Json   @default("[]")
-  stats     Json     // Battle stats
-  
-  Battle    Battle   @relation(fields: [battleId], references: [id], onDelete: Cascade)
-  User      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  
+  id           String  @id @default(cuid())
+  battleId     String
+  userId       String
+  roster       Json?
+  score        Float   @default(0)
+  rank         Int?
+  eliminated   Boolean @default(false)
+  powerUpsUsed Json    @default("[]")
+  stats        Json
+  Battle       Battle  @relation(fields: [battleId], references: [id], onDelete: Cascade)
+  User         User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
   @@unique([battleId, userId])
   @@index([battleId])
   @@index([userId])
@@ -1419,39 +1347,30 @@ model BattleRound {
   roundNumber Int
   startDate   DateTime
   endDate     DateTime
-  matchups    Json     // Round matchups
-  leaderboard Json     // Round standings
-  events      Json     @default("[]") // Battle events
-  
+  matchups    Json
+  leaderboard Json
+  events      Json     @default("[]")
   Battle      Battle   @relation(fields: [battleId], references: [id], onDelete: Cascade)
-  
+
   @@unique([battleId, roundNumber])
   @@index([battleId])
 }
 
-// ============================================
-// ML DATA MODELS
-// ============================================
-
 model MLPrediction {
-  id          String   @id @default(cuid())
-  modelType   String   // player_performance, injury_risk, lineup_optimizer, etc
-  playerId    String?
-  teamId      String?
-  gameId      String?
-  
-  prediction  Json     // Prediction details
-  confidence  Float
-  features    Json     // Input features used
-  
-  actualResult Json?   // Actual outcome for accuracy tracking
-  accuracy    Float?
-  
-  createdAt   DateTime @default(now())
-  expiresAt   DateTime
-  
-  Player      Player?  @relation(fields: [playerId], references: [id], onDelete: Cascade)
-  
+  id           String   @id @default(cuid())
+  modelType    String
+  playerId     String?
+  teamId       String?
+  gameId       String?
+  prediction   Json
+  confidence   Float
+  features     Json
+  actualResult Json?
+  accuracy     Float?
+  createdAt    DateTime @default(now())
+  expiresAt    DateTime
+  Player       Player?  @relation(fields: [playerId], references: [id], onDelete: Cascade)
+
   @@index([modelType])
   @@index([playerId])
   @@index([confidence])
@@ -1461,59 +1380,50 @@ model MLPrediction {
 model MLTrainingData {
   id          String   @id @default(cuid())
   modelType   String
-  dataType    String   // features, labels, validation
-  data        Json     // Training data
+  dataType    String
+  data        Json
   version     Int
-  
   recordCount Int
-  features    Json     // Feature metadata
-  
+  features    Json
   createdAt   DateTime @default(now())
-  
+
   @@index([modelType])
   @@index([version])
   @@index([dataType])
 }
 
 model MLModelMetadata {
-  id          String   @id @default(cuid())
-  modelType   String   @unique
-  version     Int
-  accuracy    Float
-  parameters  Json     // Model parameters
-  metrics     Json     // Performance metrics
-  
-  trainedAt   DateTime
-  deployedAt  DateTime?
-  isActive    Boolean  @default(false)
-  
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  
+  id         String    @id @default(cuid())
+  modelType  String    @unique
+  version    Int
+  accuracy   Float
+  parameters Json
+  metrics    Json
+  trainedAt  DateTime
+  deployedAt DateTime?
+  isActive   Boolean   @default(false)
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+
   @@index([modelType])
   @@index([isActive])
 }
 
 model AnomalyDetection {
-  id          String   @id @default(cuid())
-  type        String   // performance, injury, usage, market, social, weather
-  severity    String   // low, medium, high, critical
+  id          String    @id @default(cuid())
+  type        String
+  severity    String
   confidence  Float
-  
   playerId    String?
   teamId      String?
-  
-  description String   @db.Text
-  details     Json     // Anomaly details
-  impact      Json     // Fantasy impact
-  
-  resolved    Boolean  @default(false)
+  description String
+  details     Json
+  impact      Json
+  resolved    Boolean   @default(false)
   resolvedAt  DateTime?
-  
-  createdAt   DateTime @default(now())
-  
-  Player      Player?  @relation(fields: [playerId], references: [id], onDelete: Cascade)
-  
+  createdAt   DateTime  @default(now())
+  Player      Player?   @relation(fields: [playerId], references: [id], onDelete: Cascade)
+
   @@index([type])
   @@index([severity])
   @@index([playerId])
@@ -1525,11 +1435,10 @@ model ScoreSnapshot {
   id        String   @id @default(cuid())
   leagueId  String
   week      Int
-  scores    Json     // Snapshot of scores
+  scores    Json
   timestamp DateTime @default(now())
-  
   League    League   @relation(fields: [leagueId], references: [id], onDelete: Cascade)
-  
+
   @@index([leagueId])
   @@index([week])
   @@index([timestamp])

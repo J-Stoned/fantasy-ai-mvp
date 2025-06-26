@@ -5,7 +5,7 @@
 
 import axios from 'axios';
 import { prisma } from '@/lib/prisma';
-import { playerPerformanceModel } from '@/lib/ml/models/player-performance-predictor';
+import { playerPerformancePredictor } from '@/lib/ml/models/player-performance-predictor';
 
 interface YahooPlayer {
   id: string;
@@ -311,7 +311,7 @@ export class YahooDataAggregator {
           
           // Update ML model cache
           if (player.fantasy.projectedPoints > 0) {
-            playerPerformanceModel.updatePlayerCache(player.id, {
+            playerPerformancePredictor.updatePlayerCache(player.id, {
               yahooProjection: player.fantasy.projectedPoints,
               ownership: player.fantasy.ownership,
               trend: player.fantasy.trend

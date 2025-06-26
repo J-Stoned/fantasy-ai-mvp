@@ -5,7 +5,7 @@
 
 import axios from 'axios';
 import { prisma } from '@/lib/prisma';
-import { injuryRiskModel } from '@/lib/ml/models/injury-risk-assessment';
+import { injuryRiskAssessment } from '@/lib/ml/models/injury-risk-assessment';
 
 interface InjuryReport {
   playerId: string;
@@ -421,7 +421,7 @@ export class InjuryWeatherPipeline {
     console.log('🤖 Updating injury risk model...');
     
     for (const injury of injuries) {
-      await injuryRiskModel.updatePlayerInjuryStatus(
+      await injuryRiskAssessment.updatePlayerInjuryStatus(
         injury.playerId,
         injury.status,
         injury.description

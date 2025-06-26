@@ -5,7 +5,7 @@ import { prisma } from '@/lib/prisma';
 // PUT /api/anomaly/:eventId/resolve - Mark anomaly as resolved
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { eventId: string } }
+  { params }: { params: Promise<{ eventId: string }> }
 ) {
   try {
     const session = await getServerSession();
@@ -13,7 +13,7 @@ export async function PUT(
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    const eventId = params.eventId;
+    const { eventId } = await params;
     const { resolution, notes } = await request.json();
 
     // Get user

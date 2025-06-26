@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { prisma } from '@/lib/prisma';
-import { playerPerformanceModel } from '@/lib/ml/models/player-performance-predictor';
-import { injuryRiskModel } from '@/lib/ml/models/injury-risk-assessment';
+import { playerPerformancePredictor } from '@/lib/ml/models/player-performance-predictor';
+import { injuryRiskAssessment } from '@/lib/ml/models/injury-risk-assessment';
 
 export async function GET(req: NextRequest) {
   try {
@@ -43,8 +43,8 @@ export async function GET(req: NextRequest) {
         
         if (team?.roster) {
           // Initialize ML models
-          await playerPerformanceModel.initialize();
-          await injuryRiskModel.initialize();
+          await playerPerformancePredictor.initialize();
+          await injuryRiskAssessment.initialize();
           
           // Get top players from roster
           const topPlayers = (team.roster as any).players?.slice(0, 3) || [];
@@ -54,7 +54,7 @@ export async function GET(req: NextRequest) {
             topPlayers.map(async (player: any) => {
               try {
                 // Player performance prediction
-                const performance = await playerPerformanceModel.predictPoints({
+                const performance = await playerPerformancePredictor.predictPoints({
                   playerId: player.player_id || player.id,
                   name: player.full_name || player.name,
                   position: player.position,
@@ -68,7 +68,7 @@ export async function GET(req: NextRequest) {
                 });
                 
                 // Injury risk
-                const injury = await injuryRiskModel.assessRisk(
+                const injury = await injuryRiskAssessment.assessRisk(
                   player.player_id || player.id,
                   4
                 );

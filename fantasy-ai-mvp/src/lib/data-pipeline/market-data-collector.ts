@@ -5,7 +5,7 @@
 
 import axios from 'axios';
 import { prisma } from '@/lib/prisma';
-import { gameOutcomeModel } from '@/lib/ml/models/game-outcome-predictor';
+import { gameOutcomePredictor } from '@/lib/ml/models/game-outcome-predictor';
 
 interface DFSPricing {
   playerId: string;
@@ -449,7 +449,7 @@ export class MarketDataCollector {
         });
         
         // Update game outcome model with betting data
-        await gameOutcomeModel.updateBettingData(line);
+        await gameOutcomePredictor.updateBettingData(line);
         
       } catch (error) {
         console.error(`Error processing betting line for ${line.gameId}:`, error);

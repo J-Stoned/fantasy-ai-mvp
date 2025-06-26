@@ -4,12 +4,12 @@
  */
 
 import { prisma } from '@/lib/prisma';
-import { playerPerformanceModel } from '@/lib/ml/models/player-performance-predictor';
-import { injuryRiskModel } from '@/lib/ml/models/injury-risk-assessment';
+import { playerPerformancePredictor } from '@/lib/ml/models/player-performance-predictor';
+import { injuryRiskAssessment } from '@/lib/ml/models/injury-risk-assessment';
 import { lineupOptimizer } from '@/lib/ml/models/lineup-optimizer';
 import { tradeAnalyzer } from '@/lib/ml/models/trade-analyzer';
 import { draftAssistant } from '@/lib/ml/models/draft-assistant';
-import { gameOutcomeModel } from '@/lib/ml/models/game-outcome-predictor';
+import { gameOutcomePredictor } from '@/lib/ml/models/game-outcome-predictor';
 
 interface PlayerFeatures {
   playerId: string;

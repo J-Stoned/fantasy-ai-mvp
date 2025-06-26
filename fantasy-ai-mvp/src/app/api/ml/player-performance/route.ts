@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { playerPerformanceModel } from '@/lib/ml/models/player-performance-predictor';
+import { playerPerformancePredictor } from '@/lib/ml/models/player-performance-predictor';
 import { initializeML } from '@/lib/ml/initialize';
 
 export async function POST(req: NextRequest) {
@@ -21,10 +21,10 @@ export async function POST(req: NextRequest) {
     }
     
     // Initialize model if needed
-    await playerPerformanceModel.initialize();
+    await playerPerformancePredictor.initialize();
     
     // Make prediction
-    const prediction = await playerPerformanceModel.predictPoints(data);
+    const prediction = await playerPerformancePredictor.predictPoints(data);
     
     return NextResponse.json({
       success: true,

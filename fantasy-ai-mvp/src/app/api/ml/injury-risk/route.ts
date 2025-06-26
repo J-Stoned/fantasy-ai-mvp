@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { injuryRiskModel } from '@/lib/ml/models/injury-risk-assessment';
+import { injuryRiskAssessment } from '@/lib/ml/models/injury-risk-assessment';
 
 export async function POST(req: NextRequest) {
   try {
@@ -13,10 +13,10 @@ export async function POST(req: NextRequest) {
     }
     
     // Initialize model if needed
-    await injuryRiskModel.initialize();
+    await injuryRiskAssessment.initialize();
     
     // Assess injury risk
-    const assessment = await injuryRiskModel.assessRisk(playerId, weeksAhead);
+    const assessment = await injuryRiskAssessment.assessRisk(playerId, weeksAhead);
     
     return NextResponse.json({
       success: true,

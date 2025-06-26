@@ -5,8 +5,8 @@
 
 import axios from 'axios';
 import { prisma } from '@/lib/prisma';
-import { playerPerformanceModel } from '@/lib/ml/models/player-performance-predictor';
-import { injuryRiskModel } from '@/lib/ml/models/injury-risk-assessment';
+import { playerPerformancePredictor } from '@/lib/ml/models/player-performance-predictor';
+import { injuryRiskAssessment } from '@/lib/ml/models/injury-risk-assessment';
 
 interface ESPNPlayer {
   id: string;
@@ -282,7 +282,7 @@ export class ESPNDataAggregator {
         
         // Update ML features if injury status changed
         if (player.injuryStatus) {
-          await injuryRiskModel.updatePlayerInjuryStatus(
+          await injuryRiskAssessment.updatePlayerInjuryStatus(
             player.id,
             player.injuryStatus.status,
             player.injuryStatus.description
@@ -367,7 +367,7 @@ export class ESPNDataAggregator {
       
       // Update player performance model cache
       for (const feature of features) {
-        playerPerformanceModel.updatePlayerCache(feature.playerId, feature);
+        playerPerformancePredictor.updatePlayerCache(feature.playerId, feature);
       }
       
       console.log(`✅ Updated ${features.length} player features in ML models`);

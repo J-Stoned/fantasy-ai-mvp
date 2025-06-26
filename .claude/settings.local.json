@@ -70,7 +70,9 @@
       "Bash(echo:*)",
       "Bash(export:*)",
       "Bash(dpkg:*)",
-      "Bash(wget:*)"
+      "Bash(wget:*)",
+      "WebFetch(domain:fantasy-ai-5cntpvtxp-justinrstone81-gmailcoms-projects.vercel.app)",
+      "Bash(gh repo view:*)"
     ],
     "deny": []
   },

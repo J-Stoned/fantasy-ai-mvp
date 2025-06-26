@@ -1,8 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { playerPerformanceModel } from '@/lib/ml/models/player-performance-predictor';
+import { initializeML } from '@/lib/ml/initialize';
 
 export async function POST(req: NextRequest) {
   try {
+    // Initialize ML if needed
+    await initializeML();
+    
     const data = await req.json();
     
     // Validate required fields

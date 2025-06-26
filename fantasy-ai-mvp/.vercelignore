@@ -1,0 +1,34 @@
+# Vercel deployment configuration
+# Ensure Prisma client is included in deployment
+
+# Exclude dev dependencies and test files
+**/*.test.ts
+**/*.test.js
+__tests__
+jest.config.js
+.env.local
+.env.development
+
+# Include critical files
+!node_modules/.prisma/**
+!node_modules/@prisma/client/**
+!prisma/schema.prisma
+
+# Exclude large ML training data
+training-data/
+models/*.h5
+models/*.json
+!models/config.json
+
+# Exclude mobile app
+fantasy-ai-mobile/
+
+# Exclude scripts except production ones
+scripts/*
+!scripts/verify-production.ts
+
+# Exclude docs and archives
+docs/
+archive/
+*.md
+!README.md
